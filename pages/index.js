@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Post from '../components/Post'
-import getPostsData from '../utils/getPostsData'
+import getPostsMeta from '../utils/getPostsMeta'
 
 export default function Home({ posts }) {
   return (
@@ -19,7 +19,7 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getPostsData();
+  const posts = await getPostsMeta();
 
   return {
     props: {

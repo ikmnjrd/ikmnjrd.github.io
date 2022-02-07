@@ -3,6 +3,9 @@ title: よく使うgcloudコマンド
 date: '2022-01-09'
 layout: layouts/post.njk
 scheduled: '2022-01-09'
+tag:
+  - GCP
+
 ---
 
 主にCloudRun周辺の。すごく個人的なまとめです。

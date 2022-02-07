@@ -3,6 +3,8 @@ title: GitHub Pagesでズボラに使えそうなJekyllのブログ用テーマ
 date: '2021-10-29'
 layout: layouts/post.njk
 scheduled: '2021-10-29'
+tag:
+  - Jekyll
 ---
 
 * https://github.com/jekyll/minima

@@ -1,30 +1,31 @@
 import Head from 'next/head'
-import Post from '../components/Post'
 import getTags from '../utils/getTags'
 
-export default function Tag({ posts }) {
+export default function Tag({ tags }) {
+  console.log(Object.entries(tags.counts_tag));
+
+  const tags_obj = Object.entries(tags.counts_tag).map((tag) => {
+    return <li key={tag[0]}>{`${tag[0]}(${tag[1]})`}</li>
+  })
+
   return (
     <>
       <Head>
         <title>Tag一覧 | ikmnjrd.github.io</title>
       </Head>
-
-      <li className='text-newmo-100'>tahichi</li>
-      <li className='text-newmo-200'>tahichi</li>
-      <li className='text-newmo-300'>tahichi</li>
-      <li className='text-newmo-400'>tahichi</li>
-      <li className='text-newmo-500'>tahichi</li>
-      <li className='text-newmo-600'>tahichi</li>
+      <ul>
+        {tags_obj}
+      </ul>
     </>
   )
 }
 
 export async function getStaticProps() {
-  const posts = await getTags();
+  const tags = await getTags();
 
   return {
     props: {
-      posts: posts
+      tags: tags
     },
   }
 }

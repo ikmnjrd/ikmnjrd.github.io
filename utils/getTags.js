@@ -1,31 +1,35 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import {sortByDate} from './index'
+import getPostFilesData from './getPostFilesData'
 
 
-export default async function getPostsData() {
-  // Get files from the posts dir
-  const files = fs.readdirSync(path.join('_posts'))
+export default async function getTag() {
+  const files_data = await getPostFilesData()
+  const tags = [];
 
-  // Get slug and frontmatter from posts
-  const posts = files.map((filename) => {
-    // Create slug
-    const slug = filename.replace('.md', '')
+  files_data.forEach(({frontmatter}) => {
 
-    // Get frontmatter
-    const markdownWithMeta = fs.readFileSync(
-      path.join('_posts', filename),
-      'utf-8'
-    )
+    if( frontmatter.tag ) {
+      for( let tag of frontmatter.tag) {
+        tags.push(tag);
+      }
 
-    const { data: frontmatter } = matter(markdownWithMeta)
-
-    return {
-      slug,
-      frontmatter,
     }
   })
 
-  return posts.sort(sortByDate)
+  const counts_tag = countTag(tags);
+
+  console.log(tags);
+  console.log(counts_tag);
+
+  return {tags, counts_tag}
+}
+
+export function countTag(tags) {
+  return tags.reduce((prev, curr) => {
+      const name = curr;
+      if(!prev[name]){
+        prev[name] = 0;
+      }
+      prev[name] += 1;
+      return prev;
+    }, {});
 }

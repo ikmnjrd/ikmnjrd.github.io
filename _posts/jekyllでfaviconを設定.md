@@ -3,6 +3,9 @@ title: jekyllでfaviconを設定
 date: '2021-12-31'
 layout: layouts/post.njk
 scheduled: '2021-12-31'
+tag:
+  - Jekyll
+  - Ruby
 ---
 
 ## 前提

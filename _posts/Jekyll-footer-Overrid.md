@@ -3,6 +3,9 @@ title: Jekyllテーマのhtmlオーバーライド
 date: '2021-12-22'
 layout: layouts/post.njk
 scheduled: '2021-12-22'
+tag:
+  - Jekyll
+  - Ruby
 ---
 
 できるだけ楽をしてブログを続けるために仕方なくGitHub PagesでJekyllを使ってる人は僕以外にいることと思う。
