@@ -12,7 +12,7 @@ export default function Header() {
           </h1>
           {/* Right Menu */}
           <div className="col-start-11 col-end-12">
-            <Link href="/tag" passHref>Tags</Link>
+            <Link href="/tags" passHref>Tags</Link>
           </div>
       </div>
     </header>
