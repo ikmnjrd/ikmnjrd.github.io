@@ -5,6 +5,7 @@ import MarkdownIt from 'markdown-it'
 import markdownItPrism from 'markdown-it-prism'
 import Link from 'next/link'
 import Head from 'next/head'
+import markdownStyles from '@components/markdown/markdown-styles.module.css'
 
 export default function PostPage({
   frontmatter: { title, date, cover_image },
@@ -16,23 +17,20 @@ export default function PostPage({
       <Head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
       </Head>
-      <Link href='/'>
-        <a className='btn btn-back'>Go Back</a>
-      </Link>
-      <div className='card card-page'>
-        <h1 className='post-title'>{title}</h1>
-        <div className='post-date'>Posted on {date}</div>
+
+      <div className='max-w-2xl mx-auto'>
+        <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left'>{title}</h1>
+        <div className='text-right'>Posted on {date}</div>
         <img src={cover_image} alt='' />
-        <div className='post-body'>
-          <div dangerouslySetInnerHTML={{ __html: innerHtml }}></div>
-        </div>
+
+        <div dangerouslySetInnerHTML={{ __html: innerHtml }} className={markdownStyles['markdown']}></div>
       </div>
     </>
   )
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('posts'))
+  const files = fs.readdirSync(path.join('_posts'))
 
   const paths = files.map((filename) => ({
     params: {
@@ -49,7 +47,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params: { slug } }) {
   const markdownIt = new MarkdownIt()
   const markdownWithMeta = fs.readFileSync(
-    path.join('posts', slug + '.md'),
+    path.join('_posts', slug + '.md'),
     'utf-8'
   )
 
