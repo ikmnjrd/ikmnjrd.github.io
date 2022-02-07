@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className=" text-newmo-400">
       <Header />
-      <main className="container">
+      <main className="container mx-auto">
         <Component {...pageProps} />
       </main>
       <Footer />
