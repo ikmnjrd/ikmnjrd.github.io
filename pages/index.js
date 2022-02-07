@@ -9,7 +9,7 @@ export default function Home({ posts }) {
         <title>ikmnjrd.github.io</title>
       </Head>
 
-      <ul className="max-w-2xl mx-auto leading-loose">
+      <ul className="max-w-2xl mx-auto">
         {posts.map((post, index) => (
           <Post key={index} post={post} />
         ))}
