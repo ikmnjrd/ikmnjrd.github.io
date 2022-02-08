@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Post from '../components/Post'
-import getPostsMeta from '../utils/getPostsMeta'
+import getPostsMeta from '@utils/getPostsMeta'
 
 export default function Home({ posts }) {
   return (
