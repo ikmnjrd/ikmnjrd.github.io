@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import getPostsFromTag from '@utils/getPostsFromTag'
 import getTags from '@utils/getTags'
@@ -8,9 +9,13 @@ export default function TagLinkPage({
 }) {
   return (
     <>
+      <Head>
+        <title>{ tag }の記事 | ikmnjrd.github.io</title>
+      </Head>
+
       <h2>{ tag }の投稿記事一覧</h2>
       <div>
-        { posts.map((post) => <li><Link href={`/blog/${post.slug}`}>{post.frontmatter.title}</Link></li>) }
+        { posts.map((post) => <li><Link href={`/blog/${post.slug}`}><a className="hover:underline hover:text-newmo-400 visited:text-newmo-300">{post.frontmatter.title}</a></Link></li>) }
       </div>
     </>
   )
