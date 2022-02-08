@@ -3,16 +3,18 @@ import Link from 'next/link'
 export default function Header() {
   return (
     <header>
-      <div className="mb-4 p-4 grid gap-3">
+      <div className="mb-4 p-4 grid gap-3 ">
         {/* Left Menu */}
-          <h1 className="text-4xl font-bold col-start-1 col-end-11">
+          <h1 className="col-start-1 col-end-6">
             <Link href="/" passHref>
-              <img src="/logo.svg" alt="home" className="svg-logo cursor-pointer" />
+              <a alt="top" className="header-text md:text-5xl text-3xl font-serif decoration-dotted hover:opacity-50 hover:underline">ikmnjrd.github.io</a>
             </Link>
           </h1>
           {/* Right Menu */}
-          <div className="col-start-11 col-end-12">
-            <Link href="/tags" passHref>Tags</Link>
+          <div className="col-start-6 col-end-7">
+            <Link href="/tags" passHref>
+              <a alt="tags" className="header-text md:text-3xl text-2xl font-serif decoration-dotted hover:opacity-50 hover:underline">Tags</a>
+            </Link>
           </div>
       </div>
     </header>
