@@ -15,7 +15,7 @@ export default function TagLinkPage({
 
       <h2>{ tag }の投稿記事一覧</h2>
       <div>
-        { posts.map((post) => <li><Link href={`/blog/${post.slug}`}><a className="hover:underline hover:text-newmo-400 visited:text-newmo-300">{post.frontmatter.title}</a></Link></li>) }
+        { posts.map((post) => <li key={post.slug}><Link href={`/blog/${post.slug}`}><a className="hover:underline hover:text-newmo-400 visited:text-newmo-300">{post.frontmatter.title}</a></Link></li>) }
       </div>
     </>
   )
