@@ -6,10 +6,11 @@ export default function Post({ post }) {
     <>
       {/* <img src={post.frontmatter.cover_image} alt='' className="aspect-[16/9] rounded-2xl" /> */}
 
-      <li className='mb-1 block whitespace-nowrap text-ellipsis overflow-hidden'>
+      <li className="mb-1 block whitespace-nowrap text-ellipsis overflow-hidden">
         <img src="/arrow_right_black_24dp.svg" className="inline-block" width={16}/>
-        <Link href={`/blog/${post.slug}`}>{post.frontmatter.title}</Link>
-        {" "}
+        <Link href={`/blog/${post.slug}`}>
+          <a className="hover:underline hover:text-newmo-400 visited:text-newmo-300">{post.frontmatter.title}</a>
+        </Link>
         <p className="text-xs text-right pr-3 border-b-2 border-dashed border-newmo-100">Posted on {post.frontmatter.date}</p>
       </li>
 
