@@ -5,11 +5,11 @@ export default async function getTag() {
   const files_data = await getPostFilesData()
   const tags = [];
 
-  files_data.forEach(({frontmatter}) => {
+  files_data.forEach(({frontmatter, slug}) => {
 
     if( frontmatter.tag ) {
       for( let tag of frontmatter.tag) {
-        tags.push(tag);
+        tags.push({tag ,slug });
       }
 
     }
@@ -17,15 +17,12 @@ export default async function getTag() {
 
   const counts_tag = countTag(tags);
 
-  console.log(tags);
-  console.log(counts_tag);
-
   return {tags, counts_tag}
 }
 
 export function countTag(tags) {
   return tags.reduce((prev, curr) => {
-      const name = curr;
+      const name = curr.tag;
       if(!prev[name]){
         prev[name] = 0;
       }
