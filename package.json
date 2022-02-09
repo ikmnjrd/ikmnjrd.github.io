@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export -o docs",
-    "start": "next start",
-    "sitemap": "WEBSITE_URL='https://ikmnjrd.github.io' node ./scripts/generate-sitemap.js",
-    "say-ho": "WEBSITE_URL='https://ikmnjrd.github.io' node ./scripts/say-ho.js"
+    "start": "next start"
   },
   "license": "MIT",
   "dependencies": {
