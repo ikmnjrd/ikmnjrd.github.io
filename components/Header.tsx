@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import DarkModeButton from 'components/DarkModeButton'
 
 type HeaderProps = {}
 
@@ -13,9 +14,10 @@ export default function Header({}:HeaderProps) {
             // @ts-ignore */}
             <a alt="Home" className="header-text md:text-5xl text-3xl font-serif decoration-dotted hover:opacity-50 hover:underline active:opacity-30">ikmnjrd.github.io</a>
           </Link>
+          <DarkModeButton className="md:ml-3 ml-2"/>
         </h1>
 
-        <div className="col-start-6 col-end-7 items-end">
+        <div className="col-start-6 col-end-7">
           <Link href="/tags" passHref>
           {/*
           // @ts-ignore */}

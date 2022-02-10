@@ -52,7 +52,7 @@
 }
 
 .markdown code:not([class]){
-  @apply text-sm italic bg-newmo-100 text-red rounded py-[1px] px-1;
+  @apply text-sm italic dark:bg-newmo-600 bg-newmo-200  text-red rounded py-[1px] px-1;
 }
 .markdown code[class^="language-"] {
   @apply text-sm;

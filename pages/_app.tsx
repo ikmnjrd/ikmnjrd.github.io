@@ -6,7 +6,7 @@ import 'styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className=" text-newmo-400">
+    <div className="text-newmo-400 dark:text-newmo-100">
       <Header />
       <main className="max-w-2xl md:mx-auto mx-4">
         <Component {...pageProps} />

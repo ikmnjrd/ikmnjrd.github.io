@@ -28,7 +28,7 @@ export default function Document() {
           </>
         }
       </Head>
-      <body>
+      <body className="dark:bg-newmo-800">
         <Main />
         <NextScript />
       </body>

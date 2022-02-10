@@ -4,5 +4,10 @@
 
 .header-text {
   color: white;
-  text-shadow: -3px -3px 1px rgba(0, 0, 0, 0.15), 3px 3px 3px #fff;
+  text-shadow: -2px -2px 1px rgba(0, 0, 0, 0.25), 3px 3px 3px #fff;
+}
+
+img[class^="svg-icon"] {
+  filter: drop-shadow(3px 3px 3px #fff)
+    drop-shadow(-2px -2px 1px rgba(0, 0, 0, 0.3));
 }
