@@ -1,1 +1,0 @@
-{"pageProps":{"frontmatter":{"title":"TypeScriptをネイティブコンパイルするって？","date":"2021-12-26","layout":"layouts/post.njk","scheduled":"2021-12-26"},"slug":"TypeScriptをネイティブコンパイル","innerHtml":"<h3>疑問</h3>\n<p>typescriptをjavascriptを挟まずにネイティブコードにコンパイルするようなプロジェクトはないのか？</p>\n<h3>自分なりの回答</h3>\n<p>ないよ。</p>\n<p>DenoがTypeScriptコードをサポートしているが、中ではコンパイラが一度JavaScriptに変換している。</p>\n"},"__N_SSG":true}
