@@ -3,7 +3,7 @@ import getPostFilesData from './getPostFilesData'
 
 export default async function getTag() {
   const files_data = await getPostFilesData()
-  const tags = [];
+  const tags:any[] = [];
 
   files_data.forEach(({frontmatter, slug}) => {
 
@@ -20,7 +20,7 @@ export default async function getTag() {
   return {tags, counts_tag}
 }
 
-export function countTag(tags) {
+export function countTag(tags:any[]) {
   return tags.reduce((prev, curr) => {
       const name = curr.tag;
       if(!prev[name]){
