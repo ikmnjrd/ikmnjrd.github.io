@@ -1,7 +1,7 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import getPostsFromTag from '@utils/getPostsFromTag'
 import getTags from '@utils/getTags'
+import TitleHead from '@components/TitleHead'
 
 export default function TagLinkPage({
   tag,
@@ -9,9 +9,7 @@ export default function TagLinkPage({
 }) {
   return (
     <>
-      <Head>
-        <title>{ tag }の記事 | ikmnjrd.github.io</title>
-      </Head>
+      <TitleHead title={`${tag}の記事`}/>
 
       <h2>{ tag }の投稿記事一覧</h2>
       <div>

@@ -1,15 +1,13 @@
-import Head from 'next/head'
 import Post from '../components/Post'
 import getPostsMeta from '@utils/getPostsMeta'
+import TitleHead from '@components/TitleHead'
 
 export default function Home({ posts }) {
   return (
     <>
-      <Head>
-        <title>ikmnjrd.github.io</title>
-      </Head>
+      <TitleHead title={"Top"}/>
 
-      <ul className="max-w-2xl mx-auto">
+      <ul>
         {posts.map((post, index) => (
           <Post key={index} post={post} />
         ))}

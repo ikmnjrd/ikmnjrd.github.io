@@ -3,8 +3,8 @@ import path from 'path'
 import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
 import markdownItPrism from 'markdown-it-prism'
-import Link from 'next/link'
 import Head from 'next/head'
+import TitleHead from '@components/TitleHead'
 import markdownStyles from '@components/markdown/markdown-styles.module.css'
 
 export default function PostPage({
@@ -14,6 +14,7 @@ export default function PostPage({
 }) {
   return (
     <>
+      <TitleHead title={title}/>
       <Head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
       </Head>
