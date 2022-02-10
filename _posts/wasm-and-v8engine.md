@@ -1,8 +1,8 @@
 ---
-title: 疑問メモ_TypeScriptをネイティブコンパイル
+title: 疑問メモ_WASMとV8エンジン
 date: '2021-12-26'
-layout: layouts/post.njk
-scheduled: '2021-12-26'
+tag:
+  - Webブラウザ
 ---
 
 ### 疑問

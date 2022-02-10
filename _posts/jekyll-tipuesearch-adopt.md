@@ -2,8 +2,9 @@
 title: Jekyll Tipue Searchによる記事検索の導入方法
 categories: tech
 date: '2022-01-18'
-layout: layouts/post.njk
-scheduled: '2022-01-18'
+tag:
+  - Jekyll
+  - Ruby
 ---
 
 Github Pagesで手軽にブログを作成する際に第一候補となるであろうStatic Site Generator「Jekyll」に自作ブログ内検索を手軽に導入する方法について記述します。

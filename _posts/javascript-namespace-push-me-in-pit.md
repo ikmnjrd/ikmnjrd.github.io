@@ -1,8 +1,8 @@
 ---
 title: JavaScript名前空間でハマった話
 date: '2021-12-30'
-layout: layouts/post.njk
-scheduled: '2021-12-30'
+tag:
+  - JavaScript
 ---
 
 ハマったポイントとその解決策を書く。

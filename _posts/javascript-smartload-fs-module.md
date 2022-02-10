@@ -1,13 +1,15 @@
 ---
-title: スマートにfsモジュールを読み込む
+title: CommonJSでもスマートにfsモジュールを読み込む
 date: '2022-02-03'
-layout: layouts/post.njk
-scheduled: '2022-02-03'
+tag:
+  - JavaScript
 ---
-
+### 前提
 Node.jsで開発するとき、`fs`はかなりよく使う。
+そして私はまだwebpackの呪縛から逃れられていないので、CommonJSで書きたい場面が多い。
 そして現在で使うときは大抵`Promise型`で使う。
 
+### 結論
 そんなときには次のように書くとスマート
 ```javascript
 const { promises: fs } = require('fs')

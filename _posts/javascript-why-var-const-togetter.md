@@ -1,8 +1,10 @@
 ---
 title: 疑問_なぜvarとconstが共存しているのか
 date: '2022-01-23'
-layout: layouts/post.njk
-scheduled: '2022-01-23'
+tag:
+  - JavaScript
+  - Next.js
+  - Node.js
 ---
 ### 疑問に遭遇した状況
 Next.jsで`$ next export`が気になり、`~/node_modules/next/dist/cli/next-export.js`を見ていた。

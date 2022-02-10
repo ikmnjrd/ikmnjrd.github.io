@@ -1,8 +1,9 @@
 ---
 title: DockerとFirebaseで作るReact環境構築
 date: '2020-04-01'
-layout: layouts/post.njk
-scheduled: '2020-04-01'
+tag:
+  - Docker
+  - Firebase
 ---
 
 ## 都合のいいdockerイメージをダウンロード

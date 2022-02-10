@@ -1,8 +1,9 @@
 ---
 title: TypeScriptをネイティブコンパイルするって？
 date: '2021-12-26'
-layout: layouts/post.njk
-scheduled: '2021-12-26'
+tag:
+ - TypeScript
+ - Deno
 ---
 
 ### 疑問

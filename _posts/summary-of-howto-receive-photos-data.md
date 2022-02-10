@@ -1,8 +1,8 @@
 ---
 title: 履歴書用の写真をデータで受け取る方法まとめ
 date: '2022-01-31'
-layout: layouts/post.njk
-scheduled: '2022-01-31'
+tag:
+  - misc
 ---
 
 

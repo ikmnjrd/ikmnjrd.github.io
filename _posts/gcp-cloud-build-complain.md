@@ -1,8 +1,8 @@
 ---
 title: GCPのCloudBuildなんやねんこいつ
 date: '2022-01-30'
-layout: layouts/post.njk
-scheduled: '2022-01-30'
+tag:
+  - GCP
 ---
 ### 疑問に遭遇した状況
 最近 Cloud Run にハマってる。Cloud SDK こと gcloud コマンドで Artifact Registry(Container Registry)にアップロードしてほいっと `gcloud run deploy` ですぐにサービスが公開できて気持ちがいい。

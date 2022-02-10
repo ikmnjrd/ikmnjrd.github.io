@@ -1,8 +1,8 @@
 ---
 title: SVGアイコンを配布しているWebサイト
 date: '2022-01-11'
-layout: layouts/post.njk
-scheduled: '2022-01-11'
+tag:
+  - misc
 ---
 
 ## **SVGとは**

@@ -1,8 +1,8 @@
 ---
 title: kali linuxでVNCサーバーにnovncで接続する
 date: '2021-10-31'
-layout: layouts/post.njk
-scheduled: '2021-10-31'
+tag:
+  - Linux
 ---
 [公式](https://www.kali.org/docs/general-use/novnc-kali-in-browser/)にやり方も書いてあるがこの通りだとエラーが出た。
 

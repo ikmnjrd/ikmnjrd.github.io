@@ -1,8 +1,8 @@
 ---
 title: 疑問メモ_evalが頻出するのはなぜ
 date: '2021-12-26'
-layout: layouts/post.njk
-scheduled: '2021-12-26'
+tag:
+  - JavaScript
 ---
 
 ### 疑問

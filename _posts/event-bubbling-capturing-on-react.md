@@ -2,8 +2,10 @@
 title: イベントキャプチャリングとバブリング（React）
 categories: tech
 date: '2022-01-17'
-layout: layouts/post.njk
-scheduled: '2022-01-17'
+tag:
+  - React
+  - JavaScript
+  - Webブラウザ
 ---
 Reactはあまり関係ないです。
 

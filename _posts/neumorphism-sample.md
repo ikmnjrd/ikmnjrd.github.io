@@ -1,8 +1,8 @@
 ---
 title: Neumorphismサンプル
 date: '2022-02-01'
-layout: layouts/post.njk
-scheduled: '2022-02-01'
+tag:
+  - CSS
 ---
 
 ## Sandbox

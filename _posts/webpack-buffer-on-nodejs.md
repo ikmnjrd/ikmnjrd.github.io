@@ -1,8 +1,9 @@
 ---
 title: WebpackでBuffer（Node.js）を使う
 date: '2022-01-02'
-layout: layouts/post.njk
-scheduled: '2022-01-02'
+tag:
+  - webpack
+  - Node.js
 ---
 
 駆け出しエンジニアのふわっとした理解を書く。

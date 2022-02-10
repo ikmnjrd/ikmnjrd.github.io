@@ -1,8 +1,9 @@
 ---
-title: 疑問メモ_cosole.logをソースコードに残しておくことのメモリへの影響について
+title: cosole.logをソースコードに残しておくことのメモリへの影響について
 date: '2022-01-05'
-layout: layouts/post.njk
-scheduled: '2022-01-05'
+tag:
+  - JavaScript
+  - Webブラウザ
 ---
 
 ### 疑問
@@ -18,9 +19,5 @@ Create React Appで適当に作ったプロジェクトで適当にconsole.log�
 `console.log`の呼び出しを増やしてブラウザを更新->HEAP Snapshot取得すると`console.log`の呼び出し回数に応じてメモリ使用量が一見増えるように見えたが、しばらく放置して再びHEAP Snapshotを取得するとメモリ使用量が低水準にまで戻る。GCに回収されたのかな？と想像したが、よくわからない。
 ![メモリ](https://i.gyazo.com/1ef68f7e017d8ed2309a6ff90d9036ad.png)
 
-### 周辺用語
-- 
-
-
-### 参考文献
-- []()
+### 結論
+ほぼ影響はない

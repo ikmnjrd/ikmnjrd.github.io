@@ -2,8 +2,8 @@
 title: Macでオンライン会議を文字起こし
 categories: misc
 date: '2022-01-17'
-layout: layouts/post.njk
-scheduled: '2022-01-17'
+tag:
+  - misc
 ---
 
 ### 調査

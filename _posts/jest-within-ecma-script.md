@@ -1,8 +1,9 @@
 ---
 title: 疑問メモ_JestでECMAScriptを使う
 date: '2022-01-07'
-layout: layouts/post.njk
-scheduled: '2022-01-07'
+tag:
+  - Jest
+  - JavaScript
 ---
 
 ### 疑問

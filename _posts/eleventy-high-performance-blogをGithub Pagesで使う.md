@@ -1,8 +1,9 @@
 ---
 title: Googles製のテンプレート「eleventy-high-performance-blog」をGithub Pagesで使う
 date: '2022-02-06'
-layout: layouts/post.njk
-scheduled: '2022-01-28'
+tag:
+  - eleventy.js
+  - GitHub
 ---
 
 そもそも11tyを使ったのは、Next.jsのexport(静的)

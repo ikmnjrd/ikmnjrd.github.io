@@ -1,8 +1,9 @@
 ---
 title: NotionでMarkdown記法的に画像を埋め込む（w/Gyazo）
 date: '2022-01-23'
-layout: layouts/post.njk
-scheduled: '2022-01-23'
+tag:
+  - Notion
+  - misc
 ---
 
 ### 結論

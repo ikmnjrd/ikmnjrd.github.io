@@ -1,8 +1,10 @@
 ---
 title: storybook-builder-viteを使ってみる
 date: '2022-01-09'
-layout: layouts/post.njk
-scheduled: '2022-01-09'
+tag:
+  - storybook
+  - Vite
+  - OSS
 ---
 
 

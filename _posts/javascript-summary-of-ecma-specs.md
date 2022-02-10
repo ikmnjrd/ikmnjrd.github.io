@@ -1,8 +1,8 @@
 ---
 title: 歴代ECMAScript仕様情報のまとめ
 date: '2022-01-16'
-layout: layouts/post.njk
-scheduled: '2022-01-16'
+tag:
+  - JavaScript
 ---
 
 ### まとめ

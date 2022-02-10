@@ -1,8 +1,8 @@
 ---
 title: draw.ioで作る技術資料に使うツールアイコン
 date: '2022-01-28'
-layout: layouts/post.njk
-scheduled: '2022-01-28'
+tag:
+  - misc
 ---
 
 ### まずは検索

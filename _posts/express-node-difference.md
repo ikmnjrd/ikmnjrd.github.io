@@ -1,8 +1,9 @@
 ---
 title: 疑問メモ_NodejsとExpressの違い
 date: '2021-12-26'
-layout: layouts/post.njk
-scheduled: '2021-12-26'
+tag:
+  - Node.js
+  - Express.js
 ---
 
 

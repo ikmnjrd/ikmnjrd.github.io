@@ -1,8 +1,8 @@
 ---
 title: WeakMapの使い所
 date: '2022-01-16'
-layout: layouts/post.njk
-scheduled: '2022-01-16'
+tag:
+  - JavaScript
 ---
 
 ### WeakMapとは

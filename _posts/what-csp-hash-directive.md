@@ -1,8 +1,8 @@
 ---
 title: 疑問メモ_scriptタグのcsp-hashディレクティブについて
 date: '2022-01-19'
-layout: layouts/post.njk
-scheduled: '2022-01-19'
+tag:
+  - Webブラウザ
 ---
 ### 疑問に遭遇した状況
 ネットサーフィンをしていて`<head/>`を覗いていた

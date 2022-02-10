@@ -1,8 +1,8 @@
 ---
 title: CSSアニメーションで作るハンバーガーメニュー
 date: '2022-01-12'
-layout: layouts/post.njk
-scheduled: '2022-01-12'
+tag:
+  - CSS
 ---
 
 ## サンプルコード

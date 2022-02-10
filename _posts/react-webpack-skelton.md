@@ -1,8 +1,8 @@
 ---
 title: reactスケルトン的な
 date: '2020-03-01'
-layout: layouts/post.njk
-scheduled: '2020-03-01'
+tag:
+  - React
 ---
 
 ## リポジトリ

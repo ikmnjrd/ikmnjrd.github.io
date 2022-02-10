@@ -1,8 +1,9 @@
 ---
 title: V8エンジン（JavaScript）が吐くアセンブリを見たい！
 date: '2022-01-09'
-layout: layouts/post.njk
-scheduled: '2022-01-09'
+tag:
+ - JavaScript
+ - Node.js
 ---
 
 アセンブリを読みたい願望がある。

@@ -1,8 +1,8 @@
 ---
 title: Dockerにおけるログ表示
 date: '2022-01-26'
-layout: layouts/post.njk
-scheduled: '2022-01-26'
+tag:
+  - Docker
 ---
 
 ### 単体コンテナ用

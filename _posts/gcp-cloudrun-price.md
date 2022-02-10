@@ -1,8 +1,8 @@
 ---
 title: Google Cloud Runで動かすアプリをRDBに接続した際の料金を考える
 date: '2022-01-10'
-layout: layouts/post.njk
-scheduled: '2022-01-10'
+tag:
+  - GCP
 ---
 
 Googleが提供してくれているCloud Runは便利ですよね。私は普段Reactでクライアント側を触っていてFirebaseで済ませることが多いのですが、Cloud Runの便利さに感化されてRDBも使いたくなりました。（FirebaseはNoSQLしか提供してくれていないので...）
@@ -30,12 +30,12 @@ Googleが提供してくれているCloud Runは便利ですよね。私は普�
 
 #### 内訳
 1. ストレージとネットワークの料金
-   * SSD ストレージ容量: 1 GB あたり $0.221/月
-   * HDD ストレージ容量: 1 GB あたり $0.117/月
+  * SSD ストレージ容量: 1 GB あたり $0.221/月
+  * HDD ストレージ容量: 1 GB あたり $0.117/月
 2. ネットワーク下り（外向き）の料金
-   * 送信先 Google プロダクトであれば大陸内は無料
-   * インターネット下り（外向き、Cloud Interconnect を使用する場合）は$0.05/GB
-   * インターネット下り（外向き、Cloud Interconnect を使用しない場合）は$0.19/GB
+  * 送信先 Google プロダクトであれば大陸内は無料
+  * インターネット下り（外向き、Cloud Interconnect を使用する場合）は$0.05/GB
+  * インターネット下り（外向き、Cloud Interconnect を使用しない場合）は$0.19/GB
 3. インスタンスの料金
 
 | 共有コア マシンタイプ | 仮想 CPU 数 |RAM（GB） |最大ストレージ容量|1ヶ月あたりの料金（米ドル）

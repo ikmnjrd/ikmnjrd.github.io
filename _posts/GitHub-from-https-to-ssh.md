@@ -1,8 +1,8 @@
 ---
 title: GitHubのhttpsからSSH通信への切り替え
 date: '2021-10-29'
-layout: layouts/post.njk
-scheduled: '2021-10-29'
+tag:
+  - GitHub
 ---
 
 ```bash
