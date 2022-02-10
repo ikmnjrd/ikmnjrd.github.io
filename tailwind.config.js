@@ -7,6 +7,7 @@ module.exports = {
       current: 'currentColor',
       'white': '#ffffff',
       'black': '#000000',
+      'red': '#8b0000',
       /* 100~400を中心にスタイリングする */
       'newmo': {
         100: '#EFF2F9',
