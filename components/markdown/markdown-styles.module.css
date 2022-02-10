@@ -2,7 +2,6 @@
   @apply leading-relaxed;
 }
 
-
 .markdown table,
 .markdown blockquote {
   @apply my-6;
@@ -16,7 +15,7 @@
 .markdown h2,
 .markdown h3,
 .markdown h4 {
-  @apply leading-snug before:content-['#'] before:pr-2;
+  @apply leading-snug;
 }
 
 .markdown h1 {
@@ -34,6 +33,9 @@
 
 .markdown a {
   @apply hover:underline hover:text-newmo-400 visited:text-newmo-300;
+}
+.markdown a[class=header-anchor]{
+  @apply text-newmo-300 hover:text-newmo-400;
 }
 
 .markdown ul {
