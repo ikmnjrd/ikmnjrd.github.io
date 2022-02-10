@@ -5,14 +5,14 @@ import MarkdownIt from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor'
 import markdownItPrism from 'markdown-it-prism'
 import Head from 'next/head'
-import TitleHead from '@components/TitleHead'
-import markdownStyles from '@components/markdown/markdown-styles.module.css'
+import TitleHead from 'components/TitleHead'
+import markdownStyles from 'components/markdown/markdown-styles.module.css'
 
 export default function PostPage({
   frontmatter: { title, date, cover_image },
   slug,
   innerHtml,
-}) {
+} :any ) {
   return (
     <>
       <TitleHead title={title}/>
@@ -46,7 +46,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({ params: { slug } }:any) {
   const markdownIt = new MarkdownIt({
     html: true,
   })

@@ -1,6 +1,7 @@
-import Link from 'next/link'
 
-export default function Footer() {
+type FooterProps = {}
+
+export default function Footer({}:FooterProps) {
   const date = new Date();
   return (
     <footer className="text-center py-5 text-sm text-newmo-300">
@@ -8,3 +9,4 @@ export default function Footer() {
     </footer>
   )
 }
+

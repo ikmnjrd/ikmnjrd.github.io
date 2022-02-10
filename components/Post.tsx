@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 
-export default function Post({ post }) {
+export default function Post({ post }:any) {
   return (
     <>
       {/* <img src={post.frontmatter.cover_image} alt='' className="aspect-[16/9] rounded-2xl" /> */}
