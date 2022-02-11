@@ -32,10 +32,10 @@
 }
 
 .markdown a {
-  @apply hover:underline hover:text-newmo-400 visited:text-newmo-300;
+  @apply hover:underline hover:text-newmo-400 visited:text-newmo-300 break-all;
 }
 .markdown a[class=header-anchor]{
-  @apply text-newmo-300 hover:text-newmo-400;
+  @apply text-newmo-300 hover:text-newmo-400 break-all;
 }
 
 .markdown ul {

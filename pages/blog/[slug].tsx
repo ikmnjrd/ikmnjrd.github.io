@@ -23,7 +23,7 @@ export default function PostPage({
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
       </Head>
 
-      <div className='max-w-2xl mx-auto'>
+      <div className=''>
         <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left'>{title}</h1>
         <div className='text-right'>Posted on {date}</div>
         <img src={cover_image} alt='' />
