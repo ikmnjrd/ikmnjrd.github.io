@@ -60,6 +60,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>undefined/blog/gyazo-blog-useful</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>undefined/blog/hamburger-css-animation</loc>
     <changefreq>hourly</changefreq>
   </url>
