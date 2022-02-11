@@ -7,6 +7,9 @@ import markdownItPrism from 'markdown-it-prism'
 import Head from 'next/head'
 import TitleHead from 'components/TitleHead'
 import markdownStyles from 'components/markdown/markdown-styles.module.css'
+import Image from 'next/image'
+import ImageOptimizer from 'utils/ImageOptimizer'
+import { forEachTrailingCommentRange } from 'typescript'
 
 export default function PostPage({
   frontmatter: { title, date, cover_image },
@@ -67,11 +70,21 @@ export async function getStaticProps({ params: { slug } }:any) {
   const { data: frontmatter, content } = matter(markdownWithMeta)
   const innerHtml = markdownIt.render(content)
 
+  const image_tags:any = innerHtml.match(/src="https:\/\/i\.gyazo.*?"/g)
+
+  const images_path = await ImageOptimizer({images: image_tags, name: slug})
+
+  let replaceHtml = innerHtml
+
+  for( const image_path of images_path ) {
+    replaceHtml = replaceHtml.replace(/src="https:\/\/i\.gyazo.*?"/, `src="/${image_path}"`)
+  }
+
   return {
     props: {
       frontmatter,
       slug,
-      innerHtml,
+      innerHtml: replaceHtml,
     },
   }
 }

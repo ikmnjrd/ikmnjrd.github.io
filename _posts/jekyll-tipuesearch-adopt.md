@@ -9,7 +9,7 @@ tag:
 
 Github Pagesで手軽にブログを作成する際に第一候補となるであろうStatic Site Generator「Jekyll」に自作ブログ内検索を手軽に導入する方法について記述します。
 
-![完成イメージ図](https://gyazo.com/9f18a04650fb3bfaef972a88a25a00f2.png)
+![完成イメージ図](https://i.gyazo.com/9f18a04650fb3bfaef972a88a25a00f2.png)
 
 
 ### 準備するもの

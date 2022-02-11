@@ -27,6 +27,9 @@ jobs:
     - name: install
       run: npm install --frozen-lockfile
 
+    - name: create avif images
+      run: mkdir tmp
+
     - name: build
       run: npm run build
 
