@@ -10,7 +10,7 @@ tag:
 簡単にこのサービスを説明すると、Gyazoを使ってスクリーンショットを撮ると無料のクラウドサーバーにアップロード&URLが発行され、共有が簡単にできるサービスです。
 
 `https://gyazo.com/37f2d7be5ea5964c6aa339f0aa95c9f8`
-![例](https://i.gyazo.com/37f2d7be5ea5964c6aa339f0aa95c9f8)
+![例](https://i.gyazo.com/37f2d7be5ea5964c6aa339f0aa95c9f8.png)
 
 
 このようにすると、画像を直接指定できる。
