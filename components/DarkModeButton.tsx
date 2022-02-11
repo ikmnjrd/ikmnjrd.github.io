@@ -8,7 +8,7 @@ type DarkModeButtonProps = {
 }
 
 export default function DarkModeButton ({className} :DarkModeButtonProps) {
-  const [darkMode, setDarkMode] = useState<boolean>();
+  const [darkMode, setDarkMode] = useState<boolean>(false);
 
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function DarkModeButton ({className} :DarkModeButtonProps) {
   }
 
   return (
-    <button onClick={() => handleChangeDarkMode()} className={className}>
+    <button onClick={() => handleChangeDarkMode()} className={className} aria-label="Toggle Theme">
       {/* <Image
         src={ darkMode ? moonPic : sunPic}
         alt="Picture of the author"
@@ -45,7 +45,13 @@ export default function DarkModeButton ({className} :DarkModeButtonProps) {
         // blurDataURL="data:..." automatically provided
         // placeholder="blur" // Optional blur-up while loading
       /> */}
-      <img className="svg-icon w-6 md:w-10 hover:opacity-50 active:opacity-30" src={`/${ darkMode ? "nights_stay_white_24dp": "light_mode_white_24dp"}.svg`} />
+      <img
+        width="100%"
+        className="svg-icon w-6 md:w-10 hover:opacity-50 active:opacity-30"
+        src={`/${ darkMode ? "nights_stay_white_24dp": "light_mode_white_24dp"}.svg`}
+        alt={"Dark Mode Status is " + darkMode}
+        aria-hidden="true"
+      />
     </button>
   )
 }
