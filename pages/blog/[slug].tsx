@@ -6,6 +6,7 @@ import markdownItAnchor from 'markdown-it-anchor'
 import markdownItPrism from 'markdown-it-prism'
 import Head from 'next/head'
 import TitleHead from 'components/TitleHead'
+import OgpHead from 'components/OgpHead'
 import markdownStyles from 'components/markdown/markdown-styles.module.css'
 import ImageOptimizer from 'utils/ImageOptimizer'
 
@@ -17,18 +18,24 @@ export default function PostPage({
   return (
     <>
       <TitleHead title={title}/>
+      <OgpHead
+        title={title}
+        type="article"
+        url={"blog/" + slug}
+        image={"images/img1.jpg"}
+      />
       <Head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
         { description && <meta name="description" content={description}/> }
       </Head>
 
-      <div className=''>
-        <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left'>{title}</h1>
-        <div className='text-right'>Posted on {date}</div>
-        <img src={cover_image} alt='' />
 
-        <div dangerouslySetInnerHTML={{ __html: innerHtml }} className={markdownStyles['markdown']}></div>
-      </div>
+      <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left'>{title}</h1>
+      <div className='text-right'>Posted on {date}</div>
+      <img src={cover_image} alt='' />
+
+      <div dangerouslySetInnerHTML={{ __html: innerHtml }} className={markdownStyles['markdown']}></div>
+
     </>
   )
 }
