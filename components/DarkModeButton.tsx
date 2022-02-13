@@ -46,8 +46,9 @@ export default function DarkModeButton ({className} :DarkModeButtonProps) {
         // placeholder="blur" // Optional blur-up while loading
       /> */}
       <img
-        width="100%"
-        className="svg-icon w-6 md:w-10 hover:opacity-50 active:opacity-30"
+        width="24px"
+        height="24px"
+        className="svg-icon md:w-10 hover:opacity-50 active:opacity-30"
         src={`/${ darkMode ? "nights_stay_white_24dp": "light_mode_white_24dp"}.svg`}
         alt={"Dark Mode Status is " + darkMode}
         aria-hidden="true"
