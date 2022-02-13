@@ -1,9 +1,9 @@
 ---
 title: よく使うgcloudコマンド
+description: Google Cloud Platform（gcloud）の個人的によく使うコマンドを備忘録的にまとめています。
 date: '2022-01-09'
 tag:
   - GCP
-
 ---
 
 主にCloudRun周辺の。すごく個人的なまとめです。

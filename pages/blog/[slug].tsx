@@ -7,12 +7,10 @@ import markdownItPrism from 'markdown-it-prism'
 import Head from 'next/head'
 import TitleHead from 'components/TitleHead'
 import markdownStyles from 'components/markdown/markdown-styles.module.css'
-import Image from 'next/image'
 import ImageOptimizer from 'utils/ImageOptimizer'
-import { forEachTrailingCommentRange } from 'typescript'
 
 export default function PostPage({
-  frontmatter: { title, date, cover_image },
+  frontmatter: { title, date, cover_image, description },
   slug,
   innerHtml,
 } :any ) {
@@ -21,6 +19,7 @@ export default function PostPage({
       <TitleHead title={title}/>
       <Head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+        { description && <meta name="description" content={description}/> }
       </Head>
 
       <div className=''>
@@ -70,7 +69,7 @@ export async function getStaticProps({ params: { slug } }:any) {
   const { data: frontmatter, content } = matter(markdownWithMeta)
   const innerHtml = markdownIt.render(content)
 
-  const image_tags:any = innerHtml.match(/src="https:\/\/i\.gyazo.*?"/g)
+  const image_tags:string[] = innerHtml.match(/src="https:\/\/i\.gyazo.*?"/g) ?? []
 
   const images_path = await ImageOptimizer({images: image_tags, name: slug})
 
