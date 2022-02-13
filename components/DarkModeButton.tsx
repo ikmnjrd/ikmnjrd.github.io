@@ -17,10 +17,10 @@ export default function DarkModeButton ({className} :DarkModeButtonProps) {
       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
       setDarkMode(true)
-      document.querySelector('html')?.classList.add('dark')
+      document.documentElement.classList.add('dark')
     } else {
       setDarkMode(false)
-      document.querySelector('html')?.classList.remove('dark')
+      document.documentElement.classList.remove('dark')
     }
   }, [darkMode])
 
@@ -36,15 +36,6 @@ export default function DarkModeButton ({className} :DarkModeButtonProps) {
 
   return (
     <button onClick={() => handleChangeDarkMode()} className={className} aria-label="Toggle Theme">
-      {/* <Image
-        src={ darkMode ? moonPic : sunPic}
-        alt="Picture of the author"
-        className="svg-icon w-6 md:w-10 hover:opacity-50 active:opacity-30"
-        width={32}
-        height={32}
-        // blurDataURL="data:..." automatically provided
-        // placeholder="blur" // Optional blur-up while loading
-      /> */}
       <img
         width="24px"
         height="24px"
