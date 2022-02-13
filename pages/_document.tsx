@@ -4,10 +4,6 @@ export default function Document() {
   return (
     <Html lang="ja" prefix="og: http://ogp.me/ns#">
       <Head>
-        <meta property="og:url" key="url" content="https://ikmnjrd.github.io/" />
-        <meta property="og:type" key="type" content="website" />
-        <meta property="og:image" key="image" content="https://ikmnjrd.github.io/Untitled.png" />
-        <meta property="og:title" key="title" content="ikmnjrd.github.io" />
         <meta name="author" content="ikmnjrd" />
         <meta charSet="utf-8" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
