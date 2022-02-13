@@ -22,7 +22,7 @@ export default function PostPage({
         title={title}
         type="article"
         url={"blog/" + slug}
-        image={"images/img1.jpg"}
+        image={"images/posts/img1.jpg"}
       />
       <Head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
