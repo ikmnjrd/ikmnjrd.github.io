@@ -12,6 +12,7 @@ export default function Home({ posts }:any) {
         title="ikmnjrd.github.io"
         type="website"
         image="Untitled.png"
+        url=""
       />
 
       <ul>
