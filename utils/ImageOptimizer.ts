@@ -63,7 +63,7 @@ const converter = async({images, name}:converterProps):Promise<string[]> => {
 
   if (images_url) {
     for( const [index, image_url] of images_url.entries() ) {
-      const flag = !existCacheImage({
+      const flag = existCacheImage({
           name: name,
           index: index,
           url: image_url ?? "" })
@@ -87,6 +87,9 @@ const converter = async({images, name}:converterProps):Promise<string[]> => {
         catch (e) {
           console.error('Error: ', e)
         }
+      }
+      else {
+        output_file_names.push(`images/posts/test/${name}-${index}.avif`)
       }
     }
   }
