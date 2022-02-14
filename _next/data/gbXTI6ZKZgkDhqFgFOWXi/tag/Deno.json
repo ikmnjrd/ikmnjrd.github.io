@@ -1,1 +1,0 @@
-{"pageProps":{"tag":"Deno","posts":[{"slug":"typescript-compile","frontmatter":{"title":"TypeScriptをネイティブコンパイルするって？","date":"2021-12-26","tag":["TypeScript","Deno"]},"content":"\n### 疑問\ntypescriptをjavascriptを挟まずにネイティブコードにコンパイルするようなプロジェクトはないのか？\n\n### 自分なりの回答\nないよ。\n\nDenoがTypeScriptコードをサポートしているが、中ではコンパイラが一度JavaScriptに変換している。\n"}]},"__N_SSG":true}
