@@ -1,5 +1,5 @@
 import { ReactNode, FunctionComponent } from 'react'
-import SvgIcon from 'components/SvgIcon'
+import SvgIcon from '@/components/SvgIcon'
 
 type Props = {
   children?: ReactNode
