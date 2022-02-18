@@ -17,6 +17,7 @@ export default function about({}) {
       <div>
         <p>雑多な記録</p>
         <p>Googleアナリティクス</p>
+        <div>hoge</div>
       </div>
     </>
   )
