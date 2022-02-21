@@ -19,6 +19,9 @@ export default function Header({}:HeaderProps) {
 
         {/* Right Menu */}
         <div className="col-start-6 col-end-7 md:block hidden">
+          <Link href="/about" passHref>
+            <a className="header-text mr-4 md:text-3xl text-2xl font-serif decoration-dotted hover:opacity-50 hover:underline active:opacity-30">About</a>
+          </Link>
           <Link href="/tags" passHref>
             {/*
             // @ts-ignore */}
@@ -29,6 +32,9 @@ export default function Header({}:HeaderProps) {
 
       {/* SmartPhone Menu */}
       <div className="md:hidden text-right ">
+        <Link href="/about" passHref>
+          <a className="header-text mr-4 md:text-3xl text-2xl font-serif decoration-dotted hover:opacity-50 hover:underline active:opacity-30">About</a>
+        </Link>
         <Link href="/tags" passHref>
           {/*
           // @ts-ignore */}
