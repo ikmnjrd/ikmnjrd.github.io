@@ -11,3 +11,44 @@ img[class^="svg-icon"] {
   filter: drop-shadow(3px 3px 3px #fff)
     drop-shadow(-2px -2px 1px rgba(0, 0, 0, 0.3));
 }
+
+.footer-content {
+  position: relative;
+  top: 50px;
+  z-index: 1;
+}
+
+.wave {
+  background: url('/wave.svg') repeat-x;
+  position: relative;
+  height: 198px;
+  top: 0px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -5px;
+  margin-bottom: -203px;
+  height: 203px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-10px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
