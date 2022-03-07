@@ -39,8 +39,6 @@ const Footer: FunctionComponent = ({ children }: Props) => {
       </div>
       <div className="wave"></div>
       <div className="wave"></div>
-      {/* <div className="wave-bottom"></div> */}
-      
     </footer>
   )
 }

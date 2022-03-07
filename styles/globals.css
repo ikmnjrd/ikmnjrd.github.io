@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+main {
+  /* footerを最下部に固定表示するため */
+  min-height: calc(100vh - 250.195px - 32px - 4rem);
+}
+
 .header-text {
   color: white;
   text-shadow: -2px -2px 1px rgba(0, 0, 0, 0.25), 3px 3px 3px #fff;
