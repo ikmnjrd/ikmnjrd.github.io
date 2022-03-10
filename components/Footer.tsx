@@ -9,7 +9,7 @@ type Props = {
 const Footer: FunctionComponent = ({ children }: Props) => {
   const date = new Date();
   return (
-    <footer className="text-center text-sm text-newmo-300" role="contentinfo">
+    <footer className="text-center text-sm" role="contentinfo">
       <div className="footer-content">
         <ul className="flex items-center justify-between max-w-[100px] mx-auto">
           <li>

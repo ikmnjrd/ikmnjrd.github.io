@@ -10,7 +10,7 @@ export default function Tag({ tags }:any) {
   return (
     <>
       <TitleHead title={"Tag一覧"}/>
-      <h2>Tag一覧</h2>
+      <h1 className="text-3xl pt-8 pb-4">Tag一覧</h1>
       <div>
         {tags_obj}
       </div>
