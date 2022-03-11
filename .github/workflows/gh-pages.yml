@@ -30,6 +30,8 @@ jobs:
     ## /scripts/generate-sitemapを動かすため
     - name: setup for generate-sitemap
       run: echo $WEBSITE_URL
+
+    - name: printenv
       run: printenv
 
     ## 開発環境ではキャッシュとして利用してるdirを作成
