@@ -29,13 +29,6 @@ jobs:
     - name: install
       run: npm install --frozen-lockfile
 
-    ## /scripts/generate-sitemapを動かすため
-    - name: setup for generate-sitemap
-      run: echo $WEBSITE_URL
-
-    - name: printenv
-      run: printenv
-
     ## 開発環境ではキャッシュとして利用してるdirを作成
     - name: create avif images dir
       run: mkdir tmp
