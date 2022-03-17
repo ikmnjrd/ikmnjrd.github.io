@@ -18,9 +18,10 @@ type Props = {
   size: string
   strokeWidth?: number
   classes?: string
+  fill?: string
 }
 
-const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
+const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, fill, classes }) => {
   switch (type) {
     case 'logo':
       return (
@@ -30,7 +31,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 64 64"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
         >
@@ -59,7 +60,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 24 24"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
           strokeLinecap="round"
@@ -78,7 +79,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 24 24"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
           strokeLinecap="round"
@@ -95,7 +96,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 24 24"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
           strokeLinecap="round"
@@ -120,7 +121,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 24 24"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
           strokeLinecap="round"
@@ -137,7 +138,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 64 64"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
         >
@@ -155,7 +156,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 24 24"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
           strokeLinecap="round"
@@ -172,7 +173,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 24 24"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
           strokeLinecap="round"
@@ -189,7 +190,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 64 64"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
         >
@@ -204,7 +205,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 64 64"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
         >
@@ -220,7 +221,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 64 64"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
         >
@@ -236,7 +237,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 64 64"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
         >
@@ -252,7 +253,7 @@ const SvgIcon: React.FC<Props> = ({ type, size, strokeWidth = 2, classes }) => {
           width={size}
           height={size}
           viewBox="0 0 64 64"
-          fill="none"
+          fill={ fill || "none" }
           stroke="currentColor"
           strokeWidth={strokeWidth}
         >

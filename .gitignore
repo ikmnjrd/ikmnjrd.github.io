@@ -4,6 +4,7 @@ dist
 target
 docs
 tmp
+public/sitemap.xml
 
 ## dependencies
 node_modules

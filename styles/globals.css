@@ -9,12 +9,13 @@ main {
 
 .header-text {
   color: white;
-  text-shadow: -2px -2px 1px rgba(0, 0, 0, 0.25), 3px 3px 3px #fff;
+  text-shadow: -2px -2px 1px rgba(0, 0, 0, .25), 3px 3px 3px rgba(255, 255, 255, .5);
 }
 
-img[class^="svg-icon"] {
-  filter: drop-shadow(3px 3px 3px #fff)
-    drop-shadow(-2px -2px 1px rgba(0, 0, 0, 0.3));
+img[class^="svg-icon"], .footer-svg {
+  color: white;
+  filter: drop-shadow(3px 3px 3px rgba(255, 255, 255, .3))
+    drop-shadow(-2px -2px 1px rgba(0, 0, 0, .25));
 }
 
 .footer-content {

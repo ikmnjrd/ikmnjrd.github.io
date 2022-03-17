@@ -18,9 +18,9 @@ const Footer: FunctionComponent = ({ children }: Props) => {
               target="_blank"
               rel="nofollow noopener noreferrer"
               title="Twitter"
-              className="hover:opacity-50 block"
+              className="footer-svg hover:opacity-50 block"
             >
-              <SvgIcon type="twitter" size="2.3em" strokeWidth={2.3} />
+              <SvgIcon type="twitter" size="2.3em" strokeWidth={2.3} fill="#fff" />
             </a>
           </li>
           <li>
@@ -29,9 +29,9 @@ const Footer: FunctionComponent = ({ children }: Props) => {
               target="_blank"
               rel="nofollow noopener noreferrer"
               title="GitHub"
-              className="hover:opacity-50 block"
+              className="footer-svg header-text hover:opacity-50 block"
             >
-              <SvgIcon type="github" size="2em" strokeWidth={1} />
+              <SvgIcon type="github" size="2em" strokeWidth={1} fill="#fff" />
             </a>
           </li>
         </ul>
