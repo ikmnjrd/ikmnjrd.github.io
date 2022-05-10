@@ -1,0 +1,7 @@
+.yarn/
+.next/
+.output/
+dist/
+docs/
+_posts/
+node_modules/

@@ -1,0 +1,9 @@
+__tests__
+.next/
+.output/
+docs/
+_posts/
+node_modules/
+jest.config.js
+jest.setup.js
+next.config.js
