@@ -168,6 +168,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/swagger-ui-local-zubora</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/typescript-compile</loc>
     <changefreq>hourly</changefreq>
   </url>
