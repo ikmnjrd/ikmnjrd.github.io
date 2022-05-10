@@ -1,13 +1,8 @@
-import { ReactNode, FunctionComponent } from 'react'
+import { VFC } from 'react'
 import SvgIcon from '@/components/SvgIcon'
 
-type Props = {
-  children?: ReactNode
-}
-
-
-const Footer: FunctionComponent = ({ children }: Props) => {
-  const date = new Date();
+const Footer: VFC = () => {
+  const date = new Date()
   return (
     <footer className="text-center text-sm" role="contentinfo">
       <div className="footer-content">
@@ -20,7 +15,12 @@ const Footer: FunctionComponent = ({ children }: Props) => {
               title="Twitter"
               className="footer-svg hover:opacity-50 block"
             >
-              <SvgIcon type="twitter" size="2.3em" strokeWidth={2.3} fill="#fff" />
+              <SvgIcon
+                type="twitter"
+                size="2.3em"
+                strokeWidth={2.3}
+                fill="#fff"
+              />
             </a>
           </li>
           <li>
@@ -35,7 +35,10 @@ const Footer: FunctionComponent = ({ children }: Props) => {
             </a>
           </li>
         </ul>
-        <p>©︎ikmnjrd - <time dateTime={date.toString()}>{ date.getFullYear() }</time></p>
+        <p>
+          ©︎ikmnjrd -{' '}
+          <time dateTime={date.toString()}>{date.getFullYear()}</time>
+        </p>
       </div>
       <div className="wave"></div>
       <div className="wave"></div>
@@ -43,4 +46,4 @@ const Footer: FunctionComponent = ({ children }: Props) => {
   )
 }
 
-export default Footer;
+export default Footer
