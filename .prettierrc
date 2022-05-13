@@ -1,5 +1,9 @@
 {
   "semi": false,
   "singleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "es5",
+  "jsxSingleQuote": false,
+  "bracketSpacing": true,
+  "printWidth": 50,
+  "arrowParens": "always"
 }
