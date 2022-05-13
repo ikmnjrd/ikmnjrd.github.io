@@ -1,17 +1,17 @@
 module.exports = {
   mode: 'jit',
   darkMode: 'class',
-  content: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {},
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'white': '#ffffff',
-      'black': '#000000',
-      'red': '#8b0000',
+      white: '#ffffff',
+      black: '#000000',
+      red: '#8b0000',
       /* 100~400を中心にスタイリングする */
-      'newmo': {
+      newmo: {
         100: '#EFF2F9',
         200: '#E4EBF1',
         300: '#B5BFC6',
@@ -19,7 +19,7 @@ module.exports = {
         600: '#5A6872',
         800: '#3F4950',
       },
-    }
+    },
   },
   plugins: [],
 }
