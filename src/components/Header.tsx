@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import DarkModeButton from 'components/DarkModeButton'
+import DarkModeButton from '~/components/DarkModeButton'
 
 export default function Header() {
   return (

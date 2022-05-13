@@ -2,7 +2,11 @@ const fs = require('fs')
 const globby = require('globby')
 
 function addPage(page) {
-  const path = page.replace('pages', '').replace('.js', '').replace('.md', '').replace('_posts', '/blog')
+  const path = page
+    .replace('pages', '')
+    .replace('.js', '')
+    .replace('.md', '')
+    .replace('_posts', '/blog')
   const route = path === '/index' ? '' : path
 
   return `  <url>
@@ -25,7 +29,7 @@ ${pages.map(addPage).join('\n')}
 </urlset>`
 
   fs.writeFileSync('public/sitemap.xml', sitemap)
-  console.info("generated sitemap.xml!")
+  console.info('generated sitemap.xml!')
 }
 
 generateSitemap()

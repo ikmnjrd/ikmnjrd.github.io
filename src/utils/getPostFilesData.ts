@@ -4,7 +4,9 @@ import matter from 'gray-matter'
 
 export default async function getPostFilesData() {
   // Get files from the posts dir
-  const files = fs.readdirSync(path.join('_posts'))
+  const files = fs.readdirSync(
+    path.join('_posts')
+  )
 
   // Get slug and frontmatter from posts
   const posts_data = files.map((filename) => {
@@ -17,12 +19,15 @@ export default async function getPostFilesData() {
       'utf-8'
     )
 
-    const { data: frontmatter, content: content } = matter(markdownWithMeta)
+    const {
+      data: frontmatter,
+      content: content,
+    } = matter(markdownWithMeta)
 
     return {
       slug,
       frontmatter,
-      content
+      content,
     }
   })
 

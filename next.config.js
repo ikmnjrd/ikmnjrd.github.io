@@ -3,11 +3,11 @@
 /**
  * @type {import('next').NextConfig}
  **/
- const nextConfig = {
+const nextConfig = {
   reactStrictMode: true,
   webpack(config, { isServer }) {
     if (isServer) {
-      require('./scripts/generate-sitemap.js')
+      require('./src/scripts/generate-sitemap.js')
     }
 
     // config.resolve.alias['@components'] = path.join(__dirname, 'components');

@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  /* footerを最下部に固定表示するため */
+  min-height: calc(
+    100vh - 250.195px - 32px - 4rem
+  );
+}
+
+.header-text {
+  color: white;
+  text-shadow: -2px -2px 1px rgba(0, 0, 0, 0.25),
+    3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+img[class^='svg-icon'],
+.footer-svg {
+  color: white;
+  filter: drop-shadow(
+      3px 3px 3px rgba(255, 255, 255, 0.3)
+    )
+    drop-shadow(-2px -2px 1px rgba(0, 0, 0, 0.25));
+}
+
+.footer-content {
+  position: relative;
+  top: 50px;
+  z-index: 1;
+}
+
+.wave {
+  background: url('/wave.svg') repeat-x;
+  position: relative;
+  height: 198px;
+  top: 0px;
+  animation: wave 7s
+    cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -5px;
+  margin-bottom: -198px;
+  height: 198px;
+  animation: wave 7s
+      cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s
+      infinite,
+    swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate3d(0, -10px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}

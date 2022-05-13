@@ -34,7 +34,7 @@
 .markdown a {
   @apply hover:underline hover:text-newmo-400 visited:text-newmo-300 break-all;
 }
-.markdown a[class=header-anchor]{
+.markdown a[class='header-anchor'] {
   @apply text-newmo-300 hover:text-newmo-400 break-all;
 }
 
@@ -51,9 +51,9 @@
   @apply m-0 inline-block;
 }
 
-.markdown code:not([class]){
+.markdown code:not([class]) {
   @apply text-sm italic dark:bg-newmo-600 bg-newmo-200  text-red rounded py-[1px] px-1 break-all;
 }
-.markdown code[class^="language-"] {
+.markdown code[class^='language-'] {
   @apply text-sm;
 }

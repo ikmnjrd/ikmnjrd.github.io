@@ -1,10 +1,13 @@
 import { VFC } from 'react'
-import SvgIcon from '@/components/SvgIcon'
+import SvgIcon from '~/components/SvgIcon'
 
 const Footer: VFC = () => {
   const date = new Date()
   return (
-    <footer className="text-center text-sm" role="contentinfo">
+    <footer
+      className="text-center text-sm"
+      role="contentinfo"
+    >
       <div className="footer-content">
         <ul className="flex items-center justify-between max-w-[100px] mx-auto">
           <li>
@@ -31,13 +34,20 @@ const Footer: VFC = () => {
               title="GitHub"
               className="footer-svg header-text hover:opacity-50 block"
             >
-              <SvgIcon type="github" size="2em" strokeWidth={1} fill="#fff" />
+              <SvgIcon
+                type="github"
+                size="2em"
+                strokeWidth={1}
+                fill="#fff"
+              />
             </a>
           </li>
         </ul>
         <p>
           ©︎ikmnjrd -{' '}
-          <time dateTime={date.toString()}>{date.getFullYear()}</time>
+          <time dateTime={date.toString()}>
+            {date.getFullYear()}
+          </time>
         </p>
       </div>
       <div className="wave"></div>

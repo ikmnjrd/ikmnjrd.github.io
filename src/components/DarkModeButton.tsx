@@ -6,20 +6,29 @@ type DarkModeButtonProps = {
   className?: string
 }
 
-export default function DarkModeButton({ className }: DarkModeButtonProps) {
-  const [darkMode, setDarkMode] = useState<boolean>(false)
+export default function DarkModeButton({
+  className,
+}: DarkModeButtonProps) {
+  const [darkMode, setDarkMode] =
+    useState<boolean>(false)
 
   useEffect(() => {
     if (
       localStorage.theme === 'dark' ||
       (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).matches)
     ) {
       setDarkMode(true)
-      document.documentElement.classList.add('dark')
+      document.documentElement.classList.add(
+        'dark'
+      )
     } else {
       setDarkMode(false)
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove(
+        'dark'
+      )
     }
   }, [darkMode])
 
@@ -44,7 +53,9 @@ export default function DarkModeButton({ className }: DarkModeButtonProps) {
         height="24px"
         className="svg-icon md:w-10 hover:opacity-50 active:opacity-30"
         src={`/${
-          darkMode ? 'nights_stay_white_24dp' : 'light_mode_white_24dp'
+          darkMode
+            ? 'nights_stay_white_24dp'
+            : 'light_mode_white_24dp'
         }.svg`}
         alt={'Dark Mode Status is ' + darkMode}
         aria-hidden="true"
