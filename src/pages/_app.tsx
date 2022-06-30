@@ -21,7 +21,7 @@ function MyApp({
       </Head>
 
       <Header />
-      <main className="max-w-2xl md:mx-auto mx-4">
+      <main className="max-w-2xl md:mx-auto mx-4 flex flex-col justify-between">
         <Component {...pageProps} />
       </main>
       <Footer />
