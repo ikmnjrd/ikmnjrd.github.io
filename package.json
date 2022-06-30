@@ -9,7 +9,8 @@
     "lint": "next lint",
     "typecheck": "tsc",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prettier": "prettier --config ./.prettierrc --write ./src"
   },
   "license": "MIT",
   "dependencies": {
@@ -50,7 +51,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --cache",
-    "*.{css,scss,sass,html,vue}": "stylelint",
+    "*.{html}": "stylelint",
     "*.**": "prettier --check --ignore-unknown"
   }
 }
