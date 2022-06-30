@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import getPostsFromTag from 'utils/getPostsFromTag'
-import getTags from 'utils/getTags'
-import TitleHead from 'components/TitleHead'
+import getPostsFromTag from '~/utils/getPostsFromTag'
+import getTags from '~/utils/getTags'
+import TitleHead from '~/components/TitleHead'
 
 export default function TagLinkPage({
   tag,
