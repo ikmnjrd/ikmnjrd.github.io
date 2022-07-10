@@ -176,6 +176,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/useful-tips-2022-1</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/v8engine-asm-show</loc>
     <changefreq>hourly</changefreq>
   </url>
