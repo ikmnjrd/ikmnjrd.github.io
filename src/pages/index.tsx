@@ -24,7 +24,7 @@ export default function Home({
 }) {
   const router = useRouter()
   const { p } = router.query
-  const pageIndex = Number(p ?? 1)
+  const pageIndex = Number(p ?? 0)
   return (
     <>
       <TitleHead title={'Top'} />
@@ -46,7 +46,7 @@ export default function Home({
       </ul>
       <div className="flex justify-between">
         <div>
-          {pageIndex > 1 && (
+          {pageIndex > 0 && (
             <span className="mx-2">
               <Link href={`?p=${pageIndex - 1}`}>
                 前へ
