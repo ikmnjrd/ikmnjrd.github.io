@@ -10,7 +10,23 @@ tag:
 `$ ssh-keygen -t ed25519`
 パスフレーズ（パスワード）はナシ。自分しか使わないマシン上で使う鍵なので。もしマシンの管理者が自分以外ならしっかり設定しておく。
 
-
+### github
+```
+$ ssh -T github
+Hi ikmnjrd! You've successfully authenticated, but GitHub does not provide shell access.
+```
+認証は通ってるがいざcloneをしようとしたら `Permission denied (publickey).` のエラー。
+```
+$ ssh -vT git@github.com
+```
+よくわからなかったが類似エラーを適当に検索したら~/.ssh/configのHostの値が原因っぽかった。
+```
+====変更前
+Host github
+====変更後
+Host github github.com
+```
+無事cloneできた。
 
 ### 周辺用語
 - RSA
@@ -22,3 +38,4 @@ tag:
 ### 参考文献
 - [SSH認証に最強の「Ed25519鍵」を使おう | LFI](https://linuxfan.info/ssh-ed25519)
 - [SSH 鍵 - ArchWiki](https://wiki.archlinux.jp/index.php/SSH_%E9%8D%B5)
+- [git clone したら、Permission denied (publickey).のエラー - Qiita](https://qiita.com/hatorijobs/items/92d8df363020a7f6d9fb)
