@@ -1,10 +1,14 @@
 import Link from 'next/link'
-import getTags from '~/utils/getTags'
+import getTags, {
+  ITagInfo,
+} from '~/utils/getTags'
 import TitleHead from '~/components/TitleHead'
 
-export default function Tag({ tags }: any) {
+export default function Tag({
+  countedTags,
+}: ITagInfo) {
   const tags_obj = Object.entries(
-    tags.counts_tag
+    countedTags
   ).map((tag) => {
     return (
       <li key={tag[0]}>
@@ -27,11 +31,13 @@ export default function Tag({ tags }: any) {
 }
 
 export async function getStaticProps() {
-  const tags = await getTags()
+  const { wholeTags, countedTags } =
+    await getTags()
 
   return {
     props: {
-      tags: tags,
+      wholeTags,
+      countedTags,
     },
   }
 }

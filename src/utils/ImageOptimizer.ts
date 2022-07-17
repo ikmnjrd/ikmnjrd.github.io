@@ -25,19 +25,17 @@ const getImageFromWeb = async ({
   index: index,
   name: name,
 }: ImageConverterProps): Promise<string> => {
-  const response: any = await fetch(url)
+  const response = await fetch(url)
   if (!response.ok)
     throw new Error(
       `unexpected response ${response.statusText}`
     )
-
   await streamPipeline(
-    response.body,
+    response.body!,
     createWriteStream(
       `./tmp/${name}-${index}.png`
     )
   )
-
   return `/tmp/${name}-${index}.png`
 }
 
