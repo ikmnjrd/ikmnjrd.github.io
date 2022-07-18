@@ -4,19 +4,16 @@ import TitleHead from '~/components/TitleHead'
 import OgpHead from '~/components/OgpHead'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { IFrontMatter } from '~/utils/getPostFilesData'
 
 interface IPost {
   slug: string
-  frontmatter: {
-    [key: string]: string
-  }
+  frontmatter: IFrontMatter
   content?: string
 }
 
 export default function Home({
   posts,
-  // eslint-disable-next-line no-unused-vars
-  separateNum,
 }: {
   posts: IPost[][]
   length: number
@@ -70,7 +67,7 @@ export default function Home({
 
 export async function getStaticProps() {
   const posts = await getPostsMeta()
-  const SEPARATE_NUM = 10
+  const SEPARATE_NUM = 15
 
   const sliceByNumber = (
     array: IPost[],
