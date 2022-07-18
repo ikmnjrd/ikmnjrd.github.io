@@ -2,7 +2,9 @@ import Head from 'next/head'
 
 export default function TitleHead({
   title,
-}: any) {
+}: {
+  title: string
+}) {
   return (
     <Head>
       <title>{title} | ikmnjrd.github.io</title>

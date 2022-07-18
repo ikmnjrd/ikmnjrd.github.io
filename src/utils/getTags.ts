@@ -1,29 +1,42 @@
 import getPostFilesData from './getPostFilesData'
 
-export default async function getTag() {
-  const files_data = await getPostFilesData()
-  const tags: any[] = []
+export interface ITagInfo {
+  wholeTags: {
+    tag: string
+    slug: string
+  }[]
+  countedTags: { [key: string]: number }
+}
 
-  files_data.forEach(({ frontmatter, slug }) => {
+export default async function getTag(): Promise<ITagInfo> {
+  const filesData = await getPostFilesData()
+  const wholeTags: {
+    tag: string
+    slug: string
+  }[] = []
+
+  filesData.forEach(({ frontmatter, slug }) => {
     if (frontmatter.tag) {
       for (let tag of frontmatter.tag) {
-        tags.push({ tag, slug })
+        wholeTags.push({ tag, slug })
       }
     }
   })
 
-  const counts_tag = countTag(tags)
+  const countedTags = countTag(wholeTags)
 
-  return { tags, counts_tag }
+  return { wholeTags, countedTags }
 }
 
-export function countTag(tags: any[]) {
-  return tags.reduce((prev, curr) => {
-    const name = curr.tag
-    if (!prev[name]) {
-      prev[name] = 0
-    }
-    prev[name] += 1
-    return prev
-  }, {})
+export function countTag<T extends string>(
+  meta: { tag: T; slug: string }[]
+): { [key: string]: number } {
+  return meta
+    .map(({ tag }) => tag)
+    .reduce((acc, key) => {
+      return {
+        ...acc,
+        [key]: (acc[key] || 0) + 1,
+      }
+    }, {} as { [key: string]: number })
 }

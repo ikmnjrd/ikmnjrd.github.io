@@ -5,7 +5,12 @@ export default function OgpHead({
   type,
   image,
   title,
-}: any) {
+}: {
+  url: string
+  type: string
+  image: string
+  title: string
+}) {
   return (
     <Head>
       <meta

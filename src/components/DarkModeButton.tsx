@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-// import moonPic from 'public/nights_stay_white_24dp.svg'
-// import sunPic from 'public/light_mode_white_24dp.svg'
 
 type DarkModeButtonProps = {
   className?: string

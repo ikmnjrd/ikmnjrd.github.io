@@ -2,6 +2,18 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
+export interface IFrontMatter {
+  // ===事実上必須=========
+  title?: string
+  description?: string
+  date?: string // 2021-01-08
+  tag?: string[]
+  // ===未使用=========
+  categories?: string // Next製にしてから使ってない
+  layout?: string // Next製にしてから使ってない
+  scheduled?: string // Next製にしてから使ってない
+}
+
 export default async function getPostFilesData() {
   // Get files from the posts dir
   const files = fs.readdirSync(
@@ -9,7 +21,7 @@ export default async function getPostFilesData() {
   )
 
   // Get slug and frontmatter from posts
-  const posts_data = files.map((filename) => {
+  return files.map((filename) => {
     // Create slug
     const slug = filename.replace('.md', '')
 
@@ -22,7 +34,10 @@ export default async function getPostFilesData() {
     const {
       data: frontmatter,
       content: content,
-    } = matter(markdownWithMeta)
+    }: {
+      data: IFrontMatter
+      content: string
+    } = matter<string, {}>(markdownWithMeta, {})
 
     return {
       slug,
@@ -30,6 +45,4 @@ export default async function getPostFilesData() {
       content,
     }
   })
-
-  return posts_data
 }

@@ -10,6 +10,17 @@ import OgpHead from '~/components/OgpHead'
 import markdownStyles from '~/components/markdown/markdown-styles.module.css'
 import ImageOptimizer from '~/utils/ImageOptimizer'
 
+interface Props {
+  frontmatter: {
+    title: string
+    date: string
+    cover_image?: string
+    description?: string
+  }
+  slug: string
+  innerHtml: string
+}
+
 export default function PostPage({
   frontmatter: {
     title,
@@ -19,7 +30,7 @@ export default function PostPage({
   },
   slug,
   innerHtml,
-}: any) {
+}: Props) {
   return (
     <>
       <TitleHead title={title} />
