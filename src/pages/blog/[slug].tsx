@@ -9,6 +9,7 @@ import TitleHead from '~/components/TitleHead'
 import OgpHead from '~/components/OgpHead'
 import markdownStyles from '~/components/markdown/markdown-styles.module.css'
 import ImageOptimizer from '~/utils/ImageOptimizer'
+import 'prism-themes/themes/prism-a11y-dark.min.css'
 
 interface Props {
   frontmatter: {
@@ -41,10 +42,6 @@ export default function PostPage({
         image={'images/posts/img1.jpg'}
       />
       <Head>
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-okaidia.min.css"
-          rel="stylesheet"
-        />
         {description && (
           <meta
             name="description"
