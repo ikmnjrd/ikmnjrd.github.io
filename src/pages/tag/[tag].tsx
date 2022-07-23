@@ -28,7 +28,9 @@ export default function TagLinkPage({
     <>
       <TitleHead title={`${tag}の記事`} />
 
-      <h2>{tag}の投稿記事一覧</h2>
+      <h1 className="text-3xl pt-8 pb-4">
+        {tag}の投稿記事一覧
+      </h1>
       <div>
         {posts.map((post) => (
           <li key={post.slug}>
