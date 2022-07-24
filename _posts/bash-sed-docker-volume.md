@@ -8,7 +8,9 @@ tag:
 ---
 
 ### 結論
-`$ docker volume ls | sed -e 's/local[[:space:]]*//g' | grep -E '.{64,64}' | xargs docker volume rm`
+```bash
+$ docker volume ls | sed -e 's/local[[:space:]]*//g' | grep -E '.{64,64}' | xargs docker volume rm
+```
 
 Driverの部分(localとスペース)を削除。
 64文字の（ハッシュで自動生成された）ものをリストアップ。
