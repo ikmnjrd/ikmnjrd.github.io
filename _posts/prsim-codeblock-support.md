@@ -1,4 +1,3 @@
-
 ---
 title: 忘れがちなPrismJSがサポートしている言語
 description: PrismJSでサポートされている
