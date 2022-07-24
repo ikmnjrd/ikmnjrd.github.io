@@ -23,7 +23,7 @@ package.jsonに追記
 `# npm i -S react react-dom react-router-dom @types/react @types/react-dom @types/react-router-dom`
 
 tsconfig.json作成
-```json
+```json5
 {
   "compilerOptions": {
     "sourceMap": true,
@@ -43,7 +43,7 @@ tsconfig.json作成
 ```
 
 `webpack.config.js` を作成
-```jsx
+```js
 module.exports = {
   // モード値を production に設定すると最適化された状態で、
   // development に設定するとソースマップ有効でJSファイルが出力される
