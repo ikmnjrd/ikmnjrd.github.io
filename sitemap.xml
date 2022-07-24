@@ -12,6 +12,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/bash-sed-docker-volume</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/consolelog-effect</loc>
     <changefreq>hourly</changefreq>
   </url>
