@@ -6,6 +6,7 @@ docs
 tmp
 public/sitemap.xml
 public/images/posts/*
+!public/images/posts/.gitkeep
 
 ## dependencies
 node_modules
