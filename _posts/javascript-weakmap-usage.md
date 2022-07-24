@@ -28,10 +28,12 @@ MDNには以下のように書かれています。
 
 雑な説明ですが、JavaScriptではプロトタイプチェーンの仕組みにより、新しいオブジェクトを作ると元にしたオブジェクトを参照しながらメモリに保持されます。
 
-> キーによるオブジェクト参照は弱く保持され、そのオブジェクトへの参照が他に存在しないときはガベージコレクション (GC) の対象になります（出典: [MDN-キー付きコレクション](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)）
+> キーによるオブジェクト参照は弱く保持され、そのオブジェクトへの参照が他に存在しないときはガベージコレクション (GC) の対象になります
+> <cite>出典: [MDN-キー付きコレクション](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)</cite>
 
 これが"弱い参照"とされる理由の一つです。
-> Map オブジェクトとの違いの１つは、WeakMap のキーは列挙可能ではないことです（すなわち、キーのリストを取得するメソッドがありません）。もしも列挙可能であれば、リストは非決定性をもたらす、ガベージコレクションの状態に依存することになってしまいます。（出典: [MDN-キー付きコレクション](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)）
+> Map オブジェクトとの違いの１つは、WeakMap のキーは列挙可能ではないことです（すなわち、キーのリストを取得するメソッドがありません）。もしも列挙可能であれば、リストは非決定性をもたらす、ガベージコレクションの状態に依存することになってしまいます。
+> <cite>出典: [MDN-キー付きコレクション](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)</cite>
 
 
 

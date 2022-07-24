@@ -1,9 +1,8 @@
 .markdown {
   @apply leading-relaxed;
 }
-
-.markdown table,
-.markdown blockquote {
+.markdown > table,
+.markdown > blockquote {
   @apply my-6;
 }
 .markdown p,
@@ -11,13 +10,12 @@
 .markdown ol {
   @apply my-2;
 }
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4 {
+.markdown > h1,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4 {
   @apply leading-snug;
 }
-
 .markdown h1 {
   @apply text-3xl mt-8 mb-4;
 }
@@ -38,22 +36,66 @@
   @apply text-newmo-300 hover:text-newmo-400 break-all;
 }
 
+/*
+* 番号付きリスト
+* ex) jekyll-tipuesearch-adopt
+*/
+.markdown ol {
+  @apply list-inside list-decimal;
+}
+.markdown ol > li > ol {
+  @apply list-inside pl-6 my-1;
+  list-style-type: lower-alpha;
+}
+.markdown ol > li > ul {
+  @apply list-inside list-disc pl-6 my-1;
+}
+
+/*
+* 番号なしリスト
+* ex) font-what-is
+*/
 .markdown ul {
   @apply list-inside list-disc;
 }
-.markdown ul ul {
+.markdown ul > li > ul {
   @apply list-inside list-disc pl-6 my-1;
 }
-.markdown ul ul ul {
+.markdown ul > li > ul > li > ul {
   @apply list-inside list-disc pl-12 my-1;
 }
 .markdown ul p {
   @apply m-0 inline-block;
 }
 
+/*
+* code (prism)
+* ex) javascript-namespace-push-me-in-pit
+*/
 .markdown code:not([class]) {
   @apply text-sm italic dark:bg-newmo-600 bg-newmo-200  text-red rounded py-[1px] px-1 break-all;
 }
 .markdown code[class^='language-'] {
   @apply text-sm;
+}
+
+/*
+* Blockquote
+* ex) javascript-weakmap-usage
+*/
+.markdown > blockquote {
+  @apply ml-4 pl-4 py-[1px] border-solid border-l-2 border-l-newmo-200;
+}
+.markdown > blockquote cite {
+  @apply text-right block;
+}
+
+/*
+* Table
+* ex) prsim-codeblock-support
+*/
+.markdown > table td,
+.markdown > table th {
+  @apply border px-2;
+  border-style: inset;
 }

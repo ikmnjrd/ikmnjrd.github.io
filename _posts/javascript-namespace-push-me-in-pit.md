@@ -11,7 +11,7 @@ tag:
 
 なぜ②の箇所で変数`audio`にアクセスできてしまうの？？？？
 
-```jsstacktrace
+```javascript
 const init = () => {
 
   const upload_file = document.getElementById('uploadedFile');
