@@ -13,7 +13,7 @@ Reactはあまり関係ないです。
 
 ### 例題
 
-```javascript
+```tsx
 function Hoge() {
   return (
     <div onClick={() => console.log("test")}>
@@ -29,7 +29,7 @@ function Hoge() {
 
 次に`onClickCapture`という属性からconsole.logで結果を出力してみましょう。
 
-```javascript
+```tsx
 function Hoge() {
   return (
     <div onClickCapture={() => console.log("test")}>

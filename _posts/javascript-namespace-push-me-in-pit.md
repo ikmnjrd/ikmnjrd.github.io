@@ -11,7 +11,7 @@ tag:
 
 なぜ②の箇所で変数`audio`にアクセスできてしまうの？？？？
 
-```javascript
+```jsstacktrace
 const init = () => {
 
   const upload_file = document.getElementById('uploadedFile');
@@ -72,7 +72,7 @@ const draw = () => {
 window.onload = init();
 ```
 output例
-```bash
+```jsstacktrace
 script.js:40 <audio id=​"audio" controls src=​"blob:​http:​/​/​localhost:​8080/​b337de48-6ba2-459b-a022-d56dae3da9d3">​…​</audio>​
 script.js:41 Uncaught ReferenceError: audio2 is not defined
     at draw (script.js:41)

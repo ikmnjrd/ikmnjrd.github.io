@@ -5,7 +5,7 @@ target
 docs
 tmp
 public/sitemap.xml
-public/images/posts/
+public/images/posts/*
 
 ## dependencies
 node_modules

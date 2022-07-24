@@ -101,7 +101,7 @@ const converter = async ({
         const file = await fs.readFile(
           process.cwd() + fetch_image_path
         )
-        const output_file = `images/posts/test/${name}-${index}.avif`
+        const output_file = `images/posts/${name}-${index}.avif`
 
         try {
           await sharp(file)
@@ -114,7 +114,7 @@ const converter = async ({
         }
       } else {
         output_file_names.push(
-          `images/posts/test/${name}-${index}.avif`
+          `images/posts/${name}-${index}.avif`
         )
       }
     }

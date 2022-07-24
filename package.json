@@ -19,6 +19,7 @@
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-prism": "^2.2.2",
     "next": "^12.0.10",
+    "prism-themes": "^1.9.0",
     "prismjs": "^1.26.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
