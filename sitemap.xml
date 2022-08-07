@@ -124,11 +124,19 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/licence-seeking</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/mac-meeting-transcript</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://ikmnjrd.github.io/blog/mac-webserver-easiest</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ikmnjrd.github.io/blog/markdown-it-process</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -141,6 +149,10 @@
   </url>
   <url>
     <loc>https://ikmnjrd.github.io/blog/next-sitemap-sample</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ikmnjrd.github.io/blog/node-package-json-keys</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
