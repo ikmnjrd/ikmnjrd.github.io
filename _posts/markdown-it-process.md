@@ -9,7 +9,7 @@ tag:
 失敗したけど、悔しいので調べたことのメモとそのプラグインの[リポジトリ](https://github.com/ikmnjrd/markdown-it-bqcite)
 作ろうとした機能は、`<blockquote/>` 内の特定prefixから始まる箇所を`<cite/>`で囲もうとういうもの。
 
-```markdown
+```md
 > 内容はこれ
 > --- 出典はこれ
 ```
@@ -73,7 +73,7 @@ ouTokensに追加?意味わからん
 
 
 ### テストに使ってた.md
-```markdown
+```md
 > this
 > is
 > test
