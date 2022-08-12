@@ -19,6 +19,7 @@ htmlが少ないなら有効。
 - tabキーなど、文字入力は色々気を使わなくちゃいけない。onkeydownで処理するよりonkeyupで処理した方が都合が良いことが多い。
 - contenteditableなhtmlで参考にすべきはTwitter。Twitterすごい。
 - dataURLではWebStorageが使えない。
+- dataURLではlocationAPIが使えない(Not allowed to navigate top frame to data URL)
 
 
 ### 参考文献
