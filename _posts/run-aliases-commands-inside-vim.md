@@ -1,7 +1,7 @@
 ---
 title: vim内部(:r!)からエイリアスコマンドを利用する
 description: vim(nvim)からエイリアスコマンドを利用する
-date: 2022-08-18
+date: '2022-08-18'
 tag:
   - terminal
   - vim
