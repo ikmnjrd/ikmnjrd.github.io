@@ -180,6 +180,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/run-aliases-commands-inside-vim</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/ssh-keygen</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -209,6 +213,10 @@
   </url>
   <url>
     <loc>https://ikmnjrd.github.io/blog/v8engine-asm-show</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ikmnjrd.github.io/blog/vim-tmux-reference</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
