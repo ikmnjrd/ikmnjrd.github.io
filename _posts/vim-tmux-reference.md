@@ -1,7 +1,7 @@
 ---
 title: vim/tmuxを使うに当たって参考にしたサイトまとめ
 description: vimとtmuxを使うに当たって参考にしたサイトまとめ
-date: 2022-08-20
+date: '2022-08-20'
 tag:
   - tarminal
   - tmux
