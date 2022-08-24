@@ -1,7 +1,7 @@
 ---
 title: 実践Vimを読んだ時のメモ
 description: ただのメモ
-date: '2022-02-08'
+date: '2022-08-25'
 tag:
   - vim
 ---
