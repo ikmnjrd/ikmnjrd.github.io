@@ -7,7 +7,7 @@ export default function TitleHead({
 }) {
   return (
     <Head>
-      <title>{title} | ikmnjrd.github.io</title>
+      <title>{`${title} | ikmnjrd.github.io`}</title>
     </Head>
   )
 }
