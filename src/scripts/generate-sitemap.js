@@ -13,7 +13,8 @@ function addPage(page) {
 }
 
 async function generateSitemap() {
-  const fs = await import('fs').fs
+  const writeFileSync = (await import('fs'))
+    .writeFileSync
   const globby = (await import('globby')).globby
 
   // Ignore Next.js specific files (e.g., _app.js) and API routes.
@@ -28,7 +29,7 @@ async function generateSitemap() {
 ${pages.map(addPage).join('\n')}
 </urlset>`
 
-  fs.writeFileSync('public/sitemap.xml', sitemap)
+  writeFileSync('public/sitemap.xml', sitemap)
   console.info('generated sitemap.xml!')
 }
 
