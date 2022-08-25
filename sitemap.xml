@@ -172,6 +172,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/prictical-vim-memo</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/prsim-codeblock-support</loc>
     <changefreq>hourly</changefreq>
   </url>
