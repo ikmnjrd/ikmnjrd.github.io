@@ -22,7 +22,7 @@ terminal操作で`ctrl+a`を押せば行頭へ戻る
 
 iTerm側の設定を変更する。  
 画像のLeft Option keyがNormalがデフォルトの設定のはずなので、Esc+に変更する
-[!iTerm](https://i.gyazo.com/89dddef08769a9f3f3e3c59408a83ce9.png)
+![iTerm](https://i.gyazo.com/89dddef08769a9f3f3e3c59408a83ce9.png)
 
 ### 参考文献
 
