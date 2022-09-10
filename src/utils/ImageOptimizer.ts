@@ -1,13 +1,12 @@
 const sharp = require('sharp')
-const fs = require('fs/promises')
-import { pipeline } from 'node:stream'
-import { promisify } from 'node:util'
-import fetch from 'node-fetch'
-import {
-  createWriteStream,
-  existsSync,
-} from 'node:fs'
-const streamPipeline = promisify(pipeline)
+// const fs = require('fs/promises')
+const stream = require('stream')
+const util = require('util')
+const fs = require('fs')
+
+const streamPipeline = util.promisify(
+  stream.pipeline
+)
 
 type converterProps = {
   images: RegExpMatchArray | null
@@ -32,7 +31,7 @@ const getImageFromWeb = async ({
     )
   await streamPipeline(
     response.body!,
-    createWriteStream(
+    fs.createWriteStream(
       `./tmp/${name}-${index}.png`
     )
   )
@@ -53,7 +52,7 @@ const existCacheImage = ({
       .reverse()[0]
     const file = `${process.cwd()}/tmp/${name}-${index}.${ext}`
 
-    if (existsSync(file)) {
+    if (fs.existsSync(file)) {
       console.info('Exist Cache Image')
       return true
     }

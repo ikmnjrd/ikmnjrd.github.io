@@ -4,7 +4,7 @@ import OgpHead from '~/components/OgpHead'
 export default function about() {
   return (
     <>
-      <TitleHead title={'Top'} />
+      <TitleHead title={'About'} />
       <OgpHead
         title="ikmnjrd.github.io"
         type="website"

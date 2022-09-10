@@ -1,7 +1,7 @@
-import { VFC } from 'react'
+import { FC } from 'react'
 import SvgIcon from '~/components/SvgIcon'
 
-const Footer: VFC = () => {
+const Footer: FC = () => {
   const date = new Date()
   return (
     <footer
