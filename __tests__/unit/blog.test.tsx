@@ -7,19 +7,6 @@ import Blog from '~/pages/blog/[slug]'
  * https://github.com/next-page-tester/next-page-tester/pull/294
  */
 
-jest.mock('next/head', () => {
-  return {
-    __esModule: true,
-    default: ({
-      children,
-    }: {
-      children: Array<React.ReactElement>
-    }) => {
-      return <>{children}</>
-    },
-  }
-})
-
 describe('Blog', () => {
   const frontmatter = {
     title: 'hoge',
@@ -38,12 +25,14 @@ describe('Blog', () => {
         innerHtml={innerHtml}
       />,
       {
-        container: document.head,
+        container: document.body,
       }
     )
 
-    expect(document.title).toBe(
-      'hoge | ikmnjrd.github.io'
-    )
+    it('fo', () => {
+      // const githubLink =
+      //   screen.getByTitle(/github/i)
+      // expect(githubLink).toBeInTheDocument()
+    })
   })
 })
