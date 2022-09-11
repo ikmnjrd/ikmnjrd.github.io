@@ -184,6 +184,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/push-and-test-with-github-actions</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/react-webpack-skelton</loc>
     <changefreq>hourly</changefreq>
   </url>
