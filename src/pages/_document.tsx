@@ -50,7 +50,7 @@ export default function Document() {
         />
         {/* Global site tag (gtag.js) - Google Analytics */}
         {process.env.NODE_ENV !==
-          'development' || (
+          'production' && (
           <>
             <script
               async
