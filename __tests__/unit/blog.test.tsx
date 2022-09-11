@@ -18,16 +18,16 @@ describe('Blog', () => {
   const slug = 'this-is-test'
   const innerHtml = `<div>html</div>`
   test('dummy', () => {
-    // render(
-    //   <Blog
-    //     frontmatter={frontmatter}
-    //     slug={slug}
-    //     innerHtml={innerHtml}
-    //   />,
-    //   {
-    //     container: document.body,
-    //   }
-    // )
+    render(
+      <Blog
+        frontmatter={frontmatter}
+        slug={slug}
+        innerHtml={innerHtml}
+      />,
+      {
+        container: document.body,
+      }
+    )
     expect(1).toEqual(1)
   })
 })
