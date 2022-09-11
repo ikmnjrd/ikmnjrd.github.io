@@ -11,7 +11,7 @@ import markdownStyles from '~/components/markdown/markdown-styles.module.css'
 import ImageOptimizer from '~/utils/ImageOptimizer'
 import 'prism-themes/themes/prism-a11y-dark.min.css'
 
-interface Props {
+export interface IBlog {
   frontmatter: {
     title: string
     date: string
@@ -31,7 +31,7 @@ export default function PostPage({
   },
   slug,
   innerHtml,
-}: Props) {
+}: IBlog) {
   return (
     <>
       <TitleHead title={title} />
