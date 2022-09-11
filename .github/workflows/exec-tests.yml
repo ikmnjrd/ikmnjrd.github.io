@@ -1,0 +1,43 @@
+name: exec-tests
+on:
+  push:
+
+jobs:
+  status-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ inputs.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      - name: Get Cache Dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install Dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Create avif images dir
+        run: mkdir tmp
+
+      - name: Build
+        run: npm run build
+        env:
+          NODE_OPTIONS: '--max_old_space_size=4096'
+
+      - name: Check by linter
+        run: npm run lint
+
+      - name: Check by TypeScript Compiler
+        run: npm run typecheck
+
+      - name: Run Tests
+        run: npm run test
