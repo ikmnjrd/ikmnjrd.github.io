@@ -1,5 +1,4 @@
 // @ts-check
-
 /**
  * @type {import('next').NextConfig}
  **/
@@ -7,6 +6,7 @@ const nextConfig = {
   reactStrictMode: true,
   webpack(config, { isServer }) {
     if (isServer) {
+      // @ts-ignore
       require('./src/scripts/generate-sitemap.js')
     }
 
