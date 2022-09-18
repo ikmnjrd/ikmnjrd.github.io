@@ -5,8 +5,9 @@ import { promisify } from 'node:util'
 import fetch from 'node-fetch'
 import {
   createWriteStream,
-  existsSync,
+  // existsSync,
 } from 'node:fs'
+import { existCacheImage } from './existCacheImage'
 const streamPipeline = promisify(pipeline)
 
 type converterProps = {
@@ -14,13 +15,13 @@ type converterProps = {
   name: string
 }
 
-type ImageConverterProps = {
+export type ImageConverterProps = {
   url: string
   index: number
   name: string
 }
 
-const getImageFromWeb = async ({
+export const getImageFromWeb = async ({
   url: url,
   index: index,
   name: name,
@@ -37,31 +38,6 @@ const getImageFromWeb = async ({
     )
   )
   return `/tmp/${name}-${index}.png`
-}
-
-const existCacheImage = ({
-  url: url,
-  index: index,
-  name: name,
-}: ImageConverterProps): boolean => {
-  try {
-    const slash_parsed_url = url
-      ?.split('/')
-      ?.reverse()[0]
-    const ext = slash_parsed_url
-      ?.split('.')
-      .reverse()[0]
-    const file = `${process.cwd()}/tmp/${name}-${index}.${ext}`
-
-    if (existsSync(file)) {
-      console.info('Exist Cache Image')
-      return true
-    }
-  } catch (e) {
-    console.error('Error: ', e)
-  }
-
-  return false
 }
 
 const converter = async ({
