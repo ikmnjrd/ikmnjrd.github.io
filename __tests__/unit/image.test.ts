@@ -1,7 +1,6 @@
 import {
-  // getImageFromWeb,
   existCacheImage,
-  // type ImageConverterProps,
+  type ImageConverterProps,
 } from '~/utils/existCacheImage'
 
 jest.mock('fs')
@@ -13,10 +12,10 @@ describe('listFilesInDirectorySync', () => {
     '/path/to/file2.txt': 'file2 contents',
     '/path/to/image.png': 'hogehoge',
   }
-  const props = {
-    url: '/path/to/image',
+  const props: ImageConverterProps = {
+    url: 'https://i.gyazo.com/mock-1ef68f7e017d8ed2309a6ff90d9036ad.png',
     index: 0,
-    name: 'name',
+    name: 'consolelog-effect',
   }
 
   beforeEach(() => {

@@ -1,5 +1,6 @@
 import { existsSync } from 'node:fs'
 import { ImageConverterProps } from './ImageOptimizer'
+export { type ImageConverterProps } from './ImageOptimizer'
 
 export const existCacheImage = ({
   url: url,
