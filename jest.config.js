@@ -23,8 +23,15 @@ const customJestConfig = {
   },
   testEnvironment: 'jest-environment-jsdom',
   // ts/tsxファイルに対してts-jestを使うよう設定
+  // ts-jest's tsconfig: https://kulshekhar.github.io/ts-jest/docs/getting-started/options
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': [
+      'ts-jest',
+      {
+        isolatedModules: false,
+        useESM: true,
+      },
+    ],
   },
   // verbose: true,
   // rootDir: 'test',

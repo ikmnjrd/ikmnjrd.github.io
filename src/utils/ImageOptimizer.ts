@@ -1,70 +1,19 @@
 const sharp = require('sharp')
 const fs = require('fs/promises')
-import { pipeline } from 'node:stream'
-import { promisify } from 'node:util'
-import fetch from 'node-fetch'
-import {
-  createWriteStream,
-  existsSync,
-} from 'node:fs'
-const streamPipeline = promisify(pipeline)
+import { existCacheImage } from './existCacheImage'
+import { getImageFromWeb } from './getImageFromWeb'
 
 type converterProps = {
   images: RegExpMatchArray | null
   name: string
 }
-
-type ImageConverterProps = {
+export type ImageConverterProps = {
   url: string
   index: number
   name: string
 }
 
-const getImageFromWeb = async ({
-  url: url,
-  index: index,
-  name: name,
-}: ImageConverterProps): Promise<string> => {
-  const response = await fetch(url)
-  if (!response.ok)
-    throw new Error(
-      `unexpected response ${response.statusText}`
-    )
-  await streamPipeline(
-    response.body!,
-    createWriteStream(
-      `./tmp/${name}-${index}.png`
-    )
-  )
-  return `/tmp/${name}-${index}.png`
-}
-
-const existCacheImage = ({
-  url: url,
-  index: index,
-  name: name,
-}: ImageConverterProps): boolean => {
-  try {
-    const slash_parsed_url = url
-      ?.split('/')
-      ?.reverse()[0]
-    const ext = slash_parsed_url
-      ?.split('.')
-      .reverse()[0]
-    const file = `${process.cwd()}/tmp/${name}-${index}.${ext}`
-
-    if (existsSync(file)) {
-      console.info('Exist Cache Image')
-      return true
-    }
-  } catch (e) {
-    console.error('Error: ', e)
-  }
-
-  return false
-}
-
-const converter = async ({
+export const optimizeImages = async ({
   images,
   name,
 }: converterProps): Promise<string[]> => {
@@ -122,5 +71,3 @@ const converter = async ({
 
   return output_file_names
 }
-
-export default converter
