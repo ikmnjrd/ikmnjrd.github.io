@@ -51,6 +51,12 @@ tag:
 ---
 ```
 
+## dependency version
+
+node-fetch(v3.2)が ESM のみになっているが ts-jest が ESM only のパッケージに対応していないようなので、node-fetch を 2 系でインストール。
+https://github.com/node-fetch/node-fetch/discussions/1503
+global fetch は型の部分で使い勝手が悪かった
+
 ## メモ
 
 `npx prettier --config ./.prettierrc --write src/pages/about.tsx`
