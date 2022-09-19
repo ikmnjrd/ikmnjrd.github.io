@@ -60,7 +60,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --cache",
-    "*.{html}": "stylelint",
+    "*.{html, css}": "stylelint",
     "*.**": "prettier --check --ignore-unknown"
   },
   "volta": {
