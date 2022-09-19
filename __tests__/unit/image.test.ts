@@ -30,6 +30,3 @@ describe('listFilesInDirectorySync', () => {
     expect(isExist).toBe(true)
   })
 })
-
-// IsolatedModuleとしてコンパイルするために必要
-export {}
