@@ -16,7 +16,7 @@ Jestの右も左もわからないがfetcをmockしてゴニョゴニョして�
 
 
 以下のエラーが発生した。
-```js-stacktrace
+```jsstacktrace
 TypeError: mockGetImageFromWeb.mockClear is not a function
   23 |
   24 |   afterEach(() => {
