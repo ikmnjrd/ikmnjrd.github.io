@@ -1,0 +1,3566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ikmnjrd.github.io</id>
+    <title>ikmnjrd.github.io</title>
+    <updated>2022-09-19T13:34:37.513Z</updated>
+    <generator>Feed for Node.js</generator>
+    <author>
+        <name>ike</name>
+        <uri>https://twitter.com/ikmnjrd</uri>
+    </author>
+    <link rel="alternate" href="https://ikmnjrd.github.io"/>
+    <link rel="self" href="https://ikmnjrd.github.io/rss/atom.xml"/>
+    <subtitle>ikmnjrのブログ</subtitle>
+    <logo>https://ikmnjrd.github.io/logo.png</logo>
+    <icon>https://ikmnjrd.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, ike(ikmnjrd)</rights>
+    <entry>
+        <title type="html"><![CDATA[GitHubのhttpsからSSH通信への切り替え]]></title>
+        <id>https://ikmnjrd.github.io/blog/GitHub-from-https-to-ssh</id>
+        <link href="https://ikmnjrd.github.io/blog/GitHub-from-https-to-ssh"/>
+        <updated>2021-10-29T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+```bash
+$ git remote -v
+ターミナルを開いてください。
+ワーキングディレクトリをローカルプロジェクトに変更します。
+変更したいリモートの名前を取得するため、既存のリモート一覧を表示します。
+$ git remote -v
+> origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+> origin  https://github.com/USERNAME/REPOSITORY.git (push)
+git remote set-url コマンドでリモートの URL を HTTPS から SSH に変更します。
+$ git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+リモート URL が変更されたことを検証します。
+$ git remote -v
+# Verify new remote URL
+> origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+> origin  git@github.com:USERNAME/REPOSITORY.git (push)
+```
+
+参考：[公式サイト](https://docs.github.com/ja/get-started/getting-started-with-git/managing-remote-repositories)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Next.jsがWebpackを使うから嫌いという話]]></title>
+        <id>https://ikmnjrd.github.io/blog/Next-webpack</id>
+        <link href="https://ikmnjrd.github.io/blog/Next-webpack"/>
+        <updated>2022-02-09T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+今まであまりrequireとimportなどの違いを意識できていない人間。
+Next.jsをプロジェクトに導入するのは賛成をとるが、個人のプロジェクトにはあまり使いたくないなーと思う程度の距離感を保っていた人間だった。現在無職。
+
+しかし、新たな職場を探すにあたってReactは使うのにNext.jsを触ったことがないというのは自分の選択肢を狭めるだけだと考え、無職期間に作り直そうとしていたRuby(Jekyll)製ブログを、Next.jsのSSGの仕組みを用いて作ることにした。（本当はメジャーバージョンがリリースされたばかりのeleventy.jsを使って作りたかった。フレームワークに求めているもの的にもeleventyの方が合っていたと今も感じる。1週間ほどはeleventy.js製のブログだった時期もある。）
+
+同リポジトリ内にマークダウンでブログ記事を上げるため、ビルド時に色々なものを生成したい要件が出てくる。Next.jsは内部でwebpackを使っていて`next.config.js`ではその一端を見ることができる。
+
+```javascript
+module.exports = {
+  reactStrictMode: true,
+  webpack(config, { isServer }) {
+    if (isServer) {
+      require('./scripts/generate-sitemap.js')
+    }
+  }
+}
+```
+
+webpackはCommonJSで書かれていることは事前知識として知っていた。
+
+とは言ってもimportやexportが使いたい。`package.json`に`"type": "module"`を追加する方法などを試してみるが、最終的にproduction buildの際のfsモジュールが解決できないとか`Import trace for requested module:
+./pages/_app.js`などのエラーメッセージを残して終了していくプログラムを見るとイライラしてくる。
+
+勉強のためとはいえ、今度からNode.jsではなくDenoを使おうかなという気持ちになった。
+
+
+
+### 周辺用語
+- commonJS
+- ESModules
+- ES6(ES2015)
+
+### 参考文献
+- [Build a sitemap generator in Next.js - LogRocket Blog](https://blog.logrocket.com/build-sitemap-generator-nextjs/)
+- [Support ES module format (ESM) in next.config.js #9607](https://github.com/vercel/next.js/issues/9607)
+- [Support ES module format (ESM) in next.config.js #32239](https://github.com/vercel/next.js/discussions/32239)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[本田翼コレクション（メンズおすすめ服）]]></title>
+        <id>https://ikmnjrd.github.io/blog/apparel-mens-hondatubasa</id>
+        <link href="https://ikmnjrd.github.io/blog/apparel-mens-hondatubasa"/>
+        <updated>2021-12-22T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[2021年12月21日、YouTubeで行われたLIVE配信でおすすめのアパレルブランドor古着屋として語っていたもののまとめ（語る部分は聞いていないが気付いたら配信映像の固定背景にあったもの）
+
+- DAIRIKU
+  - ダイリク
+  - [https://www.acrmtsm.jp/brands/63](https://www.acrmtsm.jp/brands/63)
+
+- stein
+  - シュタイン
+  - [https://www.acrmtsm.jp/brands/28](https://www.acrmtsm.jp/brands/28)
+
+- taupe
+  - トープ
+  - [https://www.taupe-japan.com/](https://www.taupe-japan.com/)
+
+- yoke
+  - ヨーク
+  - [https://www.yoketokyo.com/](https://www.yoketokyo.com/)
+  - [https://www.acrmtsm.jp/brands/65](https://www.acrmtsm.jp/brands/65)
+
+- AURALEE
+  - オーラリー
+  - [https://auralee.jp/](https://auralee.jp/)
+  - 自社ドメインに販売サイト持ってる。えらい。
+
+- JUMPIN' JAP FLASH
+  - 古着屋
+  - [https://jumpinjap.thebase.in/](https://jumpinjap.thebase.in/)
+  - [https://www.instagram.com/jumpinjapflash](https://www.instagram.com/jumpinjapflash)
+
+- Un Old Joke
+  - 古着屋
+  - [https://unoldjoke.thebase.in/](https://unoldjoke.thebase.in/)
+  - [https://www.instagram.com/unoldjoke](https://www.instagram.com/unoldjoke)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ネーミングを忘れて大量にできたdocker volumeをまとめて削除する方法]]></title>
+        <id>https://ikmnjrd.github.io/blog/bash-sed-docker-volume</id>
+        <link href="https://ikmnjrd.github.io/blog/bash-sed-docker-volume"/>
+        <updated>2022-07-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[docker volumeをshellscriptでまとめて削除する方法]]></summary>
+        <content type="html"><![CDATA[
+### 結論
+```bash
+$ docker volume ls | sed -e 's/local[[:space:]]*//g' | grep -E '.{64,64}' | xargs docker volume rm
+```
+
+Driverの部分(localとスペース)を削除。
+64文字の（ハッシュで自動生成された）ものをリストアップ。
+削除（使用中のボリュームは削除されない）。
+
+### 説明
+気づいたら溜まってしまったdocker volumeたち。。
+ふと確認してみたらえらいことになってしまっていた。
+`$ docker volume ls
+```txt
+DRIVER    VOLUME NAME
+local     1d516cb7225f448d8bb634875487b5eaa35d329696f77f3ae2347a3abb6aa94a
+local     1fbaf3b6210ce64906fffdc1ecf9d711f2d25ebe99dfc2ca3ad3f3aca1a33801
+local     3b4da7efd093305d43c40a004c22669f0b8ae8ac5f933c582a4168c9dff51763
+local     4aada75a0a85dc48abf02fdff03aab5c3fafeaf096567b6517fc6faf62511749
+local     5aa299e15cfeb3a5e3b41c1ab53a17382a11c64101918d916ee9d1e95b0e4672
+local     5cd2395082c05f3acb1f910cf77fb5a1ba1c0e845f8522912a5a82a37e0946ce
+local     5d76f9a14aa7462eedd428b33c6473125ecc9e442e88fcaabf06e946e20b19d9
+local     5f4ba17454db26acce81f3b4ce02d31e270e3c585238db4019b3a2a8482e2238
+local     6b4605498282f9b00b367551dfb3d121e7dcaa89626a3785d5dd2914d6138712
+```
+
+これらをまとめて消したい。（ハッシュ値ではなく名前をきちっとつけてたものは消したくない。）
+
+`$ sed -e 's/local[[:space:]]*//g'`で加工して、
+`$ grep -E '.{64,64}'`で加工して、
+docker volume rmコマンドの引数に渡す
+
+### ハマったポイント
+
+`$ sed -e "s/'local[[:space:]]+'//g` とやってみたが
+`+`を1文字以上のマッチでズバッといけると思ったが`local`の部分もまとめて残ってしまった。
+
+`sed -e 's/local[[:space:]]*//g`これだとうまくいった。0文字以上だからなんか不具合起きそうとしたが...shecllscriptの正規表現はこれだから...
+
+スペースやタブを`\s`や`\t`で検出しようとしてたが、色々みてたら`[[:space"]]`の方が確実っぽいような書き方してるのがちらちらと見えた気がする
+
+
+
+
+### 参考文献
+- [Regex Space character in Sed - Stack Overflow](https://stackoverflow.com/questions/15509536/regex-space-character-in-sed)
+- [正しく理解できる！シェルスクリプトとPOSIXの正規表現（令和最新版）〜 基本正規表現BREと拡張正規表現EREについて - Qiita](https://qiita.com/ko1nksm/items/53abc144558b9bb5629f)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[cosole.logをソースコードに残しておくことのメモリへの影響について]]></title>
+        <id>https://ikmnjrd.github.io/blog/consolelog-effect</id>
+        <link href="https://ikmnjrd.github.io/blog/consolelog-effect"/>
+        <updated>2022-01-05T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+### 疑問
+console.logの上書きで本番環境はデバッグメッセージを表示させないという技を知ったが、これがメモリに影響ないのかどうか知りたい。
+```javascript
+console.log = () => {}
+```
+ちなみに最近ディベロッパーツールでメモリーのスナップショットを撮るという技を知った。
+
+Create React Appで適当に作ったプロジェクトで適当にconsole.logを出力してみた。
+![ソース](https://i.gyazo.com/f55499b3db011a5c81d04c58d71b089b.png)
+
+`console.log`の呼び出しを増やしてブラウザを更新->HEAP Snapshot取得すると`console.log`の呼び出し回数に応じてメモリ使用量が一見増えるように見えたが、しばらく放置して再びHEAP Snapshotを取得するとメモリ使用量が低水準にまで戻る。GCに回収されたのかな？と想像したが、よくわからない。
+![メモリ](https://i.gyazo.com/1ef68f7e017d8ed2309a6ff90d9036ad.png)
+
+### 結論
+ほぼ影響はない
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[contenteditable（HTML）とdataURIを使う際のTips]]></title>
+        <id>https://ikmnjrd.github.io/blog/dataurl-markdown-contenteditable-tips</id>
+        <link href="https://ikmnjrd.github.io/blog/dataurl-markdown-contenteditable-tips"/>
+        <updated>2022-08-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[オフライン環境でも使えるブラウザベースの簡易マークダウンエディタを作った時に知ったことのまとめ]]></summary>
+        <content type="html"><![CDATA[## 概要
+[オフライン環境でも使えるブラウザベースの簡易マークダウンエディタ](https://github.com/ikmnjrd/browser-local-md-editor)を作成した際に知ったことなど、
+箇条書きな内容です。　　
+
+## Tips
+- `<pre>`と`<div>`の違い。contenteditable属性と合わせて使う場合、preは改行やスペースなど入力を入力したまま保持（入出力）してくれる が、divだと改行など特にエスケープされてしまうので、
+contenteditableと使う場合はpreを使う方がベター
+- `<head>`に`<style>`タグでcssを書くとパースがシビアになりすぐ変な挙動になるので、個々のhtmlタグのstyle属性に直書きする。今回作成した簡易的なマークダウンエディタなど、
+htmlが少ないなら有効。
+- dataURIでhtml、特にマークダウン書式を書くならマークダウンんで多用する「#」をURLエンコードに合わせることを意識しておく。#は「%23」で表現される。
+- tabキーなど、文字入力は色々気を使わなくちゃいけない。onkeydownで処理するよりonkeyupで処理した方が都合が良いことが多い。
+- contenteditableなhtmlで参考にすべきはTwitter。Twitterすごい。
+- dataURLではWebStorageが使えない。
+- dataURLではlocationAPIが使えない(Not allowed to navigate top frame to data URL)
+
+
+### 参考文献
+- [How To Add New Line In Markdown? – WiseTut](https://wisetut.com/how-to-add-new-line-in-markdown/)
+- [Data URLs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [jQueryでIME入力確定時にイベントを発行する - Qiita](https://qiita.com/hrdaya/items/6488d8dd3962cf35c0a0)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[details-test]]></title>
+        <id>https://ikmnjrd.github.io/blog/detail-test</id>
+        <link href="https://ikmnjrd.github.io/blog/detail-test"/>
+        <updated>2021-12-22T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+detailstタグのテスト
+
+<details>
+  <summary>summary</summary>
+content
+</details>
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DockerとFirebaseで作るReact環境構築]]></title>
+        <id>https://ikmnjrd.github.io/blog/docker-firebase</id>
+        <link href="https://ikmnjrd.github.io/blog/docker-firebase"/>
+        <updated>2020-04-01T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+## 都合のいいdockerイメージをダウンロード
+`$ docker pull andreysenov/firebase-tools`
+
+`$ mkdir docker-firebase-test`
+
+参考: [https://hub.docker.com/r/andreysenov/firebase-tools](https://hub.docker.com/r/andreysenov/firebase-tools)
+
+## Docker関連ファイルを作成
+
+`$ vi docker-compose.yml`
+
+```yml
+version: "3.8"
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/app 
+    ports:
+      - "8000:3000"
+      - "4000:4000" #Emulator Suite UI
+      - "5000:5000" #Firebase Hosting
+      - "5001:5001" #Cloud Functions
+      - "8080:8080" #Cloud Firestore
+      - "8085:8085" #Cloud Pub/Sub
+      - "9000:9000" #Realtime Database
+      - "9005:9005" #Firebase Login
+      - "9099:9099" #Authentication
+    
+    tty: true
+    stdin_open: true
+```
+
+`$ vi Dcokerfile`
+
+```docker
+FROM andreysenov/firebase-tools
+WORKDIR /app
+```
+
+## ホスティングするファイルを用意
+今回はReactをcreate-react-appで用意
+コンテナに入ってreactをインストール
+
+`$ docker-compose build`
+
+`$ docker-compose up -d`
+
+`$ docker exec -it docker-firebase-test_web_1 sh`
+
+`$ cd /app`
+
+`$ npx create-react-app sample-app --template typescript`
+
+`$ exit`
+
+## docker-compose.ymlを編集
+`$ vi docker-compose.yml`
+
+```yml
+version: "3.8"
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/app 
+    command: sh -c "cd /app/sample-app && yarn start"
+    ports:
+      - "8000:3000"
+      - "4000:4000" #Emulator Suite UI
+      - "5000:5000" #Firebase Hosting
+      - "5001:5001" #Cloud Functions
+      - "8080:8080" #Cloud Firestore
+      - "8085:8085" #Cloud Pub/Sub
+      - "9000:9000" #Realtime Database
+      - "9005:9005" #Firebase Login
+      - "9099:9099" #Authentication
+    
+    tty: true
+    stdin_open: true
+```
+
+## firebaseへデプロイ
+`$ docker-compose up -d`
+
+`$ docker exec -it docker-firebase-test_web_1 sh`
+
+`$ cd /app/react-ts-app`
+
+`$ firebase login --no-localhost`
+
+`$ firebase init hosting`
+
+firebase.jsonを編集してfirebaseが公開ディレクトリをpublicディレクトリではなく、buildディレクトリを参照するように変更
+
+`$ vi firebase.json`
+```json
+{
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+
+```
+
+`$ firebase deploy`
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dockerにおけるログ表示]]></title>
+        <id>https://ikmnjrd.github.io/blog/docker-log</id>
+        <link href="https://ikmnjrd.github.io/blog/docker-log"/>
+        <updated>2022-01-26T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+### 単体コンテナ用
+`docker logs -f --tail=100 <container-name>`
+
+### docker compose用
+`docker compose logs -f --tail=10`
+
+### 参考
+- [Dockerのログが大きくなりすぎたから最新のだけ見たい](https://qiita.com/nitaking/items/4ca215b95cef2ad5e958)
+- [docker-compose logs](https://docs.docker.com/compose/reference/logs/)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Googles製のテンプレート「eleventy-high-performance-blog」をGithub Pagesで使う]]></title>
+        <id>https://ikmnjrd.github.io/blog/eleventy-high-performance-blogをGithub Pagesで使う</id>
+        <link href="https://ikmnjrd.github.io/blog/eleventy-high-performance-blogをGithub Pagesで使う"/>
+        <updated>2022-02-06T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+そもそも11tyを使ったのは、Next.jsのexport(静的)
+
+### Google Anarytics
+cache.jsをオリジナルのコードに直す（）
+
+プロキシ設定の解除
+
+
+### docsディレクトリに静的ファイルを吐き出す設定
+```javascript
+// eleventy.js
+    dir: {
+      input: ".",
+      includes: "_includes",
+      data: "_data",
+      output: "docs",
+    },
+```
+
+### git push時のビルド設定を削除
+以下の記述を削除
+```json
+// package.json
+  "pre-push": [
+    "build"
+  ],
+```
+
+### 周辺用語
+- 
+
+
+### 参考文献
+- []()]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[esbuildを触った際の雑記]]></title>
+        <id>https://ikmnjrd.github.io/blog/esbuild-misc</id>
+        <link href="https://ikmnjrd.github.io/blog/esbuild-misc"/>
+        <updated>2022-03-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[esbuildについての雑記]]></summary>
+        <content type="html"><![CDATA[
+Viteを使った方が楽だけど、できるだけシンプルな環境を作りたい気持ちでesbuildを触っています。
+
+
+### configファイルを作成する場合
+watchオプションを有効にした時、ビルド情報を出力するため[logLevel](https://esbuild.github.io/api/#log-level)をinfoにすると良い。
+```javascript
+// esbuild.config.js
+const esbuild = require('esbuild');
+
+esbuild.build({
+  logLevel: 'info',
+})
+```
+```json
+// package.json
+{
+  ...
+  "scripts": {
+    "build": "node esbuild.config.js",
+  }
+  ...
+}
+```
+
+
+
+### CSS Module + TypeScriptで利用したい場合
+`esbuild-css-modules-plugin`をインストールしPluginとして読み込む([GitHubリポジトリ](https://github.com/indooorsman/esbuild-css-modules-plugin))
+
+
+declareファイルを`src/`以下に置いておく。
+```typescript
+// index.d.ts
+declare module '*.css' {
+  interface IClassNames {
+    [className: string]: string
+  }
+  const classNames: IClassNames;
+  export = classNames;
+}
+```
+
+
+### 周辺用語
+- CSS modules
+- PostCSS
+
+
+### 参考文献
+- [GitHubリポジトリ - esbuild](https://github.com/evanw/esbuild)
+- [How to set up CSS Modules with esbuild](https://how-to.dev/how-to-set-up-css-modules-with-esbuild)
+- [GitHubリポジトリ - esbuild-css-modules-plugin](https://github.com/indooorsman/esbuild-css-modules-plugin))
+- [esbuild の機能が足りないならプラグインを自作すればいいじゃない](https://www.kabuku.co.jp/developers/create-your-own-esbuild-plugin)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[イベントキャプチャリングとバブリング（React）]]></title>
+        <id>https://ikmnjrd.github.io/blog/event-bubbling-capturing-on-react</id>
+        <link href="https://ikmnjrd.github.io/blog/event-bubbling-capturing-on-react"/>
+        <updated>2022-01-17T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[Reactはあまり関係ないです。
+
+筆者はReactからWebの世界に入ったため、Reactの世界観からWeb標準技術を見ることが多いですが、Reactのドキュメントを読んでいるとWeb標準なのかReactの世界の話なのかがよくわからないまま進んでしまいます。そんな状況だったので、JavaScriptの勉強を改めてしていたところに「Reactをやっていて出てきた言葉だけど、なんかよくわからないからスルーしたやつだ！」と再会を果たしたので記念にこの記事を書いています。
+
+### 例題
+
+```tsx
+function Hoge() {
+  return (
+    <div onClick={() => console.log("test")}>
+      <p onClick={() => console.log("p")} >pだよ</p>
+    </div>
+  );
+}
+```
+作成した`<p/>`をクリックすると次のようになります。これが何気なく目にしている挙動と書き方だと思います。
+
+![実行結果1](https://i.gyazo.com/63f658d09ff5f2711823f9e01fc1c2a1.png)
+
+
+次に`onClickCapture`という属性からconsole.logで結果を出力してみましょう。
+
+```tsx
+function Hoge() {
+  return (
+    <div onClickCapture={() => console.log("test")}>
+      <p onClick={() => console.log("p")} >pだよ</p>
+    </div>
+  );
+}
+```
+
+console.logで出力される順序が変わりました。
+
+![実行結果2](https://i.gyazo.com/3fb88bf4ba65dbc23410e35d38cf89d9.png)
+
+これはWEBの標準仕様、DOMのイベントフローに基づいた仕様なのでvanillaJSであろうが、Reactであろうが元の考え方は一緒です。
+
+
+### イベントフロー
+`キャプチャリングフェーズ` 親から子へイベントを見ていく処理
+|
+`ターゲットフェーズ` 発生源の要素に到達した後、その要素自体の処理
+|
+`バブリングフェーズ` 発生源から親へイベントを見ていく段階
+参考: [https://www.w3.org/TR/DOM-Level-3-Events/#event-flow](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)
+
+### JavaScriptとReact
+JavaScriptではaddEventListenrで初心者的に何も意識せずにイベントを追加すると、バブリングフェーズでイベントが発火します。
+
+Reactでも通常、ほとんどのイベントでバブリングフェーズで発火します。
+> 以下のイベントハンドラはイベント伝搬のバブリングフェーズで呼び出されます。キャプチャフェーズのイベントハンドラを登録するには、イベント名に Capture を追加します。たとえば、キャプチャフェーズでクリックイベントを処理するには onClick の代わりに onClickCapture を使用します。
+
+
+### addEventListenerの第3引数（オプション）
+第3引数にあたるものは`options`、もしくは`useCapture`のプロパティです。構造上、第3引数に急にBoolean(true/false)が現れたら、useCapture属性のことです。
+以下に引用したMDNの小難しく感じる文章もそこそこ理解できるようになったのではないでしょうか。
+
+
+- options
+  - capture
+    - Boolean値で、この型のイベントがDOMツリーで下に位置するEventTargetに配信dispatchされる前に、登録されたlistenerに配信されることを示します。
+  - once
+    - Boolean値で、listenerの呼び出しを一回のみのとしたいかどうかを値で指定します。trueを指定すると、listenerは一度実行された時に自動的に削除されます。
+- useCapture
+  - Boolean値で、この型のイベントが、DOMツリー内の下のEventTargetに配信される前に、登録されたlistenerに配信されるかどうかを示します。ツリーを上方向にバブリングしているイベントは、キャプチャーを使用するように指定されたリスナーを起動しません。イベントのバブリングとキャプチャーは、両方の要素がそのイベントのハンドラーを登録している場合に、別の要素内に入れ子になっている要素で発生するイベントを伝播する2つの方法です。イベント伝播モードは、要素がイベントを受け取る順番を決定します。詳細な説明は DOM Level 3 Events と JavaScript Event order を参照してください。指定されていない場合、useCaptureは既定でfalseとなります。
+
+
+### 参考
+- [https://uhyohyo.net/javascript/3_4.html](https://uhyohyo.net/javascript/3_4.html)
+- [https://developer.mozilla.org/ja/docs/Web/API/EventTarget/addEventListener](https://developer.mozilla.org/ja/docs/Web/API/EventTarget/addEventListener)
+- [https://ja.reactjs.org/docs/events.html](https://ja.reactjs.org/docs/events.html)
+- [https://ja.reactjs.org/blog/2020/08/10/react-v17-rc.html#no-event-pooling](https://ja.reactjs.org/blog/2020/08/10/react-v17-rc.html#no-event-pooling)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[疑問メモ_NodejsとExpressの違い]]></title>
+        <id>https://ikmnjrd.github.io/blog/express-node-difference</id>
+        <link href="https://ikmnjrd.github.io/blog/express-node-difference"/>
+        <updated>2021-12-26T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+
+### 疑問
+Node.jsはnodeコマンドでWebサーバーとして立ち上がるみたいだけど、一方expressもある。
+nodeコマンドで立ち上がるWebサーバーとexpressは何が違うんだ！！！！
+
+
+### 参考文献
+- [https://developer.mozilla.org/ja/docs/Learn/Server-side/Express_Nodejs/Introduction](https://developer.mozilla.org/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[フォントについて]]></title>
+        <id>https://ikmnjrd.github.io/blog/font-what-is</id>
+        <link href="https://ikmnjrd.github.io/blog/font-what-is"/>
+        <updated>2022-02-06T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[### フォント
+デジタルデータとしてフォントを表示するには切っても切り離せない。
+これはもちろんWebの世界でも、ネイティブアプリの世界でも一緒。
+
+フォントがない世界はありえない。
+
+### 歴史？
+Adobeはフォントという存在を意識できる人なら誰でも知ってる。
+「Adobe Illustrator」「Adobe Photoshop」などに始まり、印刷用に開発されたPostScriptなどを開発したりしていた。
+
+truetype(.ttf)
+woff(.wof)
+woff2(.woff2)
+などの拡張子がある。
+
+### フォントをユーザーにどう届けるか
+* クライアントにプリインストールされているフォントを使う
+* 自サーバーから配信
+* Webフォントを使う（配信されているものにタダ乗り）
+
+#### ライアントにプリインストールされているフォントを使う
+
+- macOS Big Sur
+  - [https://support.apple.com/ja-jp/HT211240](https://support.apple.com/ja-jp/HT211240)
+- Windows 11
+  -  [https://docs.microsoft.com/en-us/typography/fonts/windows_11_font_list](https://docs.microsoft.com/en-us/typography/fonts/windows_11_font_list)
+- iOS
+  - [https://developer.apple.com/fonts/system-fonts/](https://developer.apple.com/fonts/system-fonts/)
+- Android
+  - 端末メーカーによる場合があり
+
+#### 自サーバーから配信
+主要ブラウザはwoff2に対応しているので、woff2で用意するば十分。
+
+[対応ブラウザ](https://caniuse.com/woff2)
+
+#### Webフォントを使う
+有名なものとして
+- [Google Fonts](https://googlefonts.github.io/japanese/)
+- [REALTYPE](https://www.realtype.jp/)
+
+
+### 参考文献
+- [各OSの標準搭載フォント一覧へのリンク集  |  Rriver](https://parashuto.com/rriver/development/preinstalled-font-list-by-operating-system)
+
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GCPのCloudBuildなんやねんこいつ]]></title>
+        <id>https://ikmnjrd.github.io/blog/gcp-cloud-build-complain</id>
+        <link href="https://ikmnjrd.github.io/blog/gcp-cloud-build-complain"/>
+        <updated>2022-01-30T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[### 疑問に遭遇した状況
+最近 Cloud Run にハマってる。Cloud SDK こと gcloud コマンドで Artifact Registry(Container Registry)にアップロードしてほいっと `gcloud run deploy` ですぐにサービスが公開できて気持ちがいい。
+
+じゃあそろそろGithub ActionsでCI/CDの設定でもしようかと思ったら、サービスの概念が自分の中で咀嚼できていなかったことに気がついた。そこでの疑問は以下だ。
+
+### 疑問
+**Cloud Build なんやねんこいつ** である。
+
+`google-github-actions/setup-gcloud` を使ってワークフローを使っていると、次のような形になる。
+
+```yaml
+name: Build and Push Image
+
+on:
+  push:
+    tags:
+    - "*"
+
+jobs:
+  build-and-publish:
+    name: Build and Push docker image
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.ref }}
+
+    - name: Setup Google Cloud
+      uses: google-github-actions/setup-gcloud@v0
+      with:
+        service_account_key: ${{ secrets.GCLOUD_AUTH }}
+        project_id: node-datastore-test-111
+
+    - name: Configure docker for artifact registry
+      run: |
+        gcloud auth configure-docker asia-northeast1-docker.pkg.dev
+
+    - name: set TAG
+      run: |
+        echo "TAG=$(echo $GITHUB_REF | awk -F/ '{print $NF}')" >> $GITHUB_ENV
+
+    - name: Build
+      run: |
+        docker build -t asia-northeast1-docker.pkg.dev/node-datastore-test-111/node-datastore-test-repo/node-datastore-test-image:${{ env.TAG }} ./
+
+    - name: Push
+      run: |
+        docker push asia-northeast1-docker.pkg.dev/node-datastore-test-111/node-datastore-test-repo/node-datastore-test-image:${{ env.TAG }}
+
+    - name: Deploy
+      run: |
+        gcloud run deploy test-service --image asia-northeast1-docker.pkg.dev/node-datastore-test-111/node-datastore-test-repo/node-datastore-test-image:${{ env.TAG }} --region asia-northeast1 --platform managed --allow-unauthenticated
+
+```
+
+せっかくdockerコマンドの羅列で気持ちよくなれてたのに、deployはgcloudコマンドに戻ってくる。
+
+...?
+Cloud Buildを挟まないとArtifact RegistryからCloud Runへデプロイできないと思い込んでいたけど、Cloud RunにデプロイするためにArtifact RegistryにビルドしたDocker Imageをアップロードしてるだけで、Cloud Buildいらんやん。。。
+
+なんやねん Cloud Build こいつは、でした。
+
+
+### 周辺用語
+- Github Actions
+- Cloud SDK
+- Cloud Build
+
+
+### 参考文献
+- [Cloud Run へのデプロイ](https://cloud.google.com/artifact-registry/docs/integrate-cloud-run#command-line)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google Cloud Runで動かすアプリをRDBに接続した際の料金を考える]]></title>
+        <id>https://ikmnjrd.github.io/blog/gcp-cloudrun-price</id>
+        <link href="https://ikmnjrd.github.io/blog/gcp-cloudrun-price"/>
+        <updated>2022-01-10T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+Googleが提供してくれているCloud Runは便利ですよね。私は普段Reactでクライアント側を触っていてFirebaseで済ませることが多いのですが、Cloud Runの便利さに感化されてRDBも使いたくなりました。（FirebaseはNoSQLしか提供してくれていないので...）
+
+しかしへっぽこアプリに使うにはいかんせん料金が気になったところで、予想よりも今回の用途には高級すぎました。今回の判断の元になった部分をまとめます。
+
+自称へっぽこアプリへの、想定されるトラフィックとしては1日に1件リクエストがあるかといったレベルのものを想定して話を進めます。
+
+まず第一にCloud Runを使用する。そこにクラウドサービスを利用してRDBを接続したい。
+そうなった時の候補は、次の2つで、こちらの料金を概算していきます。
+1. Cloud Run と Cloud SQL
+2. Cloud RunにホストしたAPIサーバーをVPS上のDBサーバーに繋ぐ
+
+
+
+
+### 注意事項
+1$=100円で計算しています。
+
+料金は全て東京リージョンで計算しています。
+
+
+## **1. Cloud SQLの料金**
+1ヶ月あたり800円。
+
+#### 内訳
+1. ストレージとネットワークの料金
+  * SSD ストレージ容量: 1 GB あたり $0.221/月
+  * HDD ストレージ容量: 1 GB あたり $0.117/月
+2. ネットワーク下り（外向き）の料金
+  * 送信先 Google プロダクトであれば大陸内は無料
+  * インターネット下り（外向き、Cloud Interconnect を使用する場合）は$0.05/GB
+  * インターネット下り（外向き、Cloud Interconnect を使用しない場合）は$0.19/GB
+3. インスタンスの料金
+
+| 共有コア マシンタイプ | 仮想 CPU 数 |RAM（GB） |最大ストレージ容量|1ヶ月あたりの料金（米ドル）
+|:-----------|:------------|:------------|:------------|:------------|
+| db-f1-micro | 共有  | 0.6 | 3,062 GB | $7.67 |
+| db-g1-small | 共有  | 1.7 | 3,062 GB | $25.55 |
+
+
+
+CloudFunctionsで停止と起動をスケジューリングしてことを解説している[Google Cloudのブログ](https://cloud.google.com/blog/ja/topics/developers-practitioners/lower-development-costs-schedule-cloud-sql-instances-start-and-stop)もあります。
+
+
+## **2. 他社VPSにDBサーバを建て接続**
+必要なもの(料金計算対象)
+* VPS(今回はConoHa)
+* Cloud NAT
+* 静的IPアドレス
+
+
+### **ConoHaのVPSの料金**
+1ヶ月あたり682円
+
+メモリ: 512MB、
+CPU: 1コア、
+SSD: 30GB
+
+
+### **Cloud NATの料金**
+1ヶ月あたり数円
+
+| 割り当てられている VM インスタンスの数 | 1 時間あたりの料金 | 処理された 1 GB あたりの料金（下りと上り（外向きと内向き）の両方） |
+|:-----------|:------------|:------------|
+| 32 VM インスタンスまで | $0.0014 × ゲートウェイを使用している VM インスタンスの数 | $0.045   |
+|32 VM インスタンスを超える場合|$0.044|	$0.045
+
+参考：[https://cloud.google.com/nat/pricing?hl=ja](https://cloud.google.com/nat/pricing?hl=ja)
+
+
+### **静的IPアドレス**
+1ヶ月あたり1,080円
+
+静的IPアドレス（割り当て済み、未使用）	1時間あたり$0.015
+
+参考:[https://cloud.google.com/compute/all-pricing#ipaddress](https://cloud.google.com/compute/all-pricing#ipaddress)
+
+
+### その他参考
+- [https://cloud.google.com/run/docs/configuring/static-outbound-ip](https://cloud.google.com/run/docs/configuring/static-outbound-ip?hl=ja)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[よく使うgcloudコマンド]]></title>
+        <id>https://ikmnjrd.github.io/blog/gcp-gcloud-command-often-used</id>
+        <link href="https://ikmnjrd.github.io/blog/gcp-gcloud-command-often-used"/>
+        <updated>2022-01-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Google Cloud Platform（gcloud）の個人的によく使うコマンドを備忘録的にまとめています。]]></summary>
+        <content type="html"><![CDATA[
+主にCloudRun周辺の。すごく個人的なまとめです。
+
+## コマンド
+### 一般枠
+- `gcloud --help`
+- `gcloud config --help`
+- `gcloud config configurations list`
+- `gcloud config configurations create <configuration-name>`
+- `gcloud config configurations activate <configuration-name>`
+- `gcloud projects list`
+- `gcloud config set project <your-project-id>`
+- `gcloud config set project <project-name>`
+- `gcloud projects create <you-project-id> --name <your-project-name>`
+
+
+### Cloud BuildとArtifact RegistryとCloud Run
+- `gcloud services enable  artifactregistry.googleapis.com cloudbuild.googleapis.com`
+- `gcloud artifacts repositories list`
+- ` gcloud artifacts repositories create <repository-name> --repository-format=docker --location=asia-northeast1 --description="Docker repository hoge"`
+- `gcloud builds submit --tag asia-northeast1-docker.pkg.dev/<you-project-id>/<repository-name>/<image-name>:tag1`
+- `gcloud run deploy <service-name> --image asia-northeast1-docker.pkg.dev/<you-project-id>/<repository-name>/<image-name>:tag1 --region asia-northeast1 --platform managed --allow-unauthenticated`
+
+
+### その他メモ
+- `gcloud builds submit`時にカレントディレクトリのDockerfileがアップロードされてビルドされるものだと思ってたけど、[公式ドキュメント](https://cloud.google.com/sdk/gcloud/reference/builds/submit)を見てもそうは書いてない？とりあえずカレントディレクトリの
+- Cloud Runがデフォルトで外部接続に使うポートは8080ってまじ？
+
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub Pages(Jeykyll)をGoogle Search Consoleに登録]]></title>
+        <id>https://ikmnjrd.github.io/blog/google-search-console-regist</id>
+        <link href="https://ikmnjrd.github.io/blog/google-search-console-regist"/>
+        <updated>2021-12-28T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+## 前提
+私はGitHub Pagesで[Jekyll/minima](https://github.com/jekyll/minima)を利用しているので、同様な構成な方に向けた記事です。
+
+## サイトマップを作成
+jekyllのプラグインを利用してサイトマップを作成するため `_config.yml` に以下を記述。
+```yml
+plugins:
+- jekyll-sitemap
+```
+
+作成されたサイトマップは以下のURLで確認できる。
+
+`https://{ユーザー名}.github.io/sitemap.xml`
+
+
+## gtag(Google analytics)を埋め込む
+Google analyticsを仕込んでいることが前提になっているようなので、事前に設定を済ます。
+
+私のようにGitHub Pagesで[Jekyll/minima](https://github.com/jekyll/minima)を利用している場合
+`_config.yml` に以下のような記述をする。
+```yml
+google_analytics: G-WXXXXXXXXX
+```
+
+## Google Search Consoleにアクセス
+[https://search.google.com/search-console](https://search.google.com/search-console)にアクセスする。
+
+
+
+サーチコンソールのロゴ下のメニューをクリックし、開いたメニューの中から「プロパティ追加」をクリック。
+![俯瞰図](https://i.gyazo.com/dce2b95d46361ad38e873d5e5e9e9291.png)
+
+
+
+URLプレフィックスで自身のページ（`https://{ユーザー名}.github.io`）を入力。続行をクリック。
+![追加画面](https://i.gyazo.com/2d834c38eedd04d1d42663f7dcc4a1c0.png)
+
+
+
+登録直後の画面
+![登録直後](https://i.gyazo.com/c3ccc8921cac92ce03d4964cc6a78e84.png)
+
+
+
+### サイトマップを登録
+左側のメニューから、「インデックス」->「サイトマップ」をクリックする
+サイトマップを送信する。
+![サイトマップ登録](https://i.gyazo.com/e987cfaa2328b58a5b42d9d070929f48.png)
+
+
+
+サイトマップ送信直後は以下のようになる。
+![サイトマップ送信直後](https://i.gyazo.com/eaf2aa36d0e725c9f4a01da5ef6c833f.png)
+
+
+
+あとは処理が完了するまで数日待ちます。
+
+## 確認（数日後）
+
+サマリー（検索パフォーマンス）
+![数日後サマリー](https://i.gyazo.com/70fde43f72dc84263a0f662eb5c8e4af.png)
+
+サイトマップ
+![数日後サイトマップ](https://i.gyazo.com/175db4f4b7552d5169601a659b7ece4a.png)
+
+## 注意
+Google Analyticsタグの埋め込みなどは利用しているJeykllテーマによって異なる場合があります。自身の利用しているリモートテーマをしっかりと確認しましょう。
+
+### 参考文献
+- [https://netchira.github.io/blog/githubpages/SEOsono1.html](https://netchira.github.io/blog/githubpages/SEOsono1.html)
+- [https://developers.google.com/search/docs/beginner/seo-starter-guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gyazoをブログ用の画像ホストとして使い倒す]]></title>
+        <id>https://ikmnjrd.github.io/blog/gyazo-blog-useful</id>
+        <link href="https://ikmnjrd.github.io/blog/gyazo-blog-useful"/>
+        <updated>2022-02-11T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+大好きなWebサービス「Gyazo」の紹介です。
+
+簡単にこのサービスを説明すると、Gyazoを使ってスクリーンショットを撮ると無料のクラウドサーバーにアップロード&URLが発行され、共有が簡単にできるサービスです。
+
+`https://gyazo.com/37f2d7be5ea5964c6aa339f0aa95c9f8`
+![例](https://i.gyazo.com/37f2d7be5ea5964c6aa339f0aa95c9f8.png)
+
+
+このようにすると、画像を直接指定できる。
+
+`https://i.https://gyazo.com/37f2d7be5ea5964c6aa339f0aa95c9f8.png`
+
+以下のようにするとサイズを指定できる
+
+`https://i.gyazo.com/thumb/300/37f2d7be5ea5964c6aa339f0aa95c9f8.png`
+
+これを応用すると、画像を自前でホストせずに、最適化した画像によるレスポンシブ対応がhtmlだけでできる。
+
+```html
+  <img
+    src="https://i.gyazo.com/37f2d7be5ea5964c6aa339f0aa95c9f8.png"
+    srcset="https://i.gyazo.com/thumb/320/37f2d7be5ea5964c6aa339f0aa95c9f8.png 320w,
+            https://i.gyazo.com/thumb/640/37f2d7be5ea5964c6aa339f0aa95c9f8.png 640w,
+            https://i.gyazo.com/thumb/1280/37f2d7be5ea5964c6aa339f0aa95c9f8.png 1280w"
+    sizes="(max-width:1280px) 100vw, 1280px"
+  >
+```
+
+`<picture/>`と`<source/>`を使えばより柔軟に設定できる。
+
+
+### 周辺用語
+- レスポンシブデザイン
+- srcset
+- ポリフィル「picturefill」
+
+### 参考文献
+- [レスポンシブ画像 - ウェブ開発を学ぶ | MDN](https://developer.mozilla.org/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [HTML 5.1のsrcset・sizes属性とpicture要素の使い方 - レスポンシブイメージで画像表示を最適化 - ICS MEDIA](https://ics.media/entry/13324/)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSSアニメーションで作るハンバーガーメニュー]]></title>
+        <id>https://ikmnjrd.github.io/blog/hamburger-css-animation</id>
+        <link href="https://ikmnjrd.github.io/blog/hamburger-css-animation"/>
+        <updated>2022-01-12T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+## サンプルコード
+
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="RwLeEOj" data-user="ikmnjrd" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/ikmnjrd/pen/RwLeEOj">
+  CSS-hamburger</a> by ike (<a href="https://codepen.io/ikmnjrd">@ikmnjrd</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+
+### 重要なポイント
+
+#### CSSプロパティ
+```css
+background: currentColor;
+```
+参考:[https://zenn.dev/phi/articles/css-tips-currentcolor](https://zenn.dev/phi/articles/css-tips-currentcolor)
+
+#### アニメーションのイージング
+- `cubic-bezier`
+  - [cubic-bezier を知る。](https://qiita.com/96usa_koi/items/6f313f1d664806a77313)
+
+#### アニメーション
+座標変換の原点を設定する`transform-origin`
+
+#### WAI-ARIA
+aria-expanded="false"
+
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[draw.ioで作る技術資料に使うツールアイコン]]></title>
+        <id>https://ikmnjrd.github.io/blog/icon-of-tech-tools-with-drawio</id>
+        <link href="https://ikmnjrd.github.io/blog/icon-of-tech-tools-with-drawio"/>
+        <updated>2022-01-28T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+### まずは検索
+検索してみる。
+![draw.io検索](https://i.gyazo.com/d68e020225a55e471084351f8512ad1c.png)
+
+draw.ioで`https://~`を参照する形で読み込んでしまうとエクスポート時に画像が表示されないので注意。
+
+### 検索してないなら
+[いい感じにまとめてくれているQiita記事](https://qiita.com/tkit/items/932316c5f5f7b162b61e)
+
+
+### 何がなんでもアイコンを使いたい
+[https://vecta.io/symbols](https://vecta.io/symbols)
+
+### svgでもいいなら
+[https://devicon.dev/](https://devicon.dev/)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iTermで1単語分の移動をできるようにする]]></title>
+        <id>https://ikmnjrd.github.io/blog/iterm-enable-option-b</id>
+        <link href="https://ikmnjrd.github.io/blog/iterm-enable-option-b"/>
+        <updated>2022-08-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[僕の疑問に追記する形で更新しています。]]></summary>
+        <content type="html"><![CDATA[### 前提
+
+terminal操作で`ctrl+a`を押せば行頭へ戻る  
+`ctrl+e`を押せば行末へ移動  
+`ctrl+u`を押せばカーソル位置から行頭まで削除  
+ここまではいい。  
+
+しかし、  
+`option + b`や`option + f`を使って1単語分の移動をしようとすると筆記体のfやルート記号が入力され移動できない  
+(MacのoptionはしばしばAltと同等)  
+
+### 結論
+
+iTerm側の設定を変更する。  
+画像のLeft Option keyがNormalがデフォルトの設定のはずなので、Esc+に変更する
+![iTerm](https://i.gyazo.com/89dddef08769a9f3f3e3c59408a83ce9.png)
+
+### 参考文献
+
+- [macos - Bash keyboard shortcuts in iTerm like Alt+d and Alt+f - Stack Overflow](https://stackoverflow.com/questions/18923765/bash-keyboard-shortcuts-in-iterm-like-altd-and-altf)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript名前空間でハマった話]]></title>
+        <id>https://ikmnjrd.github.io/blog/javascript-namespace-push-me-in-pit</id>
+        <link href="https://ikmnjrd.github.io/blog/javascript-namespace-push-me-in-pit"/>
+        <updated>2021-12-30T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+ハマったポイントとその解決策を書く。
+
+### ハマったポイント
+
+なぜ②の箇所で変数`audio`にアクセスできてしまうの？？？？
+
+```javascript
+const init = () => {
+
+  const upload_file = document.getElementById('uploadedFile');
+  const audio = document.getElementById('audio');
+
+  upload_file.addEventListener('change', (e) => {
+    audio.src = URL.createObjectURL(e.target.files[0]);
+
+    console.log(audio); // ①
+    audio.load();
+    audio.play();
+    draw();
+  });
+}
+
+const draw = () => {
+  console.log(audio); // ②
+}
+
+window.onload = init();
+
+```
+
+output例
+```html
+<audio id="audio" controls="" src="blob:http://localhost:8080/b691c70c-4570-4659-97d3-45577d80ec21"></audio>
+<audio id="audio" controls="" src="blob:http://localhost:8080/b691c70c-4570-4659-97d3-45577d80ec21"></audio>
+```
+
+
+### 起こっていたこと
+ググったらすぐに出てきた。
+> タイトルの通りなんですが, HTML の DOM に指定した id はすべて同じ変数名としてグローバル変数に格納されます.
+参考: [https://zenn.dev/phi/articles/javascript-tips-dom-id-global](https://zenn.dev/phi/articles/javascript-tips-dom-id-global)
+
+
+```javascript
+const init = () => {
+
+  const upload_file = document.getElementById('uploadedFile');
+  const audio2 = document.getElementById('audio');
+
+  upload_file.addEventListener('change', (e) => {
+    audio2.src = URL.createObjectURL(e.target.files[0]);
+
+    console.log(audio); // ①
+    audio2.load();
+    audio2.play();
+    draw();
+  });
+}
+
+const draw = () => {
+  console.log(audio);
+  console.log(audio2); // ②
+}
+
+window.onload = init();
+```
+output例
+```jsstacktrace
+script.js:40 <audio id=​"audio" controls src=​"blob:​http:​/​/​localhost:​8080/​b337de48-6ba2-459b-a022-d56dae3da9d3">​…​</audio>​
+script.js:41 Uncaught ReferenceError: audio2 is not defined
+    at draw (script.js:41)
+    at HTMLInputElement.<anonymous> (script.js:30)
+draw @ script.js:41
+```
+
+
+
+### 解決案
+
+idは慎重に名付けしよう。
+
+
+### 周辺用語
+- グローバル変数
+- DOM
+
+
+### 参考文献
+- [https://zenn.dev/phi/articles/javascript-tips-dom-id-global](https://zenn.dev/phi/articles/javascript-tips-dom-id-global)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CommonJSでもスマートにfsモジュールを読み込む]]></title>
+        <id>https://ikmnjrd.github.io/blog/javascript-smartload-fs-module</id>
+        <link href="https://ikmnjrd.github.io/blog/javascript-smartload-fs-module"/>
+        <updated>2022-02-03T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[### 前提
+Node.jsで開発するとき、`fs`はかなりよく使う。
+そして私はまだwebpackの呪縛から逃れられていないので、CommonJSで書きたい場面が多い。
+そして現在で使うときは大抵`Promise型`で使う。
+
+### 結論
+そんなときには次のように書くとスマート
+```javascript
+const { promises: fs } = require('fs')
+```
+
+こういう書き方でもいい。
+```javascript
+const fs = require('fs').promises;
+```
+
+
+### 参考文献
+- [https://github.com/vercel/next.js/blob/canary/examples/blog/scripts/gen-rss.js](https://github.com/vercel/next.js/blob/canary/examples/blog/scripts/gen-rss.js)
+- [[Node.js]fs.promises APIの使い方](https://tech.chakapoko.com/nodejs/file/promises.html)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[歴代ECMAScript仕様情報のまとめ]]></title>
+        <id>https://ikmnjrd.github.io/blog/javascript-summary-of-ecma-specs</id>
+        <link href="https://ikmnjrd.github.io/blog/javascript-summary-of-ecma-specs"/>
+        <updated>2022-01-16T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+### まとめ
+ここを見ろ
+- [https://developer.mozilla.org/ja/docs/Web/JavaScript/Language_Resources](https://developer.mozilla.org/ja/docs/Web/JavaScript/Language_Resources)
+
+GitHubリポジトリや公式ページは過去の仕様が見辛い
+- [https://github.com/tc39/ecma262](https://github.com/tc39/ecma262)
+- [https://tc39.es/](https://tc39.es/)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WeakMapの使い所]]></title>
+        <id>https://ikmnjrd.github.io/blog/javascript-weakmap-usage</id>
+        <link href="https://ikmnjrd.github.io/blog/javascript-weakmap-usage"/>
+        <updated>2022-01-16T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+### WeakMapとは
+ES2015で追加された仕様。ハッシュテーブルの一種。
+MDNには以下のように書かれています。
+>The WeakMap object is a collection of key/value pairs in which the keys are weakly referenced.
+
+`weakly referenced keys`(弱い参照) という概念がキモ。
+
+
+似たオブジェクトとの一番わかりやすい違いが、キーにすることができるデータ型です。
+| オブジェクト | プロパティキーにできるもの | 値にできるもの |
+|:-----------|:------------|:------------|
+| WeakMap   | Object      | 任意            |
+| Object    | 文字列, Symbol    | 任意       |
+| Map       | 関数、オブジェクト、あらゆるプリミティブなど    | 任意      |
+
+ちなみにArray型（配列）は、キーバリューのかたち（キー付きコレクション）ではないです。逆にArrayやInt8Arrayなどは索引付きコレクションと呼ばれています。[参考:「標準組み込みオブジェクト」](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects)
+
+上の表を見た個人的感想はWeakMapはObjectと似ているな、と思うので今回の比較に用いていきたいと思います。
+
+### Objectとの違い、使い分け
+
+雑な説明ですが、JavaScriptではプロトタイプチェーンの仕組みにより、新しいオブジェクトを作ると元にしたオブジェクトを参照しながらメモリに保持されます。
+
+> キーによるオブジェクト参照は弱く保持され、そのオブジェクトへの参照が他に存在しないときはガベージコレクション (GC) の対象になります
+> <cite>出典: [MDN-キー付きコレクション](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)</cite>
+
+これが"弱い参照"とされる理由の一つです。
+> Map オブジェクトとの違いの１つは、WeakMap のキーは列挙可能ではないことです（すなわち、キーのリストを取得するメソッドがありません）。もしも列挙可能であれば、リストは非決定性をもたらす、ガベージコレクションの状態に依存することになってしまいます。
+> <cite>出典: [MDN-キー付きコレクション](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)</cite>
+
+
+
+### 使い方の例
+
+```javascript
+  // HTMLMediaElement用
+  var audioEle;
+  var wm = new WeakMap();
+
+  /* 〜中略〜 */
+
+  // WeakMapでHTMLMediaElementを保持する
+  if (wm.has(audioEle)) {
+    audioSourceNode = wm.get(audioEle);
+  } else {
+    audioSourceNode = audioCtx.createMediaElementSource(audioEle);
+    wm.set(audioEle, audioSourceNode);
+  }
+```
+出典:[https://github.com/TakeshiOkamoto/waveform-spectrum/blob/master/waveform-spectrum.js](https://github.com/TakeshiOkamoto/waveform-spectrum/blob/master/waveform-spectrum.js)
+
+### 参考
+- [WeakMap Objects-sec](https://262.ecma-international.org/#sec-weakmap-objects)
+- [tc39-GitHub](https://github.com/tc39/ecma262-6-src)
+- [MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+- [https://uhyohyo.net/javascript/16_1.html](https://uhyohyo.net/javascript/16_1.html)
+- [https://github.com/TakeshiOkamoto/waveform-spectrum/blob/master/waveform-spectrum.js](https://github.com/TakeshiOkamoto/waveform-spectrum/blob/master/waveform-spectrum.js)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[疑問メモ_evalが頻出するのはなぜ]]></title>
+        <id>https://ikmnjrd.github.io/blog/javascript-why-appear-eval</id>
+        <link href="https://ikmnjrd.github.io/blog/javascript-why-appear-eval"/>
+        <updated>2021-12-26T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+### 疑問
+なんでWebpack?esbuild?などでトランスパイルしたjsファイルにeval(withも?みたことはないけど)が頻出するの？
+MDNを見たけど、危険ってことしかわからなかった。
+自分なりに考えた理由としてはevalは機械語(ネイティブコード)に近いからコンパイルが楽になると予想した。
+
+### 自分なりの回答
+`eval`は[標準組み込みオブジェクト](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects)として実装されているから、と言う説
+
+### 周辺用語
+- 
+
+
+### 参考文献
+- [標準組み込みオブジェクト](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[疑問_なぜvarとconstが共存しているのか]]></title>
+        <id>https://ikmnjrd.github.io/blog/javascript-why-var-const-togetter</id>
+        <link href="https://ikmnjrd.github.io/blog/javascript-why-var-const-togetter"/>
+        <updated>2022-01-23T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[### 疑問に遭遇した状況
+Next.jsで`$ next export`が気になり、`~/node_modules/next/dist/cli/next-export.js`を見ていた。
+
+### 疑問
+グローバル宣言している`var`とES2015(ES6)から追加された`const`と`let`が共存している。なぜ？？
+
+```javascript
+#!/usr/bin/env node
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.nextExport = void 0;
+var _path = require("path");
+var _fs = require("fs");
+var _indexJs = _interopRequireDefault(require("next/dist/compiled/arg/index.js"));
+var _export = _interopRequireDefault(require("../export"));
+var _utils = require("../server/lib/utils");
+var _trace = require("../trace");
+var _isError = _interopRequireDefault(require("../lib/is-error"));
+var _getProjectDir = require("../lib/get-project-dir");
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+const nextExport = (argv)=>{
+    const nextExportCliSpan = (0, _trace).trace('next-export-cli');
+    const validArgs = {
+        // Types
+        '--help': Boolean,
+        '--silent': Boolean,
+        '--outdir': String,
+        '--threads': Number,
+        // Aliases
+        '-h': '--help',
+        '-s': '--silent',
+        '-o': '--outdir'
+    };
+    let args;
+    try {
+        args = (0, _indexJs).default(validArgs, {
+            argv
+        });
+    } catch (error) {
+        if ((0, _isError).default(error) && error.code === 'ARG_UNKNOWN_OPTION') {
+            return (0, _utils).printAndExit(error.message, 1);
+        }
+        throw error;
+    }
+    if (args['--help']) {
+        console.log(`
+      Description
+        Exports the application for production deployment
+
+      Usage
+        $ next export [options] <dir>
+
+      <dir> represents the directory of the Next.js application.
+      If no directory is provided, the current directory will be used.
+
+      Options
+        -h - list this help
+        -o - set the output dir (defaults to 'out')
+        -s - do not print any messages to console
+    `);
+        process.exit(0);
+    }
+    const dir = (0, _getProjectDir).getProjectDir(args._[0]);
+    // Check if pages dir exists and warn if not
+    if (!(0, _fs).existsSync(dir)) {
+        (0, _utils).printAndExit(`> No such directory exists as the project root: ${dir}`);
+    }
+    const options = {
+        silent: args['--silent'] || false,
+        threads: args['--threads'],
+        outdir: args['--outdir'] ? (0, _path).resolve(args['--outdir']) : (0, _path).join(dir, 'out')
+    };
+    (0, _export).default(dir, options, nextExportCliSpan).then(()=>{
+        nextExportCliSpan.stop();
+        (0, _utils).printAndExit(`Export successful. Files written to ${options.outdir}`, 0);
+    }).catch((err)=>{
+        nextExportCliSpan.stop();
+        (0, _utils).printAndExit(err);
+    });
+};
+exports.nextExport = nextExport;
+
+//# sourceMappingURL=next-export.js.map
+```
+
+### 周辺用語
+- Next.js
+- ESModules
+- CommonJS
+
+
+### 参考文献
+- [MDN - Object.defineProperty()](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+- [javascript.info - モジュール, 導入](https://ja.javascript.info/modules-intro)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[jekyllでfaviconを設定]]></title>
+        <id>https://ikmnjrd.github.io/blog/jekyll-favicon-setup</id>
+        <link href="https://ikmnjrd.github.io/blog/jekyll-favicon-setup"/>
+        <updated>2021-12-31T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+## 前提
+私はGitHub Pagesで[Jekyll/minima](https://github.com/jekyll/minima)を利用しているので、同様な構成な方に向けた記事です。
+
+
+## favicon設定
+./includes/custom-head.htmlに以下のコードを追記
+
+```html
+<link rel="icon" href="/favicon.ico">
+```
+
+用意したfaviconをルートディレクトリに配置。
+![リポジトリ](https://i.gyazo.com/f1dd722b4abdecd1fa61907db9601047.png)
+
+
+## 参考にしたもの
+- [https://zenn.dev/pacchiy/articles/e4dcd7bd29d387](https://zenn.dev/pacchiy/articles/e4dcd7bd29d387)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Jekyllテーマのhtmlオーバーライド]]></title>
+        <id>https://ikmnjrd.github.io/blog/jekyll-footer-override</id>
+        <link href="https://ikmnjrd.github.io/blog/jekyll-footer-override"/>
+        <updated>2021-12-22T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+できるだけ楽をしてブログを続けるために仕方なくGitHub PagesでJekyllを使ってる人は僕以外にいることと思う。
+
+~~今となっては古いデザインのものが多く、好みのテーマを見つけることすらめんどくさかった。それすら古さが漂う~~
+
+せっかく見つけたテーマのうち1部分だけ気に入らない時の対処法を書く。
+ちなみにテーマは[minima](https://github.com/jekyll/minima)です。
+
+今回僕が気に入らなかったのが、footerにある「Subscribe」の文字部分。これを消したい。
+![feeds削除前](https://i.gyazo.com/1c3f3779075834651e9c927a2ea096a4.png)
+
+
+[minima](https://github.com/jekyll/minima)のソースコードを確認し、`/_incledes/footer.html`が気に入らなかった箇所があることを確認した。
+
+
+**自身のリポジトリ**に`/_incledes/footer.html`を作成、今回はオリジナルのfooter.htmlから該当箇所を削除。
+
+以下の画像のような状態になると思います。
+![リポジトリルート](https://i.gyazo.com/aa22c02a8c6b29a6ed66c1d473d6695d.png)
+
+いつも通りGitHubにpush。
+消えたことが確認できました。
+![feed削除後](https://i.gyazo.com/1d8dc36636e96098fa0bff06abe2a31f.png)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub Pagesでズボラに使えそうなJekyllのブログ用テーマ]]></title>
+        <id>https://ikmnjrd.github.io/blog/jekyll-theme-on-gh-pages</id>
+        <link href="https://ikmnjrd.github.io/blog/jekyll-theme-on-gh-pages"/>
+        <updated>2021-10-29T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+* https://github.com/jekyll/minima
+* https://github.com/zivong/jekyll-theme-hydure
+* https://github.com/huangyz0918/moving
+* https://github.com/jekyllt/jasper
+* https://github.com/joshgerdes/jekyll-uno
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Jekyll Tipue Searchによる記事検索の導入方法]]></title>
+        <id>https://ikmnjrd.github.io/blog/jekyll-tipuesearch-adopt</id>
+        <link href="https://ikmnjrd.github.io/blog/jekyll-tipuesearch-adopt"/>
+        <updated>2022-01-18T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+Github Pagesで手軽にブログを作成する際に第一候補となるであろうStatic Site Generator「Jekyll」に自作ブログ内検索を手軽に導入する方法について記述します。
+
+![完成イメージ図](https://i.gyazo.com/9f18a04650fb3bfaef972a88a25a00f2.png)
+
+
+### 準備するもの
+- すでに公開設定などを済ませたJekyll製ブログ
+### 手順
+1. 以下に示すソースコード（./assets）をダウンロードします。
+
+[公式GitHubリポジトリ](https://github.com/jekylltools/jekyll-tipue-search)は2017年8月23日より新規コミットがないので、以下に直接zipのリンクを掲載しています。
+[ソースコード(d4b5df7).zip](https://github.com/jekylltools/jekyll-tipue-search/archive/refs/heads/master.zip)
+
+
+
+
+2. 解凍し、自身のブログのソースコードにassetsフォルダの中身を丸ごとコピーします。
+
+![image1](https://i.gyazo.com/e8456b0e9178d920970dcc32c088b62a.png)
+![image2](https://i.gyazo.com/b1c5d6ca798cf6851b5b17db17b09e8e.png)
+
+3. 利用しているテーマでheadタグを規定している部分に以下のソースコードを追記する。
+   - 筆者の環境だと[minima](https://github.com/jekyll/minima)を利用しているので、`_includes/custom-head.html`が本手順の作業対象になります。
+
+[ソース](https://github.com/jekylltools/jekyll-tipue-search)
+
+![image3](https://i.gyazo.com/a75a11a735f7db802a1f1eaccabebad3.png)
+
+4. 以下に示すコードを`search.html`としてコピペし、画像のように配置します。
+   - [minima](https://github.com/jekyll/minima)であれば、統一感を持たせるためにファイル名`search.md`とするのが綺麗な気がするので、私は`search.md`としています。
+
+[ソース](https://github.com/jekylltools/jekyll-tipue-search)
+
+![image4](https://i.gyazo.com/e83c01861fea2707147a8970e8f31784.png)
+
+
+5. あとは`_config.yml`をいじるなりしてヘッダー部分にパーマリンクを設置したり、CSSを少し変えてみたり、ビルド、デプロイをすれば完了です。
+   - よろしければ[筆者の公開リポジトリ](https://github.com/ikmnjrd/ikmnjrd.github.io)を参考にしてみてください。
+
+完成です。
+
+![完成](https://i.gyazo.com/82a80325376d64d4e4560fc0b924881f.png)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[疑問メモ_JestでECMAScriptを使う]]></title>
+        <id>https://ikmnjrd.github.io/blog/jest-within-ecma-script</id>
+        <link href="https://ikmnjrd.github.io/blog/jest-within-ecma-script"/>
+        <updated>2022-01-07T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+### 疑問
+JestでECMAScriptを使う方法が[公式](https://jestjs.io/ja/docs/ecmascript-modules)に書いてある。
+やってみたけどなぜかできなかったというメモ。
+
+公式通りにやってみた結果以下のエラー。
+
+### エラー全文
+```bash
+% node --experimental-vm-modules node_modules/jest/bin/jest.js
+(node:92238) ExperimentalWarning: VM Modules is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ FAIL  ./index.test.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    /Users/ike/workspace/no-degradation-image-converter/index.test.js:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){import sum from './index';
+                                                                                      ^^^^^^
+
+    SyntaxError: Cannot use import statement outside a module
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.222 s
+```
+
+### わからないことを辿る
+そもそも実行時に付与してるオプションは、[Node.js]((https://nodejs.org/api/cli.html#--experimental-vm-modules))のサイトでこのように説明されている。
+>--experimental-vm-module
+>Enable experimental ES Module support in the vm module.
+
+とてもあっさり！
+
+`vm module`とはなんぞ？
+要はV8エンジンらしい。以下公式での[Node.jsのサイト](https://nodejs.org/api/vm.html#vm-executing-javascript)での説明
+>The vm module enables compiling and running code within V8 Virtual Machine contexts. The vm module is not a security mechanism. Do not use it to run untrusted code.
+
+そして迷宮入り。Nodeを16の最新安定版にしてみたけどダメでしたね。
+大人しくCommonJSでrequireします。
+
+
+### 周辺用語
+- Node.js
+- V8
+- VM moduel
+- CommonJS
+- ECMAScript
+
+
+### 参考文献
+- [--experimental-vm-module](https://nodejs.org/api/cli.html#--experimental-vm-modules)
+- [(https://nodejs.org/api/vm.html#vm-executing-javascript)](https://nodejs.org/api/vm.html#vm-executing-javascript)
+- [https://nodejs.org/api/vm.html#vm-executing-javascript](https://nodejs.org/api/vm.html#vm-executing-javascript)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[package.jsonに記述するlicenceの書き方]]></title>
+        <id>https://ikmnjrd.github.io/blog/licence-seeking</id>
+        <link href="https://ikmnjrd.github.io/blog/licence-seeking"/>
+        <updated>2022-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Licenseを書く際の決まりについて調べたのでまとめた。]]></summary>
+        <content type="html"><![CDATA[
+### どのように書くのがいいのか
+MITやISCなどよく書いてあるがどう書くのがいいのか？
+npm Docsにはこのように書いてある。
+> BSD-2-Clause や MIT などの一般的なライセンスを使用している場合は、次のように、使用しているライセンスの現在の SPDX ライセンス識別子を追加します。
+> { "license" : "BSD-3-Clause" }
+> --- [package.json | npm Docs](https://docs.npmjs.com/cli/v6/configuring-npm/package-json#license)
+
+### SPDXとは
+Linux Foundationのブログ（日本語訳版）に怪しい日本語でこのように書いてあります。
+> SPDXは、コンポーネント、ライセンス、著作権、セキュリティ リファレンスなどのソフトウェア部品表 (SBOM) 情報を伝達するためのオープンな標準です
+> --- [SPDX : すでに世界共通のソフトウェア部品表 (SBOM) およびサプライチェーン セキュリティで使用 - The Linux Foundation](https://www.linuxfoundation.jp/blog/2021/06/spdx-its-already-in-use-for-global-software-bill-of-materials-sbom-and-supply-chain-security/)
+
+### ライセンスのリストを参照する
+[SPDX License List](https://spdx.org/licenses/)
+リンク先の表からのIdentifierを探し、次のようにかく。
+```json
+{ "license" : "CC0-1.0" }
+```
+
+UnlicenseなどもしっかりとSPDXライセンスリストに記載されています。
+
+### 余談
+[https://github.com/jslicense/spdx-license-ids](https://github.com/jslicense/spdx-license-ids)のスター数は2桁なのにUsed byの項目が1千万人近くになってるのはどういうことなのか不思議に思った。
+
+
+
+
+
+
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Macでオンライン会議を文字起こし]]></title>
+        <id>https://ikmnjrd.github.io/blog/mac-meeting-transcript</id>
+        <link href="https://ikmnjrd.github.io/blog/mac-meeting-transcript"/>
+        <updated>2022-01-17T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+### 調査
+[Blackhole](https://github.com/ExistentialAudio/BlackHole)や[ladiocast](https://apps.apple.com/jp/app/ladiocast/id411213048)を使って録音した音声を文字起こしする方法がよく紹介されている。
+
+リアルタイムでGoogle Docs上に文字起こしをしたかったが、Blackholeとlaidiocastでは実現できず。
+
+
+### 無料で使えるリアルタイム文字起こしサービス
+* Texta
+* Sloos
+* AI GIJIROKU
+
+
+### 個人的な結論
+普段のメモなどをGoogle Docsで管理しているため、Google Docsをマストとする。
+そのためGoogle MeetやZoomを簡単に録音したい。
+以上の理由から、[Blackhole](https://github.com/ExistentialAudio/BlackHole)と[ladiocast](https://apps.apple.com/jp/app/ladiocast/id411213048)で録音データをGoogle Docsに文字起こしする方式で、
+録音自体を[Krisp](https://krisp.ai/)（ノイズ除去ソフト）で提供されている録音機能を使う。
+
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Macでお手軽Webサーバー]]></title>
+        <id>https://ikmnjrd.github.io/blog/mac-webserver-easiest</id>
+        <link href="https://ikmnjrd.github.io/blog/mac-webserver-easiest"/>
+        <updated>2021-12-30T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+ただの引用メモ
+
+> Mac OS X に最初からインストールされているPythonを利用
+
+```bash
+$ cd ドキュメントルートとなるフォルダ
+$ python -m SimpleHTTPServer 8080
+```
+
+
+### 参考文献
+- [https://qiita.com/massie_g/items/2913066e596dae197539](https://qiita.com/massie_g/items/2913066e596dae197539)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[markdown-itのプラグイン開発に失敗したのでメモ]]></title>
+        <id>https://ikmnjrd.github.io/blog/markdown-it-process</id>
+        <link href="https://ikmnjrd.github.io/blog/markdown-it-process"/>
+        <updated>2022-08-07T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+失敗したけど、悔しいので調べたことのメモとそのプラグインの[リポジトリ](https://github.com/ikmnjrd/markdown-it-bqcite)
+作ろうとした機能は、`<blockquote/>` 内の特定prefixから始まる箇所を`<cite/>`で囲もうとういうもの。
+
+```md
+> 内容はこれ
+> --- 出典はこれ
+```
+こんなのを
+
+> 内容はこれ
+> <cite>出典はこれ</cite>
+
+こんな風に出力したかった
+
+### markdown-itの処理の大きな流れ
+1. ソース(.md)をToken単位にまずparse。この際、inlineやblockといった固まりで放置されるものがある。
+2. 1.でparseしたものをStringとして出力しながらinlineやblockで放置されたものをそれぞれのルールに従いながらパース。パースしながら出力
+
+
+### 流れ
+MarkdownIt#render(src)
+
+MarkdownIt#parse(src)
+
+state = new this.core.State(src, this, env);
+// Tokenクラスの読み込み初期化など
+
+this.core.process(state)
+// coreルールを順にstateを引き回しながら実行
+// stateをToken[]にparse終了
+
+
+MarkdownIt#renderer#renderを実行。token.typeがinlineならRenderer#renderInlineを実行。独自ルールのあるtoken.typeならそのルールを実行。どちらにも当てはまらないならRenderer#renderTokenを実行
+```js
+Renderer.prototype.render = function (tokens, options, env) {
+  var i, len, type,
+      result = '',
+      rules = this.rules;
+
+  for (i = 0, len = tokens.length; i < len; i++) {
+    type = tokens[i].type;
+
+    if (type === 'inline') {
+      result += this.renderInline(tokens[i].children, options, env);
+    } else if (typeof rules[type] !== 'undefined') {
+      result += rules[type](tokens, i, options, env, this);
+    } else {
+      result += this.renderToken(tokens, i, options, env);
+    }
+  }
+
+  return result;
+};
+```
+
+Renderer#renderInlinの処理例
+
+
+Renderer#renderTokenの処理例
+Token.hiddenなら空文字を返す
+
+
+ouTokensに追加?意味わからん
+
+
+
+### テストに使ってた.md
+```md
+> this
+> is
+> test
+> --- in-cite
+
+<!-- >>> second
+--- in-cite -->
+
+
+<!-- >>> aaa
+bbb
+ccc -->
+
+> `hoge`
+> hoge
+
+> link in cite
+> --- [link](https://github.com/markdown-it/markdown-it/blob/master/lib/renderer.js)
+```]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[へっぽこエンジニアの技術選定時の頭の中]]></title>
+        <id>https://ikmnjrd.github.io/blog/narrative-of-my-criteria-for-tech-selection</id>
+        <link href="https://ikmnjrd.github.io/blog/narrative-of-my-criteria-for-tech-selection"/>
+        <updated>2022-01-07T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+私は2020年12月からWebエンジニアとして働いている小市民です。
+
+## 2022/1
+世の中のフロントエンドプロジェクトではstorybookなるものが使われているらしいな...
+とりあえず神ツールであるReactとWebpackで使ってみるとするか...
+最新のWebpack5だとWebpack4->5からの破壊的変更のせいでstorybookがそのまま使えないだと？！！バッチが配布されているらしいが...
+じゃあWebpackではなく何やら爆速と話題のesbuildは、、、cssをインポートできないというブログがちらほら...？
+
+[公式](https://esbuild.github.io/content-types/#css-from-js)によると、CSSモジュールとしてのインポートはまだできないって書いてある。
+>You can also import CSS from JavaScript. When you do this, esbuild will gather all CSS files referenced from a given entry point and bundle it into a sibling CSS output file next to the JavaScript output file for that JavaScript entry point. So if esbuild generates app.js it would also generate app.css containing all CSS files referenced by app.js. Here's an example of importing a CSS file from JavaScript:
+>```javascript
+>import './button.css'
+>
+>export let Button = ({ text }) =>
+>  <div className="button">{text}</div>
+>```
+>Note that esbuild doesn't yet support CSS modules, so the set of export names from a CSS file is currently always empty. Supporting a basic form of CSS modules is on the roadmap.
+
+
+ふーん。とりあえずstorybookとviteをインストールして...ん？
+今webpackって見えたような...webpackいるな...
+
+
+
+```javascript
+while (何かいいの見つかればな〜){
+  （...GitHubで「storybook vite」で検索）
+  （...!!...😣）
+}
+```
+
+この文章はなんの役に立つんですかね？（疑問）
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Neumorphismサンプル]]></title>
+        <id>https://ikmnjrd.github.io/blog/neumorphism-sample</id>
+        <link href="https://ikmnjrd.github.io/blog/neumorphism-sample"/>
+        <updated>2022-02-01T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+## Sandbox
+
+
+<iframe src="https://codesandbox.io/embed/beautiful-darwin-4gf3h?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="beautiful-darwin-4gf3h"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+## ポイント
+
+### SVG化した文字に陰影をつける
+
+cssではこのようにすると綺麗に抜ける。
+```css
+svg {
+  filter: drop-shadow(3px 3px 3px #fff)
+    drop-shadow(-3px -3px 1px rgba(0, 0, 0, 0.15));
+}
+```
+html上では、適宜fillやstrokeを設定する。
+
+[https://danmarshall.github.io/google-font-to-svg-path/](https://danmarshall.github.io/google-font-to-svg-path/)（[GitHubリポジトリ](https://github.com/danmarshall/google-font-to-svg-path)）を使って文字を事前にSVG化しておく。
+
+npmパッケージで似たものを提供している人もいる[https://github.com/shrhdk/text-to-svg](https://github.com/shrhdk/text-to-svg)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Next.jsのサンプル集を参考にサイトマップを作成しようとしたらエラー]]></title>
+        <id>https://ikmnjrd.github.io/blog/next-sitemap-sample</id>
+        <link href="https://ikmnjrd.github.io/blog/next-sitemap-sample"/>
+        <updated>2022-02-08T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[エラーに遭遇しました。
+
+### 環境
+- Node: v16.13.2
+- Next.js: 12.0.10
+- globby: 13.1.1
+
+[公式のサンプル集の「with-sitemap」](https://github.com/vercel/next.js/tree/canary/examples/with-sitemap)では以下のようなスクリプトをサーバー実行時に（`next.config.js`のisServerオブションをフラグにして）実行している。
+
+
+./scripts/generate-sitemap.js
+```javascript
+const fs = require('fs')
+const globby = require('globby')
+
+function addPage(page) {
+  const path = page.replace('pages', '').replace('.js', '').replace('.mdx', '')
+  const route = path === '/index' ? '' : path
+
+  return `  <url>
+    <loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
+    <changefreq>hourly</changefreq>
+  </url>`
+}
+
+async function generateSitemap() {
+  // Ignore Next.js specific files (e.g., _app.js) and API routes.
+  const pages = await globby([
+    'pages/**/*{.js,.mdx}',
+    '!pages/_*.js',
+    '!pages/api',
+  ])
+  const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(addPage).join('\n')}
+</urlset>`
+
+  fs.writeFileSync('public/sitemap.xml', sitemap)
+}
+
+generateSitemap()
+
+```
+
+
+遭遇したエラーは以下
+
+```bash
+Error [ERR_REQUIRE_ESM]: require() of ES Module ./node_modules/globby/index.js from ./scripts/generate-sitemap.js not supported.
+Instead change the require of index.js in ./scripts/generate-sitemap.js to a dynamic import() which is available in all CommonJS modules.
+```
+
+最新のglobbyからはCommonJSが省かれたらしい。
+
+
+### 解決策
+package.jsonを以下のように書き換え、`$npm i`を実行
+```json
+"globby": "^13.1.1",
+```
+↓
+```json
+"globby": "^11.0.1",
+```
+
+インストール後、ビルド時に`./public/sitemap.xml`が無事出力された。
+
+
+### 周辺用語
+- commonJS
+- ESModules
+
+
+### 参考文献
+- [Build a sitemap generator in Next.js - LogRocket Blog](https://blog.logrocket.com/build-sitemap-generator-nextjs/)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ESモジュール内でJSONを読み込む方法]]></title>
+        <id>https://ikmnjrd.github.io/blog/node-package-json-keys</id>
+        <link href="https://ikmnjrd.github.io/blog/node-package-json-keys"/>
+        <updated>2022-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ESモジュール内でJSONを読み込む方法]]></summary>
+        <content type="html"><![CDATA[
+### 楽ができるNodeのバージョン
+Node.js`v17.5~`もしくは`v16`の`--experimental-json-modules`オブションを使えば利用できます。
+
+```js
+/* index.js */
+// An import assertion in a static import
+import info from `./package.json` assert { type: `json` };
+
+// An import assertion in a dynamic import
+const { default: info } = await import("./package.json", {
+  assert: {
+    type: "json",
+  },
+});
+```
+`v16`でオプション付きで実行する場合は`$ node --experimental-json-modules index.js`と実行します。
+ちなみに`--experimental-wasm-modules`というオプションで`wasm`も読み込めます。
+
+### 対象のバージョン以外でやる方法
+1. JSONを読み込み自力でパースする
+```js
+import { readFile } from 'fs/promises';
+const json = JSON.parse(
+  await readFile(
+    new URL('./some-file.json', import.meta.url)
+  )
+);
+```
+2. [createRequire](https://nodejs.org/api/module.html#module_module_createrequire_filename)を使う
+```js
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const data = require("./data.json");
+```
+
+
+### 参考
+本記事のソースコードおよび内容は以下のリンク先から引用しています。
+- [How to import JSON files in ES modules (Node.js)](https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Notionにテキストファイルを置くときはサブページとしてインポートしましょう]]></title>
+        <id>https://ikmnjrd.github.io/blog/notion-for-putting-textfile</id>
+        <link href="https://ikmnjrd.github.io/blog/notion-for-putting-textfile"/>
+        <updated>2022-02-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[個人的なNotionの使い方備忘録です。]]></summary>
+        <content type="html"><![CDATA[
+### 結論
+Notionにテキストファイルを直接アップロードすると、amazon S3 上にアップロード(&S3へのリンクが生成)され、文字化けしてしまう。（us-west-2リージョンにアップロードされてた）
+
+![文字化けした様子](https://i.gyazo.com/01b1e2fad8348309ba8ce00a0adbdeb1.png)
+
+ドラッグ&ドロップでテキストファイルのアップロードをいますぐやめて、サブページ作成後に`Text&Markdown`のインポートをして取り込もう。
+![NotionへImport](https://i.gyazo.com/06904fb5cdea05b0bd13fb572b262bba.png)
+
+
+### 背景
+Notionを使いこなしてるとは言いづらい私ですが、私のNotionの数少ない活躍する機会の一つが、転職活動時に使う[ボードの機能](https://www.notion.so/ja-jp/help/boards)です。
+
+![Notionのボード画像](https://i.gyazo.com/d00cadf7fdca1c09406d615bddef1d9b.png)
+
+
+申し込み、連絡待ち、結果待ちなどのステータスで管理しながら、メモ程度の企業研究や、面談・面接時のメモを書き込んだりしています。
+
+ただ、普段はMac標準のテキストエディタで`.txt`や`.md`を書き殴るのが癖になっていました。
+
+このファイルをそのままNotionにアップロードすると文字化けするので、インポート機能を使ってサブページとして取り込もうねというのが上でも述べた結論。
+
+それでもNotionの書き味よりも、テキストエディタでマークダウンを書くほうが性に合っているし、急なオンラインミーティングでもサクッと開けるので、Mac標準のテキストエディタはまだしばらく使い続けると思う。
+
+
+そして極個人的な感想として「普段のメモスタイルという支流と、管理ツールという支流が交わったなぁ」という感想を持ちググったらそのまま`合流`という言葉がヒットして謎の感動をしました。
+
+
+> 合流（ごうりゅう、英語：confluence）とは、地理学では二つ以上の水の流れが合わさることをいう。通常、支川がより大きな川に流れ込むことを指す。こうした地点は合流点と呼ばれる。
+> wikipediaより引用
+
+どこぞのソフトウェアは合流の意味だったんですね。
+
+### 参考文献
+- [合流 - wikipedia](https://ja.wikipedia.org/wiki/%E6%B5%81%E8%B7%AF%E5%BD%A2%E7%8A%B6#:~:text=%E5%90%88%E6%B5%81%EF%BC%88%E3%81%94%E3%81%86%E3%82%8A%E3%82%85%E3%81%86%E3%80%81%E8%8B%B1%E8%AA%9E%EF%BC%9A,%E3%81%AF%E5%90%88%E6%B5%81%E7%82%B9%E3%81%A8%E5%91%BC%E3%81%B0%E3%82%8C%E3%82%8B%E3%80%82)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NotionでMarkdown記法的に画像を埋め込む（w/Gyazo）]]></title>
+        <id>https://ikmnjrd.github.io/blog/notion-image-embed-like-md</id>
+        <link href="https://ikmnjrd.github.io/blog/notion-image-embed-like-md"/>
+        <updated>2022-01-23T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+### 結論
+**画像ファイル自体のリンクをNotionに貼り付ける**
+
+![Notion埋め込み例](https://i.gyazo.com/7046c2a8fa7d00ff1cf6feb1503ce36c.png)
+
+### 前提
+私は画像を自身のブログに書くときなどにGyazo（スクリーショットの共有アプリ）を利用しています。
+
+手元のテキストファイル（マークダウンファイル）として残しておく際には、`![hoge](url)`の記法で十分なのですが、Notionアプリ上でこの記法を使ってもそのまま画像を表示してくれません。
+
+Gyazoを知らない人向けのイメージ画像。Gyazoを使ってスクリーンショットを撮ると、自動的にGyazoのクラウドサーバー（GCPを利用しているらしい）にアップロードされ、公開される。
+![Gyazo画像](https://i.gyazo.com/34240519a32ac82716681aa70ef518fe.png)
+
+
+### 作業の流れの例
+
+Gyazoを利用して取得できるURL例:
+https://gyazo.com/34240519a32ac82716681aa70ef518fe
+
+
+Gyazoから自動的に与えられるURLをNotionに貼り付け(「Create bookmark」 「Create embed」を選択し)ても画像を綺麗に貼り付けられない。
+![失敗例](https://i.gyazo.com/2f272328bf161c206970d572583f7b50.png)
+↓
+![続・失敗例](https://i.gyazo.com/26e64715a416362727c04054857d25d8.png)
+
+Gyazoを使って生成されるリンクは、余分なWebページ情報が多く含まれている。そのためURLを次のようにしてからNotionに貼り付ける。
+加工例（i.と拡張子.pngをつける）:
+https://`i.`gyazo.com/34240519a32ac82716681aa70ef518fe`.png`
+
+
+Notionに加工したURLを貼り付けると「Emged image」というオブションが選択できるので、選択すれば画像が埋め込まれる。
+![成功例](https://i.gyazo.com/ef946f57d0800ca06f337425f98ec6fe.png)
+
+
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[kali linuxでVNCサーバーにnovncで接続する]]></title>
+        <id>https://ikmnjrd.github.io/blog/novnc-kali-linux</id>
+        <link href="https://ikmnjrd.github.io/blog/novnc-kali-linux"/>
+        <updated>2021-10-31T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[[公式](https://www.kali.org/docs/general-use/novnc-kali-in-browser/)にやり方も書いてあるがこの通りだとエラーが出た。
+
+`$ sudo apt install -y x11vnc`
+
+以下の部分をそのまま実行するとエラーが出る。
+$ x11vnc -display :0 -autoport -localhost -nopw -bg -xkb -ncache -ncache_cr-quiet -forever
+```bash
+31/10/2021 20:23:07 passing arg to libvncserver: -ncache_cr-quiet
+31/10/2021 20:23:07 x11vnc version: 0.9.16 lastmod: 2019-01-05  pid: 2173
+31/10/2021 20:23:07 Using X display :0
+31/10/2021 20:23:07 rootwin: 0x764 reswin: 0x3800001 dpy: 0x1dc24970
+31/10/2021 20:23:07 
+31/10/2021 20:23:07 ------------------ USEFUL INFORMATION ------------------
+31/10/2021 20:23:07 X DAMAGE available on display, using it for polling hints.
+31/10/2021 20:23:07   To disable this behavior use: '-noxdamage'
+31/10/2021 20:23:07 
+31/10/2021 20:23:07   Most compositing window managers like 'compiz' or 'beryl'
+31/10/2021 20:23:07   cause X DAMAGE to fail, and so you may not see any screen
+31/10/2021 20:23:07   updates via VNC.  Either disable 'compiz' (recommended) or
+31/10/2021 20:23:07   supply the x11vnc '-noxdamage' command line option.
+31/10/2021 20:23:07 
+31/10/2021 20:23:07 Wireframing: -wireframe mode is in effect for window moves.
+31/10/2021 20:23:07   If this yields undesired behavior (poor response, painting
+31/10/2021 20:23:07   errors, etc) it may be disabled:
+31/10/2021 20:23:07    - use '-nowf' to disable wireframing completely.
+31/10/2021 20:23:07    - use '-nowcr' to disable the Copy Rectangle after the
+31/10/2021 20:23:07      moved window is released in the new position.
+31/10/2021 20:23:07   Also see the -help entry for tuning parameters.
+31/10/2021 20:23:07   You can press 3 Alt_L's (Left "Alt" key) in a row to 
+31/10/2021 20:23:07   repaint the screen, also see the -fixscreen option for
+31/10/2021 20:23:07   periodic repaints.
+31/10/2021 20:23:07 
+31/10/2021 20:23:07 XFIXES available on display, resetting cursor mode
+31/10/2021 20:23:07   to: '-cursor most'.
+31/10/2021 20:23:07   to disable this behavior use: '-cursor arrow'
+31/10/2021 20:23:07   or '-noxfixes'.
+31/10/2021 20:23:07 using XFIXES for cursor drawing.
+31/10/2021 20:23:07 GrabServer control via XTEST.
+31/10/2021 20:23:07 
+31/10/2021 20:23:07 Scroll Detection: -scrollcopyrect mode is in effect to
+31/10/2021 20:23:07   use RECORD extension to try to detect scrolling windows
+31/10/2021 20:23:07   (induced by either user keystroke or mouse input).
+31/10/2021 20:23:07   If this yields undesired behavior (poor response, painting
+31/10/2021 20:23:07   errors, etc) it may be disabled via: '-noscr'
+31/10/2021 20:23:07   Also see the -help entry for tuning parameters.
+31/10/2021 20:23:07   You can press 3 Alt_L's (Left "Alt" key) in a row to 
+31/10/2021 20:23:07   repaint the screen, also see the -fixscreen option for
+31/10/2021 20:23:07   periodic repaints.
+31/10/2021 20:23:07 
+31/10/2021 20:23:07 Client Side Caching: -ncache mode is in effect to provide
+31/10/2021 20:23:07   client-side pixel data caching.  This speeds up
+31/10/2021 20:23:07   iconifying/deiconifying windows, moving and raising
+31/10/2021 20:23:07   windows, and reposting menus.  In the simple CopyRect
+31/10/2021 20:23:07   encoding scheme used (no compression) a huge amount
+31/10/2021 20:23:07   of extra memory (20-100MB) is used on both the server and
+31/10/2021 20:23:07   client sides.  This mode works with any VNC viewer.
+31/10/2021 20:23:07   However, in most you can actually see the cached pixel
+31/10/2021 20:23:07   data by scrolling down, so you need to re-adjust its size.
+31/10/2021 20:23:07   See http://www.karlrunge.com/x11vnc/faq.html#faq-client-caching.
+31/10/2021 20:23:07   If this mode yields undesired behavior (poor response,
+31/10/2021 20:23:07   painting errors, etc) it may be disabled via: '-ncache 0'
+31/10/2021 20:23:07   You can press 3 Alt_L's (Left "Alt" key) in a row to 
+31/10/2021 20:23:07   repaint the screen, also see the -fixscreen option for
+31/10/2021 20:23:07   periodic repaints.
+31/10/2021 20:23:07 X FBPM extension not supported.
+31/10/2021 20:23:07 X display is capable of DPMS.
+31/10/2021 20:23:07 --------------------------------------------------------
+31/10/2021 20:23:07 
+31/10/2021 20:23:07 Default visual ID: 0x21
+31/10/2021 20:23:07 Read initial data from X display into framebuffer.
+31/10/2021 20:23:07 initialize_screen: fb_depth/fb_bpp/fb_Bpl 24/32/7680
+31/10/2021 20:23:07 *** unrecognized option(s) ***
+31/10/2021 20:23:07     [1]  -ncache_cr-quiet
+31/10/2021 20:23:07 For a list of options run: x11vnc -opts
+31/10/2021 20:23:07 or for the full help: x11vnc -help
+31/10/2021 20:23:07 
+31/10/2021 20:23:07 Here is a list of removed or obsolete options:
+31/10/2021 20:23:07 
+31/10/2021 20:23:07 removed: -hints, -nohints
+31/10/2021 20:23:07 removed: -cursorposall
+31/10/2021 20:23:07 removed: -nofilexfer, now the default.
+31/10/2021 20:23:07 
+31/10/2021 20:23:07 renamed: -old_copytile, use -onetile
+31/10/2021 20:23:07 renamed: -mouse,   use -cursor
+31/10/2021 20:23:07 renamed: -mouseX,  use -cursor X
+31/10/2021 20:23:07 renamed: -X,       use -cursor X
+31/10/2021 20:23:07 renamed: -nomouse, use -nocursor
+31/10/2021 20:23:07 renamed: -old_pointer, use -pointer_mode 1
+```
+
+そのため以下のように実行
+$ x11vnc -display :0 -autoport -localhost -nopw -bg -xkb -ncache -forever
+
+
+起動確認
+
+`$ ss -antp | grep vnc`
+
+```bash
+LISTEN    0         32                127.0.0.1:5900            0.0.0.0:*        users:(("x11vnc",pid=8056,fd=8))
+LISTEN    0         32                    [::1]:5900               [::]:*        users:(("x11vnc",pid=8056,fd=9))
+kali@kali:~$
+```
+
+
+
+
+ここでもエラーが出る。
+$ /usr/share/novnc/utils/launch.sh --listen 8081 --vnc localhost
+```bash
+Warning: could not find self.pem
+Using installed websockify at /usr/bin/websockify
+Starting webserver and WebSockets proxy on port 8081
+Usage: 
+    websockify [options] [source_addr:]source_port [target_addr:target_port]
+    websockify [options] [source_addr:]source_port -- WRAP_COMMAND_LINE
+
+websockify: error: Error parsing target
+Failed to start WebSockets proxy
+```
+[novnc公式のIssue](https://github.com/novnc/noVNC/issues/1443)でも似た症状が報告されてた。
+
+
+`$ cd ~`
+`$ git clone https://github.com/novnc/noVNC.git`
+`$ cd noVnc/utils/novnc_proxy --vnc localhost:5900`
+
+
+
+サーバー側の別のターミナルでsshを有効にする（？）
+`$ sudo systemctl enable ssh --now`
+
+
+クライアントのターミナルからポートフォワーディング。sshでログインした状態になればOK。
+`ssh kali@192.168.0.140 -L 6080:localhost:6080`
+
+
+クライアントのWebブラウザで以下のようにアクセスする。
+http://localhost:6080/vnc.html
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[実践Vimを読んだ時のメモ]]></title>
+        <id>https://ikmnjrd.github.io/blog/prictical-vim-memo</id>
+        <link href="https://ikmnjrd.github.io/blog/prictical-vim-memo"/>
+        <updated>2022-08-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ただのメモ]]></summary>
+        <content type="html"><![CDATA[本を読んだ時のメモ書きがいつもより出てしまったので。
+
+### これは実践vimを読んだ時のメモです
+
+expressionレジスタ  
+`<C-r>=` でアクセス  
+1+1の実行結果(2)などが得られる。  
+
+`vit`  
+`<script>DDG.Utils.WebVitals.reportWebVitals(DDG.pixel)</script>`  
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+body>.container {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1264px;
+    width: 100%;
+}
+
+.container {
+    flex: 1 0 auto;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+| Left align | Right align | Center align | hoge |
+|:--------|:--------|:--------|:-------|
+| This    | This    | This    | hoge   |
+| column  | column  | column  | hoge   |
+| will    | will    | will    | hoge   |
+| be      | be      | be      | hoge   |
+| left    | right   | center  | hoge   |
+| aligned | aligned | aligned | hoge   |
+
+`q:` コマンドラインウィンドウ
+テキストのように編集ができる。`J`を使って2つのコマンドを1つにまとめるなどができる。  
+プロンプトから切り替えたい時は`<C-f>`で切り替えられる。  
+
+`%`は現在編集中のファイル名のエイリアス  
+バッファ内だと対となる対象へのジャンプ(モーション)  
+プロンプトの`:%s`はsubstituteコマンドじゃなかった？？  
+
+`:sh[ell]`コマンドが何故か使えず、`:terminal`コマンドなら使えた。  
+
+`<C-z>`実行中のvimをバックグラウンドにする。zshではfgコマンドでvimに戻ってこれる。  
+
+`read !{cmd}`コマンド実行結果をvim内に挿入できる  
+
+`q{register}`マクロ記録開始 => `q` マクロ記録停止  
+`@{register}` マクロ実行  
+`@@` 前回実行のマクロを実行  
+`:reg {register}` マクロ確認  
+
+`q/` コマンドライン履歴を表示する  
+ノーマルモードの時の`*`でカーソル位置の単語(?)の検索  
+
+`C-w`s 水平分割  
+`C-w`v 垂直分割  
+
+### 置換コマンド
+
+:[range]s[ubstitute]/{pattern}/{string}/[flags]
+
+sコマンドのgフラグは現在行の意味でグローバルでしかない。  
+ファイル全体を変更するならsコマンドの前に`%`をつける  
+
+レジスタの参照し  
+`:%s//\=@0/g` 直前の検索パターンをヤンクレジスタの内容で置き換える  
+
+`g&` = `:%s//~/&`  
+
+### ファイルの補完
+
+`i_<C-x><C-f>`  
+workspace/liff-firebase/liff-app/functions/node_modules/
+
+### コンフィグ
+
+`:set spell` => `:set nospell`  
+`:set spell!` 設定値をトグル  
+`:set spell?` 現在の設定値を見る  
+`:set spell&` 設定値をデフォルト値にする  
+
+`:setloacal tabstop=4` 現在のウィンドウとバッファに適用  
+`:bufdo setloacal tabstop=4` 既存のバッファに適用  
+`:windo setloacal tabstop=4` 全てのウィンドウに適用  
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[忘れがちなPrismJSがサポートしている言語]]></title>
+        <id>https://ikmnjrd.github.io/blog/prsim-codeblock-support</id>
+        <link href="https://ikmnjrd.github.io/blog/prsim-codeblock-support"/>
+        <updated>2022-07-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[PrismJSでサポートされている]]></summary>
+        <content type="html"><![CDATA[
+### PrismJSでサポートされている言語を抜粋
+`language-xxxx`の`xxxx`部分に当てはめればいいのがformatに書いてるやつ。
+
+使う機会がありそうで忘れがちなやつをまとめた。jsstacktraceなんてよく使う機会あるはずなのに存在を知らなかった.
+基本的には拡張子を指定すればいける。
+
+
+| lang | format |
+|:-----------|:------------|
+| CSV| csv|
+| Docker| docker|
+| JSON5| json5|
+| JSONP| jsonp|
+| JS stack trace| jsstacktrace|
+| JS Templates| js-templates|
+| JS Extras| js-extras|
+| Markdown| md|
+| React TSX| tsx|
+| React JSX| jsx|
+| JSDoc| jsdoc|
+| GraphQl| graphql|
+| Go module| go-mod|
+| Git| git|
+| ignore| ignore, gitignore, hgignore, npmignore|
+| Log file| log|
+| SQL| sql|
+
+### その他感想
+nginxやapplescriptなどもサポートされてるみたいで懐が深い。
+
+### 参考文献
+- [prism - Supported Laungages](https://prismjs.com/#supported-languages)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHubにpushした時に特定コマンドの実行結果でマージ可否の設定]]></title>
+        <id>https://ikmnjrd.github.io/blog/push-and-test-with-github-actions</id>
+        <link href="https://ikmnjrd.github.io/blog/push-and-test-with-github-actions"/>
+        <updated>2022-09-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[GitHubでpushした時にマージ可否を設定する]]></summary>
+        <content type="html"><![CDATA[
+## 手順
+
+ワークフローの設定（コード管理できるもの）とGitHubのUI上から設定するものに分けて考える
+
+### ワークフローの設定
+
+例として貼り付けますが、[ここ](https://docs.github.com/ja/actions/examples/using-scripts-to-test-your-code-on-a-runner)を参考にするなど自分の環境に合わせカスタマイズしてください。
+
+```yaml
+name: exec-tests
+on:
+  push:
+
+jobs:
+  status-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ inputs.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      - name: Get Cache Dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Create avif images dir
+        run: mkdir tmp
+
+      - name: Build
+        run: npm run build
+        env:
+          NODE_OPTIONS: '--max_old_space_size=4096'
+
+      - name: Check by linter
+        run: npm run lint
+
+      - name: Check by TypeScript Compiler
+        run: npm run typecheck
+
+      - name: Run Tests
+        run: npm run test
+
+```
+
+### リポジトリ(Web上から)の設定
+
+以下の画面から編集
+![create-protection](https://i.gyazo.com/b5ca6098ced1849a751945e9e45d2c62.png)
+mainブランチの保護をするため、「main」と入力。  
+「Require status checks to pass before merging」にチェックを入れ、検索窓から「status-check」を入力、選択。  
+![入力例1](https://i.gyazo.com/7e5c454ddc160cff2b14487e48a12504.png)
+
+ここまで設定できると、以下のような画面で表示できる。
+![動作例1](https://i.gyazo.com/ccf3105509cc3d866b5cc6ca9cf26524.png)
+
+この設定だと警告が出るがマージはぽちぽちとクリックすればできてしまうので、「Do not allow bypassing the above settings」の設定もしておく。
+![設定例2](https://i.gyazo.com/31b6721b6b8636087028d71c1f906445.png)
+
+これでマージするにはコードの変更を余儀なくされる。
+![動作例2](https://i.gyazo.com/bf39f63f875bc6ca659adbaca36bc357.png)
+
+## 余談
+
+### 意図通りいかなかったこと
+
+`npm ci --ignore-scripts`コマンドを使って依存関係のインストールが爆速になるかと思ったら、ビルド時に画像フォーマットの変換に使っているsharpを対象に以下のエラーが出た。
+
+> Error:  
+> Something went wrong installing the "sharp" module
+> Cannot find module '../build/Release/sharp-linux-x64.node'
+> Require stack:
+>   /home/runner/work/ikmnjrd.github.io/ikmnjrd.github.io/node_modules/sharp/lib/sharp.js
+
+そのため、`$ npm ci`とした。
+
+### 参考文献
+
+- [スクリプトを使ってランナーでコードをテストする - GitHub Docs](https://docs.github.com/ja/actions/examples/using-scripts-to-test-your-code-on-a-runner)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[reactスケルトン的な]]></title>
+        <id>https://ikmnjrd.github.io/blog/react-webpack-skelton</id>
+        <link href="https://ikmnjrd.github.io/blog/react-webpack-skelton"/>
+        <updated>2020-03-01T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+## リポジトリ
+https://github.com/ikmnjrd/react-webpack-skelton
+
+## 手順
+`# npm init -y`
+
+`# npm i -D webpack webpack-cli webpack-dev-server typescript ts-loader`
+
+package.jsonに追記
+```json
+"build": "webpack",
+"watch": "webpack -w",
+"start": "webpack serve"
+```
+
+`# npm i -S react react-dom react-router-dom @types/react @types/react-dom @types/react-router-dom`
+
+tsconfig.json作成
+```json5
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    // TSはECMAScript 5に変換
+    "target": "ES5",
+    // TSのモジュールはES Modulesとして出力
+    "module": "ES2015",
+    // JSXの書式を有効に設定
+    "jsx": "react",
+    "moduleResolution": "node",
+    "lib": [
+      "ES2020",
+      "DOM"
+    ]
+  }
+}
+```
+
+`webpack.config.js` を作成
+```js
+module.exports = {
+  // モード値を production に設定すると最適化された状態で、
+  // development に設定するとソースマップ有効でJSファイルが出力される
+  mode: "development",
+
+  // メインとなるJavaScriptファイル（エントリーポイント）
+  entry: "./src/main.tsx",
+  // ファイルの出力設定
+  output: {
+    //  出力ファイルのディレクトリ名
+    path: `${__dirname}/dist`,
+    // 出力ファイル名
+    filename: "main.js"
+  },
+  module: {
+    rules: [
+      {
+        // 拡張子 .ts もしくは .tsx の場合
+        test: /\.tsx?$/,
+        // TypeScript をコンパイルする
+        use: "ts-loader"
+      }
+    ]
+  },
+  // import 文で .ts や .tsx ファイルを解決するため
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".json"]
+  },
+  // ES5(IE11等)向けの指定（webpack 5以上で必要）
+  target: ["web", "es5"],
+
+	// ローカルサーバー（webpack-dev-server）
+  devServer: {
+		contentBase: `${__dirname}/dist`,
+    hotOnly: true,
+    port: 8080,
+    host: '0.0.0.0',
+  }
+};
+```
+
+`/src` 配下に  `main.tsx` を作成
+```jsx
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+const App = () => {
+  return (
+      <div>
+        <h1>Hello React!</h1>
+      </div>
+  );
+}
+
+ReactDOM.render(<App/>, document.querySelector('#app'));
+```
+
+
+
+`/dist` にindex.htmlを作成
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my-app</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
+```
+
+
+https://ics.media/entry/16329/
+
+https://newcss.net/
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[vim内部(:r!)からエイリアスコマンドを利用する]]></title>
+        <id>https://ikmnjrd.github.io/blog/run-aliases-commands-inside-vim</id>
+        <link href="https://ikmnjrd.github.io/blog/run-aliases-commands-inside-vim"/>
+        <updated>2022-08-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[vim(nvim)からエイリアスコマンドを利用する]]></summary>
+        <content type="html"><![CDATA[
+### 結論
+`.zshenv`ならvim起動時にも読み込まれるので、エイリアスは`.zshenv`に記述する。
+`.config/nvim/init.nvim` に以下を記述
+```vim
+set shell=zsh
+```
+
+### 余談
+ブログを書くときに"yyyy-mm-dd"という形でいつも日付を書いていた。  
+その時にvimから`date "+%Y-%m-%d"`と実行・挿入したかった。  
+毎回オプションを書くぐらいならalias(名前day)として登録したが、`:r! day`で挿入されなかった.  (エラー内容: シェルが値を返しました 127)  
+
+
+### 参考文献
+- [terminal vim not loading .zshrc](https://stackoverflow.com/questions/11415428/terminal-vim-not-loading-zshrc)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[自分のsshキーの作り方メモ]]></title>
+        <id>https://ikmnjrd.github.io/blog/ssh-keygen</id>
+        <link href="https://ikmnjrd.github.io/blog/ssh-keygen"/>
+        <updated>2022-07-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[僕の疑問に追記する形で更新しています。]]></summary>
+        <content type="html"><![CDATA[### 手順
+`$ ssh-keygen -t ed25519`  
+鍵の名前の入力を求められるので`github`や`hoge`などサービス名を入れておく。  
+パスフレーズ（パスワード）はナシ。自分しか使わないマシン上で使う鍵なので。もしマシンの管理者が自分以外ならしっかり設定しておく。
+
+`$HOME/.ssh`内にssh-keygenで入力した名前(`hoge`)の秘密鍵と`hoge.pub`の公開鍵ができている
+`$ pbcopy < ~/.ssh/hoge.pub`  
+
+### github
+```
+$ ssh -T github
+Hi ikmnjrd! You've successfully authenticated, but GitHub does not provide shell access.
+```
+認証は通ってるがいざcloneをしようとしたら `Permission denied (publickey).` のエラー。
+```
+$ ssh -vT git@github.com
+```
+よくわからなかったが類似エラーを適当に検索したら~/.ssh/configのHostの値が原因っぽかった。
+```
+====変更前
+Host github
+====変更後
+Host github github.com
+```
+無事cloneできた。
+
+### 周辺用語
+- RSA
+- Ed25519
+- 楕円曲線暗号
+- エドワーズ曲線デジタル署名アルゴリズム
+
+
+### 参考文献
+- [SSH認証に最強の「Ed25519鍵」を使おう | LFI](https://linuxfan.info/ssh-ed25519)
+- [SSH 鍵 - ArchWiki](https://wiki.archlinux.jp/index.php/SSH_%E9%8D%B5)
+- [git clone したら、Permission denied (publickey).のエラー - Qiita](https://qiita.com/hatorijobs/items/92d8df363020a7f6d9fb)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[storybook-builder-viteを使ってみる]]></title>
+        <id>https://ikmnjrd.github.io/blog/story-book-builder-vite</id>
+        <link href="https://ikmnjrd.github.io/blog/story-book-builder-vite"/>
+        <updated>2022-01-09T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+
+使ってみたら使用感的にとてもよかった。
+ただ、
+[Getting started with React, Vite and Storybook (on a new project)]((https://github.com/eirslett/storybook-builder-vite#getting-started-with-react-vite-and-storybook-on-a-new-project))の中で紹介されていた`@vitejs/app`がdeprecatedだったので、修正したものを紹介する。
+
+```bash
+npm init vite@latest vite-react-app -- --template react-ts && cd vite-react-app
+npm install # or yarn
+npx sb@next init --builder storybook-builder-vite && npm run storybook
+```
+
+
+
+関係ないが、[viteの公式テンプレート集](https://github.com/vitejs/awesome-vite#templates)などもあるのでこれから参考にバイトライフをEnjoyしようと思います
+
+
+### 参考
+- [https://github.com/eirslett/storybook-builder-vite#getting-started-with-react-vite-and-storybook-on-a-new-project](https://github.com/eirslett/storybook-builder-vite#getting-started-with-react-vite-and-storybook-on-a-new-project)
+- [https://vitejs.dev/guide/#scaffolding-your-first-vite-project](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
+- [https://github.com/vitejs/awesome-vite#templates](https://github.com/vitejs/awesome-vite#templates)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[履歴書用の写真をデータで受け取る方法まとめ]]></title>
+        <id>https://ikmnjrd.github.io/blog/summary-of-howto-receive-photos-data</id>
+        <link href="https://ikmnjrd.github.io/blog/summary-of-howto-receive-photos-data"/>
+        <updated>2022-01-31T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+
+#### [証明写真ボックス](https://www.fujifilm.com/jp/ja/consumer/photoprinting/photo-box)
+おすすめ。富士フィルムがやっている証明写真機。
+
+写真機の中に入ると、「データと写真」「データのみ」「写真のみ」などから選択できる。値段は少しずつ違い、「データと写真」が1000円、「データのみ」が800円だったはず。
+
+会員登録や専用アプリのダウンロードなどの必要がない。
+撮影後に発行される受付番号とパスワードで半年間ダウンロード可。
+
+
+#### [証明写真機Ki-Re-i](https://www.dnpphoto.jp/products/kirei/with/)
+
+専用アプリのダウンロードが必要.
+「証明写真機Ki-Re-i Withスマホ」という機種でないとデータでの受け取りに対応してなくてややこしい。
+
+
+#### 地元の写真屋
+地元の写真屋を今まで使ってた。
+自分の顔がひん曲がってるせいで、もう少し顔傾けてなどの指示がよく出て面倒くさい。
+カメラマンの腕次第で写真の出来が変わる。
+
+値段は1500円くらいで高い。
+CD-ROMに焼いてくれるが処分に困る。
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SVGアイコンを配布しているWebサイト]]></title>
+        <id>https://ikmnjrd.github.io/blog/svg-icon-distributing-sites</id>
+        <link href="https://ikmnjrd.github.io/blog/svg-icon-distributing-sites"/>
+        <updated>2022-01-11T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+## **SVGとは**
+Scalable Vector Graphics
+
+### SVGの網羅的な説明
+[https://www.webdesignleaves.com/pr/html/svg_basic.html](https://www.webdesignleaves.com/pr/html/svg_basic.html)
+
+### SVGのベストプラクティス的な説明
+[https://design.dena.com/engineering/svg-sprite](https://design.dena.com/engineering/svg-sprite)
+
+## **便利な素材**
+- [https://devicon.dev/](https://devicon.dev/)
+  - MITライセンス
+- [https://svgporn.com/](https://svgporn.com/)
+  - CC0 1.0 Universal
+- [https://fonts.google.com/icons?selected=Material+Icons](https://fonts.google.com/icons?selected=Material+Icons)
+  - APACHE LICENSE, VERSION 2.0
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ズボラにローカルでswagger-uiを使う]]></title>
+        <id>https://ikmnjrd.github.io/blog/swagger-ui-local-zubora</id>
+        <link href="https://ikmnjrd.github.io/blog/swagger-ui-local-zubora"/>
+        <updated>2022-05-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ズボラにローカルでswagger-uiを使う]]></summary>
+        <content type="html"><![CDATA[### きっかけと対象読者
+SwaggerことOpenAPI(以下、OAS)でドキュメントが書かれているが、特にそれが利用されているわけでもないプロジェクトに入ったばかりの頃（執筆している今）。
+フロントエンドを中心に新規実装を担当していたが、APIの完成待ちの部分が多く、フロント・バックエンドともに未着手のAPI仕様を作る仕事が回ってきた。
+手書きしてもいいが、どうせだったらOASの便利ツールにも手を出してみたくなったによるズボラ記事。
+似た境遇じゃなきゃ以下の手順は参考にならないと思う。
+
+### 手順
+#### swagger-ui側
+勝手にプロジェクトのリポジトリにインストールしたくないので、[git clone](https://github.com/swagger-api/swagger-ui)して使う。
+`$ git clone git@github.com:swagger-api/swagger-ui.git && cd swagger-ui`
+`$ cd swagger-ui`
+`$ npm run dev`
+
+localhost:3200でswagger-uiが起動するので開く
+
+#### OASドキュメント側
+`$ npm install -g http-server`
+`$ cd {your-oas-document-dir}`
+`$ http-server --cors`
+
+localhost:8080でサーバー起動
+
+![画面例](https://i.gyazo.com/5c53a9d6be78fafb5f4fda86a8d7d981.png)
+
+テキストボックスに`http://localhost:8080/your-oas.json`などと入れてExploreボタンを押す。
+
+### その他
+swagger-ui起動時にはデフォルトで `https://petstore.swagger.io/v2/swagger.json`に接続される。
+
+`swagger-ui/dev-helpers/dev-helper-initializer.js`に設定があったりするので、いじれる。ここらへんはしっかりと公式ドキュメントに書かれているのでぜひ見てみてください。
+```javascript
+// Build a system
+  const ui = SwaggerUIBundle({
+    url: "your-oas-file",
+    dom_id: "#swagger-ui",
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    // requestSnippetsEnabled: true,
+    layout: "StandaloneLayout"
+  })
+```
+
+### 参考文献
+- [how to load local .json file? · Issue #1110 · swagger-api/swagger-ui](https://github.com/swagger-api/swagger-ui/issues/1110#issuecomment-155873088)
+- [治安のいいOpenAPIの開発環境を作る](https://tech.buysell-technologies.com/entry/2021/09/21/095238)
+- [npm - swagger-ui](https://www.npmjs.com/package/swagger-ui)
+- [swagger-ui/setting-up.md at master · swagger-api/swagger-ui](https://github.com/swagger-api/swagger-ui/blob/master/docs/development/setting-up.md)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Jest(ts-jest)で作ったはずのmockがundefinedになるエラー]]></title>
+        <id>https://ikmnjrd.github.io/blog/ts-jest-fail-because-import-global-jset</id>
+        <link href="https://ikmnjrd.github.io/blog/ts-jest-fail-because-import-global-jset"/>
+        <updated>2022-09-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Jestで遭遇したエラー]]></summary>
+        <content type="html"><![CDATA[### 結論
+ts-jest?esmで書いてるから？とりあえずでimportするのやめよう。
+
+### 状況
+Jestの右も左もわからないがfetcをmockしてゴニョゴニョしていた。  
+[公式の例](https://jestjs.io/docs/mock-function-api/#jestmockedsource)にもnode-fetchを使った例が載ってるぐらいなので、コピペして動かそうとしていたら問題発生。
+
+
+以下のエラーが発生した。
+```jsstacktrace
+TypeError: mockGetImageFromWeb.mockClear is not a function
+  23 |
+  24 |   afterEach(() => {
+> 25 |     mockGetImageFromWeb.mockClear()
+     |                         ^
+  26 |   })
+  27 |   test('should be defined', () => {
+  28 |     expect(getImageFromWeb).toBeDefined()
+```
+
+コピペしたコードはこれ
+```js
+import {expect, jest, test} from '@jest/globals';
+import type {fetch} from 'node-fetch';
+
+jest.mock('node-fetch');
+
+let mockedFetch: jest.Mocked<typeof fetch>;
+
+afterEach(() => {
+  mockedFetch.mockClear();
+});
+
+test('makes correct call', () => {
+  mockedFetch = getMockedFetch();
+  // ...
+});
+
+test('returns correct data', () => {
+  mockedFetch = getMockedFetch();
+  // ...
+});
+```
+
+
+### 対応
+コピペしてきたtestファイルで以下のインポート文を削除したら動いた。
+```js
+import { expect, jest, test } from '@jest/globals'
+```
+
+### 参考文献
+- [Mock Functions · Jest](https://jestjs.io/docs/mock-function-api/#jestmockedsource)
+- [How To Mock Fetch in Jest | Leigh Halliday](https://www.leighhalliday.com/mock-fetch-jest)
+
+
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TypeScriptをネイティブコンパイルするって？]]></title>
+        <id>https://ikmnjrd.github.io/blog/typescript-compile</id>
+        <link href="https://ikmnjrd.github.io/blog/typescript-compile"/>
+        <updated>2021-12-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[僕の疑問に追記する形で更新しています。]]></summary>
+        <content type="html"><![CDATA[
+### 疑問
+typescriptをjavascriptを挟まずにネイティブコードにコンパイルするようなプロジェクトはないのか？
+
+### 自分なりの回答
+ないよ。
+
+DenoがTypeScriptコードをサポートしているが、中ではコンパイラが一度JavaScriptに変換している。
+
+マイクロソフトがTypeScriptコンパイラAPIをwikiにしてくれている。
+[https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近知ったTips]]></title>
+        <id>https://ikmnjrd.github.io/blog/useful-tips-2022-1</id>
+        <link href="https://ikmnjrd.github.io/blog/useful-tips-2022-1"/>
+        <updated>2022-07-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2022年度に知ったTipsまとめその1]]></summary>
+        <content type="html"><![CDATA[
+### 著者近況
+転職を経てシステム開発会社に入社して2ヶ月。知らないことばかりが頭上を飛び交うドタバタの中、合間を縫って引っ越しをした。少し新しい生活に慣れ始めた今日この頃。久々に自分の興味を昇華しようとGitHubで他人のdotfilesを覗いたりしている。なお当人はMacのデフォルトのterminalを使い続け、特に設定にこだわろうとしたことすらなかったところ。
+
+## Tips
+
+### Webブラウザを簡易的なメモ帳として使う
+アドレスバーに以下を入力しEnter
+`data:text/html, <html contenteditable>`
+
+htmlなのでstyleの指定やscriptタグも読み込める。
+`data:text/html, <html contenteditable style="font-style: italic;">`
+
+### Zsh
+#### historyの検索
+`control + r` でhistoryからの検索&実行ができる
+
+#### cd系
+pushdとpopdとこれらを使うのに便利な設定
+```shell
+# This is in ~/.zshrc
+setopt auto_pushd
+setopt pushd_ignore_dups
+```
+
+#### history系
+```shell
+# This is in ~/.zshrc
+setopt hist_ignore_dups
+setopt share_history
+setopt inc_append_history
+```
+
+#### Zshのオプションの一覧(Web）はここ
+[https://zsh.sourceforge.io/Doc/Release/Options-Index.html](https://zsh.sourceforge.io/Doc/Release/Options-Index.html)
+
+
+### Mac標準TerminalとiTerm2
+使ってて一番違うのが"色"という自分なりの結論。
+[pastel](https://github.com/sharkdp/pastel)をbrew installして使ってみるのが体感しやすかった。
+今まで標準のTerminalを使っていたが、nvimを試している中でiTerm2に乗り換えることにした。
+
+
+### 周辺用語
+- true color 
+- 16bit color 
+- 24bit color
+
+### 参考文献
+- [ブラウザのタブがメモ帳になる技が便利　とっさに何かメモりたいときなどに](https://nlab.itmedia.co.jp/nl/articles/2207/06/news129.html)
+- [現役シリコンバレーエンジニアが教える NeoVim(VIM) + Tmux + Zsh 入門](https://www.udemy.com/course/vim-tmux-zsh/)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[V8エンジン（JavaScript）が吐くアセンブリを見たい！]]></title>
+        <id>https://ikmnjrd.github.io/blog/v8engine-asm-show</id>
+        <link href="https://ikmnjrd.github.io/blog/v8engine-asm-show"/>
+        <updated>2022-01-09T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+アセンブリを読みたい願望がある。
+nodeでもV8エンジンの`--print-code`オプションが使える。
+```bash
+$ node --print-code sample.js
+$ d8 --print-code sample.js
+```
+
+実際に出力してみたけど、自分で書いたコード部分すら見つからず、わけわからんかった。
+（Raw Codeとして出力されると紹介されていたが、見当たらなかった。）
+
+
+### 参考
+- [v8でjsとwasmのアセンブリを取る方法](https://zenn.dev/umashiba/articles/d64fb62a09fb4f)
+- [GitHubの公式ミラーリポジトリ](https://github.com/v8/v8)
+- [公式Gitリポジトリ](https://chromium.googlesource.com/v8/v8.git)
+- [https://v8.dev/docs](https://v8.dev/docs)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[vimで繰り返しの操作とその対となる操作]]></title>
+        <id>https://ikmnjrd.github.io/blog/vim-redo-undo-list</id>
+        <link href="https://ikmnjrd.github.io/blog/vim-redo-undo-list"/>
+        <updated>2022-08-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[vimで繰り返しの操作とその対となる操作]]></summary>
+        <content type="html"><![CDATA[
+
+### 繰り返しが可能な操作と対になる操作
+
+| 実施項目 | 操作 | 繰り返す| 戻る| 戻るの取り消し(進む) |
+|:-----------|:------------|:------------|:------------|:------------|
+|変更する | {edit} | . | u | `<C-r>` |
+|行内で文字を前方検索|f{char}/t{char}|;|,||
+|行内で文字を後方検索|F{char}/T{char}|;|,||
+|ドキュメント内で文字を前方検索|/pattern`<CR>`|n|N||
+|ドキュメント内で文字を後方検索|?pattern`<CR>`|n|N||
+|置換の実行|:s/target/replacement|&|u||
+|一連の変更を実行|qx{changes}q|@x|u||
+
+
+### 参考文献
+- [実践Vim 思考のスピードで編集しよう!](https://www.amazon.co.jp/%E5%AE%9F%E8%B7%B5Vim-%E6%80%9D%E8%80%83%E3%81%AE%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89%E3%81%A7%E7%B7%A8%E9%9B%86%E3%81%97%E3%82%88%E3%81%86-Drew-Neil/dp/4048916599)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[vim/tmuxを使うに当たって参考にしたサイトまとめ]]></title>
+        <id>https://ikmnjrd.github.io/blog/vim-tmux-reference</id>
+        <link href="https://ikmnjrd.github.io/blog/vim-tmux-reference"/>
+        <updated>2022-08-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[vimとtmuxを使うに当たって参考にしたサイトまとめ]]></summary>
+        <content type="html"><![CDATA[
+## 参考サイトまとめ
+### vim関連
+- [how-to-yank-from-vim-to-system-clipboard](https://vi.stackexchange.com/questions/23130/how-to-yank-from-vim-to-system-clipboard)
+- [How to Undo Changes in Vim / Vi](https://phoenixnap.com/kb/vim-undo-redo)
+- [Neovimでのフロントエンド開発環境 2021](https://zenn.dev/yano/articles/vim_frontend_development_2021)
+- [新人達を1ヶ月でガチvimmerにした方法](https://qiita.com/nyantera/items/4bf29ca6f11bc797a9cb)
+
+### tmux関連
+- [とほほのtmux入門](https://www.tohoho-web.com/ex/tmux.html)
+- [tmuxで快適にpane移動](https://qiita.com/pocari/items/b1828c8aea8e3545cadd)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[疑問メモ_WASMとV8エンジン]]></title>
+        <id>https://ikmnjrd.github.io/blog/wasm-and-v8engine</id>
+        <link href="https://ikmnjrd.github.io/blog/wasm-and-v8engine"/>
+        <updated>2021-12-26T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+### 疑問
+WebブラウザではV8エンジンがJavaScriptを解釈・実行するのはわかったが、JavaScriptに埋め込まれたwasm（別言語・npm）で提供されている場合もV8エンジンが同一スレッド内でwasmを解釈・実行するの？
+V8がhidden classを作成して、、、
+
+### 参考文献
+- [https://postd.cc/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code/](https://postd.cc/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code/)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WebpackでBuffer（Node.js）を使う]]></title>
+        <id>https://ikmnjrd.github.io/blog/webpack-buffer-on-nodejs</id>
+        <link href="https://ikmnjrd.github.io/blog/webpack-buffer-on-nodejs"/>
+        <updated>2022-01-02T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+駆け出しエンジニアのふわっとした理解を書く。
+Node.jsのコアモジュールであるBuffer()をフロント側で使いたいときがあるらしい。[参考の該当箇所](https://github.com/CyberAgentHack/web-speed-hackathon-2021/blob/135468cc9f69f6f27ba0bc9d3b74d60f1ebe3a40/client/src/components/foundation/CoveredImage/CoveredImage.jsx#L21-L23)（パフォーマンスチューニングを行う元して書かれたソースコードなので、ベストプラクティス的ではないのかもしれないが、初心者の私には判断つきません）
+```javascript
+const imageSize = React.useMemo(() => {
+  return data !== null ? sizeOf(Buffer.from(data)) : null;
+}, [data]);
+```
+
+
+### 解決策
+解決策(といっても、元々のソースコードに書かれていたが)、下に記載する設定がないとブラウザから怒られてしまいます。
+```bash
+CoveredImage.jsx:22 Uncaught ReferenceError: Buffer is not defined
+```
+
+
+`webpack.config.js` に以下のように追記する。
+```javascript
+plugins: [
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+    }),
+]
+```
+
+
+
+### 参考文献
+- [https://github.com/diegomura/react-pdf/issues/1029](https://github.com/diegomura/react-pdf/issues/1029)
+- [https://github.com/CyberAgentHack/web-speed-hackathon-2021](https://github.com/CyberAgentHack/web-speed-hackathon-2021)
+- [https://webpack.js.org/plugins/provide-plugin/](https://webpack.js.org/plugins/provide-plugin/)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[疑問メモ_scriptタグのcsp-hashディレクティブについて]]></title>
+        <id>https://ikmnjrd.github.io/blog/what-csp-hash-directive</id>
+        <link href="https://ikmnjrd.github.io/blog/what-csp-hash-directive"/>
+        <updated>2022-01-19T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[### 疑問に遭遇した状況
+ネットサーフィンをしていて`<head/>`を覗いていた
+
+### 疑問
+csp-hashディレクティブって何？なんのために使うの？
+
+どうもcspは Content-Security-Policy の略っぽい。
+```html
+<script csp-hash>
+  if (/Mac OS X/.test(navigator.userAgent))document.documentElement.classList.add('apple')
+</script>
+```
+
+このブログがわかりやすかった気がしたが、わからなかった。[CSP(コンテンツセキュリティポリシー)について調べてみた - SSTエンジニアブログ](https://techblog.securesky-tech.com/entry/2020/05/21/)
+
+
+### 参考文献
+- [patterns.dev](https://www.patterns.dev/)
+- [CSP(コンテンツセキュリティポリシー)について調べてみた - SSTエンジニアブログ](https://techblog.securesky-tech.com/entry/2020/05/21/)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+</feed>
