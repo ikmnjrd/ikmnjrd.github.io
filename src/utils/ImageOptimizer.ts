@@ -1,46 +1,19 @@
 const sharp = require('sharp')
 const fs = require('fs/promises')
-import { pipeline } from 'node:stream'
-import { promisify } from 'node:util'
-import fetch from 'node-fetch'
-import {
-  createWriteStream,
-  // existsSync,
-} from 'node:fs'
 import { existCacheImage } from './existCacheImage'
-const streamPipeline = promisify(pipeline)
+import { getImageFromWeb } from './getImageFromWeb'
 
 type converterProps = {
   images: RegExpMatchArray | null
   name: string
 }
-
 export type ImageConverterProps = {
   url: string
   index: number
   name: string
 }
 
-export const getImageFromWeb = async ({
-  url: url,
-  index: index,
-  name: name,
-}: ImageConverterProps): Promise<string> => {
-  const response = await fetch(url)
-  if (!response.ok)
-    throw new Error(
-      `unexpected response ${response.statusText}`
-    )
-  await streamPipeline(
-    response.body!,
-    createWriteStream(
-      `./tmp/${name}-${index}.png`
-    )
-  )
-  return `/tmp/${name}-${index}.png`
-}
-
-const converter = async ({
+export const optimizeImages = async ({
   images,
   name,
 }: converterProps): Promise<string[]> => {
@@ -98,5 +71,3 @@ const converter = async ({
 
   return output_file_names
 }
-
-export default converter

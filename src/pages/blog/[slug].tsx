@@ -8,7 +8,7 @@ import Head from 'next/head'
 import TitleHead from '~/components/TitleHead'
 import OgpHead from '~/components/OgpHead'
 import markdownStyles from '~/components/markdown/markdown-styles.module.css'
-import ImageOptimizer from '~/utils/ImageOptimizer'
+import { optimizeImages } from '~/utils/ImageOptimizer'
 import 'prism-themes/themes/prism-a11y-dark.min.css'
 
 export interface IBlog {
@@ -118,7 +118,7 @@ export async function getStaticProps({
       /src="https:\/\/i\.gyazo.*?"/g
     ) ?? []
 
-  const images_path = await ImageOptimizer({
+  const images_path = await optimizeImages({
     images: image_tags,
     name: slug,
   })
