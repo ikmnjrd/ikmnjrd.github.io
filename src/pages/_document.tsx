@@ -40,6 +40,12 @@ export default function Document() {
           href="/safari-pinned-tab.svg"
           color="#5bbad5"
         />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="ikmnjrd.github.io - rss"
+          href="/rss/feed.xml"
+        />
         <meta
           name="msapplication-TileColor"
           content="#da532c"
