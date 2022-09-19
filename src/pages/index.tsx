@@ -28,7 +28,7 @@ export default function Home({
       <OgpHead
         title="ikmnjrd.github.io"
         type="website"
-        image="Untitled.png"
+        image="logo.png"
         url="/"
       />
 

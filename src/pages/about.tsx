@@ -8,7 +8,7 @@ export default function about() {
       <OgpHead
         title="ikmnjrd.github.io"
         type="website"
-        image="Untitled.png"
+        image="logo.png"
         url=""
       />
 
