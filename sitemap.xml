@@ -16,6 +16,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/chrome-dev-tool</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/consolelog-effect</loc>
     <changefreq>hourly</changefreq>
   </url>

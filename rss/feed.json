@@ -56,6 +56,18 @@
             }
         },
         {
+            "id": "https://ikmnjrd.github.io/blog/chrome-dev-tool",
+            "content_html": "\n### JavaScriptの値をリアルタイムに監視する\n![watch](https://i.gyazo.com/6672149b7ec1d9594b135a95b466d3df.png)　　\n目のマークをクリック、監視したい対象を記述する。  \n\nNext.jsのpropsなどもこのように指定することで見れる。  \n![__NEXT_DATA](https://i.gyazo.com/c0aea2fc27e14a4e81581efbdf7accc3.png)\n\n### minifyされたJSファイルを見やすくする\n巷でいうpritty printは「{}」と表示された箇所をクリック\n![minified](https://i.gyazo.com/6dc5d5259c2116dd0be1580eae2da93b.png)\n![prittyprint](https://i.gyazo.com/5f7cc0e5ce0a3abed4685a13992fd689.png)\n\n### ブレークポイント\n\n| ブレークポイントの設定できるもの | 説明 |\n|:-----------|:------------|\n| Line-of-code|\tOn an exact region of code. |\n| DOM|\tOn the code that changes or removes a specific DOM node, or its children.|\n| XHR\t|When an XHR URL contains a string pattern.|\n| Event listener|\tOn the code that runs after an event, such as click, is fired.|\n| Exception|\tOn the line of code that is throwing a caught or uncaught exception.|\n| Function\t| Whenever a specific function is called.|\n\n詳しくは[ここ](https://developer.chrome.com/docs/devtools/javascript/breakpoints/)を見てくれ\n\nDOMを右クリックして「BreakOn」から設定したり、Sourceタブの右側からXHR(Fetch)をリクエスト先を指定して設定したりできる。\n\n### console\nNode.jsで使うことの方が多いが、一応紹介\n#### console.dir\nHTML Elementを見るときなどにconsole.logだと出力してくれない情報などがあって便利\n```js\nconst obj = getElementById('hoge')\nconsole.dir(obj)\n```\n\n#### console.time\n実行時間を調べたいとき\n```js\nconsole.time();\nfor (var i = 0; i < 100000; i++) {\n  let square = i ** 2;\n}\nconsole.timeEnd();\n```\n\n![console.time実行結果](https://i.gyazo.com/1e32408254a932443cfc9763d5ad213e.png)\n\n### その他一言\n#### performanceタブ\nボトルネックになっている箇所を調べるときに。パフォーマンス改善したいならとりあえず見るとこ。\n\n#### networkタブ\nAPIとのやりとりを見ようね。  \n\n飽きた。\n\n### 参考文献\n- [Watch JavaScript values in real-time with Live Expressions - Chrome Developers](https://developer.chrome.com/docs/devtools/console/live-expressions/)\n- [Pause your code with breakpoints - Chrome Developers](https://developer.chrome.com/docs/devtools/javascript/breakpoints/)\n- [Console API reference - Chrome Developers](https://developer.chrome.com/docs/devtools/console/api/)",
+            "url": "https://ikmnjrd.github.io/blog/chrome-dev-tool",
+            "title": "Chromeディベロッパーツールを使おう",
+            "summary": "ちょっと目に止まったディベロッパーツールの機能を紹介",
+            "date_modified": "2022-09-23T00:00:00.000Z",
+            "author": {
+                "name": "ike",
+                "url": "https://twitter.com/ikmnjrd"
+            }
+        },
+        {
             "id": "https://ikmnjrd.github.io/blog/consolelog-effect",
             "content_html": "\n### 疑問\nconsole.logの上書きで本番環境はデバッグメッセージを表示させないという技を知ったが、これがメモリに影響ないのかどうか知りたい。\n```javascript\nconsole.log = () => {}\n```\nちなみに最近ディベロッパーツールでメモリーのスナップショットを撮るという技を知った。\n\nCreate React Appで適当に作ったプロジェクトで適当にconsole.logを出力してみた。\n![ソース](https://i.gyazo.com/f55499b3db011a5c81d04c58d71b089b.png)\n\n`console.log`の呼び出しを増やしてブラウザを更新->HEAP Snapshot取得すると`console.log`の呼び出し回数に応じてメモリ使用量が一見増えるように見えたが、しばらく放置して再びHEAP Snapshotを取得するとメモリ使用量が低水準にまで戻る。GCに回収されたのかな？と想像したが、よくわからない。\n![メモリ](https://i.gyazo.com/1ef68f7e017d8ed2309a6ff90d9036ad.png)\n\n### 結論\nほぼ影響はない\n",
             "url": "https://ikmnjrd.github.io/blog/consolelog-effect",
