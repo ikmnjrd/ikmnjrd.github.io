@@ -9,7 +9,7 @@ import TitleHead from '~/components/TitleHead'
 import OgpHead from '~/components/OgpHead'
 import markdownStyles from '~/components/markdown/markdown-styles.module.css'
 import { optimizeImages } from '~/utils/ImageOptimizer'
-import 'prism-themes/themes/prism-a11y-dark.min.css'
+import 'prism-themes/themes/prism-nord.min.css'
 
 export interface IBlog {
   frontmatter: {
