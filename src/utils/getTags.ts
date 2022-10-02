@@ -1,4 +1,6 @@
-import getPostFilesData from './getPostFilesData'
+import getPostFilesData, {
+  type IFrontMatter,
+} from './getPostFilesData'
 
 export interface ITagInfo {
   wholeTags: {
@@ -6,6 +8,11 @@ export interface ITagInfo {
     slug: string
   }[]
   countedTags: { [key: string]: number }
+  filesData: {
+    slug: string
+    frontmatter: IFrontMatter
+    content: string
+  }[]
 }
 
 export default async function getTag(): Promise<ITagInfo> {
@@ -25,7 +32,7 @@ export default async function getTag(): Promise<ITagInfo> {
 
   const countedTags = countTag(wholeTags)
 
-  return { wholeTags, countedTags }
+  return { wholeTags, countedTags, filesData }
 }
 
 export function countTag<T extends string>(
