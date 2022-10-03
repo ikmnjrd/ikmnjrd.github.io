@@ -1,13 +1,15 @@
 import { useD3 } from '~/hooks/useD3'
 import * as d3Sankey from 'd3-sankey'
-// interface SankeyNode extends d3Sankey.SankeyNodeMinimal
+import * as d3 from 'd3'
 
 interface Node {
   id: number
   name: string
 }
 interface Link {
-  [k: string]: number
+  source: number | string // slug
+  target: number | string // tag name
+  value: number
 }
 
 interface Props {
@@ -17,16 +19,21 @@ interface Props {
 }
 
 function SankeyChart(props: Props) {
-  console.log({ props })
-
   const ref = useD3(
-    (svg: SVGSVGElement) => {
+    (
+      svg: d3.Selection<
+        SVGSVGElement,
+        any,
+        any,
+        any
+      >
+    ) => {
       const width = 640 // outer width, in pixels
       const height = 1200 // outer height, in pixels
       const nodeLabelPadding = 5
 
       const sankey = d3Sankey
-        .sankey<unknown[], any>()
+        .sankey<any, any>()
         .size([width, height])
         .nodeId((d) => d.id)
         .nodeWidth(20)
@@ -104,10 +111,8 @@ function SankeyChart(props: Props) {
         })
         .text((i) => i.name)
         .style('fill', '#222222')
-
-      return svg
     },
-    [props]
+    [props.nodes]
   )
 
   return (

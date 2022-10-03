@@ -21,33 +21,6 @@ export default function Tag({
   countedTags,
   filesData,
 }: ITagInfo) {
-  // const data3 = data2.nodes.map((i, idx) => {
-  //   return { id: idx, name: i.name }
-  // })
-
-  console.log({ wholeTags })
-  console.log({ countedTags })
-  const hogeNodes = filesData.map((i, idx) => {
-    return {
-      name: i.slug,
-      id: idx,
-    }
-  })
-  const hogeLinks = filesData.flatMap(
-    (i, idx) => {
-      return (
-        i.frontmatter.tag?.map((tag) => {
-          return {
-            source: idx,
-            target: tag,
-            value: 1,
-          }
-        }) ?? []
-      )
-    }
-  )
-  console.log({ hogeNodes })
-  console.log({ hogeLinks })
   const baseTagUrl = '/tag/'
   const baseBlogUrl = '/blog/'
 
@@ -85,9 +58,6 @@ export default function Tag({
         url: baseBlogUrl + i.slug,
       })
     })
-    // console.log({ slugs })
-    // Nodes.concat(slugs)
-    // console.log({ Nodes })
 
     return data.wholeTags.map((i) => {
       Nodes.findIndex((n) => n.name === i.tag)
@@ -103,9 +73,6 @@ export default function Tag({
       }
     })
   }
-  // const newNodes = Nodes.filter(
-  //   (_, idx) => idx <= lastNodesLength
-  // )
 
   const Links = linksFactory({
     wholeTags,
@@ -113,8 +80,6 @@ export default function Tag({
     filesData,
   })
 
-  console.log({ Nodes })
-  console.log({ Links })
   return (
     <>
       <TitleHead title={'Tag一覧'} />
@@ -122,8 +87,6 @@ export default function Tag({
         Tag一覧
       </h1>
       <SankeyChart
-        // nodes={data3}
-        // links={data2.links}
         nodes={Nodes}
         links={Links}
         lastIndex={lastNodesLength}
