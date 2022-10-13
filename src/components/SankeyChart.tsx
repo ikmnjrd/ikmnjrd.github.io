@@ -19,6 +19,9 @@ interface Props {
 }
 
 function SankeyChart(props: Props) {
+  const width = 640 // outer width, in pixels
+  const height = 1400 // outer height, in pixels
+
   const ref = useD3(
     (
       svg: d3.Selection<
@@ -28,8 +31,6 @@ function SankeyChart(props: Props) {
         any
       >
     ) => {
-      const width = 640 // outer width, in pixels
-      const height = 1200 // outer height, in pixels
       const nodeLabelPadding = 5
 
       const sankey = d3Sankey
@@ -41,7 +42,7 @@ function SankeyChart(props: Props) {
         .nodeAlign(d3Sankey.sankeyCenter)
         .extent([
           [0, 0],
-          [width, height],
+          [width, height * 1.1], // SVG一番上のテキストの上半分が見切れてしまうため対応
         ])
 
       const graph = sankey(props)
@@ -119,7 +120,7 @@ function SankeyChart(props: Props) {
     <svg
       ref={ref}
       style={{
-        height: 1200,
+        height: height,
         width: '100%',
         marginRight: '0px',
         marginLeft: '0px',
