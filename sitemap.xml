@@ -156,6 +156,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/neovim-volta</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/neumorphism-sample</loc>
     <changefreq>hourly</changefreq>
   </url>
