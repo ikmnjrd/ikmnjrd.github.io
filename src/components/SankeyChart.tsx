@@ -60,11 +60,11 @@ function SankeyChart(props: Props) {
           d3Sankey.sankeyLinkHorizontal()
         )
         .attr('fill', 'none')
-        .attr('stroke', '#999999')
+        .attr('stroke', '#A0FFFF')
         .attr('stroke-width', (d) => d.width)
         .attr('stoke-opacity', 0.5)
 
-      console.log('graph nodes:', graph.nodes)
+      // console.log('graph nodes:', graph.nodes)
 
       // let nodes =
       svg
@@ -79,7 +79,7 @@ function SankeyChart(props: Props) {
         .attr('y', (d) => d.y0)
         .attr('width', (d) => d.x1 - d.x0)
         .attr('height', (d) => d.y1 - d.y0)
-        .attr('fill', 'blue')
+        .attr('fill', '#6E7F8D')
         .attr('opacity', 0.8)
 
       svg
@@ -110,7 +110,7 @@ function SankeyChart(props: Props) {
           return d.url
         })
         .text((i) => i.name)
-        .style('fill', '#222222')
+        .style('fill', '#6E7F8D')
     },
     [props.nodes]
   )
