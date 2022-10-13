@@ -19,6 +19,9 @@ interface Props {
 }
 
 function SankeyChart(props: Props) {
+  const width = 640 // outer width, in pixels
+  const height = 1400 // outer height, in pixels
+
   const ref = useD3(
     (
       svg: d3.Selection<
@@ -28,8 +31,6 @@ function SankeyChart(props: Props) {
         any
       >
     ) => {
-      const width = 640 // outer width, in pixels
-      const height = 1200 // outer height, in pixels
       const nodeLabelPadding = 5
 
       const sankey = d3Sankey
@@ -41,7 +42,7 @@ function SankeyChart(props: Props) {
         .nodeAlign(d3Sankey.sankeyCenter)
         .extent([
           [0, 0],
-          [width, height],
+          [width, height * 1.1], // SVG一番上のテキストの上半分が見切れてしまうため対応
         ])
 
       const graph = sankey(props)
@@ -60,11 +61,11 @@ function SankeyChart(props: Props) {
           d3Sankey.sankeyLinkHorizontal()
         )
         .attr('fill', 'none')
-        .attr('stroke', '#999999')
+        .attr('stroke', '#A0FFFF')
         .attr('stroke-width', (d) => d.width)
         .attr('stoke-opacity', 0.5)
 
-      console.log('graph nodes:', graph.nodes)
+      // console.log('graph nodes:', graph.nodes)
 
       // let nodes =
       svg
@@ -79,7 +80,7 @@ function SankeyChart(props: Props) {
         .attr('y', (d) => d.y0)
         .attr('width', (d) => d.x1 - d.x0)
         .attr('height', (d) => d.y1 - d.y0)
-        .attr('fill', 'blue')
+        .attr('fill', '#6E7F8D')
         .attr('opacity', 0.8)
 
       svg
@@ -109,8 +110,12 @@ function SankeyChart(props: Props) {
         .attr('xlink:href', function (d) {
           return d.url
         })
+        .classed(
+          'hover:opacity-50 hover:underline active:opacity-30',
+          true
+        )
         .text((i) => i.name)
-        .style('fill', '#222222')
+        .style('fill', '#6E7F8D')
     },
     [props.nodes]
   )
@@ -119,7 +124,7 @@ function SankeyChart(props: Props) {
     <svg
       ref={ref}
       style={{
-        height: 1200,
+        height: height,
         width: '100%',
         marginRight: '0px',
         marginLeft: '0px',
