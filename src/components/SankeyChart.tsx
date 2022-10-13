@@ -110,6 +110,10 @@ function SankeyChart(props: Props) {
         .attr('xlink:href', function (d) {
           return d.url
         })
+        .classed(
+          'hover:opacity-50 hover:underline active:opacity-30',
+          true
+        )
         .text((i) => i.name)
         .style('fill', '#6E7F8D')
     },
