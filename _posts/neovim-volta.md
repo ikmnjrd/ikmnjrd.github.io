@@ -1,6 +1,6 @@
 ---
 title: NeoVimとvoltaを併用するとNodeを見つけてくれない問題
-description: NeoVimとvoltaを使うと必ずこの問題にぶち当たるのでは？というような
+description: NeoVimとvoltaを使うと必ずこの問題にぶち当たるのでは？
 date: '2022-10-13'
 tag:
   - Node.js
@@ -10,10 +10,14 @@ tag:
 ---
 
 ## 環境
-- macOS Monterey(v12.6)
-- NeoVim(v8.0)
-- volta(v1.0.8)
-- Node(v16.17.0)
+
+| 関連ソフトウェア | バージョン |
+|:--------------|:---------|
+| macOS         | 12.6     |
+| NodeJS        | 16.17.0  |
+| volta         | 1.0.8    |
+| NeoVim        | 8.0      |
+
 
 ## 結論
 voltaを使うなら[voltaのIssue](https://github.com/volta-cli/volta/issues/866)にあるようにinit.vimに以下のような記述をしておく。
