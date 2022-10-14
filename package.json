@@ -14,7 +14,8 @@
     "typecheck": "tsc",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --silent --config=jest.config.js",
     "prepare": "husky install",
-    "prettier": "prettier --config ./.prettierrc --write ./src"
+    "prettier": "prettier --config ./.prettierrc --write ./src",
+    "smug": "smug start -f ./smug.yml"
   },
   "license": "MIT",
   "dependencies": {
