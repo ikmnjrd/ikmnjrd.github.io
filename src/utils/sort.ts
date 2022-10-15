@@ -10,7 +10,7 @@ export const sortByPostMeta = (
   )
 }
 
-const sortByDate = (
+export const sortByDate = (
   first: string | undefined,
   second: string | undefined
 ) => {
