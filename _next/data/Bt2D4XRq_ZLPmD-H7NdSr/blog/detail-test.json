@@ -1,0 +1,1 @@
+{"pageProps":{"frontmatter":{"title":"details-test","date":"2021-12-22","tag":["misc"]},"slug":"detail-test","innerHtml":"<p>detailstタグのテスト</p>\n<details>\n  <summary>summary</summary>\ncontent\n</details>\n","createdAt":"2022-10-15","updatedAt":"2022-10-15"},"__N_SSG":true}

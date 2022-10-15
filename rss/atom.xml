@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ikmnjrd.github.io</id>
     <title>ikmnjrd.github.io</title>
-    <updated>2022-10-13T12:53:26.805Z</updated>
+    <updated>2022-10-15T05:53:34.319Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>ike</name>
@@ -309,6 +309,33 @@ Create React Appで適当に作ったプロジェクトで適当にconsole.log�
 ### 結論
 ほぼ影響はない
 ]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NPMパッケージのREADMEでよく見るテストカバレッジのバッチ作ってみた]]></title>
+        <id>https://ikmnjrd.github.io/blog/coverage-badge</id>
+        <link href="https://ikmnjrd.github.io/blog/coverage-badge"/>
+        <updated>2022-10-13T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+### 疑問に遭遇した状況
+
+
+### 疑問
+
+
+### 周辺用語
+- 
+
+
+### 参考文献
+- [Coverage Badge with GitHub Actions - FINALLY!](https://dev.to/thejaredwilcurt/coverage-badge-with-github-actions-finally-59fa)]]></content>
         <author>
             <name>ike</name>
             <uri>https://twitter.com/ikmnjrd</uri>
@@ -2141,6 +2168,38 @@ ccc -->
         </contributor>
     </entry>
     <entry>
+        <title type="html"><![CDATA[mermaidの動作確認用ポスト]]></title>
+        <id>https://ikmnjrd.github.io/blog/mermaid-test</id>
+        <link href="https://ikmnjrd.github.io/blog/mermaid-test"/>
+        <updated>2022-10-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[個人的なNotionの使い方備忘録です。]]></summary>
+        <content type="html"><![CDATA[
+## mermaidのテスト
+これは普通の文章
+
+
+```javascript
+const hoge = 'this is mermaid test'
+```
+
+```mermaid
+graph TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[Car]
+```]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[へっぽこエンジニアの技術選定時の頭の中]]></title>
         <id>https://ikmnjrd.github.io/blog/narrative-of-my-criteria-for-tech-selection</id>
         <link href="https://ikmnjrd.github.io/blog/narrative-of-my-criteria-for-tech-selection"/>
@@ -3618,10 +3677,13 @@ $ d8 --print-code sample.js
 - [How to Undo Changes in Vim / Vi](https://phoenixnap.com/kb/vim-undo-redo)
 - [Neovimでのフロントエンド開発環境 2021](https://zenn.dev/yano/articles/vim_frontend_development_2021)
 - [新人達を1ヶ月でガチvimmerにした方法](https://qiita.com/nyantera/items/4bf29ca6f11bc797a9cb)
+- [vim バッファ入門](https://zenn.dev/sa2knight/articles/e0a1b2ee30e9ec22dea9)
 
 ### tmux関連
 - [とほほのtmux入門](https://www.tohoho-web.com/ex/tmux.html)
 - [tmuxで快適にpane移動](https://qiita.com/pocari/items/b1828c8aea8e3545cadd)
+- [tmux select-layout](https://waylonwalker.com/tmux-select-layout/)
+  - main-verticalのvertical設定のバインド
 ]]></content>
         <author>
             <name>ike</name>

@@ -24,6 +24,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/coverage-badge</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/dataurl-markdown-contenteditable-tips</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -149,6 +153,10 @@
   </url>
   <url>
     <loc>https://ikmnjrd.github.io/blog/markdown-it-process</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ikmnjrd.github.io/blog/mermaid-test</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>

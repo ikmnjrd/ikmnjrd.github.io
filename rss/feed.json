@@ -79,6 +79,17 @@
             }
         },
         {
+            "id": "https://ikmnjrd.github.io/blog/coverage-badge",
+            "content_html": "\n### 疑問に遭遇した状況\n\n\n### 疑問\n\n\n### 周辺用語\n- \n\n\n### 参考文献\n- [Coverage Badge with GitHub Actions - FINALLY!](https://dev.to/thejaredwilcurt/coverage-badge-with-github-actions-finally-59fa)",
+            "url": "https://ikmnjrd.github.io/blog/coverage-badge",
+            "title": "NPMパッケージのREADMEでよく見るテストカバレッジのバッチ作ってみた",
+            "date_modified": "2022-10-13T00:00:00.000Z",
+            "author": {
+                "name": "ike",
+                "url": "https://twitter.com/ikmnjrd"
+            }
+        },
+        {
             "id": "https://ikmnjrd.github.io/blog/dataurl-markdown-contenteditable-tips",
             "content_html": "## 概要\n[オフライン環境でも使えるブラウザベースの簡易マークダウンエディタ](https://github.com/ikmnjrd/browser-local-md-editor)を作成した際に知ったことなど、\n箇条書きな内容です。　　\n\n## Tips\n- `<pre>`と`<div>`の違い。contenteditable属性と合わせて使う場合、preは改行やスペースなど入力を入力したまま保持（入出力）してくれる が、divだと改行など特にエスケープされてしまうので、\ncontenteditableと使う場合はpreを使う方がベター\n- `<head>`に`<style>`タグでcssを書くとパースがシビアになりすぐ変な挙動になるので、個々のhtmlタグのstyle属性に直書きする。今回作成した簡易的なマークダウンエディタなど、\nhtmlが少ないなら有効。\n- dataURIでhtml、特にマークダウン書式を書くならマークダウンんで多用する「#」をURLエンコードに合わせることを意識しておく。#は「%23」で表現される。\n- tabキーなど、文字入力は色々気を使わなくちゃいけない。onkeydownで処理するよりonkeyupで処理した方が都合が良いことが多い。\n- contenteditableなhtmlで参考にすべきはTwitter。Twitterすごい。\n- dataURLではWebStorageが使えない。\n- dataURLではlocationAPIが使えない(Not allowed to navigate top frame to data URL)\n\n\n### 参考文献\n- [How To Add New Line In Markdown? – WiseTut](https://wisetut.com/how-to-add-new-line-in-markdown/)\n- [Data URLs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)\n- [jQueryでIME入力確定時にイベントを発行する - Qiita](https://qiita.com/hrdaya/items/6488d8dd3962cf35c0a0)",
             "url": "https://ikmnjrd.github.io/blog/dataurl-markdown-contenteditable-tips",
@@ -436,6 +447,18 @@
             }
         },
         {
+            "id": "https://ikmnjrd.github.io/blog/mermaid-test",
+            "content_html": "\n## mermaidのテスト\nこれは普通の文章\n\n\n```javascript\nconst hoge = 'this is mermaid test'\n```\n\n```mermaid\ngraph TD\n    A[Christmas] -->|Get money| B(Go shopping)\n    B --> C{Let me think}\n    C -->|One| D[Laptop]\n    C -->|Two| E[iPhone]\n    C -->|Three| F[Car]\n```",
+            "url": "https://ikmnjrd.github.io/blog/mermaid-test",
+            "title": "mermaidの動作確認用ポスト",
+            "summary": "個人的なNotionの使い方備忘録です。",
+            "date_modified": "2022-10-11T00:00:00.000Z",
+            "author": {
+                "name": "ike",
+                "url": "https://twitter.com/ikmnjrd"
+            }
+        },
+        {
             "id": "https://ikmnjrd.github.io/blog/narrative-of-my-criteria-for-tech-selection",
             "content_html": "\n私は2020年12月からWebエンジニアとして働いている小市民です。\n\n## 2022/1\n世の中のフロントエンドプロジェクトではstorybookなるものが使われているらしいな...\nとりあえず神ツールであるReactとWebpackで使ってみるとするか...\n最新のWebpack5だとWebpack4->5からの破壊的変更のせいでstorybookがそのまま使えないだと？！！バッチが配布されているらしいが...\nじゃあWebpackではなく何やら爆速と話題のesbuildは、、、cssをインポートできないというブログがちらほら...？\n\n[公式](https://esbuild.github.io/content-types/#css-from-js)によると、CSSモジュールとしてのインポートはまだできないって書いてある。\n>You can also import CSS from JavaScript. When you do this, esbuild will gather all CSS files referenced from a given entry point and bundle it into a sibling CSS output file next to the JavaScript output file for that JavaScript entry point. So if esbuild generates app.js it would also generate app.css containing all CSS files referenced by app.js. Here's an example of importing a CSS file from JavaScript:\n>```javascript\n>import './button.css'\n>\n>export let Button = ({ text }) =>\n>  <div className=\"button\">{text}</div>\n>```\n>Note that esbuild doesn't yet support CSS modules, so the set of export names from a CSS file is currently always empty. Supporting a basic form of CSS modules is on the roadmap.\n\n\nふーん。とりあえずstorybookとviteをインストールして...ん？\n今webpackって見えたような...webpackいるな...\n\n\n\n```javascript\nwhile (何かいいの見つかればな〜){\n  （...GitHubで「storybook vite」で検索）\n  （...!!...😣）\n}\n```\n\nこの文章はなんの役に立つんですかね？（疑問）\n",
             "url": "https://ikmnjrd.github.io/blog/narrative-of-my-criteria-for-tech-selection",
@@ -703,7 +726,7 @@
         },
         {
             "id": "https://ikmnjrd.github.io/blog/vim-tmux-reference",
-            "content_html": "\n## 参考サイトまとめ\n### vim関連\n- [how-to-yank-from-vim-to-system-clipboard](https://vi.stackexchange.com/questions/23130/how-to-yank-from-vim-to-system-clipboard)\n- [How to Undo Changes in Vim / Vi](https://phoenixnap.com/kb/vim-undo-redo)\n- [Neovimでのフロントエンド開発環境 2021](https://zenn.dev/yano/articles/vim_frontend_development_2021)\n- [新人達を1ヶ月でガチvimmerにした方法](https://qiita.com/nyantera/items/4bf29ca6f11bc797a9cb)\n\n### tmux関連\n- [とほほのtmux入門](https://www.tohoho-web.com/ex/tmux.html)\n- [tmuxで快適にpane移動](https://qiita.com/pocari/items/b1828c8aea8e3545cadd)\n",
+            "content_html": "\n## 参考サイトまとめ\n### vim関連\n- [how-to-yank-from-vim-to-system-clipboard](https://vi.stackexchange.com/questions/23130/how-to-yank-from-vim-to-system-clipboard)\n- [How to Undo Changes in Vim / Vi](https://phoenixnap.com/kb/vim-undo-redo)\n- [Neovimでのフロントエンド開発環境 2021](https://zenn.dev/yano/articles/vim_frontend_development_2021)\n- [新人達を1ヶ月でガチvimmerにした方法](https://qiita.com/nyantera/items/4bf29ca6f11bc797a9cb)\n- [vim バッファ入門](https://zenn.dev/sa2knight/articles/e0a1b2ee30e9ec22dea9)\n\n### tmux関連\n- [とほほのtmux入門](https://www.tohoho-web.com/ex/tmux.html)\n- [tmuxで快適にpane移動](https://qiita.com/pocari/items/b1828c8aea8e3545cadd)\n- [tmux select-layout](https://waylonwalker.com/tmux-select-layout/)\n  - main-verticalのvertical設定のバインド\n",
             "url": "https://ikmnjrd.github.io/blog/vim-tmux-reference",
             "title": "vim/tmuxを使うに当たって参考にしたサイトまとめ",
             "summary": "vimとtmuxを使うに当たって参考にしたサイトまとめ",
