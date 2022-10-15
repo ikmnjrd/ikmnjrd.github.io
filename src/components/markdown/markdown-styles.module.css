@@ -83,8 +83,8 @@
 * Blockquote
 * ex) javascript-weakmap-usage
 */
-.markdown > blockquote {
-  @apply ml-4 pl-4 py-[1px] border-solid border-l-2 border-l-newmo-200;
+.markdown blockquote {
+  @apply ml-4 pl-4 py-[1px] border-solid border-l-[0.5rem] border-l-newmo-200;
 }
 .markdown > blockquote cite {
   @apply text-right block;
