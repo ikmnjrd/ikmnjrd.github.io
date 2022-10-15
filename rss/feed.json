@@ -79,17 +79,6 @@
             }
         },
         {
-            "id": "https://ikmnjrd.github.io/blog/coverage-badge",
-            "content_html": "\n### 疑問に遭遇した状況\n\n\n### 疑問\n\n\n### 周辺用語\n- \n\n\n### 参考文献\n- [Coverage Badge with GitHub Actions - FINALLY!](https://dev.to/thejaredwilcurt/coverage-badge-with-github-actions-finally-59fa)",
-            "url": "https://ikmnjrd.github.io/blog/coverage-badge",
-            "title": "NPMパッケージのREADMEでよく見るテストカバレッジのバッチ作ってみた",
-            "date_modified": "2022-10-13T00:00:00.000Z",
-            "author": {
-                "name": "ike",
-                "url": "https://twitter.com/ikmnjrd"
-            }
-        },
-        {
             "id": "https://ikmnjrd.github.io/blog/dataurl-markdown-contenteditable-tips",
             "content_html": "## 概要\n[オフライン環境でも使えるブラウザベースの簡易マークダウンエディタ](https://github.com/ikmnjrd/browser-local-md-editor)を作成した際に知ったことなど、\n箇条書きな内容です。　　\n\n## Tips\n- `<pre>`と`<div>`の違い。contenteditable属性と合わせて使う場合、preは改行やスペースなど入力を入力したまま保持（入出力）してくれる が、divだと改行など特にエスケープされてしまうので、\ncontenteditableと使う場合はpreを使う方がベター\n- `<head>`に`<style>`タグでcssを書くとパースがシビアになりすぐ変な挙動になるので、個々のhtmlタグのstyle属性に直書きする。今回作成した簡易的なマークダウンエディタなど、\nhtmlが少ないなら有効。\n- dataURIでhtml、特にマークダウン書式を書くならマークダウンんで多用する「#」をURLエンコードに合わせることを意識しておく。#は「%23」で表現される。\n- tabキーなど、文字入力は色々気を使わなくちゃいけない。onkeydownで処理するよりonkeyupで処理した方が都合が良いことが多い。\n- contenteditableなhtmlで参考にすべきはTwitter。Twitterすごい。\n- dataURLではWebStorageが使えない。\n- dataURLではlocationAPIが使えない(Not allowed to navigate top frame to data URL)\n\n\n### 参考文献\n- [How To Add New Line In Markdown? – WiseTut](https://wisetut.com/how-to-add-new-line-in-markdown/)\n- [Data URLs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)\n- [jQueryでIME入力確定時にイベントを発行する - Qiita](https://qiita.com/hrdaya/items/6488d8dd3962cf35c0a0)",
             "url": "https://ikmnjrd.github.io/blog/dataurl-markdown-contenteditable-tips",
@@ -441,18 +430,6 @@
             "url": "https://ikmnjrd.github.io/blog/markdown-it-process",
             "title": "markdown-itのプラグイン開発に失敗したのでメモ",
             "date_modified": "2022-08-07T00:00:00.000Z",
-            "author": {
-                "name": "ike",
-                "url": "https://twitter.com/ikmnjrd"
-            }
-        },
-        {
-            "id": "https://ikmnjrd.github.io/blog/mermaid-test",
-            "content_html": "\n## mermaidのテスト\nこれは普通の文章\n\n\n```javascript\nconst hoge = 'this is mermaid test'\n```\n\n```mermaid\ngraph TD\n    A[Christmas] -->|Get money| B(Go shopping)\n    B --> C{Let me think}\n    C -->|One| D[Laptop]\n    C -->|Two| E[iPhone]\n    C -->|Three| F[Car]\n```",
-            "url": "https://ikmnjrd.github.io/blog/mermaid-test",
-            "title": "mermaidの動作確認用ポスト",
-            "summary": "個人的なNotionの使い方備忘録です。",
-            "date_modified": "2022-10-11T00:00:00.000Z",
             "author": {
                 "name": "ike",
                 "url": "https://twitter.com/ikmnjrd"

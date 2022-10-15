@@ -4,7 +4,7 @@
         <title>ikmnjrd.github.io</title>
         <link>https://ikmnjrd.github.io</link>
         <description>ikmnjrのブログ</description>
-        <lastBuildDate>Sat, 15 Oct 2022 05:53:34 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 15 Oct 2022 06:43:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -268,25 +268,6 @@ Create React Appで適当に作ったプロジェクトで適当にconsole.log�
 ### 結論
 ほぼ影響はない
 ]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[NPMパッケージのREADMEでよく見るテストカバレッジのバッチ作ってみた]]></title>
-            <link>https://ikmnjrd.github.io/blog/coverage-badge</link>
-            <guid>https://ikmnjrd.github.io/blog/coverage-badge</guid>
-            <pubDate>Thu, 13 Oct 2022 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-### 疑問に遭遇した状況
-
-
-### 疑問
-
-
-### 周辺用語
-- 
-
-
-### 参考文献
-- [Coverage Badge with GitHub Actions - FINALLY!](https://dev.to/thejaredwilcurt/coverage-badge-with-github-actions-finally-59fa)]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[contenteditable（HTML）とdataURIを使う際のTips]]></title>
@@ -1852,30 +1833,6 @@ ccc -->
 
 > link in cite
 > --- [link](https://github.com/markdown-it/markdown-it/blob/master/lib/renderer.js)
-```]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[mermaidの動作確認用ポスト]]></title>
-            <link>https://ikmnjrd.github.io/blog/mermaid-test</link>
-            <guid>https://ikmnjrd.github.io/blog/mermaid-test</guid>
-            <pubDate>Tue, 11 Oct 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[個人的なNotionの使い方備忘録です。]]></description>
-            <content:encoded><![CDATA[
-## mermaidのテスト
-これは普通の文章
-
-
-```javascript
-const hoge = 'this is mermaid test'
-```
-
-```mermaid
-graph TD
-    A[Christmas] -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
-    C -->|Three| F[Car]
 ```]]></content:encoded>
         </item>
         <item>

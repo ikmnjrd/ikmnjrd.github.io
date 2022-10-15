@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ikmnjrd.github.io</id>
     <title>ikmnjrd.github.io</title>
-    <updated>2022-10-15T05:53:34.319Z</updated>
+    <updated>2022-10-15T06:43:56.434Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>ike</name>
@@ -309,33 +309,6 @@ Create React Appで適当に作ったプロジェクトで適当にconsole.log�
 ### 結論
 ほぼ影響はない
 ]]></content>
-        <author>
-            <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
-        </author>
-        <contributor>
-            <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NPMパッケージのREADMEでよく見るテストカバレッジのバッチ作ってみた]]></title>
-        <id>https://ikmnjrd.github.io/blog/coverage-badge</id>
-        <link href="https://ikmnjrd.github.io/blog/coverage-badge"/>
-        <updated>2022-10-13T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[
-### 疑問に遭遇した状況
-
-
-### 疑問
-
-
-### 周辺用語
-- 
-
-
-### 参考文献
-- [Coverage Badge with GitHub Actions - FINALLY!](https://dev.to/thejaredwilcurt/coverage-badge-with-github-actions-finally-59fa)]]></content>
         <author>
             <name>ike</name>
             <uri>https://twitter.com/ikmnjrd</uri>
@@ -2157,38 +2130,6 @@ ccc -->
 
 > link in cite
 > --- [link](https://github.com/markdown-it/markdown-it/blob/master/lib/renderer.js)
-```]]></content>
-        <author>
-            <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
-        </author>
-        <contributor>
-            <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[mermaidの動作確認用ポスト]]></title>
-        <id>https://ikmnjrd.github.io/blog/mermaid-test</id>
-        <link href="https://ikmnjrd.github.io/blog/mermaid-test"/>
-        <updated>2022-10-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[個人的なNotionの使い方備忘録です。]]></summary>
-        <content type="html"><![CDATA[
-## mermaidのテスト
-これは普通の文章
-
-
-```javascript
-const hoge = 'this is mermaid test'
-```
-
-```mermaid
-graph TD
-    A[Christmas] -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
-    C -->|Three| F[Car]
 ```]]></content>
         <author>
             <name>ike</name>
