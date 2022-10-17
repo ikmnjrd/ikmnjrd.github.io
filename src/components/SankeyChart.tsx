@@ -23,14 +23,7 @@ function SankeyChart(props: Props) {
   const height = 1400 // outer height, in pixels
 
   const ref = useD3(
-    (
-      svg: d3.Selection<
-        SVGSVGElement,
-        any,
-        any,
-        any
-      >
-    ) => {
+    (svg: d3.Selection<SVGSVGElement, any, any, any>) => {
       const nodeLabelPadding = 5
 
       const sankey = d3Sankey
@@ -56,10 +49,7 @@ function SankeyChart(props: Props) {
         .enter()
         .append('path')
         .classed('link', true)
-        .attr(
-          'd',
-          d3Sankey.sankeyLinkHorizontal()
-        )
+        .attr('d', d3Sankey.sankeyLinkHorizontal())
         .attr('fill', 'none')
         .attr('stroke', '#A0FFFF')
         .attr('stroke-width', (d) => d.width)
@@ -90,9 +80,7 @@ function SankeyChart(props: Props) {
         .selectAll('text')
         .data(
           graph.nodes.filter(
-            (i) =>
-              i.x0 > 50 ||
-              i.index < props.lastIndex
+            (i) => i.x0 > 50 || i.index < props.lastIndex
           )
         )
         .join('text')

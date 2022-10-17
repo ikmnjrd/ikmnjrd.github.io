@@ -3,10 +3,7 @@ import getPostsFromTag from '~/utils/getPostsFromTag'
 import getTags from '~/utils/getTags'
 import { IFrontMatter } from '~/utils/getPostFilesData'
 import TitleHead from '~/components/TitleHead'
-import {
-  GetStaticProps,
-  GetStaticPaths,
-} from 'next'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import { ParsedUrlQuery } from 'node:querystring'
 
 interface Props {
@@ -20,17 +17,12 @@ interface Params extends ParsedUrlQuery {
   tag: string
 }
 
-export default function TagLinkPage({
-  tag,
-  posts,
-}: Props) {
+export default function TagLinkPage({ tag, posts }: Props) {
   return (
     <>
       <TitleHead title={`${tag}の記事`} />
 
-      <h1 className="text-3xl pt-8 pb-4">
-        {tag}の投稿記事一覧
-      </h1>
+      <h1 className="text-3xl pt-8 pb-4">{tag}の投稿記事一覧</h1>
       <div>
         {posts.map((post) => (
           <li key={post.slug}>
@@ -51,11 +43,9 @@ export const getStaticPaths: GetStaticPaths<
 > = async () => {
   const { countedTags } = await getTags()
 
-  const paths = Object.entries(countedTags).map(
-    (tag) => {
-      return { params: { tag: tag[0] } }
-    }
-  )
+  const paths = Object.entries(countedTags).map((tag) => {
+    return { params: { tag: tag[0] } }
+  })
 
   return {
     paths,

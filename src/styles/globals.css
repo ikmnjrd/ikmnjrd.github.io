@@ -4,9 +4,7 @@
 
 main {
   /* footerを最下部に固定表示するため */
-  min-height: calc(
-    100vh - 250.195px - 32px - 4rem
-  );
+  min-height: calc(100vh - 250.195px - 32px - 4rem);
 }
 
 .header-text {
@@ -18,9 +16,7 @@ main {
 img[class^='svg-icon'],
 .footer-svg {
   color: white;
-  filter: drop-shadow(
-      3px 3px 3px rgba(255, 255, 255, 0.3)
-    )
+  filter: drop-shadow(3px 3px 3px rgba(255, 255, 255, 0.3))
     drop-shadow(-2px -2px 1px rgba(0, 0, 0, 0.25));
 }
 
@@ -35,8 +31,8 @@ img[class^='svg-icon'],
   position: relative;
   height: 198px;
   top: 0px;
-  animation: wave 7s
-    cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53)
+    infinite;
   transform: translate3d(0, 0, 0);
 }
 
@@ -44,8 +40,7 @@ img[class^='svg-icon'],
   top: -5px;
   margin-bottom: -198px;
   height: 198px;
-  animation: wave 7s
-      cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s
       infinite,
     swell 7s ease -1.25s infinite;
   opacity: 1;

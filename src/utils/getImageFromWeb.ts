@@ -14,14 +14,10 @@ export const getImageFromWeb = async ({
 
   const response = await fetch(url)
   if (!response.body)
-    throw new Error(
-      `unexpected response ${response.statusText}`
-    )
+    throw new Error(`unexpected response ${response.statusText}`)
   await streamPipeline(
     response.body,
-    createWriteStream(
-      `./tmp/${name}-${index}.png`
-    )
+    createWriteStream(`./tmp/${name}-${index}.png`)
   )
   return `/tmp/${name}-${index}.png`
 }

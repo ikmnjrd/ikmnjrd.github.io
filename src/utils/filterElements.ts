@@ -14,8 +14,6 @@ export type Truthy<T> = T extends
   ? never
   : T // from lodash
 
-export function truthy<T>(
-  value: T
-): value is Truthy<T> {
+export function truthy<T>(value: T): value is Truthy<T> {
   return !!value
 }

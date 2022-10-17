@@ -4,9 +4,7 @@ import dayjs from 'dayjs'
 import { nonNullable } from './filterElements'
 import { sortByDate } from './sort'
 
-export async function getDateFromGit(
-  slug: string
-) {
+export async function getDateFromGit(slug: string) {
   const gitdir = '.git'
   const filepath = `_posts/${slug}.md`
   const commits = await git.log({
@@ -23,14 +21,10 @@ export async function getDateFromGit(
       if (!committers) return null
 
       const dates = committers.map((commiter) => {
-        const rawTime = (commiter.match(
-          /\d{10}/
-        ) ?? [null])[0]
+        const rawTime = (commiter.match(/\d{10}/) ?? [null])[0]
         if (!rawTime) return null
 
-        return getDateFromUnixTime(
-          parseInt(rawTime, 10)
-        )
+        return getDateFromUnixTime(parseInt(rawTime, 10))
       })
 
       return dates.filter(nonNullable)
@@ -41,22 +35,15 @@ export async function getDateFromGit(
   /// https://1-notes.com/javascript-remove-duplicate-values-from-array/
   const newDates = Array.from(new Set(dates))
   // 最近の日付が先頭,昔の日付が末尾
-  const sortedDateArray =
-    newDates.sort(sortByDate)
+  const sortedDateArray = newDates.sort(sortByDate)
 
   return {
     createdAt:
-      sortedDateArray[
-        sortedDateArray.length - 1
-      ] ?? 'hoge',
+      sortedDateArray[sortedDateArray.length - 1] ?? 'hoge',
     updatedAt: sortedDateArray[0],
   }
 }
 
-function getDateFromUnixTime(
-  unixTimeInSeconds: number
-) {
-  return dayjs(unixTimeInSeconds * 1000).format(
-    'YYYY-MM-DD'
-  )
+function getDateFromUnixTime(unixTimeInSeconds: number) {
+  return dayjs(unixTimeInSeconds * 1000).format('YYYY-MM-DD')
 }

@@ -1,16 +1,8 @@
-import {
-  Html,
-  Head,
-  Main,
-  NextScript,
-} from 'next/document'
+import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html
-      lang="ja"
-      prefix="og:https://ikmnjrd.github.io/ns#"
-    >
+    <Html lang="ja" prefix="og:https://ikmnjrd.github.io/ns#">
       <Head>
         <meta name="author" content="ikmnjrd" />
         <meta charSet="utf-8" />
@@ -31,10 +23,7 @@ export default function Document() {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <link
-          rel="manifest"
-          href="/site.webmanifest"
-        />
+        <link rel="manifest" href="/site.webmanifest" />
         <link
           rel="mask-icon"
           href="/safari-pinned-tab.svg"
@@ -46,17 +35,10 @@ export default function Document() {
           title="ikmnjrd.github.io - rss"
           href="/rss/feed.xml"
         />
-        <meta
-          name="msapplication-TileColor"
-          content="#da532c"
-        />
-        <meta
-          name="theme-color"
-          content="#ffffff"
-        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
         {/* Global site tag (gtag.js) - Google Analytics */}
-        {process.env.NODE_ENV !==
-          'production' && (
+        {process.env.NODE_ENV !== 'production' && (
           <>
             <script
               async

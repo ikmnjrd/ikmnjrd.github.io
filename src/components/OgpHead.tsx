@@ -16,32 +16,20 @@ export default function OgpHead({
       <meta
         property="og:url"
         key="url"
-        content={
-          'https://ikmnjrd.github.io/' + url
-        }
+        content={'https://ikmnjrd.github.io/' + url}
       />
       {type && (
-        <meta
-          property="og:type"
-          key="type"
-          content={type}
-        />
+        <meta property="og:type" key="type" content={type} />
       )}
       {image && (
         <meta
           property="og:image"
           key="image"
-          content={
-            'https://ikmnjrd.github.io/' + image
-          }
+          content={'https://ikmnjrd.github.io/' + image}
         />
       )}
       {title && (
-        <meta
-          property="og:title"
-          key="title"
-          content={title}
-        />
+        <meta property="og:title" key="title" content={title} />
       )}
     </Head>
   )
