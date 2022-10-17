@@ -6,7 +6,7 @@ const Footer: FC = () => {
   return (
     <footer className="text-center text-sm" role="contentinfo">
       <div className="footer-content">
-        <ul className="flex items-center justify-between max-w-[100px] mx-auto">
+        <ul className="flex items-center justify-between max-w-[150px] mx-auto">
           <li>
             <a
               href="https://twitter.com/ikmnjrd"
@@ -35,6 +35,22 @@ const Footer: FC = () => {
                 type="github"
                 size="2em"
                 strokeWidth={1}
+                fill="#fff"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://ikmnjrd.github.io/rss/feed.xml"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              title="RSS"
+              className="footer-svg header-text hover:opacity-50 block"
+            >
+              <SvgIcon
+                type="rss"
+                size="2em"
+                strokeWidth={2.3}
                 fill="#fff"
               />
             </a>
