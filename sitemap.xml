@@ -196,6 +196,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/python-homebrew</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/react-webpack-skelton</loc>
     <changefreq>hourly</changefreq>
   </url>
