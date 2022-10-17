@@ -1,6 +1,4 @@
-import getTags, {
-  ITagInfo,
-} from '~/utils/getTags'
+import getTags, { ITagInfo } from '~/utils/getTags'
 import TitleHead from '~/components/TitleHead'
 import SankeyChart from '~/components/SankeyChart'
 
@@ -26,9 +24,7 @@ export default function Tag({
   const NodesFactory = (data: ITagInfo) => {
     const arr: Node[] = []
     let idx = 0
-    for (const [key, _] of Object.entries(
-      data.countedTags
-    )) {
+    for (const [key, _] of Object.entries(data.countedTags)) {
       arr.push({
         name: key,
         id: idx,
@@ -46,9 +42,7 @@ export default function Tag({
   })
   const lastNodesLength = Nodes.length
 
-  const linksFactory = (
-    data: ITagInfo
-  ): ILink[] => {
+  const linksFactory = (data: ITagInfo): ILink[] => {
     // 一時的に追加.あとで削除
     data.wholeTags.forEach((i, idx) => {
       Nodes.push({
@@ -62,12 +56,8 @@ export default function Tag({
       Nodes.findIndex((n) => n.name === i.tag)
 
       return {
-        source: Nodes.findIndex(
-          (n) => n.name === i.tag
-        ),
-        target: Nodes.findIndex(
-          (n) => n.name === i.slug
-        ),
+        source: Nodes.findIndex((n) => n.name === i.tag),
+        target: Nodes.findIndex((n) => n.name === i.slug),
         value: 1,
       }
     })
@@ -82,9 +72,7 @@ export default function Tag({
   return (
     <>
       <TitleHead title={'Tag一覧'} />
-      <h1 className="text-3xl pt-8 pb-4">
-        Tag一覧
-      </h1>
+      <h1 className="text-3xl pt-8 pb-4">Tag一覧</h1>
       <SankeyChart
         nodes={Nodes}
         links={Links}
@@ -95,8 +83,7 @@ export default function Tag({
 }
 
 export async function getStaticProps() {
-  const { wholeTags, countedTags, filesData } =
-    await getTags()
+  const { wholeTags, countedTags, filesData } = await getTags()
 
   return {
     props: {

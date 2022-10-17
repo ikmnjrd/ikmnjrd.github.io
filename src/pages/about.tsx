@@ -12,9 +12,7 @@ export default function about() {
         url=""
       />
 
-      <h1 className="text-3xl pt-8 pb-4">
-        About
-      </h1>
+      <h1 className="text-3xl pt-8 pb-4">About</h1>
       <div>
         <p>雑多な記録</p>
         <p>

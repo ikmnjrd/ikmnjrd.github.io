@@ -16,9 +16,7 @@ export interface IFrontMatter {
 
 export default async function getPostFilesData() {
   // Get files from the posts dir
-  const files = fs.readdirSync(
-    path.join('_posts')
-  )
+  const files = fs.readdirSync(path.join('_posts'))
 
   // Get slug and frontmatter from posts
   return files.map((filename) => {

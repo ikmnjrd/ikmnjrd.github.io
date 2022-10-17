@@ -48,10 +48,7 @@ export default function PostPage({
       />
       <Head>
         {description && (
-          <meta
-            name="description"
-            content={description}
-          />
+          <meta name="description" content={description} />
         )}
       </Head>
 
@@ -77,9 +74,7 @@ export default function PostPage({
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(
-    path.join('_posts')
-  )
+  const files = fs.readdirSync(path.join('_posts'))
 
   const paths = files.map((filename) => ({
     params: {
@@ -111,23 +106,18 @@ export async function getStaticProps({
   )
 
   markdownIt.use(markdownItAnchor, {
-    permalink:
-      markdownItAnchor.permalink.ariaHidden({
-        placement: 'before',
-      }),
+    permalink: markdownItAnchor.permalink.ariaHidden({
+      placement: 'before',
+    }),
   })
 
   markdownIt.use(markdownItPrism, {})
 
-  const { data: frontmatter, content } = matter(
-    markdownWithMeta
-  )
+  const { data: frontmatter, content } = matter(markdownWithMeta)
   const innerHtml = markdownIt.render(content)
 
   const image_tags: string[] =
-    innerHtml.match(
-      /src="https:\/\/i\.gyazo.*?"/g
-    ) ?? []
+    innerHtml.match(/src="https:\/\/i\.gyazo.*?"/g) ?? []
 
   const images_path = await optimizeImages({
     images: image_tags,
@@ -146,8 +136,7 @@ export async function getStaticProps({
   /**
    * マークダウンファイルのgit管理から得た情報
    */
-  const { createdAt, updatedAt } =
-    await getDateFromGit(slug)
+  const { createdAt, updatedAt } = await getDateFromGit(slug)
 
   return {
     props: {

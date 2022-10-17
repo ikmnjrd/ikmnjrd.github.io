@@ -46,18 +46,14 @@ export default function Home({
         <div>
           {pageIndex > 0 && (
             <span className="mx-2">
-              <Link href={`?p=${pageIndex - 1}`}>
-                前へ
-              </Link>
+              <Link href={`?p=${pageIndex - 1}`}>前へ</Link>
             </span>
           )}
         </div>
         <div>
           {pageIndex < posts.length - 1 && (
             <span className="mx-2">
-              <Link href={`?p=${pageIndex + 1}`}>
-                次へ
-              </Link>
+              <Link href={`?p=${pageIndex + 1}`}>次へ</Link>
             </span>
           )}
         </div>
@@ -77,9 +73,7 @@ export async function getStaticProps() {
     array: IPost[],
     number: number
   ): Array<IPost[]> => {
-    const length = Math.ceil(
-      array.length / number
-    )
+    const length = Math.ceil(array.length / number)
     return [...Array(length)].map((_, idx) => {
       const slicedArray = array.slice(
         idx * number,
@@ -88,10 +82,7 @@ export async function getStaticProps() {
       return slicedArray
     })
   }
-  const dividedPosts = sliceByNumber(
-    posts,
-    SEPARATE_NUM
-  )
+  const dividedPosts = sliceByNumber(posts, SEPARATE_NUM)
 
   return {
     props: {

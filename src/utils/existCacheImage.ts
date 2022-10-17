@@ -8,12 +8,8 @@ export const existCacheImage = ({
   name: name,
 }: ImageConverterProps): boolean => {
   try {
-    const slash_parsed_url = url
-      ?.split('/')
-      ?.reverse()[0]
-    const ext = slash_parsed_url
-      ?.split('.')
-      .reverse()[0]
+    const slash_parsed_url = url?.split('/')?.reverse()[0]
+    const ext = slash_parsed_url?.split('.').reverse()[0]
     const file = `${process.cwd()}/tmp/${name}-${index}.${ext}`
 
     if (existsSync(file)) {

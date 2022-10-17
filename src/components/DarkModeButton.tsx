@@ -7,26 +7,20 @@ type DarkModeButtonProps = {
 export default function DarkModeButton({
   className,
 }: DarkModeButtonProps) {
-  const [darkMode, setDarkMode] =
-    useState<boolean>(false)
+  const [darkMode, setDarkMode] = useState<boolean>(false)
 
   useEffect(() => {
     if (
       localStorage.theme === 'dark' ||
       (!('theme' in localStorage) &&
-        window.matchMedia(
-          '(prefers-color-scheme: dark)'
-        ).matches)
+        window.matchMedia('(prefers-color-scheme: dark)')
+          .matches)
     ) {
       setDarkMode(true)
-      document.documentElement.classList.add(
-        'dark'
-      )
+      document.documentElement.classList.add('dark')
     } else {
       setDarkMode(false)
-      document.documentElement.classList.remove(
-        'dark'
-      )
+      document.documentElement.classList.remove('dark')
     }
   }, [darkMode])
 

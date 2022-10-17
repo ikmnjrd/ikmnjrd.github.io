@@ -19,20 +19,15 @@ export const optimizeImages = async ({
 }: converterProps): Promise<string[]> => {
   let output_file_names: string[] = []
 
-  const images_url = images?.map(
-    (image: string) => {
-      return image
-        .match(/src="https:\/\/i\.gyazo.*?"/)
-        ?.toString()
-        .slice(5, -1)
-    }
-  )
+  const images_url = images?.map((image: string) => {
+    return image
+      .match(/src="https:\/\/i\.gyazo.*?"/)
+      ?.toString()
+      .slice(5, -1)
+  })
 
   if (images_url) {
-    for (const [
-      index,
-      image_url,
-    ] of images_url.entries()) {
+    for (const [index, image_url] of images_url.entries()) {
       const flag = existCacheImage({
         name: name,
         index: index,
@@ -40,12 +35,11 @@ export const optimizeImages = async ({
       })
 
       if (!flag) {
-        const fetch_image_path =
-          await getImageFromWeb({
-            url: image_url ?? '',
-            index: index,
-            name: name,
-          })
+        const fetch_image_path = await getImageFromWeb({
+          url: image_url ?? '',
+          index: index,
+          name: name,
+        })
 
         const file = await fs.readFile(
           process.cwd() + fetch_image_path

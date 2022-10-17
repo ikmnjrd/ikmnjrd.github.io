@@ -36,8 +36,7 @@ export const generateRssFeed = async () => {
   posts.forEach((post) => {
     const url = `${siteURL}/blog/${post.slug}`
     feed.addItem({
-      title:
-        post.frontmatter.title ?? '無名の記事',
+      title: post.frontmatter.title ?? '無名の記事',
       id: url,
       link: url,
       description: post.frontmatter.description,
@@ -50,16 +49,7 @@ export const generateRssFeed = async () => {
   fs.mkdirSync('./public/rss', {
     recursive: true,
   })
-  fs.writeFileSync(
-    './public/rss/feed.xml',
-    feed.rss2()
-  )
-  fs.writeFileSync(
-    './public/rss/atom.xml',
-    feed.atom1()
-  )
-  fs.writeFileSync(
-    './public/rss/feed.json',
-    feed.json1()
-  )
+  fs.writeFileSync('./public/rss/feed.xml', feed.rss2())
+  fs.writeFileSync('./public/rss/atom.xml', feed.atom1())
+  fs.writeFileSync('./public/rss/feed.json', feed.json1())
 }

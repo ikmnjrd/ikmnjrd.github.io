@@ -1,7 +1,5 @@
 import { sortByPostMeta } from './sort'
-import getPostFiles, {
-  IFrontMatter,
-} from './getPostFilesData'
+import getPostFiles, { IFrontMatter } from './getPostFilesData'
 
 export interface IPostMeta {
   slug: string
