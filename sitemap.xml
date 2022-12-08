@@ -152,6 +152,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/minio-s3-express-js</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/narrative-of-my-criteria-for-tech-selection</loc>
     <changefreq>hourly</changefreq>
   </url>
