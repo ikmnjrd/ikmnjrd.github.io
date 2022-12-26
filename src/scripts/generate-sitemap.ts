@@ -1,8 +1,10 @@
-function addPage(page) {
-  const path = page
+function addPage(pagePath: string) {
+  const path = pagePath
     .replace('pages', '')
     .replace('.js', '')
+    .replace('.tsx', '')
     .replace('.md', '')
+    .replace('src/', '')
     .replace('_posts', '/blog')
   const route = path === '/index' ? '' : path
 
@@ -12,18 +14,19 @@ function addPage(page) {
   </url>`
 }
 
-async function generateSitemap() {
+export async function generateSitemap() {
   const writeFileSync = (await import('fs')).writeFileSync
   const globby = (await import('globby')).globby
 
   // Ignore Next.js specific files (e.g., _app.js) and API routes.
   const pages = await globby([
-    'pages/**/*{.js,.mdx}',
+    'src/pages/**/*.tsx',
     '_posts/*.md',
-    '!pages/**/"["*"]".js',
-    '!pages/_*.js',
-    '!pages/api',
+    '!src/pages/**/"["*"]".tsx',
+    '!src/pages/_*.tsx',
+    '!src/pages/api',
   ])
+
   const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(addPage).join('\n')}
 </urlset>`
@@ -31,5 +34,3 @@ ${pages.map(addPage).join('\n')}
   writeFileSync('public/sitemap.xml', sitemap)
   console.info('generated sitemap.xml!')
 }
-
-generateSitemap()
