@@ -10,7 +10,6 @@ import OgpHead from '~/components/OgpHead'
 import markdownStyles from '~/components/markdown/markdown-styles.module.css'
 import { optimizeImages } from '~/utils/ImageOptimizer'
 import 'prism-themes/themes/prism-nord.min.css'
-import { getDateFromGit } from '~/utils/getDateFromGit'
 
 export interface IBlog {
   frontmatter: {
@@ -21,21 +20,12 @@ export interface IBlog {
   }
   slug: string
   innerHtml: string
-  createdAt: string
-  updatedAt: string
 }
 
 export default function PostPage({
-  frontmatter: {
-    title,
-    // date,
-    cover_image,
-    description,
-  },
+  frontmatter: { title, date, cover_image, description },
   slug,
   innerHtml,
-  createdAt,
-  updatedAt,
 }: IBlog) {
   return (
     <>
@@ -55,12 +45,7 @@ export default function PostPage({
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
         {title}
       </h1>
-      <div className="text-right">
-        <p>Posted on {createdAt}</p>
-        {createdAt !== updatedAt && (
-          <p>Updated at {updatedAt}</p>
-        )}
-      </div>
+      <div className="text-right">Posted on {date}</div>
       <img src={cover_image} alt="" />
 
       <div
@@ -93,9 +78,6 @@ export async function getStaticProps({
 }: {
   params: { slug: string }
 }) {
-  /**
-   * マークダウンファイルの内容からの情報
-   */
   const markdownIt = new MarkdownIt({
     html: true,
   })
@@ -133,18 +115,11 @@ export async function getStaticProps({
     )
   }
 
-  /**
-   * マークダウンファイルのgit管理から得た情報
-   */
-  const { createdAt, updatedAt } = await getDateFromGit(slug)
-
   return {
     props: {
       frontmatter,
       slug,
       innerHtml: replaceHtml,
-      createdAt,
-      updatedAt,
     },
   }
 }
