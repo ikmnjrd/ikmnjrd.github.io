@@ -1,5 +1,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ikmnjrd.github.io/about</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ikmnjrd.github.io</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ikmnjrd.github.io/tags</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/GitHub-from-https-to-ssh</loc>
     <changefreq>hourly</changefreq>
   </url>
