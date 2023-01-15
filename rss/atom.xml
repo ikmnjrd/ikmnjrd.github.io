@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ikmnjrd.github.io</id>
     <title>ikmnjrd.github.io</title>
-    <updated>2022-12-26T15:51:43.036Z</updated>
+    <updated>2023-01-15T08:22:55.893Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>ike</name>
@@ -13,7 +13,7 @@
     <subtitle>ikmnjrのブログ</subtitle>
     <logo>https://ikmnjrd.github.io/logo.png</logo>
     <icon>https://ikmnjrd.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2022, ike(ikmnjrd)</rights>
+    <rights>All rights reserved 2023, ike(ikmnjrd)</rights>
     <entry>
         <title type="html"><![CDATA[GitHubのhttpsからSSH通信への切り替え]]></title>
         <id>https://ikmnjrd.github.io/blog/GitHub-from-https-to-ssh</id>
@@ -2319,6 +2319,192 @@ app.listen('3000')
 - multer
 - multerS3
 ]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「グリクシスヒルワーム」デッキ紹介(MTGA・スタンダード)]]></title>
+        <id>https://ikmnjrd.github.io/blog/mtg-deck-immortal-warm</id>
+        <link href="https://ikmnjrd.github.io/blog/mtg-deck-immortal-warm"/>
+        <updated>2023-01-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[怪物的戦ヒル・ファイレクシアの肉体喰らい]]></summary>
+        <content type="html"><![CDATA[
+
+年始からMTGアリーナを始め、ファイレクシアの肉体喰らいにほれた結果このデッキを組み、主にBO1で回してようやくダイヤモンドに到達しました。
+
+##　コンセプト
+墓地に落としたファッティを利用しながら殴るシンプルなコンセプトのデッキ。  
+デッキの核である怪物的戦ヒル、ファイレクシアの肉体喰らいを中盤に展開し、相手に除去などで対応させた後にオリヴィアで釣りながら殴ってゲームエンド。
+![デッキ全容](https://i.gyazo.com/725b9ef9a22d6c69a09ae090c037bb21.jpg)
+
+## デッキの長所
+コントロール系のデッキに対して強め。  
+でかいクリーチャーが盤面に出るので楽しい。  
+デカブツを墓地に落とすためのルーティングが大量なので、結果的に安定する。
+
+## デッキの短所
+アグロ系デッキ全般。赤単にはほぼ何もさせてもらえず負ける。白や緑などもカウンターを増やしながら横に並べられる動きをされると無理。  
+でかいクリーチャーが除去られたり1/1に止められたりするのは悲しい。
+
+
+## メインカード紹介
+* 怪物的戦ヒル  
+  最大で4マナ15/15として君臨してくれる。
+* ファイレクシアの肉体喰らい  
+  ワームとぐろエンジンを彷彿とさせる大好きなカード。このデッキを考え始めるきっかけ。
+* 鏡割りの寓話  
+  ただのパワーカード。そのため、上のメインカードをコンセプトに組み上げて行ったのに、寓話を最大限生かす形にどんどんなっていった。
+* 速攻付与系
+  * 無謀な嵐探し  
+  2Tルーティングで終末の影を墓地に、3T嵐探し、4T戦ヒルで殴るなど気持ちいい。ターン終了時まで速攻は有効なので、第一メインで出した税血の収穫者のタップ能力を第二メインで使うなども良い。
+  * 苦々しい再会
+  * 寓話（キキジキ起動能力）
+  * 真紅の花嫁、オリヴィア
+* 墓地肥やし系
+  * ルーティング
+    * 苦々しい再会
+    * 染み付いた耽溺
+    * 税血の収穫者(血トークン)
+    * 死体鑑定士
+    * 寓話(第二章)
+* リアニメイト系
+  * 真紅の花嫁、オリヴィア
+
+
+
+## リスト入りしなかったカード
+* 試作クリーチャーたち
+  * 突き刺す戦耕し  
+  一番の迷いどころ。さすがに接死を持ってるだけあり、緑相手などには強いが見送り
+  * 鉄蹄の猪  
+  フィニッシュのタイミングで魂力を使いたいために手札に残しておくが、序盤に落ちれないなら意味がなかったため不採用
+  * 巨体変異  
+  試作で出すとサイズ的に物足りない。コピー元がETBだけでも強いやつが伝説か税血の収穫者ぐらい、小粒システムクリーチャーの強化という文脈にもデカブツ主体のこのデッキには合わない。使ってて面白かったけど不採用
+
+* 街並みの地ならし屋  
+自力で出すようなマナ加速がないため不採用。こいつを入れるならもう一枚、終末の影を投入した方が安定する。
+
+* 伝説のクリーチャー全般  
+キキジキでデカブツをコピーしたい盤面は結構あるのだが、伝説だとコピーできなくてテンポロスが負けにつながった感覚。
+シェオルドレッドやシェオルドレッドやトクスリル、ザンダー卿など強いだけで詰に行きづらいカードだった。  
+逆に採用したオリヴィアと殉至は回避能力(飛行)で殴りに行けることが多く仕事できることが多かったので採用している。
+
+* リアニメイト系のソーサリー(インスタント)  
+戦ヒルなど、戦場に自力で出しやすいデカブツが主体なので5マナ払ってまで出したいという機会が少ない。1マナの不死なる悪意だけワンチャン。ギックスの残虐は悠長、殺戮者の目覚めはワンチャン
+
+* 死体の爆発
+ありかも。予算不足で試せてない
+
+* 貪る混沌、碑出告
+予算不足で試してないが、そんな強くなさそう
+
+
+* PW全般
+  * 3~5マナ程度で寓話や戰ヒルが動きたいタイミングと被る。これらで動きづらく長期戦に持ち込みたい時はヴェリアナがあるといいかもしれないが、4マナ以降が生物のみの構成に多少のメリットを感じてるため入れづらい。
+  * 候補
+    * ヴェールのリリアナ
+    * 敵対するもの、オブ・ニクシリス
+
+* 流城のルノ
+面白そうなロマン枠。流城のルノが通る時はほぼ勝ちな状況なのでダメ押しのロマン野郎でしかなかった。
+
+* 貪る混沌、碑出告
+条件が難しいがルノとシナジーがありながらマナ総量分のダメージ飛ばせる。
+
+* 貴顕廊一家の魔除け
+殴り勝つデッキなので死体鑑定士に軍配があり。3マナから動き出す
+
+* ランタンを携えるもの
+このデッキのデカブツに足りないの回避能力付与。今のマナ基盤で1ターン目から青で動くことが難しいので保留したまま。
+
+* 代償破
+うまくいけば15点パンチ。ヒル+代償破=8マナなので1ターンに決めきれないのが痛い。
+
+* 真夜中の空、殉至
+強い。しかしフィニッシャーとして即効性がなく不採用
+
+
+## インポート用デッキリスト
+### 日本語
+```
+デッキ
+4 憑依された峰 (MID) 263
+2 山 (NEO) 290
+4 沼 (NEO) 288
+4 鏡割りの寓話 (NEO) 141
+3 嵐削りの海岸 (VOW) 265
+2 難破船の湿地 (MID) 267
+2 島 (BRO) 271
+1 見捨てられたぬかるみ、竹沼 (NEO) 278
+4 ファイレクシアの肉体喰らい (BRO) 121
+2 真紅の花嫁、オリヴィア (VOW) 245
+4 硫黄泉 (DMU) 256
+2 無謀な嵐探し (MID) 157
+1 ザンダーの居室 (SNC) 260
+4 怪物的戦ヒル (DMU) 98
+2 死体鑑定士 (SNC) 178
+2 終末の影 (SNC) 94
+3 鏡殻のカニ (NEO) 63
+1 天上都市、大田原 (NEO) 271
+4 苦々しい再会 (BRO) 127
+4 税血の収穫者 (VOW) 232
+4 染みついた耽溺 (SNC) 227
+1 刃とぐろの蛇 (BRO) 229
+
+サイドボード
+3 強迫 (M21) 96
+1 家の焼き払い (MID) 131
+1 兄弟仲の終焉 (BRO) 128
+2 削剥 (VOW) 139
+2 絶望招来 (NEO) 101
+1 強迫 (M21) 96
+3 兄弟仲の終焉 (BRO) 128
+2 否認 (M20) 69
+```
+
+### 英語
+```
+Deck
+4 Haunted Ridge (MID) 263
+2 Mountain (NEO) 290
+4 Swamp (NEO) 288
+4 Fable of the Mirror-Breaker (NEO) 141
+3 Stormcarved Coast (VOW) 265
+2 Shipwreck Marsh (MID) 267
+2 Island (BRO) 271
+1 Takenuma, Abandoned Mire (NEO) 278
+4 Phyrexian Fleshgorger (BRO) 121
+2 Olivia, Crimson Bride (VOW) 245
+4 Sulfurous Springs (DMU) 256
+2 Reckless Stormseeker (MID) 157
+1 Xander's Lounge (SNC) 260
+4 Monstrous War-Leech (DMU) 98
+2 Corpse Appraiser (SNC) 178
+2 Shadow of Mortality (SNC) 94
+3 Mirrorshell Crab (NEO) 63
+1 Otawara, Soaring City (NEO) 271
+4 Bitter Reunion (BRO) 127
+4 Bloodtithe Harvester (VOW) 232
+4 Tainted Indulgence (SNC) 227
+1 Bladecoil Serpent (BRO) 229
+
+Sideboard
+3 Duress (M21) 96
+1 Burn Down the House (MID) 131
+1 Brotherhood's End (BRO) 128
+2 Abrade (VOW) 139
+2 Invoke Despair (NEO) 101
+1 Duress (M21) 96
+3 Brotherhood's End (BRO) 128
+2 Negate (M20) 69
+
+```]]></content>
         <author>
             <name>ike</name>
             <uri>https://twitter.com/ikmnjrd</uri>
