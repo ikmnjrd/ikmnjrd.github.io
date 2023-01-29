@@ -14,7 +14,9 @@ tag:
 
 ![デッキ全容](https://i.gyazo.com/98f6d209f755672ac77aa4b3bcc9f400.jpg)
 
-![マナカーブ](https://i.gyazo.com/6a72b184ee6b86057c879c1d46b6844a.png)
+
+<img alt="マナカーブ" src="https://i.gyazo.com/6a72b184ee6b86057c879c1d46b6844a.png" width="40%">
+
 
 ##　コンセプト
 前回と同じですが、墓地に落としたファッティを利用しながら殴るシンプルなコンセプトのデッキ。  
@@ -85,7 +87,7 @@ tag:
 
 ## インポート用デッキリスト
 ### 日本語
-```
+```txt
 デッキ
 4 憑依された峰 (MID) 263
 2 山 (NEO) 290
@@ -124,11 +126,10 @@ tag:
 1 ギックスの命令 (BRO) 97
 1 ファイレクシアの宣教師 (DMU) 27
 1 怒りの大天使 (DMU) 3
-
 ```
 
 ### 英語
-```
+```txt
 Deck
 4 Haunted Ridge (MID) 263
 2 Mountain (NEO) 290
