@@ -232,6 +232,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/safari-before-block</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/ssh-keygen</loc>
     <changefreq>hourly</changefreq>
   </url>
