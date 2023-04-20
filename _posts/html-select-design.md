@@ -1,7 +1,7 @@
 ---
 title: select要素をCSSでカスタマイズする際に気をつけるべきブラウザごとの差
 description: やっぱりsafariはおかしいね。select要素を少しカスタマイズしようとしたところにも地雷がある。
-date: '2022-04-19'
+date: '2023-04-19'
 tag:
   - HTML
   - Webブラウザ
