@@ -252,7 +252,7 @@
             "url": "https://ikmnjrd.github.io/blog/html-select-design",
             "title": "select要素をCSSでカスタマイズする際に気をつけるべきブラウザごとの差",
             "summary": "やっぱりsafariはおかしいね。select要素を少しカスタマイズしようとしたところにも地雷がある。",
-            "date_modified": "2022-04-19T00:00:00.000Z",
+            "date_modified": "2023-04-19T00:00:00.000Z",
             "author": {
                 "name": "ike",
                 "url": "https://twitter.com/ikmnjrd"

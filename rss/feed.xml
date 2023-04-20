@@ -4,7 +4,7 @@
         <title>ikmnjrd.github.io</title>
         <link>https://ikmnjrd.github.io</link>
         <description>ikmnjrのブログ</description>
-        <lastBuildDate>Wed, 19 Apr 2023 15:24:38 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 20 Apr 2023 00:42:28 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -1073,7 +1073,7 @@ aria-expanded="false"
             <title><![CDATA[select要素をCSSでカスタマイズする際に気をつけるべきブラウザごとの差]]></title>
             <link>https://ikmnjrd.github.io/blog/html-select-design</link>
             <guid>https://ikmnjrd.github.io/blog/html-select-design</guid>
-            <pubDate>Tue, 19 Apr 2022 00:00:00 GMT</pubDate>
+            <pubDate>Wed, 19 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[やっぱりsafariはおかしいね。select要素を少しカスタマイズしようとしたところにも地雷がある。]]></description>
             <content:encoded><![CDATA[
 まずはこちらをご覧ください。毒々しいCSSが施されたselect要素です。
