@@ -288,6 +288,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/vscode-gistpad</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/wasm-and-v8engine</loc>
     <changefreq>hourly</changefreq>
   </url>
