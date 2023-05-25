@@ -256,6 +256,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/subpixel-rendering</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/summary-of-howto-receive-photos-data</loc>
     <changefreq>hourly</changefreq>
   </url>
