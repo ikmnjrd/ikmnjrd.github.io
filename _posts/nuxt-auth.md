@@ -8,7 +8,7 @@ tag:
   - Vue
 ---
 
-### TL;DL
+### TL;DR
 - CookieとBrowser Storage(Local Storage)を使ってる
 - Cookieが消失することを踏まえ、expires/max-ageは本来的な意味で使っていない
 
