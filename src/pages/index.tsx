@@ -34,7 +34,7 @@ export default function Home({
         url="/"
       />
 
-      <ul>
+      <ul className="min-h-[60vh]">
         {posts[pageIndex].map((_post) => (
           <Post
             key={_post.slug}
