@@ -35,8 +35,8 @@ export default async function getTag(): Promise<ITagInfo> {
   return { wholeTags, countedTags, filesData }
 }
 
-export function countTag<T extends string>(
-  meta: { tag: T; slug: string }[]
+export function countTag(
+  meta: { tag: string; slug: string }[]
 ): { [key: string]: number } {
   return meta
     .map(({ tag }) => tag)

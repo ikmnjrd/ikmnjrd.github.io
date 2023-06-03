@@ -11,5 +11,21 @@
   "javascript.format.enable": false,
   "json.format.enable": false,
   "css.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  // cSpell
+  "cSpell.ignoreRegExpList": [
+    "frontmatter",
+    "gyazo",
+    "newmo",
+    "ikmnjrd",
+    "gtag",
+    // npm module
+    "nord",
+    "Sankey",
+    // HTML meta
+    "msapplication",
+    // sitemap
+    "changefreq",
+    "urlset"
+  ]
 }
