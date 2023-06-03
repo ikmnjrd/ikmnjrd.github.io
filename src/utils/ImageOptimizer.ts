@@ -4,7 +4,7 @@ import { existCacheImage } from './existCacheImage'
 import { getImageFromWeb } from './getImageFromWeb'
 
 type converterProps = {
-  images: RegExpMatchArray | null
+  images: string[]
   name: string
 }
 export type ImageConverterProps = {
@@ -19,7 +19,7 @@ export const optimizeImages = async ({
 }: converterProps): Promise<string[]> => {
   let output_file_names: string[] = []
 
-  const images_url = images?.map((image: string) => {
+  const images_url = images.map((image: string) => {
     return image
       .match(/src="https:\/\/i\.gyazo.*?"/)
       ?.toString()
