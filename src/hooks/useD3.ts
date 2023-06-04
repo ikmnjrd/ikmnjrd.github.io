@@ -2,8 +2,8 @@ import { useEffect, createRef, Ref } from 'react'
 import * as d3 from 'd3'
 
 export const useD3 = (
-  renderChartFn: Function,
-  dependencies: unknown[]
+  dependencies: unknown[],
+  renderChartFn: Function
 ): Ref<SVGSVGElement> => {
   const ref = createRef<SVGSVGElement>()
 
@@ -13,6 +13,7 @@ export const useD3 = (
     return () => {
       d3.select(current).selectAll('*').remove()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies)
 
   return ref

@@ -32,6 +32,7 @@ function SankeyChart(props: Props) {
   }
 
   const ref = useD3(
+    [props.nodes, props.links],
     (svg: d3.Selection<SVGSVGElement, any, any, any>) => {
       const nodeLabelPadding = 5
 
@@ -42,8 +43,8 @@ function SankeyChart(props: Props) {
         .nodePadding(10)
         .nodeAlign(sankeyCenter)
         .extent([
-          [0, 0],
-          [width, height * 1.1], // SVG一番上のテキストの上半分が見切れてしまうため対応
+          [0, 10], // SVG一番上のテキストの上半分が見切れてしまうため対応
+          [width, height - 10],
         ])
 
       const graph = mySankey(props)
@@ -105,17 +106,14 @@ function SankeyChart(props: Props) {
           padZero(d.x0) < width / 2 ? 'start' : 'end'
         )
         .insert('a')
-        .attr('xlink:href', function (d) {
-          return d.url
-        })
+        .attr('xlink:href', (d) => d.url)
         .classed(
           'hover:opacity-50 hover:underline active:opacity-30',
           true
         )
         .text((i) => i.name)
         .style('fill', '#6E7F8D')
-    },
-    [props.nodes]
+    }
   )
 
   return (
