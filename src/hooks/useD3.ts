@@ -8,8 +8,11 @@ export const useD3 = (
   const ref = createRef<SVGSVGElement>()
 
   useEffect(() => {
-    renderChartFn(d3.select(ref.current))
-    return () => {}
+    const current = ref.current
+    renderChartFn(d3.select(current))
+    return () => {
+      d3.select(current).selectAll('*').remove()
+    }
   }, dependencies)
 
   return ref

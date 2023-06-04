@@ -15,7 +15,7 @@ export interface ITagInfo {
   }[]
 }
 
-export default async function getTag(): Promise<ITagInfo> {
+export default async function getTags(): Promise<ITagInfo> {
   const filesData = await getPostFilesData()
   const wholeTags: {
     tag: string
@@ -23,11 +23,9 @@ export default async function getTag(): Promise<ITagInfo> {
   }[] = []
 
   filesData.forEach(({ frontmatter, slug }) => {
-    if (frontmatter.tag) {
-      for (let tag of frontmatter.tag) {
-        wholeTags.push({ tag, slug })
-      }
-    }
+    frontmatter.tag?.forEach((tag) => {
+      wholeTags.push({ tag, slug })
+    })
   })
 
   const countedTags = countTag(wholeTags)
@@ -40,10 +38,10 @@ export function countTag(
 ): { [key: string]: number } {
   return meta
     .map(({ tag }) => tag)
-    .reduce((acc, key) => {
+    .reduce<{ [key: string]: number }>((acc, key) => {
       return {
         ...acc,
         [key]: (acc[key] || 0) + 1,
       }
-    }, {} as { [key: string]: number })
+    }, {})
 }
