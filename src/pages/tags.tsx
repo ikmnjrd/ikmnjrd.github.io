@@ -1,17 +1,9 @@
-import getTags, { ITagInfo } from '~/utils/getTags'
+import getTags, { type ITagInfo } from '~/utils/getTags'
 import TitleHead from '~/components/TitleHead'
-import SankeyChart from '~/components/SankeyChart'
-
-export interface Node {
-  name: string // tag
-  id: number // tag name
-  url: string
-}
-export interface ILink {
-  source: number | string // slug
-  target: number | string // tag name
-  value: number
-}
+import SankeyChart, {
+  type Node,
+  type Link,
+} from '~/components/SankeyChart'
 
 export default function Tag({
   wholeTags,
@@ -21,31 +13,21 @@ export default function Tag({
   const baseTagUrl = '/tag/'
   const baseBlogUrl = '/blog/'
 
-  const NodesFactory = (data: ITagInfo) => {
-    const arr: Node[] = []
-    let idx = 0
-    for (const [key, _] of Object.entries(data.countedTags)) {
-      arr.push({
-        name: key,
-        id: idx,
-        url: baseTagUrl + key,
-      })
-      idx++
-    }
-    return arr
-  }
+  const sankeyNodes = NodesFactory(
+    {
+      wholeTags,
+      countedTags,
+      filesData,
+    },
+    baseTagUrl
+  )
+  const lastNodesLength = sankeyNodes.length
 
-  const Nodes = NodesFactory({
-    wholeTags,
-    countedTags,
-    filesData,
-  })
-  const lastNodesLength = Nodes.length
-
-  const linksFactory = (data: ITagInfo): ILink[] => {
+  const linksFactory = (data: ITagInfo): Link[] => {
     // 一時的に追加.あとで削除
+    // なんでこんなことしてるんだっけ？
     data.wholeTags.forEach((i, idx) => {
-      Nodes.push({
+      sankeyNodes.push({
         name: i.slug,
         id: lastNodesLength + idx,
         url: baseBlogUrl + i.slug,
@@ -53,17 +35,15 @@ export default function Tag({
     })
 
     return data.wholeTags.map((i) => {
-      Nodes.findIndex((n) => n.name === i.tag)
-
       return {
-        source: Nodes.findIndex((n) => n.name === i.tag),
-        target: Nodes.findIndex((n) => n.name === i.slug),
+        source: sankeyNodes.findIndex((n) => n.name === i.tag),
+        target: sankeyNodes.findIndex((n) => n.name === i.slug),
         value: 1,
       }
     })
   }
 
-  const Links = linksFactory({
+  const sankeyLinks = linksFactory({
     wholeTags,
     countedTags,
     filesData,
@@ -74,8 +54,8 @@ export default function Tag({
       <TitleHead title={'Tag一覧'} />
       <h1 className="text-3xl pt-8 pb-4">Tag一覧</h1>
       <SankeyChart
-        nodes={Nodes}
-        links={Links}
+        nodes={sankeyNodes}
+        links={sankeyLinks}
         lastIndex={lastNodesLength}
       />
     </>
@@ -92,4 +72,18 @@ export async function getStaticProps() {
       filesData,
     },
   }
+}
+
+const NodesFactory = (data: ITagInfo, baseTagUrl: string) => {
+  const arr: Node[] = []
+  let idx = 0
+  for (const [key, _] of Object.entries(data.countedTags)) {
+    arr.push({
+      name: key,
+      id: idx,
+      url: baseTagUrl + key,
+    })
+    idx++
+  }
+  return arr
 }
