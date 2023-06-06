@@ -4,7 +4,7 @@
         <title>ikmnjrd.github.io</title>
         <link>https://ikmnjrd.github.io</link>
         <description>ikmnjrのブログ</description>
-        <lastBuildDate>Sun, 04 Jun 2023 11:19:06 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 06 Jun 2023 23:52:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -454,8 +454,8 @@ firebase.jsonを編集してfirebaseが公開ディレクトリをpublicディ�
         </item>
         <item>
             <title><![CDATA[Googles製のテンプレート「eleventy-high-performance-blog」をGithub Pagesで使う]]></title>
-            <link>https://ikmnjrd.github.io/blog/eleventy-high-performance-blogをGithub Pagesで使う</link>
-            <guid>https://ikmnjrd.github.io/blog/eleventy-high-performance-blogをGithub Pagesで使う</guid>
+            <link>https://ikmnjrd.github.io/blog/eleventy-on-github-pages</link>
+            <guid>https://ikmnjrd.github.io/blog/eleventy-on-github-pages</guid>
             <pubDate>Sun, 06 Feb 2022 00:00:00 GMT</pubDate>
             <content:encoded><![CDATA[
 そもそも11tyを使ったのは、Next.jsのexport(静的)

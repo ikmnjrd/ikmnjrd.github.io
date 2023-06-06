@@ -124,9 +124,9 @@
             }
         },
         {
-            "id": "https://ikmnjrd.github.io/blog/eleventy-high-performance-blogをGithub Pagesで使う",
+            "id": "https://ikmnjrd.github.io/blog/eleventy-on-github-pages",
             "content_html": "\nそもそも11tyを使ったのは、Next.jsのexport(静的)\n\n### Google Anarytics\ncache.jsをオリジナルのコードに直す（）\n\nプロキシ設定の解除\n\n\n### docsディレクトリに静的ファイルを吐き出す設定\n```javascript\n// eleventy.js\n    dir: {\n      input: \".\",\n      includes: \"_includes\",\n      data: \"_data\",\n      output: \"docs\",\n    },\n```\n\n### git push時のビルド設定を削除\n以下の記述を削除\n```json\n// package.json\n  \"pre-push\": [\n    \"build\"\n  ],\n```\n\n### 周辺用語\n- \n\n\n### 参考文献\n- []()",
-            "url": "https://ikmnjrd.github.io/blog/eleventy-high-performance-blogをGithub Pagesで使う",
+            "url": "https://ikmnjrd.github.io/blog/eleventy-on-github-pages",
             "title": "Googles製のテンプレート「eleventy-high-performance-blog」をGithub Pagesで使う",
             "date_modified": "2022-02-06T00:00:00.000Z",
             "author": {

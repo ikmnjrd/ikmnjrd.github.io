@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ikmnjrd.github.io</id>
     <title>ikmnjrd.github.io</title>
-    <updated>2023-06-04T11:19:06.953Z</updated>
+    <updated>2023-06-06T23:52:00.635Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>ike</name>
@@ -535,8 +535,8 @@ firebase.jsonを編集してfirebaseが公開ディレクトリをpublicディ�
     </entry>
     <entry>
         <title type="html"><![CDATA[Googles製のテンプレート「eleventy-high-performance-blog」をGithub Pagesで使う]]></title>
-        <id>https://ikmnjrd.github.io/blog/eleventy-high-performance-blogをGithub Pagesで使う</id>
-        <link href="https://ikmnjrd.github.io/blog/eleventy-high-performance-blogをGithub Pagesで使う"/>
+        <id>https://ikmnjrd.github.io/blog/eleventy-on-github-pages</id>
+        <link href="https://ikmnjrd.github.io/blog/eleventy-on-github-pages"/>
         <updated>2022-02-06T00:00:00.000Z</updated>
         <content type="html"><![CDATA[
 そもそも11tyを使ったのは、Next.jsのexport(静的)
