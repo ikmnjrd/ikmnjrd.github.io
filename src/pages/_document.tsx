@@ -38,7 +38,7 @@ export default function Document() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         {/* Global site tag (gtag.js) - Google Analytics */}
-        {process.env.NODE_ENV !== 'production' && (
+        {process.env.NODE_ENV === 'production' && (
           <>
             <script
               async
