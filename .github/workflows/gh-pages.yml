@@ -29,6 +29,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: fix prepare husky fail when production ci
+        run: npm set-scripts prepare ""
+
       - name: install
         run: npm install --frozen-lockfile
 
