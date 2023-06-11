@@ -1,11 +1,11 @@
-import { useD3 } from '~/hooks/useD3'
+import { useContext } from 'react'
 import {
   sankey,
   sankeyLinkHorizontal,
   sankeyCenter,
 } from 'd3-sankey'
+import { useD3 } from '~/hooks/useD3'
 import { useWindowSize } from '~/hooks/useWindowSize'
-import { useContext } from 'react'
 import { UserContext } from '~/hooks/useUserContext'
 
 export interface Node {
@@ -84,7 +84,6 @@ function SankeyChart(props: Props) {
         .attr('y', (d) => padZero(d.y0))
         .attr('width', (d) => padZero(d.x1) - padZero(d.x0))
         .attr('height', (d) => padZero(d.y1) - padZero(d.y0))
-        // .attr('fill', '#6E7F8D')
         .attr('fill', fillColor)
         .attr('opacity', 0.8)
 
@@ -119,7 +118,6 @@ function SankeyChart(props: Props) {
           true
         )
         .text((i) => i.name)
-        // .style('fill', '#6E7F8D')
         .style('fill', fillColor)
     }
   )
