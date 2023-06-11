@@ -5,6 +5,8 @@ import {
   sankeyCenter,
 } from 'd3-sankey'
 import { useWindowSize } from '~/hooks/useWindowSize'
+import { useContext } from 'react'
+import { UserContext } from '~/hooks/useUserContext'
 
 export interface Node {
   name: string // tag
@@ -25,13 +27,16 @@ interface Props {
 
 function SankeyChart(props: Props) {
   const { width: windowWidth } = useWindowSize()
+  const { isDarkMode } = useContext(UserContext)
   // heightは固定
   let height = 1400
 
   const ref = useD3(
-    [windowWidth, props.nodes, props.links],
+    [windowWidth, isDarkMode, props.nodes, props.links],
     ({ svg, width, height: _height }) => {
       const nodeLabelPadding = 5
+      const strokeColor = isDarkMode ? '#808000' : '#A0FFFF'
+      const fillColor = isDarkMode ? '#fff' : '#6E7F8D'
       height = _height
 
       const mySankey = sankey<Node, Link>()
@@ -62,7 +67,7 @@ function SankeyChart(props: Props) {
         .classed('link', true)
         .attr('d', sankeyLinkHorizontal())
         .attr('fill', 'none')
-        .attr('stroke', '#A0FFFF')
+        .attr('stroke', strokeColor)
         .attr('stroke-width', (d) => d.width || null)
         .attr('stoke-opacity', 0.5)
 
@@ -79,7 +84,8 @@ function SankeyChart(props: Props) {
         .attr('y', (d) => padZero(d.y0))
         .attr('width', (d) => padZero(d.x1) - padZero(d.x0))
         .attr('height', (d) => padZero(d.y1) - padZero(d.y0))
-        .attr('fill', '#6E7F8D')
+        // .attr('fill', '#6E7F8D')
+        .attr('fill', fillColor)
         .attr('opacity', 0.8)
 
       // node labels
@@ -113,7 +119,8 @@ function SankeyChart(props: Props) {
           true
         )
         .text((i) => i.name)
-        .style('fill', '#6E7F8D')
+        // .style('fill', '#6E7F8D')
+        .style('fill', fillColor)
     }
   )
 
