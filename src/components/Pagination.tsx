@@ -16,10 +16,8 @@ export function Pagination({
         <div key={idx}>
           <span
             className={
-              'mx-3 ' +
-              (idx === currentPageIndex
-                ? 'text-newmo-800'
-                : 'text-newmo-300')
+              'mx-2 px-1 hover:opacity-50 ' +
+              (idx === currentPageIndex ? 'underline' : '')
             }
           >
             <Link href={`?p=${idx}`}>{idx + 1}</Link>
