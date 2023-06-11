@@ -4,7 +4,7 @@ import {
   sankeyLinkHorizontal,
   sankeyCenter,
 } from 'd3-sankey'
-import * as d3 from 'd3'
+import { useWindowSize } from '~/hooks/useWindowSize'
 
 export interface Node {
   name: string // tag
@@ -24,17 +24,15 @@ interface Props {
 }
 
 function SankeyChart(props: Props) {
-  const width = 640 // outer width, in pixels
-  const height = 1400 // outer height, in pixels
-
-  function padZero(num?: number): number {
-    return num ?? 0
-  }
+  const { width: windowWidth } = useWindowSize()
+  // heightは固定
+  let height = 1400
 
   const ref = useD3(
-    [props.nodes, props.links],
-    (svg: d3.Selection<SVGSVGElement, any, any, any>) => {
+    [windowWidth, props.nodes, props.links],
+    ({ svg, width, height: _height }) => {
       const nodeLabelPadding = 5
+      height = _height
 
       const mySankey = sankey<Node, Link>()
         .size([width, height])
@@ -49,7 +47,11 @@ function SankeyChart(props: Props) {
 
       const graph = mySankey(props)
 
-      // let links =
+      function padZero(num?: number): number {
+        return num ?? 0
+      }
+
+      // links
       svg
         .append('g')
         .classed('links', true)
@@ -64,9 +66,7 @@ function SankeyChart(props: Props) {
         .attr('stroke-width', (d) => d.width || null)
         .attr('stoke-opacity', 0.5)
 
-      // console.log('graph nodes:', graph.nodes)
-
-      // let nodes =
+      // nodes
       svg
         .append('g')
         .classed('nodes', true)
@@ -82,6 +82,7 @@ function SankeyChart(props: Props) {
         .attr('fill', '#6E7F8D')
         .attr('opacity', 0.8)
 
+      // node labels
       svg
         .append('g')
         .attr('font-family', 'sans-serif')
