@@ -11,6 +11,10 @@ jobs:
     env:
       WEBSITE_URL: ${{ secrets.WEBSITE_URL }}
       GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
+      NEXT_PUBLIC_ALGOLIA_APP_ID: ${{ secrets.NEXT_PUBLIC_ALGOLIA_APP_ID }}
+      NEXT_PUBLIC_ALGOLIA_SEARCH_KEY: ${{ secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY }}
+      NEXT_PUBLIC_ALGOLIA_INDEX_NAME: ${{ secrets.NEXT_PUBLIC_ALGOLIA_INDEX_NAME }}
+      ALGOLIA_ADMIN_KEY: ${{ secrets.NEXT_PUBLIC_ALGOLIA_ADMIN_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
