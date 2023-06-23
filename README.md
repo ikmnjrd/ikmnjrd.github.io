@@ -23,6 +23,9 @@ $ npm run dev
 
 - Next.js(SSG)
 - tailwind
+- MarkdownIt(マークダウンパーサー)
+- algolia(検索エンジン)
+- D3.js(タグ記事のビジュアライズ)
 
 ## 運用
 

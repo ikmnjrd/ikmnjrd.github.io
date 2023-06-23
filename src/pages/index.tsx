@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 import { IFrontMatter } from '~/utils/getPostFilesData'
 import { generateRssFeed } from '~/scripts/rss'
 import { generateSitemap } from '~/scripts/generate-sitemap'
+import { sendAlgoliaIndex } from '~/scripts/algolia'
 
 interface IPost {
   slug: string
@@ -75,6 +76,9 @@ export async function getStaticProps() {
     })
   }
   const dividedPosts = sliceByNumber(posts, SEPARATE_NUM)
+
+  // algoliaにページ内検索に利用する記事情報を送信
+  sendAlgoliaIndex()
 
   return {
     props: {
