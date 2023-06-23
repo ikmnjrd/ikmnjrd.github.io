@@ -22,6 +22,8 @@
     // npm module
     "nord",
     "Sankey",
+    "algoria",
+    "algoliasearch",
     // HTML meta
     "msapplication",
     // sitemap
