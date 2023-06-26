@@ -8,6 +8,9 @@
     segoe ui, arial, sans-serif; */
   position: relative;
   z-index: 9999;
+  text-align: left;
+  /* dialog.showModal時のbackdrop対策 */
+  padding: 0;
 }
 
 .modal__overlay {
@@ -151,31 +154,24 @@
   }
 }
 
-.micromodal-slide {
-  display: none;
-}
-
-.micromodal-slide.is-open {
-  display: block;
-}
-
-.micromodal-slide[aria-hidden='false'] .modal__overlay {
+.micromodal__slide[open] .modal__overlay {
   animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.micromodal-slide[aria-hidden='false'] .modal__container {
+.micromodal__slide[open] .modal__container {
   animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.micromodal-slide[aria-hidden='true'] .modal__overlay {
+/* dialogのshow, closeを使ってるため、閉じるアニメーションは効かない */
+.micromodal__slide:not([open]) .modal__overlay {
   animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.micromodal-slide[aria-hidden='true'] .modal__container {
+.micromodal__slide:not([open]) .modal__container {
   animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.micromodal-slide .modal__container,
-.micromodal-slide .modal__overlay {
+.micromodal__slide .modal__container,
+.micromodal__slide .modal__overlay {
   will-change: transform;
 }
