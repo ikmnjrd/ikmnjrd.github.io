@@ -3,11 +3,14 @@ import type { AppProps /*, AppContext */ } from 'next/app'
 import Head from 'next/head'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
-import { useUserContext } from '~/hooks/useUserContext'
+import {
+  useUserContext,
+  UserContext,
+} from '~/hooks/useUserContext'
 import '~/styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { UserContext, ...userContext } = useUserContext()
+  const userContext = useUserContext()
 
   return (
     <>

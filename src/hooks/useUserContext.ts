@@ -34,7 +34,6 @@ export const useUserContext = () => {
   }
 
   return {
-    UserContext: UserContext,
     isDarkMode,
     handleChangeDarkMode,
   }
