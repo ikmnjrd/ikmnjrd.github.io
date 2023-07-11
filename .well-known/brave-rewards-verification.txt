@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ikmnjrd.github.io
+Token: 8ebed7bb80c46a0235ff3a3248f4988e3ef68a8fba7527bc68e74662217b13fc
