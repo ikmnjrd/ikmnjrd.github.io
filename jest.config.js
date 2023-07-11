@@ -7,21 +7,16 @@ const createJestConfig = nextJest({
 
 // Any custom config you want to pass to Jest
 const customJestConfig = {
-  testMatch: [
-    '**/*.test.js',
-    '**/*.test.ts',
-    '**/*.test.tsx',
-  ],
+  testMatch: ['**/*.(test|spec).(js|ts|tsx)'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
-    '^~/components/(.*)$':
-      '<rootDir>/src/components/$1',
-
+    '^~/components/(.*)$': '<rootDir>/src/components/$1',
     '^~/pages/(.*)$': '<rootDir>/src/pages/$1',
     '^~/utils/(.*)$': '<rootDir>/src/utils/$1',
+    '^~/hooks/(.*)$': '<rootDir>/src/hooks/$1',
   },
-  testEnvironment: 'jest-environment-jsdom',
+  testEnvironment: './jest-environment-jsdom.cjs',
   // ts/tsxファイルに対してts-jestを使うよう設定
   // ts-jest's tsconfig: https://kulshekhar.github.io/ts-jest/docs/getting-started/options
   transform: {
@@ -42,10 +37,8 @@ const customJestConfig = {
   //   '^~/components/(.*)$':
   //     '<rootDir>/src/components/$1',
   // ],
-  // moduleDirectories: ['node_modules'],
+  moduleDirectories: ['node_modules'],
 }
 
 // createJestConfig is exported in this way to ensure that next/jest can load the Next.js config which is async
-module.exports = createJestConfig(
-  customJestConfig
-)
+module.exports = createJestConfig(customJestConfig)
