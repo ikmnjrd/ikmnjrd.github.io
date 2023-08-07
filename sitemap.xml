@@ -196,6 +196,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/nestjs-why-disable-strict</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/neumorphism-sample</loc>
     <changefreq>hourly</changefreq>
   </url>
