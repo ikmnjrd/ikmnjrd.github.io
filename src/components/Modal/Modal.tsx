@@ -1,30 +1,33 @@
 import {
   useEffect,
-  createRef,
+  useRef,
   PropsWithChildren,
   useCallback,
 } from 'react'
 import styles from './modal.module.css'
-import Search from '~/components/Search'
 
 /**
  * TODO: overscroll-behaviorが効かないので、聞くようにする。
  */
-export default function Modal({ children }: PropsWithChildren) {
-  const dialogRef = createRef<HTMLDialogElement>()
+export default function Modal({
+  children,
+  label,
+  labelClass,
+}: PropsWithChildren<{ labelClass?: string; label?: string }>) {
+  const dialogRef = useRef<HTMLDialogElement>(null)
 
-  const onClickOpenBtn = () => {
+  function onClickOpenBtn() {
     dialogRef.current?.showModal()
   }
 
-  const onClickCloseBtn = () => {
+  function onClickCloseBtn() {
     dialogRef.current?.close()
   }
 
   const handleKeydownDialogContainer = useCallback(
     (event: KeyboardEvent) => {
       if (event.code === 'Escape') {
-        onClickCloseBtn()
+        onClickOpenBtn()
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -47,8 +50,14 @@ export default function Modal({ children }: PropsWithChildren) {
 
   return (
     <>
-      <button type="button" onClick={onClickOpenBtn}>
-        {children || 'Open Modal'}
+      <button
+        type="button"
+        onClick={onClickOpenBtn}
+        data-test="dialog-open-btn"
+      >
+        <span className={labelClass}>
+          {label || 'Open Modal'}
+        </span>
       </button>
       <dialog
         className={`${styles.modal} ${styles.micromodal__slide}`}
@@ -65,7 +74,7 @@ export default function Modal({ children }: PropsWithChildren) {
             aria-modal="true"
             onClick={(e) => e.stopPropagation()}
           >
-            <Search />
+            {children}
           </div>
         </div>
       </dialog>
