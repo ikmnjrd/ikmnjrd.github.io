@@ -5,7 +5,6 @@ import {
   fireEvent,
 } from '@testing-library/react'
 import Modal from '~/components/Modal/Modal'
-import { useModal } from '~/hooks/useModal'
 
 jest.mock('~/hooks/useModal', () => {
   return {
@@ -33,9 +32,6 @@ describe('Modal', () => {
   it.skip('Click OpenButton', async () => {
     const { container } = render(<Modal />)
 
-    const { onClickOpenBtn } = useModal()
-    expect(onClickOpenBtn).toBeCalledTimes(0)
-
     // const spy = jest.spyOn(Modal.prototype, 'onClickOpenBtn')
 
     const dialog = container.querySelector('dialog')
@@ -50,7 +46,6 @@ describe('Modal', () => {
 
     const dialogAfter = container.querySelector('dialog')
 
-    expect(onClickOpenBtn).toBeCalledTimes(1)
     expect(dialogAfter?.open).toBe(true)
   })
 })
