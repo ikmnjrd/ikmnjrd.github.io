@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import DarkModeButton from '~/components/DarkModeButton'
 import Modal from '~/components/Modal/Modal'
+import Search from '~/components/Search'
 
 export default function Header() {
   return (
@@ -18,10 +19,11 @@ export default function Header() {
 
       {/* Right Menu */}
       <nav className="text-right">
-        <Modal>
-          <span className="header-text mr-4 md:text-3xl text-2xl font-serif decoration-dotted hover:opacity-50 hover:underline active:opacity-30">
-            Search
-          </span>
+        <Modal
+          label="Search"
+          labelClass="header-text mr-4 md:text-3xl text-2xl font-serif decoration-dotted hover:opacity-50 hover:underline active:opacity-30"
+        >
+          <Search />
         </Modal>
         <Link href="/about" passHref>
           <a className="header-text mr-4 md:text-3xl text-2xl font-serif decoration-dotted hover:opacity-50 hover:underline active:opacity-30">
