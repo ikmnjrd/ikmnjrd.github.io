@@ -6,20 +6,20 @@ import {
 } from '@testing-library/react'
 import Modal from '~/components/Modal/Modal'
 
-jest.mock('~/hooks/useModal', () => {
-  return {
-    useModal: jest.fn(() => ({
-      onClickOpenBtn: jest.fn(),
-      onClickCloseBtn: jest.fn(),
-      dialogRef: {
-        current: {
-          showModal: jest.fn(),
-          close: jest.fn(),
-        },
-      },
-    })),
-  }
-})
+// jest.mock('~/hooks/useModal', () => {
+//   return {
+//     useModal: jest.fn(() => ({
+//       onClickOpenBtn: jest.fn(),
+//       onClickCloseBtn: jest.fn(),
+//       dialogRef: {
+//         current: {
+//           showModal: jest.fn(),
+//           close: jest.fn(),
+//         },
+//       },
+//     })),
+//   }
+// })
 
 describe('Modal', () => {
   beforeAll(() => {
