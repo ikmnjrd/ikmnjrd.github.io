@@ -172,6 +172,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/mp3-scrap</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/mtg-deck-immortal-warm</loc>
     <changefreq>hourly</changefreq>
   </url>
