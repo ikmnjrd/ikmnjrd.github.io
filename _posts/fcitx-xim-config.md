@@ -37,6 +37,8 @@ vi ~/.config/fcitx/conf/fcitx-xim.config
 UseOnTheSpotStyle=True
 ```
 
+fcitxを再起動すればインライン表示されるようになってるはず。以上。
+
 
 ### 参考文献
 - [Fcitx: リアルタイム入力（インライン入力）のための設定 - DEV Community](https://dev.to/nabbisen/fcitx--1n59)
