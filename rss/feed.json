@@ -169,6 +169,17 @@
             }
         },
         {
+            "id": "https://ikmnjrd.github.io/blog/fcitx-xim-config",
+            "content_html": "\n### 対処前の状況\nEndeavourOSにfcitxとmozcをインストールした。\n入力確定までは、入力補助ポップアップが表示されるが、カーソルが点滅してる位置には何も表示されない。\n\n[ググって出てくる方法](https://dev.to/nabbisen/fcitx--1n59)も試すがGUIの「設定」を開いてもコンフィグファイルが開かれるだけでXIMの設定が見つからない\nGUIの「設定」を開くと現れる設定ファイルは `~/.config/fcitx/config`である。\n\n### 対処方法\n`~/.config/fcitx/conf/fcitx-xim.config` を開く\n\n```bash\nvi ~/.config/fcitx/conf/fcitx-xim.config\n```\n\n開くといかのようになっていると思う\n```text\n[Xim]\n# XIMで On The Spot スタイルを使う(起動中は変更できません)\n# 可能な値:\n# True False\n# UseOnTheSpotStyle=False\n```\nコメントアウトを外すとともに、`UseOnTheSpotStyle=True`にする。\n```text\n[Xim]\n# XIMで On The Spot スタイルを使う(起動中は変更できません)\n# 可能な値:\n# True False\nUseOnTheSpotStyle=True\n```\n\nfcitxを再起動すればインライン表示されるようになってるはず。以上。\n\n\n### 参考文献\n- [Fcitx: リアルタイム入力（インライン入力）のための設定 - DEV Community](https://dev.to/nabbisen/fcitx--1n59)\n",
+            "url": "https://ikmnjrd.github.io/blog/fcitx-xim-config",
+            "title": "fcitxで日本語がインライン表示されないし、設定からximが見つからない",
+            "date_modified": "2024-02-10T00:00:00.000Z",
+            "author": {
+                "name": "ike",
+                "url": "https://twitter.com/ikmnjrd"
+            }
+        },
+        {
             "id": "https://ikmnjrd.github.io/blog/font-what-is",
             "content_html": "### フォント\nデジタルデータとしてフォントを表示するには切っても切り離せない。\nこれはもちろんWebの世界でも、ネイティブアプリの世界でも一緒。\n\nフォントがない世界はありえない。\n\n### 歴史？\nAdobeはフォントという存在を意識できる人なら誰でも知ってる。\n「Adobe Illustrator」「Adobe Photoshop」などに始まり、印刷用に開発されたPostScriptなどを開発したりしていた。\n\ntruetype(.ttf)\nwoff(.wof)\nwoff2(.woff2)\nなどの拡張子がある。\n\n### フォントをユーザーにどう届けるか\n* クライアントにプリインストールされているフォントを使う\n* 自サーバーから配信\n* Webフォントを使う（配信されているものにタダ乗り）\n\n#### ライアントにプリインストールされているフォントを使う\n\n- macOS Big Sur\n  - [https://support.apple.com/ja-jp/HT211240](https://support.apple.com/ja-jp/HT211240)\n- Windows 11\n  -  [https://docs.microsoft.com/en-us/typography/fonts/windows_11_font_list](https://docs.microsoft.com/en-us/typography/fonts/windows_11_font_list)\n- iOS\n  - [https://developer.apple.com/fonts/system-fonts/](https://developer.apple.com/fonts/system-fonts/)\n- Android\n  - 端末メーカーによる場合があり\n\n#### 自サーバーから配信\n主要ブラウザはwoff2に対応しているので、woff2で用意するば十分。\n\n[対応ブラウザ](https://caniuse.com/woff2)\n\n#### Webフォントを使う\n有名なものとして\n- [Google Fonts](https://googlefonts.github.io/japanese/)\n- [REALTYPE](https://www.realtype.jp/)\n\n\n### 参考文献\n- [各OSの標準搭載フォント一覧へのリンク集  |  Rriver](https://parashuto.com/rriver/development/preinstalled-font-list-by-operating-system)\n\n",
             "url": "https://ikmnjrd.github.io/blog/font-what-is",
