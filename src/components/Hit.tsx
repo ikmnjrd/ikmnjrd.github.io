@@ -19,7 +19,7 @@ type HitProps = {
 
 export function Hit({ hit }: HitProps) {
   return (
-    <Link href={`/blog/${hit.slug}`} passHref>
+    <Link href={`/blog/${hit.slug}`} passHref legacyBehavior>
       {/* FIXME: devモードでもモーダルが閉じるようにする */}
       <a className="hover:cursor-pointer" data-custom-close>
         <h1>
