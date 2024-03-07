@@ -26,7 +26,7 @@ export default function TagLinkPage({ tag, posts }: Props) {
       <div>
         {posts.map((post) => (
           <li key={post.slug}>
-            <Link href={`/blog/${post.slug}`}>
+            <Link href={`/blog/${post.slug}`} legacyBehavior>
               <a className="hover:underline hover:text-newmo-400 visited:text-newmo-300">
                 {post.frontmatter.title}
               </a>

@@ -19,7 +19,7 @@ export default function Post({
           width="16px"
           height="16px"
         />
-        <Link href={`/blog/${slug}`}>
+        <Link href={`/blog/${slug}`} legacyBehavior>
           <a className="hover:underline hover:text-newmo-400 visited:text-newmo-300">
             {frontmatter?.title}
           </a>
