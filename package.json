@@ -7,7 +7,7 @@
     "build": "run-s prebuild:* build:next",
     "start": "next start",
     "lint": "next lint",
-    "build:next": "next build && next export -o docs",
+    "build:next": "next build",
     "prebuild": "run-s prebuild:*",
     "prebuild:clean": "rimraf ./tmp",
     "prebuild:init": "mkdir ./tmp",
@@ -78,6 +78,6 @@
     "*.**": "prettier --check --ignore-unknown"
   },
   "volta": {
-    "node": "18.19.1"
+    "node": "20.3.0"
   }
 }

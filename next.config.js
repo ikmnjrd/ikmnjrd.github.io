@@ -3,6 +3,8 @@
  * @type {import('next').NextConfig}
  **/
 const nextConfig = {
+  output: 'export',
+  distDir: 'docs',
   reactStrictMode: true,
   webpack(config, { isServer }) {
     if (isServer) {
