@@ -4,7 +4,7 @@
         <title>ikmnjrd.github.io</title>
         <link>https://ikmnjrd.github.io</link>
         <description>ikmnjrのブログ</description>
-        <lastBuildDate>Sun, 11 Feb 2024 06:20:56 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 Mar 2024 15:58:44 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -744,6 +744,39 @@ woff2(.woff2)
 ### 参考文献
 - [各OSの標準搭載フォント一覧へのリンク集  |  Rriver](https://parashuto.com/rriver/development/preinstalled-font-list-by-operating-system)
 
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[fzfの履歴検索（Ctrl + r）が動いてないときに確認すること]]></title>
+            <link>https://ikmnjrd.github.io/blog/fzf-linux-ctrl-r</link>
+            <guid>https://ikmnjrd.github.io/blog/fzf-linux-ctrl-r</guid>
+            <pubDate>Sun, 18 Feb 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+### 対処前の状況
+EndeavourOSにfzfをインストールしたが、fzfの履歴検索が機能しない
+![対処前イメージ](https://i.gyazo.com/d3febdcaec7dd79a7c5f2d69a0fe3719.png)
+
+### 対処方法
+環境によって異なるが私の環境の場合は`/usr/share/fzf`にあった。人によっては`/usr/loxal/share/docs/fzf`などにある場合もあるらしい。
+```
+$ls /usr/share/fzf/
+合計 52
+drwxr-xr-x   2 root  4096  2月 15 22:54 .
+drwxr-xr-x 177 root  4096  2月 15 22:55 ..
+-rw-r--r--   1 root 14523  2月  4 00:41 completion.bash
+-rw-r--r--   1 root 11766  2月  4 00:41 completion.zsh
+-rw-r--r--   1 root  5524  2月  4 00:41 key-bindings.bash
+-rw-r--r--   1 root  4115  2月  4 00:41 key-bindings.zsh
+```
+
+
+私はzshを使っているので.zshrcなどに以下を追記した
+```bash
+source /usr/share/fzf/key-bindings.zsh
+```
+
+### 参考文献
+- [fzf bash history CTRL+R not working · Issue #1190 · junegunn/fzf](https://github.com/junegunn/fzf/issues/1190)
 ]]></content:encoded>
         </item>
         <item>
