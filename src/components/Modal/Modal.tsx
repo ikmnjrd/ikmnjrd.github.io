@@ -1,9 +1,4 @@
-import {
-  useEffect,
-  useRef,
-  PropsWithChildren,
-  useCallback,
-} from 'react'
+import { useRef, PropsWithChildren } from 'react'
 import styles from './modal.module.css'
 
 /**
@@ -24,37 +19,28 @@ export default function Modal({
     dialogRef.current?.close()
   }
 
-  const handleKeydownDialogContainer = useCallback(
-    (event: KeyboardEvent) => {
-      if (event.code === 'Escape') {
-        onClickOpenBtn()
-      }
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
-  )
-
-  useEffect(() => {
-    document.addEventListener(
-      'keydown',
-      handleKeydownDialogContainer
-    )
-    return () => {
-      document.removeEventListener(
-        'keydown',
-        handleKeydownDialogContainer
-      )
+  function handleClickForChildren(evTarget: unknown) {
+    // @ts-expect-error FIXME
+    if (!evTarget?.outerHTML) {
+      return
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+
+    // @ts-expect-error FIXME
+    const html = evTarget.outerHTML as string
+
+    if (
+      !html.includes('ais-Hits-list') &&
+      (html.includes('data-target-close') ||
+        html.includes('ais-Highlight') ||
+        html.includes('ais-Snippet'))
+    ) {
+      onClickCloseBtn()
+    }
+  }
 
   return (
     <>
-      <button
-        type="button"
-        onClick={onClickOpenBtn}
-        data-test="dialog-open-btn"
-      >
+      <button type="button" onClick={onClickOpenBtn}>
         <span className={labelClass}>
           {label || 'Open Modal'}
         </span>
@@ -72,7 +58,10 @@ export default function Modal({
             className={styles.modal__container}
             role="dialog"
             aria-modal="true"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              handleClickForChildren(e.nativeEvent.target)
+              e.stopPropagation()
+            }}
           >
             {children}
           </div>
