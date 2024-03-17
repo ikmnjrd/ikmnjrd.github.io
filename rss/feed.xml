@@ -4,7 +4,7 @@
         <title>ikmnjrd.github.io</title>
         <link>https://ikmnjrd.github.io</link>
         <description>ikmnjrのブログ</description>
-        <lastBuildDate>Mon, 11 Mar 2024 16:16:30 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 17 Mar 2024 02:44:43 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -1204,6 +1204,26 @@ safariでも見てみましょう。
 ### 参考文献
 - [outlineプロパティで作った枠線は角丸にすることができない - dskd](https://dskd.jp/archives/73.html)
 - [css - What is the default style of the blue focus outline in Chrome? - Stack Overflow](https://stackoverflow.com/questions/20609485/what-is-the-default-style-of-the-blue-focus-outline-in-chrome)]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[i3wmデスクトップでVSCodeのGitHubログインが保持できなかったメモ]]></title>
+            <link>https://ikmnjrd.github.io/blog/i3wm-vscode-keiyring</link>
+            <guid>https://ikmnjrd.github.io/blog/i3wm-vscode-keiyring</guid>
+            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+
+### 状況
+VSCodeからGitHub CopilotのためにGitHubログインすると次のようなメッセージが表示される。  
+![error message](https://i.gyazo.com/eb85146b137d3908359fab61c3952e95.png)
+「Open troubleshooting guide」をクリックするとこれが開く[https://code.visualstudio.com/docs/editor/settings-sync#_troubleshooting-keychain-issues](https://code.visualstudio.com/docs/editor/settings-sync#_troubleshooting-keychain-issues)
+
+
+
+
+### 参考文献
+- [Automatically unlock gnome keyring at boot - Desktop Environments / All WMs - EndeavourOS](https://forum.endeavouros.com/t/automatically-unlock-gnome-keyring-at-boot/24216)
+- [Troubleshooting keychain issues - Settings Sync in Visual Studio Code](https://code.visualstudio.com/docs/editor/settings-sync#_troubleshooting-keychain-issues)
+]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[draw.ioで作る技術資料に使うツールアイコン]]></title>

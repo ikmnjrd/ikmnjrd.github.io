@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ikmnjrd.github.io</id>
     <title>ikmnjrd.github.io</title>
-    <updated>2024-03-11T16:16:30.076Z</updated>
+    <updated>2024-03-17T02:44:43.175Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>ike</name>
@@ -1389,6 +1389,34 @@ safariでも見てみましょう。
 ### 参考文献
 - [outlineプロパティで作った枠線は角丸にすることができない - dskd](https://dskd.jp/archives/73.html)
 - [css - What is the default style of the blue focus outline in Chrome? - Stack Overflow](https://stackoverflow.com/questions/20609485/what-is-the-default-style-of-the-blue-focus-outline-in-chrome)]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https://twitter.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[i3wmデスクトップでVSCodeのGitHubログインが保持できなかったメモ]]></title>
+        <id>https://ikmnjrd.github.io/blog/i3wm-vscode-keiyring</id>
+        <link href="https://ikmnjrd.github.io/blog/i3wm-vscode-keiyring"/>
+        <updated>2024-03-17T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+
+### 状況
+VSCodeからGitHub CopilotのためにGitHubログインすると次のようなメッセージが表示される。  
+![error message](https://i.gyazo.com/eb85146b137d3908359fab61c3952e95.png)
+「Open troubleshooting guide」をクリックするとこれが開く[https://code.visualstudio.com/docs/editor/settings-sync#_troubleshooting-keychain-issues](https://code.visualstudio.com/docs/editor/settings-sync#_troubleshooting-keychain-issues)
+
+
+
+
+### 参考文献
+- [Automatically unlock gnome keyring at boot - Desktop Environments / All WMs - EndeavourOS](https://forum.endeavouros.com/t/automatically-unlock-gnome-keyring-at-boot/24216)
+- [Troubleshooting keychain issues - Settings Sync in Visual Studio Code](https://code.visualstudio.com/docs/editor/settings-sync#_troubleshooting-keychain-issues)
+]]></content>
         <author>
             <name>ike</name>
             <uri>https://twitter.com/ikmnjrd</uri>
