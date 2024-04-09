@@ -168,6 +168,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/linux-hardware-2024-03</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/mac-meeting-transcript</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -273,6 +277,10 @@
   </url>
   <url>
     <loc>https://ikmnjrd.github.io/blog/ssh-keygen</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ikmnjrd.github.io/blog/steam-lib32-vulkan-driver</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
