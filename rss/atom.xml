@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ikmnjrd.github.io</id>
     <title>ikmnjrd.github.io</title>
-    <updated>2024-04-09T16:39:41.086Z</updated>
+    <updated>2024-04-27T02:48:33.456Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>ike</name>
-        <uri>https://twitter.com/ikmnjrd</uri>
+        <uri>https:/x.com/ikmnjrd</uri>
     </author>
     <link rel="alternate" href="https://ikmnjrd.github.io"/>
     <link rel="self" href="https://ikmnjrd.github.io/rss/atom.xml"/>
@@ -41,11 +41,11 @@ $ git remote -v
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -92,11 +92,11 @@ webpackはCommonJSで書かれていることは事前知識として知って�
 - [Support ES module format (ESM) in next.config.js #32239](https://github.com/vercel/next.js/discussions/32239)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -140,11 +140,11 @@ webpackはCommonJSで書かれていることは事前知識として知って�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -203,11 +203,11 @@ docker volume rmコマンドの引数に渡す
 - [正しく理解できる！シェルスクリプトとPOSIXの正規表現（令和最新版）〜 基本正規表現BREと拡張正規表現EREについて - Qiita](https://qiita.com/ko1nksm/items/53abc144558b9bb5629f)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -280,11 +280,11 @@ APIとのやりとりを見ようね。
 - [Console API reference - Chrome Developers](https://developer.chrome.com/docs/devtools/console/api/)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -311,11 +311,11 @@ Create React Appで適当に作ったプロジェクトで適当にconsole.log�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -346,11 +346,11 @@ htmlが少ないなら有効。
 - [jQueryでIME入力確定時にイベントを発行する - Qiita](https://qiita.com/hrdaya/items/6488d8dd3962cf35c0a0)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -368,11 +368,11 @@ content
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -501,11 +501,11 @@ firebase.jsonを編集してfirebaseが公開ディレクトリをpublicディ�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -526,11 +526,11 @@ firebase.jsonを編集してfirebaseが公開ディレクトリをpublicディ�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -575,11 +575,11 @@ cache.jsをオリジナルのコードに直す（）
 - []()]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -644,11 +644,11 @@ declare module '*.css' {
 - [esbuild の機能が足りないならプラグインを自作すればいいじゃない](https://www.kabuku.co.jp/developers/create-your-own-esbuild-plugin)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -732,11 +732,11 @@ Reactでも通常、ほとんどのイベントでバブリングフェーズで
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -756,11 +756,11 @@ nodeコマンドで立ち上がるWebサーバーとexpressは何が違うんだ
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -808,11 +808,11 @@ fcitxを再起動すればインライン表示されるようになってるは
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -868,11 +868,11 @@ woff2(.woff2)
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -909,11 +909,11 @@ source /usr/share/fzf/key-bindings.zsh
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -997,11 +997,11 @@ Cloud Buildを挟まないとArtifact RegistryからCloud Runへデプロイで�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1092,11 +1092,11 @@ SSD: 30GB
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1136,11 +1136,11 @@ SSD: 30GB
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1224,11 +1224,11 @@ Google Analyticsタグの埋め込みなどは利用しているJeykllテーマ�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1279,11 +1279,11 @@ Google Analyticsタグの埋め込みなどは利用しているJeykllテーマ�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1324,11 +1324,11 @@ aria-expanded="false"
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1391,11 +1391,11 @@ safariでも見てみましょう。
 - [css - What is the default style of the blue focus outline in Chrome? - Stack Overflow](https://stackoverflow.com/questions/20609485/what-is-the-default-style-of-the-blue-focus-outline-in-chrome)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1419,11 +1419,11 @@ VSCodeからGitHub CopilotのためにGitHubログインすると次のような
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1450,11 +1450,11 @@ draw.ioで`https://~`を参照する形で読み込んでしまうとエクス�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1486,11 +1486,11 @@ iTerm側の設定を変更する。
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1591,11 +1591,11 @@ idは慎重に名付けしよう。
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1626,11 +1626,11 @@ const fs = require('fs').promises;
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1649,11 +1649,11 @@ GitHubリポジトリや公式ページは過去の仕様が見辛い
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1722,11 +1722,11 @@ MDNには以下のように書かれています。
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1752,11 +1752,11 @@ MDNを見たけど、危険ってことしかわからなかった。
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1867,11 +1867,11 @@ exports.nextExport = nextExport;
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1900,11 +1900,11 @@ exports.nextExport = nextExport;
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1938,11 +1938,11 @@ exports.nextExport = nextExport;
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -1959,11 +1959,11 @@ exports.nextExport = nextExport;
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2017,11 +2017,11 @@ Github Pagesで手軽にブログを作成する際に第一候補となるで�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2111,11 +2111,11 @@ Time:        0.222 s
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2157,11 +2157,11 @@ UnlicenseなどもしっかりとSPDXライセンスリストに記載されて�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2201,11 +2201,11 @@ UnlicenseなどもしっかりとSPDXライセンスリストに記載されて�
 | GPU           | ASUS Radeon RX 7600 OC  8GB       |]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2235,11 +2235,11 @@ UnlicenseなどもしっかりとSPDXライセンスリストに記載されて�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2263,11 +2263,11 @@ $ python -m SimpleHTTPServer 8080
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2365,11 +2365,11 @@ ccc -->
 ```]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2553,11 +2553,11 @@ app.listen('3000')
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2595,11 +2595,11 @@ CONTENTS ](https://csclub.uwaterloo.ca/~pbarfuss/ISO11172-3.pdf)
   - 現在音楽業界で広く使われているFlacのソースコード]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2781,11 +2781,11 @@ Sideboard
 ```]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2881,11 +2881,11 @@ Deck
 ```]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -2967,11 +2967,11 @@ Deck
 ```]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -3145,11 +3145,11 @@ Sideboard
 ```]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -3376,11 +3376,11 @@ Sideboard
 ```]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -3424,11 +3424,11 @@ while (何かいいの見つかればな〜){
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -3519,11 +3519,11 @@ Vim(NeoVim)わからん。
 - [Shim と Polyfill](https://qiita.com/ybiquitous/items/3104beb84b78ca15f407)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -3588,11 +3588,11 @@ APIサーバーにNest.jsを採用したプロジェクトに途中参加した�
 - [Documentation | NestJS - A progressive Node.js framework](https://docs.nestjs.com/)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -3630,11 +3630,11 @@ npmパッケージで似たものを提供している人もいる[https://githu
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -3718,11 +3718,11 @@ package.jsonを以下のように書き換え、`$npm i`を実行
 - [Build a sitemap generator in Next.js - LogRocket Blog](https://blog.logrocket.com/build-sitemap-generator-nextjs/)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -3774,11 +3774,11 @@ const data = require("./data.json");
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -3824,11 +3824,11 @@ Notionを使いこなしてるとは言いづらい私ですが、私のNotion�
 - [合流 - wikipedia](https://ja.wikipedia.org/wiki/%E6%B5%81%E8%B7%AF%E5%BD%A2%E7%8A%B6#:~:text=%E5%90%88%E6%B5%81%EF%BC%88%E3%81%94%E3%81%86%E3%82%8A%E3%82%85%E3%81%86%E3%80%81%E8%8B%B1%E8%AA%9E%EF%BC%9A,%E3%81%AF%E5%90%88%E6%B5%81%E7%82%B9%E3%81%A8%E5%91%BC%E3%81%B0%E3%82%8C%E3%82%8B%E3%80%82)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -3874,11 +3874,11 @@ Notionに加工したURLを貼り付けると「Emged image」というオブシ
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4028,11 +4028,11 @@ http://localhost:6080/vnc.html
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4138,11 +4138,11 @@ SPA/SSR/SSGモード、認証方式、fetchライブラリ、ストアなどの�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4245,11 +4245,11 @@ workspace/liff-firebase/liff-app/functions/node_modules/
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4293,11 +4293,11 @@ nginxやapplescriptなどもサポートされてるみたいで懐が深い。
 - [prism - Supported Laungages](https://prismjs.com/#supported-languages)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4399,11 +4399,11 @@ mainブランチの保護をするため、「main」と入力。
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4533,11 +4533,94 @@ https://newcss.net/
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[リファクタリングしてますか？]]></title>
+        <id>https://ikmnjrd.github.io/blog/refactoring-and-develop</id>
+        <link href="https://ikmnjrd.github.io/blog/refactoring-and-develop"/>
+        <updated>2024-04-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[社のチーム内での共有に書いたメモの一部]]></summary>
+        <content type="html"><![CDATA[
+
+### 伝えたいことの結論
+「リファクタリング」という言葉には新機能の追加タスクでも既存コードベースの改修が含まれる。
+
+#### 自己紹介
+前提として、私自身は小さな受託システム開発会社（50人規模）で働くWebエンジニアで主に新規開発を転々とやっています。
+
+
+### いつやるか
+コードを触る機会があったなら、それは常にリファクタリングするタイミング。
+
+### 例え話
+料金を表示するコードがあったとする。
+
+```jsx
+const price = 100
+
+return (
+  <div>
+    {{
+      price.toLocaleString("ja-JP", {
+        style: "currency", currency: "JPY",
+      })
+    }}
+  </div>
+)
+```
+
+もし料金を国別の表にするという変更があったら、次のようにしたとする。  
+
+```jsx
+const priceJP = 100
+const priceUS = 1
+
+return (
+  <div>
+    <div>日本: {{
+       priceJP.toLocaleString("ja-JP", {
+         style: "currency", currency: "JPY",
+       })
+    }}</div>
+    <div>米国: {{
+       priceUS.toLocaleString("en-US", {
+         style: "currency", currency: "USD",
+       })
+     }}</div>
+  </div>
+)
+```
+
+priceだったものが暗黙の了解として日本料金を示していたが、他の国が入ったことで暗黙の了解は崩れそれぞれを明示するに至った。  
+私はこれをいい変更だと考えるものとして次の話に進む。  
+
+### 実際によくあるやつ
+この部分を既存コードの変更を嫌がって次のようにすることってまま稀によくあると思う。
+
+```jsx
+const price = 100 // 名前の変更もしない
+const priceUS = 1 // 新しく追加
+```
+
+私はこういう時、変更の箇所が増えて自分が負わないでいい責任を負ってる感覚を味わうことがあるが、そこも含めてリファクタリングや仕様変更と呼びたい。  
+
+
+しかもこういった部分は `price` のままにするとレビュワーからは差分にならないのでGitHub上から見えづらい。  
+
+そのためレビュイーに頼る部分が多くなるが、善意でバグを発生させようとも善意を持ちたい（静的解析ツールを存分に頼ろう）]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https:/x.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4565,11 +4648,11 @@ set shell=zsh
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4665,11 +4748,11 @@ safari用のものが見たいならsafariで開き、chrome用のものが見�
    ></iframe>]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4717,11 +4800,11 @@ Host github github.com
 - [git clone したら、Permission denied (publickey).のエラー - Qiita](https://qiita.com/hatorijobs/items/92d8df363020a7f6d9fb)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4798,11 +4881,11 @@ $ sudo pacman -S steam
 - [Steam/トラブルシューティング - ArchWiki](https://wiki.archlinux.jp/index.php/Steam/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4834,11 +4917,11 @@ npx sb@next init --builder storybook-builder-vite && npm run storybook
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4884,11 +4967,11 @@ canvasと同一視するのはどうかとも思うが、大きく離れても�
 - [font-smooth - CSS: カスケーディングスタイルシート | MDN](https://developer.mozilla.org/ja/docs/Web/CSS/font-smooth)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4923,11 +5006,11 @@ CD-ROMに焼いてくれるが処分に困る。
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -4955,11 +5038,11 @@ Scalable Vector Graphics
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5022,11 +5105,11 @@ swagger-ui起動時にはデフォルトで `https://petstore.swagger.io/v2/swag
 - [swagger-ui/setting-up.md at master · swagger-api/swagger-ui](https://github.com/swagger-api/swagger-ui/blob/master/docs/development/setting-up.md)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5094,11 +5177,11 @@ import { expect, jest, test } from '@jest/globals'
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5195,11 +5278,11 @@ checkUser(user)
 - [Is it possible to restrict TypeScript object to contain only properties defined by its class? - Stack Overflow](https://stackoverflow.com/questions/49580725/is-it-possible-to-restrict-typescript-object-to-contain-only-properties-defined)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5221,11 +5304,11 @@ DenoがTypeScriptコードをサポートしているが、中ではコンパイ
 [https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5287,11 +5370,11 @@ setopt inc_append_history
 - [現役シリコンバレーエンジニアが教える NeoVim(VIM) + Tmux + Zsh 入門](https://www.udemy.com/course/vim-tmux-zsh/)]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5319,11 +5402,11 @@ $ d8 --print-code sample.js
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5352,11 +5435,11 @@ $ d8 --print-code sample.js
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5382,11 +5465,11 @@ $ d8 --print-code sample.js
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5421,11 +5504,11 @@ VSCodeで一番開いているである`ファイルエクスプローラー`の
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5443,11 +5526,11 @@ V8がhidden classを作成して、、、
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5490,11 +5573,11 @@ plugins: [
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5524,11 +5607,11 @@ csp-hashディレクティブって何？なんのために使うの？
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
     <entry>
@@ -5622,11 +5705,11 @@ Pythonを日常使いすることないので、そうだったんだねー(ど�
 ]]></content>
         <author>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </author>
         <contributor>
             <name>ike</name>
-            <uri>https://twitter.com/ikmnjrd</uri>
+            <uri>https:/x.com/ikmnjrd</uri>
         </contributor>
     </entry>
 </feed>

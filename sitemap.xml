@@ -268,6 +268,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/refactoring-and-develop</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/run-aliases-commands-inside-vim</loc>
     <changefreq>hourly</changefreq>
   </url>
