@@ -8,8 +8,7 @@ export const generateRssFeed = async () => {
   const date = new Date()
   const author = {
     name: 'ike',
-    // email: 'sample@example.com',
-    link: 'https://twitter.com/ikmnjrd',
+    link: 'https:/x.com/ikmnjrd',
   }
 
   if (!siteURL) {

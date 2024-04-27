@@ -9,16 +9,16 @@ const Footer: FC = () => {
         <ul className="flex items-center justify-between max-w-[150px] mx-auto">
           <li>
             <a
-              href="https://twitter.com/ikmnjrd"
+              href="https://x.com/ikmnjrd"
               target="_blank"
               rel="nofollow noopener noreferrer"
-              title="Twitter"
+              title="x"
               className="footer-svg hover:opacity-50 block"
             >
               <SvgIcon
-                type="twitter"
-                size="2.3em"
-                strokeWidth={2.3}
+                type="x"
+                size="1.8em"
+                strokeWidth={1}
                 fill="#fff"
               />
             </a>
@@ -56,7 +56,7 @@ const Footer: FC = () => {
             </a>
           </li>
         </ul>
-        <p>
+        <p className="pt-4">
           ©︎ikmnjrd -{' '}
           <time dateTime={date.toString()}>
             {date.getFullYear()}

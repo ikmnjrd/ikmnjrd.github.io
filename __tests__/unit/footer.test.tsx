@@ -11,11 +11,11 @@ describe('Footer', () => {
     expect(footerText).toBeInTheDocument()
     expect(footerEl)
   })
-  it('footer Twitter link', () => {
+  it('footer x link', () => {
     render(<Footer />)
 
-    const twitterLink = screen.getByTitle(/twitter/i)
-    expect(twitterLink).toBeInTheDocument()
+    const xLink = screen.getByTitle(/x/i)
+    expect(xLink).toBeInTheDocument()
   })
   it('footer GitHub link', () => {
     render(<Footer />)
