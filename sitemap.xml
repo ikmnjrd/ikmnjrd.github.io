@@ -36,6 +36,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/css-hue-vs-oklch</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/css-position-sticky</loc>
     <changefreq>hourly</changefreq>
   </url>
