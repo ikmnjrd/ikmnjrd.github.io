@@ -14,33 +14,37 @@ export interface IFrontMatter {
   scheduled?: string // Next製にしてから使ってない
 }
 
+const ignoreDirs = ['draft']
+
 export default async function getPostFilesData() {
   // Get files from the posts dir
   const files = fs.readdirSync(path.join('_posts'))
 
   // Get slug and frontmatter from posts
-  return files.map((filename) => {
-    // Create slug
-    const slug = filename.replace('.md', '')
+  return files
+    .filter((filename) => !ignoreDirs.includes(filename))
+    .map((filename) => {
+      // Create slug
+      const slug = filename.replace('.md', '')
 
-    // Get frontmatter and content
-    const markdownWithMeta = fs.readFileSync(
-      path.join('_posts', filename),
-      'utf-8'
-    )
+      // Get frontmatter and content
+      const markdownWithMeta = fs.readFileSync(
+        path.join('_posts', filename),
+        'utf-8'
+      )
 
-    const {
-      data: frontmatter,
-      content: content,
-    }: {
-      data: IFrontMatter
-      content: string
-    } = matter<string, {}>(markdownWithMeta, {})
+      const {
+        data: frontmatter,
+        content: content,
+      }: {
+        data: IFrontMatter
+        content: string
+      } = matter<string, {}>(markdownWithMeta, {})
 
-    return {
-      slug,
-      frontmatter,
-      content,
-    }
-  })
+      return {
+        slug,
+        frontmatter,
+        content,
+      }
+    })
 }
