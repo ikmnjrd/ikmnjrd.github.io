@@ -39,15 +39,17 @@ function SankeyChart(props: Props) {
       const fillColor = isDarkMode ? '#fff' : '#6E7F8D'
       height = _height
 
+      const yPadding = 7
+
       const mySankey = sankey<Node, Link>()
         .size([width, height])
         .nodeId((d) => d.id)
         .nodeWidth(20)
-        .nodePadding(10)
+        .nodePadding(yPadding)
         .nodeAlign(sankeyCenter)
         .extent([
-          [0, 10], // SVG一番上のテキストの上半分が見切れてしまうため対応
-          [width, height - 10],
+          [0, yPadding], // SVG一番上のテキストの上半分が見切れてしまうため対応
+          [width, height - yPadding],
         ])
 
       const graph = mySankey(props)
