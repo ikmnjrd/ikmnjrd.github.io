@@ -93,7 +93,7 @@ export async function getStaticProps({
     }),
   })
 
-  markdownIt.use(markdownItPrism, {})
+  markdownIt.use(markdownItPrism, { defaultLanguage: 'sh' })
 
   const { data: frontmatter, content } = matter(markdownWithMeta)
   const innerHtml = markdownIt.render(content)
