@@ -56,6 +56,10 @@ tag:
 ---
 ```
 
+### 記事内のコードブロック
+
+[prismjs](https://prismjs.com/#supported-languages)でサポートされているものに当てはまらないと感じたらとりあえず`sh`を指定しておく
+
 ## dependency version
 
 node-fetch(v3.2)が ESM のみになっているが ts-jest が ESM only のパッケージに対応していないようなので、node-fetch を 2 系でインストール。
