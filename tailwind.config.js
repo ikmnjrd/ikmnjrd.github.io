@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
   darkMode: 'class',
@@ -19,6 +20,12 @@ module.exports = {
         600: '#5A6872',
         800: '#3F4950',
       },
+    },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
     },
   },
   plugins: [],
