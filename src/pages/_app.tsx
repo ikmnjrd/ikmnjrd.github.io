@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <UserContext.Provider value={userContext}>
         <Header />
-        <main className="max-w-2xl md:mx-auto mx-4 flex flex-col">
+        <main>
           <Component {...pageProps} />
         </main>
         <Footer />
