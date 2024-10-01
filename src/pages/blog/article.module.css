@@ -1,0 +1,21 @@
+.title {
+  @apply text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight md:leading-none text-center md:text-left;
+}
+
+.article {
+  /* tailwindのブレークポイント依存。
+  * screens: { sm: '480px'; md: '768px',lg: '976px'}
+  * tailwindを捨てたときにcss変数で書き直す */
+  grid-template-columns:
+    minmax(481px, 976px)
+    max-content;
+  justify-content: center;
+}
+
+.gridElSticky {
+  @media (min-width: 976px) {
+    position: sticky;
+    inset-block-start: 0;
+    align-self: start;
+  }
+}
