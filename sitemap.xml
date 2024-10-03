@@ -340,6 +340,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/vim-leave-insert-fcitx5</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/vim-redo-undo-list</loc>
     <changefreq>hourly</changefreq>
   </url>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ikmnjrd.github.io</id>
     <title>ikmnjrd.github.io</title>
-    <updated>2024-07-29T14:55:40.687Z</updated>
+    <updated>2024-10-03T16:46:38.430Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>ike</name>
@@ -5600,6 +5600,38 @@ $ d8 --print-code sample.js
 - [GitHubの公式ミラーリポジトリ](https://github.com/v8/v8)
 - [公式Gitリポジトリ](https://chromium.googlesource.com/v8/v8.git)
 - [https://v8.dev/docs](https://v8.dev/docs)
+]]></content>
+        <author>
+            <name>ike</name>
+            <uri>https:/x.com/ikmnjrd</uri>
+        </author>
+        <contributor>
+            <name>ike</name>
+            <uri>https:/x.com/ikmnjrd</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[インサートモードから抜けたときに日本語入力モードから英字入力に自動で戻す(fcitx5)]]></title>
+        <id>https://ikmnjrd.github.io/blog/vim-leave-insert-fcitx5</id>
+        <link href="https://ikmnjrd.github.io/blog/vim-leave-insert-fcitx5"/>
+        <updated>2024-10-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[インサートモードから離れたときにfcitx5のコマンドを呼び出す]]></summary>
+        <content type="html"><![CDATA[
+### 結論
+```vim
+augroup fcitx5_integration
+  autocmd!
+  " autocmd InsertEnter * :call system('fcitx5-remote -o')
+  autocmd InsertLeave * :call system('fcitx5-remote -c')
+augroup END
+```
+### 環境
+- neovim 0.10.1
+- fcitx5 5.1.10
+
+### 参考文献
+- [keaising/im-select.nvim: Switch Input Method automatically depends on Neovim's edit mode](https://github.com/keaising/im-select.nvim)
+- [brglng/vim-im-select: Improve Vim/Neovim experience with input methods.](https://github.com/brglng/vim-im-select)
 ]]></content>
         <author>
             <name>ike</name>
