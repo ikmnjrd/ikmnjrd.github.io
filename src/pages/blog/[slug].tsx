@@ -13,6 +13,7 @@ import 'prism-themes/themes/prism-nord.min.css'
 import { Outline } from '~/components/Outline'
 import Link from 'next/link'
 import styles from './article.module.css'
+import { getPostsDirs } from '~/utils/readPost'
 
 export interface IBlog {
   frontmatter: {
@@ -114,7 +115,7 @@ export default function PostPage({
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('_posts'))
+  const files = getPostsDirs()
 
   const paths = files.map((filename) => ({
     params: {
