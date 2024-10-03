@@ -54,7 +54,7 @@ export default function PostPage({
         className={[
           styles.article,
           'lg:grid ',
-          'px-2 md:px-0',
+          'px-2  md:px-4 lg:px-0',
         ].join(' ')}
       >
         <div className="pb-4">
@@ -153,8 +153,6 @@ export async function getStaticProps({
   const { data: frontmatter, content } = matter(markdownWithMeta)
   const innerHtml = markdownIt.render(content)
 
-  console.log({ frontmatter })
-
   const image_tags: string[] =
     innerHtml.match(/src="https:\/\/i\.gyazo.*?"/g) ?? []
 
@@ -173,13 +171,11 @@ export async function getStaticProps({
   }
 
   const ids = replaceHtml.match(/id=["'].+?["']/g)
-  console.log({ ids })
   const anchors =
     ids?.map((id) => ({
       text: decodeURI(id.replace(/id=["'](.+)["']/, '$1')),
       link: id.replace(/id=["'](.+)["']/, '$1'),
     })) ?? []
-  console.log({ anchors })
 
   return {
     props: {

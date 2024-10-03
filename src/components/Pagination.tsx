@@ -1,17 +1,16 @@
 import Link from 'next/link'
-import type { CSSProperties } from 'react'
+import type { HTMLProps } from 'react'
 
 export function Pagination({
   currentPageIndex,
   targetArray,
-  style,
+  ...props
 }: {
   currentPageIndex: number
-  targetArray: any[]
-  style?: CSSProperties
-}) {
+  targetArray: unknown[]
+} & HTMLProps<HTMLDivElement>) {
   return (
-    <div className="flex justify-between" style={style}>
+    <div className="flex justify-between" {...props}>
       {targetArray.map((_, idx) => (
         <div key={idx}>
           <span

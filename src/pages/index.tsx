@@ -8,6 +8,7 @@ import { IFrontMatter } from '~/utils/getPostFilesData'
 import { generateRssFeed } from '~/scripts/rss'
 import { generateSitemap } from '~/scripts/generate-sitemap'
 import { sendAlgoliaIndex } from '~/scripts/algolia'
+import styles from './base.module.css'
 
 interface IPost {
   slug: string
@@ -35,21 +36,24 @@ export default function Home({
         url="/"
       />
 
-      <ul className="min-h-[60vh]">
-        {posts[pageIndex].map((_post) => (
-          <Post
-            key={_post.slug}
-            slug={_post.slug}
-            frontmatter={_post.frontmatter}
-          />
-        ))}
-      </ul>
+      <div className={`${styles.main}`}>
+        <ul className="min-h-[60vh]">
+          {posts[pageIndex].map((_post) => (
+            <Post
+              key={_post.slug}
+              slug={_post.slug}
+              frontmatter={_post.frontmatter}
+            />
+          ))}
+        </ul>
 
-      <Pagination
-        currentPageIndex={pageIndex}
-        targetArray={posts}
-        style={{ marginLeft: 'auto' }}
-      />
+        <Pagination
+          currentPageIndex={pageIndex}
+          targetArray={posts}
+          style={{ marginLeft: 'auto' }}
+          className="flex justify-end mt-8"
+        />
+      </div>
     </>
   )
 }

@@ -4,6 +4,7 @@ import SankeyChart, {
   type Node,
   type Link,
 } from '~/components/SankeyChart'
+import styles from './base.module.css'
 
 export default function Tag({
   wholeTags,
@@ -52,12 +53,15 @@ export default function Tag({
   return (
     <>
       <TitleHead title={'Tag一覧'} />
-      <h1 className="text-3xl pt-8 pb-4">Tag一覧</h1>
-      <SankeyChart
-        nodes={sankeyNodes}
-        links={sankeyLinks}
-        lastIndex={lastNodesLength}
-      />
+
+      <article className={`${styles.main}`}>
+        <h1 className="text-3xl pt-8 pb-4">Tag一覧</h1>
+        <SankeyChart
+          nodes={sankeyNodes}
+          links={sankeyLinks}
+          lastIndex={lastNodesLength}
+        />
+      </article>
     </>
   )
 }
