@@ -1,4 +1,3 @@
-// import App from "next/app";
 import type { AppProps /*, AppContext */ } from 'next/app'
 import Head from 'next/head'
 import Header from '~/components/Header'

@@ -4,7 +4,15 @@ module.exports = {
   darkMode: 'class',
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'zen-kaku-gothic-new': [
+          'Zen Kaku Gothic New',
+          'sans-serif',
+        ],
+        'yuji-mai': ['Yuji Mai', 'serif'],
+      },
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
