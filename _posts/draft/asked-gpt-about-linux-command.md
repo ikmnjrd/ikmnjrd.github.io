@@ -21,4 +21,5 @@ OSはArchベースのEndeavourOSに i3wm                                        
 
 
 ### 参考文献
-- [https://developer.mozilla.org/ja/docs/Learn/Server-side/Express_Nodejs/Introduction](https://developer.mozilla.org/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [keaising/im-select.nvim: Switch Input Method automatically depends on Neovim's edit mode](https://github.com/keaising/im-select.nvim)
+- [brglng/vim-im-select: Improve Vim/Neovim experience with input methods.](https://github.com/brglng/vim-im-select)
