@@ -912,6 +912,18 @@
             }
         },
         {
+            "id": "https://ikmnjrd.github.io/blog/typeorm-to-me",
+            "content_html": "\n## はじめに\n私はTypeORMについてかなりネガティブ寄り\nな意見を持っています。  \nこれはTypeScript環境でのORMは[Prisma](https://www.prisma.io/)が1強とされる2023年、そんな時期に”Tier2以下”とされるORMを使うことを強いられたからにほかならないと思いますが、その”Tier2以下”から見える景色というのは貴重だという思いで、自分から見えた景色を書いていきます。  \nORMの厳密な定義はわかりませんが、ORMかそうじゃないかという論争をたまに見かけます。自分には判断がつかないのでTypeORMやPrismaによき期待される層のことを総称してORMとこの記事の中では呼びます。  \n\n## ここがだめだよTypeORM\n### 型が取り出しづらい\nまずTypeORMのテーブル定義はClassとデコレータで行われます。\n```ts\nimport { Entity, PrimaryGeneratedColumn, Column } from \"typeorm\"\n\n@Entity({ database: \"secondDB\" })\nexport class User {\n    @PrimaryGeneratedColumn()\n    id: number\n\n    @Column()\n    firstName: string\n\n    @Column()\n    lastName: string\n}\n```\n\nリレーションの記述もこれに従います。  \n\n```ts\n@Entity({ database: \"secondDB\" })\nexport class User {\n    @PrimaryGeneratedColumn()\n    id: number\n\n    @Column()\n    firstName: string\n\n    @Column()\n    lastName: string\n\n    @OneToMany(() => Photo, (photo) => photo.user)\n    photos: Photo[]\n}\n```\n\n次にUserテーブルから条件に一致するデータを取り出すときはこう書きます。\n```ts\nuserRepository.find({\n      where: {\n        firstName: \"Timber\",\n        lastName: \"Saw\",\n    },\n})\n```\nここにもうTypeORMの嫌なところが顔を出します。  \n上のコードの返り値からPromiseを解決させると`Userインスタンス`が現れます。  \nつまり、この型には`{ photos: Photo[] }`が含まれています。もちろん実行結果にはphotosは含まれず、relation先も含めて取得する場合はそれ用のオプションがあります。  \n最悪ですね。  \n  \n対応作はもちろんあって、元のUserからOmitしたものをベースに使用し、オプション次第で自分たちで型を組み立てるということもできるわけですが、二度手間です。Prismaならここらもうまくやってくれます。  \n\nちなみに[クエリビルダ](https://typeorm.io/update-query-builder)として使っても一緒です。（Prismaは最近クエリビルダでSQLを書いたらそのSQLに応じた型を提供してくれるようになったというニュースを最近みました。実際にまだ使ってないのでどの程度のものなにかは知りません。）  \n\n### いまだにメジャーバージョンがリリースされてない\n\nTypeORMの名前はよく聞くかと思いますが、実はまだv0.3あたりで、数年前にでました。それまでv0.1やv0.2です。  \n0.2から0.3で破壊的な変更も入っています。  \n\n## 個人的な所感\nTypeORMはTypeScriptバックエンドの初期を担ったツールという印象で、今ではもう時代遅れだと感じます。  \nその理由は自分の中で明確で、テーブル定義もTypeScriptで行おうとした点にあると思っています。  \nリレーショナルデータベースでよく使う機能に限って言っても、デコレータは使わないシンプルなTypeScriptの表現力でカバーしきれていません。そこを近道的にクラスとデコレータで表現をしたため行き詰まり、Prismaにその座を奪われたという印象です。PrismaはDSLですしね。  \nソフトウェアの栄枯盛衰のサイクルについて学びがあったような、なかったような気がします。  \n素直に時代にあった選択肢を選択しよう。  \n\n\n### 参考文献\n- [Prisma | Simplify working and interacting with databases ](https://www.prisma.io/)\n- [Update using Query Builder | TypeORM](https://typeorm.io/update-query-builder)\n",
+            "url": "https://ikmnjrd.github.io/blog/typeorm-to-me",
+            "title": "私が知ってるTypeORMについて、またはPrismaとの比較",
+            "summary": "TypeORMに対して私が思ったこと",
+            "date_modified": "2024-11-19T00:00:00.000Z",
+            "author": {
+                "name": "ike",
+                "url": "https:/x.com/ikmnjrd"
+            }
+        },
+        {
             "id": "https://ikmnjrd.github.io/blog/typescript-compile",
             "content_html": "\n### 疑問\ntypescriptをjavascriptを挟まずにネイティブコードにコンパイルするようなプロジェクトはないのか？\n\n### 自分なりの回答\nないよ。\n\nDenoがTypeScriptコードをサポートしているが、中ではコンパイラが一度JavaScriptに変換している。\n\nマイクロソフトがTypeScriptコンパイラAPIをwikiにしてくれている。\n[https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API)",
             "url": "https://ikmnjrd.github.io/blog/typescript-compile",
