@@ -68,6 +68,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/espanso-introduvtion</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/event-bubbling-capturing-on-react</loc>
     <changefreq>hourly</changefreq>
   </url>
