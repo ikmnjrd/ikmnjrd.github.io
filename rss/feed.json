@@ -472,6 +472,18 @@
             }
         },
         {
+            "id": "https://ikmnjrd.github.io/blog/keyball44-keymap",
+            "content_html": "\n### はじめに\nもともと分割キーボードや40%キーボードは未経験で、US配列のHHKBやMagic Keyboardを使用していた。  \nMac歴が長く、現在は仕事でMac、プライベートではLinuxを使っていてどちらにも対応できるような配列を目指した。  \n1週間程度、両環境で運用したところ以前よりも入力のスピードは出ないが（特に記号、ショートカット）、考えたらムリな運指にはならずに入力したいものが入力できる状態になったので、そのキーマップを公開する。  \n\n### こだわったポイント\n- Webブラウジングなど、リラックスして行いたい操作は片手で操作できるようにトラックボール側に固める\n- 早く慣れるためにもともと使っていた配列に近づける\n\n### キーマップ\n![layer0](https://i.gyazo.com/73ecdb0b51dbffc4c936fe48c583f06e.png)\n![layer1](https://i.gyazo.com/303aaa661a3c15858f6f26c21f816d1d.png)\n![layer2](https://i.gyazo.com/ba9bbb83f5004f4bb91bda0fc74e1dd8.png)\n![layer3](https://i.gyazo.com/0a0c3606ed29e1249a9166e44ce8bf9a.png)\n\n### 今後の課題\n- 英語と日本語の切り替えをMacに寄せて右親指を日本語、左親指で英語が選択されるようにしているが、Linux環境だと右側がtoggle、左側が日本語になってしまう部分が今のところ一番混乱する部分（ctrlと⌘/superの違いは元から慣れていた）\n- viaだとJSONで管理できるらしいと聞いたが動かなかったので保留\n- スクロールのためのLo3の押し込みとトラックボール操作で小指が疲れる\n- チャット系のサービスで使いがちな⌘+Enter(Mac環境のみ)がホームポジションから押しづらい\n- layer3がスカスカ、キーの種類が全然わからないのでそれらを使ってみること\n\n### 参考文献\n- [keyball/keyball44/doc/rev1/buildguide_jp.md at main · Yowkees/keyball](https://github.com/Yowkees/keyball/blob/main/keyball44/doc/rev1/buildguide_jp.md)\n- [VIA](https://usevia.app/)\n",
+            "url": "https://ikmnjrd.github.io/blog/keyball44-keymap",
+            "title": "MacとLinux兼用する人間によるkeyball44のキーマップ",
+            "summary": "keyball44を1週間使ってみてたどり着いたキーマップの紹介",
+            "date_modified": "2024-12-03T00:00:00.000Z",
+            "author": {
+                "name": "ike",
+                "url": "https:/x.com/ikmnjrd"
+            }
+        },
+        {
             "id": "https://ikmnjrd.github.io/blog/licence-seeking",
             "content_html": "\n### どのように書くのがいいのか\nMITやISCなどよく書いてあるがどう書くのがいいのか？\nnpm Docsにはこのように書いてある。\n> BSD-2-Clause や MIT などの一般的なライセンスを使用している場合は、次のように、使用しているライセンスの現在の SPDX ライセンス識別子を追加します。\n> { \"license\" : \"BSD-3-Clause\" }\n> --- [package.json | npm Docs](https://docs.npmjs.com/cli/v6/configuring-npm/package-json#license)\n\n### SPDXとは\nLinux Foundationのブログ（日本語訳版）に怪しい日本語でこのように書いてあります。\n> SPDXは、コンポーネント、ライセンス、著作権、セキュリティ リファレンスなどのソフトウェア部品表 (SBOM) 情報を伝達するためのオープンな標準です\n> --- [SPDX : すでに世界共通のソフトウェア部品表 (SBOM) およびサプライチェーン セキュリティで使用 - The Linux Foundation](https://www.linuxfoundation.jp/blog/2021/06/spdx-its-already-in-use-for-global-software-bill-of-materials-sbom-and-supply-chain-security/)\n\n### ライセンスのリストを参照する\n[SPDX License List](https://spdx.org/licenses/)\nリンク先の表からのIdentifierを探し、次のようにかく。\n```json\n{ \"license\" : \"CC0-1.0\" }\n```\n\nUnlicenseなどもしっかりとSPDXライセンスリストに記載されています。\n\n### 余談\n[https://github.com/jslicense/spdx-license-ids](https://github.com/jslicense/spdx-license-ids)のスター数は2桁なのにUsed byの項目が1千万人近くになってるのはどういうことなのか不思議に思った。\n\n\n\n\n\n\n",
             "url": "https://ikmnjrd.github.io/blog/licence-seeking",
