@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ikmnjrd.github.io</id>
     <title>ikmnjrd.github.io</title>
-    <updated>2024-12-03T16:21:56.115Z</updated>
+    <updated>2024-12-04T15:02:19.856Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>ike</name>
@@ -2321,7 +2321,6 @@ Time:        0.222 s
         <updated>2024-12-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[keyball44を1週間使ってみてたどり着いたキーマップの紹介]]></summary>
         <content type="html"><![CDATA[
-### はじめに
 もともと分割キーボードや40%キーボードは未経験で、US配列のHHKBやMagic Keyboardを使用していた。  
 Mac歴が長く、現在は仕事でMac、プライベートではLinuxを使っていてどちらにも対応できるような配列を目指した。  
 1週間程度、両環境で運用したところ以前よりも入力のスピードは出ないが（特に記号、ショートカット）、考えたらムリな運指にはならずに入力したいものが入力できる状態になったので、そのキーマップを公開する。  
@@ -2329,6 +2328,10 @@ Mac歴が長く、現在は仕事でMac、プライベートではLinuxを使っ
 ### こだわったポイント
 - Webブラウジングなど、リラックスして行いたい操作は片手で操作できるようにトラックボール側に固める
 - 早く慣れるためにもともと使っていた配列に近づける
+- Linuxではi3、Macではyabaiのショートカットの利用が無理なくできる
+
+### あきらめたこと
+- もともと3キー以上を同時押しするようなショートカットも多用していたので、それらもすべて2キーまでの同時押しに収めようとするとレイヤーが足りないので諦める
 
 ### キーマップ
 ![layer0](https://i.gyazo.com/73ecdb0b51dbffc4c936fe48c583f06e.png)
