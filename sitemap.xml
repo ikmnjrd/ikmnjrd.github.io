@@ -328,6 +328,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/todo-txt-with-vim</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/ts-jest-fail-because-import-global-jset</loc>
     <changefreq>hourly</changefreq>
   </url>
