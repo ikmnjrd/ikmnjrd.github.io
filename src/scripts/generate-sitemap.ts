@@ -34,3 +34,5 @@ ${pages.map(addPage).join('\n')}
   writeFileSync('public/sitemap.xml', sitemap)
   console.info('generated sitemap.xml!')
 }
+
+generateSitemap()
