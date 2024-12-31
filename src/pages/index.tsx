@@ -5,8 +5,6 @@ import OgpHead from '~/components/OgpHead'
 import { Pagination } from '~/components/Pagination'
 import { useRouter } from 'next/router'
 import { IFrontMatter } from '~/utils/getPostFilesData'
-import { generateRssFeed } from '~/scripts/rss'
-import { generateSitemap } from '~/scripts/generate-sitemap'
 import { sendAlgoliaIndex } from '~/scripts/algolia'
 import styles from './base.module.css'
 
@@ -59,10 +57,6 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  // どこかのページでやればいい。ここ以外今は候補が思いつかないからここで処理。
-  await generateRssFeed()
-  await generateSitemap()
-
   const posts = await getPostsMeta()
   const SEPARATE_NUM = 15
 
