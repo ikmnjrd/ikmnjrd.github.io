@@ -1,4 +1,6 @@
 // デプロイ時のビルド用にタイムアウトを設定する
-setTimeout(() => {
+let timer = setTimeout(() => {
   console.log('Timeout!')
 }, 20000)
+
+export { timer }
