@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import DarkModeButton from '~/components/DarkModeButton'
 import Modal from '~/components/Modal/Modal'
-import Search from '~/components/Search'
+import Minisearch from '../components/Minisearch/index'
 
 export default function Header() {
   return (
@@ -23,7 +23,7 @@ export default function Header() {
           label="Search"
           labelClass="header-text mr-4 md:text-3xl text-2xl font-serif decoration-dotted hover:opacity-50 hover:underline active:opacity-30"
         >
-          <Search />
+          <Minisearch />
         </Modal>
         <Link href="/about" passHref legacyBehavior>
           <a className="header-text mr-4 md:text-3xl text-2xl font-serif decoration-dotted hover:opacity-50 hover:underline active:opacity-30">

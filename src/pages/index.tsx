@@ -5,7 +5,6 @@ import OgpHead from '~/components/OgpHead'
 import { Pagination } from '~/components/Pagination'
 import { useRouter } from 'next/router'
 import { IFrontMatter } from '~/utils/getPostFilesData'
-import { sendAlgoliaIndex } from '~/scripts/algolia'
 import styles from './base.module.css'
 
 interface IPost {
@@ -74,9 +73,6 @@ export async function getStaticProps() {
     })
   }
   const dividedPosts = sliceByNumber(posts, SEPARATE_NUM)
-
-  // algoliaにページ内検索に利用する記事情報を送信
-  sendAlgoliaIndex()
 
   return {
     props: {

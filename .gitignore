@@ -9,6 +9,8 @@ public/images/posts/*
 !public/images/posts/.gitkeep
 public/rss/*
 !public/rss/.gitkeep
+public/to-search/*
+!public/to-search/.gitkeep
 
 ## dependencies
 node_modules

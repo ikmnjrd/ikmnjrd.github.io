@@ -69,11 +69,3 @@ img[class^='svg-icon'],
     transform: translate3d(0, 5px, 0);
   }
 }
-
-/* Algoria */
-.ais-Pagination-list {
-  flex-wrap: wrap;
-}
-.ais-Snippet {
-  word-break: break-all;
-}
