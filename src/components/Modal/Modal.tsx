@@ -13,29 +13,18 @@ export default function Modal({
 
   function onClickOpenBtn() {
     dialogRef.current?.showModal()
+
+    // Searchのコンポーネント用の処理
+    if (dialogRef.current) {
+      const input = dialogRef.current.querySelector('input')
+      if (input) {
+        input.focus()
+      }
+    }
   }
 
   function onClickCloseBtn() {
     dialogRef.current?.close()
-  }
-
-  function handleClickForChildren(evTarget: unknown) {
-    // @ts-expect-error FIXME
-    if (!evTarget?.outerHTML) {
-      return
-    }
-
-    // @ts-expect-error FIXME
-    const html = evTarget.outerHTML as string
-
-    if (
-      !html.includes('ais-Hits-list') &&
-      (html.includes('data-target-close') ||
-        html.includes('ais-Highlight') ||
-        html.includes('ais-Snippet'))
-    ) {
-      onClickCloseBtn()
-    }
   }
 
   return (
@@ -59,7 +48,6 @@ export default function Modal({
             role="dialog"
             aria-modal="true"
             onClick={(e) => {
-              handleClickForChildren(e.nativeEvent.target)
               e.stopPropagation()
             }}
           >
