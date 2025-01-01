@@ -30,6 +30,10 @@
   margin: 1rem 0;
 }
 
+.resultOne:hover {
+  background-color: theme(colors.newmo.100);
+}
+
 .resultTitle {
   font-size: 1.5rem;
   font-weight: bold;
