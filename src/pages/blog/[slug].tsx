@@ -67,7 +67,7 @@ export default function PostPage({
                 <li key={t} className="mr-2 inline-block">
                   <Link
                     href={`/tag/${t}`}
-                    className="border-newmo-400 border-2 px-4 py-1 rounded-full"
+                    className="border-newmo-400 border-2 px-4 py-1 rounded-full hover:bg-newmo-100 hover:text-newmo-400"
                   >
                     {t}
                   </Link>
