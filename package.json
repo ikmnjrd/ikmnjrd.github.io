@@ -10,18 +10,15 @@
     "build:next": "next build",
     "prebuild": "run-s prebuild:*",
     "prebuild:clean": "rimraf ./tmp",
-    "prebuild:init": "mkdir ./tmp",
-    "postbuild": "run-s postbuild:*",
-    "postbuild:sitemap": "tsx ./src/scripts/generate-sitemap.ts",
-    "postbuild:rss": "tsx ./src/scripts/rss.ts",
-    "postbuild:search": "tsx ./src/scripts/search-json.ts",
-    "postbuild:timer": "tsx ./src/scripts/build-timer.ts",
+    "prebuild:init": "mkdir -p ./tmp",
+    "prebuild:sitemap": "tsx ./src/scripts/generate-sitemap.ts",
+    "prebuild:rss": "tsx ./src/scripts/rss.ts",
+    "prebuild:search": "tsx ./src/scripts/search-json.ts",
     "typecheck": "tsc",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --silent --config=jest.config.js",
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch --silent --config=jest.config.js",
     "prepare": "husky install",
-    "prettier": "prettier --config ./.prettierrc --write ./src",
-    "smug": "smug start -f ./smug.yml"
+    "prettier": "prettier --config ./.prettierrc --write ./src"
   },
   "license": "MIT",
   "dependencies": {
