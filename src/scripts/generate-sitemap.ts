@@ -26,6 +26,7 @@ export async function generateSitemap() {
     '!src/pages/_*.tsx',
     '!src/pages/api',
   ])
+  console.log(pages)
 
   const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(addPage).join('\n')}
