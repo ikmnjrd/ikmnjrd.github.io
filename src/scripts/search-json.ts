@@ -12,6 +12,8 @@ export const generateJsonForSearch = async () => {
     './public/to-search/blog-contents.json',
     JSON.stringify(postsWithId)
   )
+
+  console.log('json for search generated')
 }
 
 generateJsonForSearch()
