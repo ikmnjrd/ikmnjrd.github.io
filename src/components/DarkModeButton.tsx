@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { UserContext } from '../hooks/useUserContext'
+import styles from './DarkModeButton.module.css'
 
 type DarkModeButtonProps = {
   className?: string
@@ -20,7 +21,7 @@ export default function DarkModeButton({
       <img
         width="24px"
         height="24px"
-        className="svg-icon md:w-10 hover:opacity-50 active:opacity-30"
+        className={styles.icon}
         src={`/${
           isDarkMode
             ? 'nights_stay_white_24dp'

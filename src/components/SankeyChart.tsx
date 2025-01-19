@@ -7,6 +7,7 @@ import {
 import { useD3 } from '../hooks/useD3'
 import { useWindowSize } from '../hooks/useWindowSize'
 import { UserContext } from '../hooks/useUserContext'
+import styles from './SankeyChart.module.css'
 
 export interface Node {
   name: string // tag
@@ -115,10 +116,7 @@ function SankeyChart(props: Props) {
         )
         .insert('a')
         .attr('xlink:href', (d) => d.url)
-        .classed(
-          'hover:opacity-50 hover:underline active:opacity-30',
-          true
-        )
+        .classed(styles.link, true)
         .text((i) => i.name)
         .style('fill', fillColor)
     }

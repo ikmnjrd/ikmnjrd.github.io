@@ -1,0 +1,12 @@
+.link {
+  color: var(--color-newmo-400);
+}
+
+.link:hover {
+  opacity: 0.5;
+  text-decoration: underline;
+}
+
+.link:active {
+  opacity: 0.3;
+}

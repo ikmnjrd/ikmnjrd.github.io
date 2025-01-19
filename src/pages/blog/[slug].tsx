@@ -5,6 +5,7 @@ import MarkdownIt from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor'
 import markdownItPrism from 'markdown-it-prism'
 import Head from 'next/head'
+import classNames from 'classnames'
 import TitleHead from '../../components/TitleHead'
 import OgpHead from '../../components/OgpHead'
 import markdownStyles from '../../components/markdown/markdown-styles.module.css'
@@ -34,8 +35,6 @@ export default function PostPage({
   innerHtml,
   anchors,
 }: IBlog) {
-  const dotBorder = 'border-dotted border-newmo-400'
-
   return (
     <>
       <TitleHead title={title} />
@@ -51,23 +50,17 @@ export default function PostPage({
         )}
       </Head>
 
-      <article
-        className={[
-          styles.article,
-          'lg:grid ',
-          'px-2  md:px-4 lg:px-0',
-        ].join(' ')}
-      >
-        <div className="pb-4">
-          <h1 className={`${styles.title} mb-4`}>{title}</h1>
+      <article className={styles.article}>
+        <div className={styles.header}>
+          <h1 className={styles.title}>{title}</h1>
 
-          <ul className="mb-2">
+          <ul className={styles.tagList}>
             {tag &&
               tag.map((t) => (
-                <li key={t} className="mr-2 inline-block">
+                <li key={t} className={styles.tagItem}>
                   <Link
                     href={`/tag/${t}`}
-                    className="border-newmo-400 border-2 px-4 py-1 rounded-full hover:bg-newmo-100 hover:text-newmo-400"
+                    className={styles.tagLink}
                   >
                     {t}
                   </Link>
@@ -75,7 +68,7 @@ export default function PostPage({
               ))}
           </ul>
 
-          <div className="">Posted on {date}</div>
+          <div className={styles.date}>Posted on {date}</div>
         </div>
 
         {/* TODO: 記事内で使われているかどうか調査の後、削除 */}
@@ -88,26 +81,23 @@ export default function PostPage({
             order: 2,
             padding: '1rem 2rem',
           }}
-          className={[
+          className={classNames(
             styles.gridElSticky,
-            dotBorder,
-            'border-t-2',
-          ].join(' ')}
+            styles.dotBorder,
+            styles.borderTop
+          )}
         />
 
         <div
           dangerouslySetInnerHTML={{
             __html: innerHtml,
           }}
-          className={[
+          className={classNames(
             markdownStyles['markdown'],
-            dotBorder,
-            'border-t-2',
-            'md:border-r-2 md:pr-4',
-          ].join(' ')}
-          style={{
-            order: 1,
-          }}
+            styles.content,
+            styles.dotBorder,
+            styles.borderTop
+          )}
         ></div>
       </article>
     </>

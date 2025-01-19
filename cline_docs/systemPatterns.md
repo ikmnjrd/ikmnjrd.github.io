@@ -25,6 +25,8 @@
 - コンポーネントは機能ごとに分割
 - Props の型定義を厳密に行う
 - CSS Modules または Tailwind CSS でスタイリング
+  - 新しく着手するものは CSS modules を使用する
+  - ただし、`composes: xxx from global`の構文は使わない
 - classnames パッケージを使用したクラス名の管理
 
   ```typescript

@@ -1,0 +1,14 @@
+.icon {
+  width: var(--font-size-lg);
+  height: var(--font-size-lg);
+  color: var(--color-text-primary);
+  filter: var(--icon-filter);
+}
+
+.icon:hover {
+  opacity: 0.5;
+}
+
+.icon:active {
+  opacity: 0.3;
+}

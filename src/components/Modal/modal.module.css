@@ -3,11 +3,8 @@
 \**************************/
 
 .modal {
-  /* font-family: -apple-system, BlinkMacSystemFont, avenir next,
-    avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
-    segoe ui, arial, sans-serif; */
   position: relative;
-  z-index: 9999;
+  z-index: var(--z-modal);
   text-align: left;
   /* dialog.showModal時のbackdrop対策 */
   padding: 0;
@@ -19,28 +16,23 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--color-overlay);
   display: flex;
   justify-content: center;
-  /* 
-  ここのオリジナル部分はコメントアウト
-  align-items: center;
-  */
 }
 
 .modal__container {
-  background-color: #fff;
-  padding: 30px;
-  min-width: 320px;
+  background-color: var(--color-background);
+  padding: var(--spacing-modal);
+  min-width: var(--min-width-modal);
   width: 100vw;
-  max-width: 640px;
-  max-height: calc(100vh - 50px - 50px);
-  border-radius: 4px;
+  max-width: var(--max-width-modal);
+  max-height: calc(100vh - var(--modal-top-offset) * 2);
+  border-radius: var(--radius-md);
   overflow-y: auto;
   box-sizing: border-box;
-  /* カスタマイズ部分 */
   position: absolute;
-  top: 50px;
+  top: var(--modal-top-offset);
 }
 
 .modal__header {
@@ -53,9 +45,9 @@
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: var(--font-size-md);
   line-height: 1.25;
-  color: #00449e;
+  color: var(--color-primary);
   box-sizing: border-box;
 }
 
@@ -69,21 +61,18 @@
 }
 
 .modal__content {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: var(--spacing-8);
+  margin-bottom: var(--spacing-8);
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--color-text-body);
 }
 
 .modal__btn {
-  font-size: 0.875rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background-color: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  border-radius: 0.25rem;
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: var(--color-button);
+  color: var(--color-text-body);
+  border-radius: var(--radius-sm);
   border-style: none;
   border-width: 0;
   cursor: pointer;
@@ -111,8 +100,8 @@
 }
 
 .modal__btn-primary {
-  background-color: #00449e;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
 }
 
 /**************************\

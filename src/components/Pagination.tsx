@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { HTMLProps } from 'react'
 import classNames from 'classnames'
+import styles from './Pagination.module.css'
 
 export function Pagination({
   currentPageIndex,
@@ -11,12 +12,12 @@ export function Pagination({
   targetArray: unknown[]
 } & HTMLProps<HTMLDivElement>) {
   return (
-    <div className="flex justify-between" {...props}>
+    <div className={styles.container} {...props}>
       {targetArray.map((_, idx) => (
         <div key={idx}>
           <span
-            className={classNames('mx-2 px-1 hover:opacity-50', {
-              underline: idx === currentPageIndex,
+            className={classNames(styles.pageLink, {
+              [styles.active]: idx === currentPageIndex,
             })}
           >
             <Link href={`?p=${idx}`}>{idx + 1}</Link>
