@@ -25,6 +25,28 @@
 - コンポーネントは機能ごとに分割
 - Props の型定義を厳密に行う
 - CSS Modules または Tailwind CSS でスタイリング
+- classnames パッケージを使用したクラス名の管理
+
+  ```typescript
+  // 条件付きクラス
+  className={classNames('base-class', {
+    'conditional-class': condition
+  })}
+
+  // CSS Modules
+  className={classNames(
+    styles.baseClass,
+    styles.additionalClass
+  )}
+  ```
+
+### インポートパス規約
+
+- src/ ディレクトリ配下のファイルインポートは以下の規則に従う:
+  1. 同一ディレクトリ内: `./component`
+  2. 子ディレクトリ: `./subdirectory/component`
+  3. 親ディレクトリ: `../parentDirectory/component`
+- 詳細は ADR-001 を参照
 
 ### データフロー
 

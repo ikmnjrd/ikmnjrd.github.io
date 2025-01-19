@@ -1,4 +1,5 @@
 import { useRef, PropsWithChildren } from 'react'
+import classNames from 'classnames'
 import styles from './modal.module.css'
 
 /**
@@ -35,7 +36,10 @@ export default function Modal({
         </span>
       </button>
       <dialog
-        className={`${styles.modal} ${styles.micromodal__slide}`}
+        className={classNames(
+          styles.modal,
+          styles.micromodal__slide
+        )}
         ref={dialogRef}
       >
         <div

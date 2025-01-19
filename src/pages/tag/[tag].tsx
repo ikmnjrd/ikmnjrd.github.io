@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import getPostsFromTag from '~/utils/getPostsFromTag'
-import getTags from '~/utils/getTags'
-import { IFrontMatter } from '~/utils/getPostFilesData'
-import TitleHead from '~/components/TitleHead'
+import getPostsFromTag from '../../utils/getPostsFromTag'
+import getTags from '../../utils/getTags'
+import { IFrontMatter } from '../../utils/getPostFilesData'
+import TitleHead from '../../components/TitleHead'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { ParsedUrlQuery } from 'node:querystring'
-import styles from '~/pages/base.module.css'
+import styles from '../base.module.css'
 
 interface Props {
   tag: string

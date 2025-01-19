@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { isBrowser, off, on } from '~/utils/browser'
+import { isBrowser, off, on } from '../utils/browser'
 
 // Inspiration from react-use:
 // https://github.com/streamich/react-use/blob/master/src/misc/util.ts

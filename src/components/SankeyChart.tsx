@@ -4,9 +4,9 @@ import {
   sankeyLinkHorizontal,
   sankeyCenter,
 } from 'd3-sankey'
-import { useD3 } from '~/hooks/useD3'
-import { useWindowSize } from '~/hooks/useWindowSize'
-import { UserContext } from '~/hooks/useUserContext'
+import { useD3 } from '../hooks/useD3'
+import { useWindowSize } from '../hooks/useWindowSize'
+import { UserContext } from '../hooks/useUserContext'
 
 export interface Node {
   name: string // tag

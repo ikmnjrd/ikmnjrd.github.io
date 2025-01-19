@@ -1,10 +1,10 @@
-import Post from '~/components/Post'
-import getPostsMeta from '~/utils/getPostsMeta'
-import TitleHead from '~/components/TitleHead'
-import OgpHead from '~/components/OgpHead'
-import { Pagination } from '~/components/Pagination'
+import Post from '../components/Post'
+import getPostsMeta from '../utils/getPostsMeta'
+import TitleHead from '../components/TitleHead'
+import OgpHead from '../components/OgpHead'
+import { Pagination } from '../components/Pagination'
 import { useRouter } from 'next/router'
-import { IFrontMatter } from '~/utils/getPostFilesData'
+import { IFrontMatter } from '../utils/getPostFilesData'
 import styles from './base.module.css'
 
 interface IPost {
