@@ -1,19 +1,20 @@
 import { FC } from 'react'
 import SvgIcon from './SvgIcon'
+import styles from './Footer.module.css'
 
 const Footer: FC = () => {
   const date = new Date()
   return (
-    <footer className="text-center text-sm" role="contentinfo">
-      <div className="footer-content">
-        <ul className="flex items-center justify-between max-w-[150px] mx-auto">
+    <footer className={styles.footer} role="contentinfo">
+      <div className={styles.content}>
+        <ul className={styles.socialList}>
           <li>
             <a
               href="https://x.com/ikmnjrd"
               target="_blank"
               rel="nofollow noopener noreferrer"
               title="x"
-              className="footer-svg hover:opacity-50 block"
+              className={styles.socialLink}
             >
               <SvgIcon
                 type="x"
@@ -29,7 +30,7 @@ const Footer: FC = () => {
               target="_blank"
               rel="nofollow noopener noreferrer"
               title="GitHub"
-              className="footer-svg header-text hover:opacity-50 block"
+              className={styles.socialLink}
             >
               <SvgIcon
                 type="github"
@@ -45,7 +46,7 @@ const Footer: FC = () => {
               target="_blank"
               rel="nofollow noopener noreferrer"
               title="RSS"
-              className="footer-svg header-text hover:opacity-50 block"
+              className={styles.socialLink}
             >
               <SvgIcon
                 type="rss"
@@ -56,15 +57,15 @@ const Footer: FC = () => {
             </a>
           </li>
         </ul>
-        <p className="pt-4">
+        <p className={styles.copyright}>
           ©︎ikmnjrd -{' '}
           <time dateTime={date.toString()}>
             {date.getFullYear()}
           </time>
         </p>
       </div>
-      <div className="wave"></div>
-      <div className="wave"></div>
+      <div className={styles.wave}></div>
+      <div className={styles.wave}></div>
     </footer>
   )
 }

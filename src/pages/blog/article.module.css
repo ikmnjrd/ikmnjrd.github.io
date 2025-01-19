@@ -1,21 +1,79 @@
 .title {
-  @apply text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight md:leading-none text-center md:text-left;
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: -0.05em;
+  line-height: 1.25;
+  text-align: left;
 }
 
 .article {
-  /* tailwindのブレークポイント依存。
-  * screens: { sm: '480px'; md: '768px',lg: '976px'}
-  * tailwindを捨てたときにcss変数で書き直す */
   grid-template-columns:
     minmax(481px, 976px)
     max-content;
   justify-content: center;
 }
 
-.gridElSticky {
-  @media (min-width: 976px) {
+.header {
+  padding-bottom: var(--spacing-4);
+}
+
+.tagList {
+  padding: var(--spacing-4) 0;
+}
+
+.tagItem {
+  display: inline-block;
+  margin-right: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+}
+
+.tagLink {
+  display: block;
+  border: 2px solid var(--color-newmo-400);
+  padding: var(--spacing-1) var(--spacing-4);
+  border-radius: 24px;
+}
+
+.tagLink:hover {
+  background-color: var(--color-newmo-100);
+  color: var(--color-newmo-400);
+}
+.date {
+  text-align: right;
+  padding-right: var(--spacing-4);
+}
+.content {
+  order: 1;
+}
+
+.dotBorder {
+  border-style: dotted;
+  border-color: var(--color-newmo-400);
+}
+
+.borderTop {
+  border-top-width: 2px;
+}
+
+@container style(--less-than-eq-large) {
+  .title {
+    font-size: 1.5rem;
+    line-height: 1;
+    text-align: center;
+  }
+}
+
+@container style(--is-x-large) {
+  .article {
+    display: grid;
+  }
+  .gridElSticky {
     position: sticky;
     inset-block-start: 0;
     align-self: start;
+  }
+  .content {
+    border-right: 2px dotted var(--color-newmo-400);
+    padding-right: var(--spacing-4);
   }
 }

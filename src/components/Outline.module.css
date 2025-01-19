@@ -1,0 +1,18 @@
+.desktopOutline {
+  display: block;
+}
+.mobileOutline {
+  display: none;
+}
+@container style(--less-than-eq-large) {
+  .desktopOutline {
+    display: none;
+  }
+  .mobileOutline {
+    display: block;
+  }
+}
+
+.item {
+  margin-bottom: var(--spacing-2);
+}

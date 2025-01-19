@@ -23,15 +23,13 @@ export default function TagLinkPage({ tag, posts }: Props) {
     <>
       <TitleHead title={`${tag}の記事`} />
 
-      <article className={`${styles.main}`}>
-        <h1 className="text-3xl pt-8 pb-4">
-          {tag}の投稿記事一覧
-        </h1>
+      <article className={styles.main}>
+        <h1 className={styles.pageTitle}>{tag}の投稿記事一覧</h1>
         <div>
           {posts.map((post) => (
             <li key={post.slug}>
               <Link href={`/blog/${post.slug}`} legacyBehavior>
-                <a className="hover:underline hover:text-newmo-400 visited:text-newmo-300">
+                <a className={styles.link}>
                   {post.frontmatter.title}
                 </a>
               </Link>

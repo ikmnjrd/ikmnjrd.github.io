@@ -33,8 +33,8 @@ export default function Home({
         url="/"
       />
 
-      <div className={`${styles.main}`}>
-        <ul className="min-h-[60vh]">
+      <div className={styles.main}>
+        <ul className={styles.postList}>
           {posts[pageIndex].map((_post) => (
             <Post
               key={_post.slug}
@@ -48,7 +48,7 @@ export default function Home({
           currentPageIndex={pageIndex}
           targetArray={posts}
           style={{ marginLeft: 'auto' }}
-          className="flex justify-end mt-8"
+          className={styles.pagination}
         />
       </div>
     </>

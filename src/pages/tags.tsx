@@ -55,7 +55,7 @@ export default function Tag({
       <TitleHead title={'Tag一覧'} />
 
       <article className={`${styles.main}`}>
-        <h1 className="text-3xl pt-8 pb-4">Tag一覧</h1>
+        <h1 className={styles.pageTitle}>Tag一覧</h1>
         <SankeyChart
           nodes={sankeyNodes}
           links={sankeyLinks}

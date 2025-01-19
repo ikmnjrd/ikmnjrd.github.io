@@ -1,0 +1,93 @@
+:root {
+  /* Colors TODO: 修正*/
+  --color-text-primary: white;
+  --color-text-body: rgba(0, 0, 0, 0.8);
+  --color-primary: #00449e;
+  --color-background: #fff;
+  --color-overlay: rgba(0, 0, 0, 0.6);
+  --color-button: #e6e6e6;
+
+  /* Shadows */
+  --text-shadow-primary: -2px -2px 1px rgba(0, 0, 0, 0.25),
+    3px 3px 3px rgba(255, 255, 255, 0.5);
+  --icon-filter: drop-shadow(
+      3px 3px 3px rgba(255, 255, 255, 0.3)
+    )
+    drop-shadow(-2px -2px 1px rgba(0, 0, 0, 0.25));
+
+  /* Font Sizes */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1.25rem; /* 20px */
+  --font-size-lg: 2.25rem; /* 32px */
+  --font-size-xl: 3rem; /* 48px */
+
+  --font-size-lg-line-height: 2rem;
+  --font-size-xl-line-height: 1;
+
+  /* Spacing */
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem; /* 16px */
+  --spacing-8: 2rem; /* 32px */
+  --spacing-modal: 30px;
+
+  /* Layout */
+  --max-width-body: 1200px;
+  --max-width-modal: 640px;
+  --min-width-modal: 320px;
+  --modal-top-offset: 50px;
+
+  /* Z-index */
+  --z-modal: 9999;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 0.8rem; /* 12.8px */
+  --radius-xl: 1.2rem; /* 19.2px */
+
+  /* Footer */
+  --footer-content-top: 50px;
+  --footer-content-height: 50px;
+  --footer-wave-height: 198px;
+  --footer-social-max-width: 150px;
+  --footer-icon-size-base: 1.8em;
+  --footer-icon-size-large: 2em;
+  --footer-wave-animation-duration: 7s;
+
+  /* Colors */
+  --color-newmo-100: #eff2f9;
+  --color-newmo-200: #e4ebf1;
+  --color-newmo-300: #b5bfc6;
+  --color-newmo-400: #6e7f8d;
+  --color-newmo-600: #5a6872;
+  --color-newmo-800: #3f4950;
+
+  /* Breakpoints */
+  /* less-than系をできるだけ使用する。is系はあまり使わないようにしたい。 */
+  @media (480px >= width >= 0px) {
+    --is-small: true;
+  }
+  @media (768px >= width > 480px) {
+    --is-medium: true;
+  }
+  @media (976px >= width > 768px) {
+    --is-large: true;
+  }
+  @media (width > 976px) {
+    --is-x-large: true;
+  }
+  @media (480px >= width) {
+    --less-than-eq-small: true;
+  }
+  @media (768px >= width) {
+    --less-than-eq-medium: true;
+  }
+  @media (976px >= width) {
+    --less-than-eq-large: true;
+  }
+  @media (width > 976px) {
+    --greater-than-large: true;
+  }
+}

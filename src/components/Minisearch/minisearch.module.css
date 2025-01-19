@@ -1,43 +1,61 @@
 .title {
-  color: theme(colors.newmo.400);
-  @apply text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight md:leading-none text-center md:text-left;
+  color: var(--color-newmo-400);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.875rem;
+    line-height: 1;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 2.25rem;
+  }
 }
 
 .input {
-  border: 1px solid theme(colors.newmo.400);
-  border-radius: 1.2rem;
+  border: 1px solid var(--color-newmo-400);
+  border-radius: var(--radius-xl);
   padding: 0.36rem 1rem;
-  margin: 1rem 0;
+  margin: var(--spacing-4) 0;
 }
 
 .input:focus {
-  border: 1px solid theme(colors.newmo.400);
+  border: 1px solid var(--color-newmo-400);
 }
 
 .input::placeholder {
-  color: theme(colors.newmo.400);
+  color: var(--color-newmo-400);
 }
 
 .input::selection {
-  background-color: theme(colors.newmo.400);
+  background-color: var(--color-newmo-400);
 }
 
 .resultOne {
   display: block;
-  border: 1px solid theme(colors.newmo.400);
-  border-radius: 0.8rem;
-  padding: 1rem;
-  margin: 1rem 0;
+  border: 1px solid var(--color-newmo-400);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  margin: var(--spacing-4) 0;
 }
 
 .resultOne:hover {
-  background-color: theme(colors.newmo.100);
+  background-color: var(--color-newmo-100);
 }
 
 .resultTitle {
   font-size: 1.5rem;
   font-weight: bold;
-  color: theme(colors.newmo.400);
+  color: var(--color-newmo-400);
 }
 
 .resultContent {
@@ -55,20 +73,20 @@
 }
 
 .pagination button {
-  background-color: theme(colors.newmo.400);
+  background-color: var(--color-newmo-400);
   border: none;
-  color: white;
-  padding: 0.5rem 1rem;
+  color: var(--color-text-primary);
+  padding: var(--spacing-2) var(--spacing-4);
   margin: 0 0.25rem;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-md);
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .pagination button:hover {
-  background-color: theme(colors.newmo.600);
+  background-color: var(--color-newmo-600);
 }
 
 .pagination button.activePage {
-  background-color: theme(colors.newmo.800);
+  background-color: var(--color-newmo-800);
 }

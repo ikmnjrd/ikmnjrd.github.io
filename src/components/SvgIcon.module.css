@@ -1,0 +1,11 @@
+.icon {
+  color: currentColor;
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
+
+.icon:active {
+  opacity: 0.6;
+}
