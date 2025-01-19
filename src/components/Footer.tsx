@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import SvgIcon from '~/components/SvgIcon'
+import SvgIcon from './SvgIcon'
 
 const Footer: FC = () => {
   const date = new Date()

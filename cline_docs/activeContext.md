@@ -1,44 +1,32 @@
-# アクティブコンテキスト
+# 現在の作業内容
 
-## 現在の作業内容
+パスエイリアスを相対パスに変更する作業を完了しました。
 
-- プロジェクトのガイドライン (.clinerules) を作成
-- メモリーバンク (cline_docs) の初期設定を実施中
+## 変更したファイル
 
-## 直近の変更点
+1. src/components/Footer.tsx
+2. src/pages/\_app.tsx
+3. src/pages/index.tsx
+4. src/pages/about.tsx
+5. src/components/Header.tsx
+6. src/components/SankeyChart.tsx
+7. src/components/DarkModeButton.tsx
+8. src/hooks/useWindowSize.ts
+9. src/scripts/rss.ts
+10. src/scripts/search-json.ts
+11. src/pages/tag/[tag].tsx
+12. src/pages/tags.tsx
+13. src/pages/blog/[slug].tsx
+14. src/components/Outline.tsx
 
-1. .clinerules ファイルを作成
+## 変更内容
 
-   - プロジェクトガイドラインを定義
-   - ドキュメント要件を設定
-   - コードスタイル規約を確立
-   - テスト基準を定義
-   - Git 運用ルールを設定
-
-2. cline_docs ディレクトリを作成
-   - メモリーバンクの基本構造を確立
-   - productContext.md を作成し、プロジェクトの目的と要件を記録
+- すべてのファイルで `~/` で始まるパスエイリアスを相対パスに変更
+- 各ファイルの場所に応じて適切な相対パスを設定（例：`../components/`, `./Component`など）
+- プロジェクト全体で残りのパスエイリアスがないことを確認済み
 
 ## 次のステップ
 
-1. システムパターンの文書化
-
-   - systemPatterns.md の作成
-   - アーキテクチャパターンの記録
-   - コンポーネント構造の定義
-
-2. 技術コンテキストの文書化
-
-   - techContext.md の作成
-   - 使用技術スタックの記録
-   - 開発環境の設定情報の記録
-
-3. 進捗状況の文書化
-
-   - progress.md の作成
-   - 現在の機能実装状況の記録
-   - 今後の実装予定の記録
-
-4. ADR テンプレートの作成
-   - /cline_docs/adr/template.md の作成
-   - ADR フォーマットの定義
+- 変更したファイルのテストを実行
+- 開発サーバーで動作確認
+- 必要に応じて tsconfig.json のパス設定の見直し

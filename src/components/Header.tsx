@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import DarkModeButton from '~/components/DarkModeButton'
-import Modal from '~/components/Modal/Modal'
+import DarkModeButton from './DarkModeButton'
+import Modal from './Modal/Modal'
 import Minisearch from '../components/Minisearch/index'
 
 export default function Header() {

@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { Feed } from 'feed'
-import getPostFilesData from '~/utils/getPostFilesData'
+import getPostFilesData from '../utils/getPostFilesData'
 
 export const generateRssFeed = async () => {
   const posts = await getPostFilesData()

@@ -1,5 +1,5 @@
-import TitleHead from '~/components/TitleHead'
-import OgpHead from '~/components/OgpHead'
+import TitleHead from '../components/TitleHead'
+import OgpHead from '../components/OgpHead'
 import styles from './base.module.css'
 
 export default function about() {

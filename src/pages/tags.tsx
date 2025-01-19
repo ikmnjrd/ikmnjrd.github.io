@@ -1,9 +1,9 @@
-import getTags, { type ITagInfo } from '~/utils/getTags'
-import TitleHead from '~/components/TitleHead'
+import getTags, { type ITagInfo } from '../utils/getTags'
+import TitleHead from '../components/TitleHead'
 import SankeyChart, {
   type Node,
   type Link,
-} from '~/components/SankeyChart'
+} from '../components/SankeyChart'
 import styles from './base.module.css'
 
 export default function Tag({

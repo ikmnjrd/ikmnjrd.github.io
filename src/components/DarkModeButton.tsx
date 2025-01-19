@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { UserContext } from '~/hooks/useUserContext'
+import { UserContext } from '../hooks/useUserContext'
 
 type DarkModeButtonProps = {
   className?: string

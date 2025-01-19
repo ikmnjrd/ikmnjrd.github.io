@@ -1,5 +1,5 @@
 import fs from 'fs'
-import getPostFilesData from '~/utils/getPostFilesData'
+import getPostFilesData from '../utils/getPostFilesData'
 
 export const generateJsonForSearch = async () => {
   const posts = await getPostFilesData()
