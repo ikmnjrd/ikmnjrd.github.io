@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
-import Header from '~/components/Header'
-import { UserContext } from '~/hooks/useUserContext'
+import Header from '../../src/components/Header'
+import { UserContext } from '../../src/hooks/useUserContext'
 
 const darkModeValue = {
   isDarkMode: true,

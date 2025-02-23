@@ -1,8 +1,5 @@
-import {
-  render,
-  screen,
-} from '@testing-library/react'
-import TitleHead from '~/components/TitleHead'
+import { render, screen } from '@testing-library/react'
+import TitleHead from '../../src/components/TitleHead'
 
 /* https://zenn.dev/nskij/articles/f7e8f8baa766e7 */
 jest.mock('next/head', () => {
@@ -25,8 +22,6 @@ describe('TitleHead', () => {
       container: document.head,
     })
 
-    expect(document.title).toBe(
-      '| ikmnjrd.github.io'
-    )
+    expect(document.title).toBe('| ikmnjrd.github.io')
   })
 })

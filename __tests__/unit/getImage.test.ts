@@ -1,14 +1,12 @@
 import {
   getImageFromWeb,
   type ImageConverterProps,
-} from '~/utils/getImageFromWeb'
+} from '../../src/utils/getImageFromWeb'
 
-jest.mock('~/utils/getImageFromWeb')
+jest.mock('../../src/utils/getImageFromWeb')
 
 const mockGetImageFromWeb =
-  getImageFromWeb as jest.MockedFunction<
-    typeof getImageFromWeb
-  >
+  getImageFromWeb as jest.MockedFunction<typeof getImageFromWeb>
 
 describe('getImageFromWeb', () => {
   const props: ImageConverterProps = {
@@ -28,9 +26,7 @@ describe('getImageFromWeb', () => {
   test('should be called a time', async () => {
     await mockGetImageFromWeb(props)
 
-    expect(
-      mockGetImageFromWeb
-    ).toHaveBeenCalledTimes(1)
+    expect(mockGetImageFromWeb).toHaveBeenCalledTimes(1)
   })
 
   // test('makes correct call', async () => {

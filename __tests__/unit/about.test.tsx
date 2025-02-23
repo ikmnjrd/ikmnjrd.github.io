@@ -1,8 +1,5 @@
-import {
-  render,
-  screen,
-} from '@testing-library/react'
-import About from '~/pages/about'
+import { render, screen } from '@testing-library/react'
+import About from '../../src/pages/about'
 
 /* https://zenn.dev/nskij/articles/f7e8f8baa766e7 */
 jest.mock('next/head', () => {
@@ -24,8 +21,6 @@ describe('TitleHead', () => {
       container: document.head,
     })
 
-    expect(document.title).toBe(
-      'About | ikmnjrd.github.io'
-    )
+    expect(document.title).toBe('About | ikmnjrd.github.io')
   })
 })

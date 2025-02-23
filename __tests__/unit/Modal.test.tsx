@@ -4,9 +4,9 @@ import {
   screen,
   fireEvent,
 } from '@testing-library/react'
-import Modal from '~/components/Modal/Modal'
+import Modal from '../../src/components/Modal/Modal'
 
-// jest.mock('~/hooks/useModal', () => {
+// jest.mock('../../src/hooks/useModal', () => {
 //   return {
 //     useModal: jest.fn(() => ({
 //       onClickOpenBtn: jest.fn(),
