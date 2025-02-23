@@ -1,14 +1,13 @@
 import {
   existCacheImage,
   type ImageConverterProps,
-} from '~/utils/existCacheImage'
+} from '../../src/utils/existCacheImage'
 
 describe('listFilesInDirectorySync', () => {
   jest.mock('fs')
 
   const MOCK_FILE_INFO = {
-    '/path/to/file1.js':
-      'console.log("file1 contents");',
+    '/path/to/file1.js': 'console.log("file1 contents");',
     '/path/to/file2.txt': 'file2 contents',
     '/path/to/image.png': 'hogehoge',
   }
@@ -20,9 +19,7 @@ describe('listFilesInDirectorySync', () => {
 
   beforeEach(() => {
     // Set up some mocked out file info before each test
-    require('fs').fs.__setMockFiles(
-      MOCK_FILE_INFO
-    )
+    require('fs').fs.__setMockFiles(MOCK_FILE_INFO)
   })
 
   test('fn: existCacheImage', () => {

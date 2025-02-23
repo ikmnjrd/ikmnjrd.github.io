@@ -66,7 +66,7 @@ export default function Search(
         onChange={(e) => setQuery(e.target.value)}
         className={styles.input}
       />
-      <div className={styles.resultContainer}>
+      <div>
         {paginatedResults.map((r) => (
           <Link
             key={r.id}

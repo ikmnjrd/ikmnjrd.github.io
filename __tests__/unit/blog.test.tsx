@@ -1,8 +1,5 @@
-import {
-  render,
-  screen,
-} from '@testing-library/react'
-import Blog from '~/pages/blog/[slug]'
+import { render, screen } from '@testing-library/react'
+import Blog from '../../src/pages/blog/[slug]'
 
 // 以下のエラーが出る。直そうとするがそうすると肝心のプログラムが動かなくなる
 // Test suite failed to run
