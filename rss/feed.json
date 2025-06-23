@@ -33,6 +33,18 @@
             }
         },
         {
+            "id": "https://ikmnjrd.github.io/blog/alacritty-beep",
+            "content_html": "\n自分のLinux(X Window)環境ではハマったのでそれの紹介。Macでも設定したが得に難しいことはなかった。\n\n### 前提\nbeepと度々出てくるがエイリアスでそれぞれの環境で次の設定を`.zshenv`にしている\n```sh\n# Mac\nalias beep=\"afplay /System/Library/Sounds/Submarine.aiff\"\n\n# Linux\nalias beep=\"paplay /usr/share/sounds/freedesktop/stereo/bell.oga\"\n```\n\n### Macでの設定\n\n```yaml\n[bell]\ncommand = { program = \"osascript\", args = [\"-e\", \"beep\"] }\n```\n\n### Linuxでの設定\n\n```yaml\n[bell]\ncommand  = { program = \"/usr/local/bin/alacritty-bell\", args = [] }\n```\nyamlに書いたスクリプトを自分で書いてインストール(以下の例では`/usr/local/bin/`にしているがお好きなところで。不要になったらrmでOK)\n\n```\n# /usr/local/bin/alacritty-bell\n#!/bin/sh\n# 最初の 2 つの引数 \"-e\" \"beep\" を捨てて残りを無視\nshift 2\nexec paplay /usr/share/sounds/freedesktop/stereo/bell.oga\n```\n\n```sh\nsudo install -m 755 alacritty-bell /usr/local/bin/alacritty-bell\n\n# テストとして\nprintf '\\a'\n```\n\n##### 設定のポイント\n以下のように設定しても実行時には鳴らない。\n```yaml\n[bell]\ncommand = { program = \"paplay\", args = [\"/usr/share/sounds/freedesktop/stereo/bell.oga\"] }\n```\nalacrittyのログを`alacritty -vvv`で起動して`printf '\\a'`を実行してみると次のように、`-e beep`というオプションが追加されてしまっている。(今思ったがosascriptに渡したいargsをLinux環境でも渡されてることが原因?未検証です)\n```\n[75.645577126s] [DEBUG] [alacritty] Launched paplay with args [\"-e\", \"beep\", \"/usr/share/sounds/freedesktop/stereo/bell.oga\"]\n```\n\n\n### おまけ\n#### tmuxのコンフィグ\n\n\n### 参考文献\n- [Add support for audio bell · Issue #1528 · alacritty/alacritty](https://github.com/alacritty/alacritty/issues/1528)\n- [ChatGPTログ(非公開リンク)](https://chatgpt.com/c/68581981-a338-8013-b5fc-be3e617b8a53)\n",
+            "url": "https://ikmnjrd.github.io/blog/alacritty-beep",
+            "title": "alacrittyでbeep音を鳴らす(Mac,Linux)",
+            "summary": "alacrittyをLinuxで使うときに苦戦した",
+            "date_modified": "2025-06-23T00:00:00.000Z",
+            "author": {
+                "name": "ike",
+                "url": "https:/x.com/ikmnjrd"
+            }
+        },
+        {
             "id": "https://ikmnjrd.github.io/blog/apparel-mens-hondatubasa",
             "content_html": "2021年12月21日、YouTubeで行われたLIVE配信でおすすめのアパレルブランドor古着屋として語っていたもののまとめ（語る部分は聞いていないが気付いたら配信映像の固定背景にあったもの）\n\n- DAIRIKU\n  - ダイリク\n  - [https://www.acrmtsm.jp/brands/63](https://www.acrmtsm.jp/brands/63)\n\n- stein\n  - シュタイン\n  - [https://www.acrmtsm.jp/brands/28](https://www.acrmtsm.jp/brands/28)\n\n- taupe\n  - トープ\n  - [https://www.taupe-japan.com/](https://www.taupe-japan.com/)\n\n- yoke\n  - ヨーク\n  - [https://www.yoketokyo.com/](https://www.yoketokyo.com/)\n  - [https://www.acrmtsm.jp/brands/65](https://www.acrmtsm.jp/brands/65)\n\n- AURALEE\n  - オーラリー\n  - [https://auralee.jp/](https://auralee.jp/)\n  - 自社ドメインに販売サイト持ってる。えらい。\n\n- JUMPIN' JAP FLASH\n  - 古着屋\n  - [https://jumpinjap.thebase.in/](https://jumpinjap.thebase.in/)\n  - [https://www.instagram.com/jumpinjapflash](https://www.instagram.com/jumpinjapflash)\n\n- Un Old Joke\n  - 古着屋\n  - [https://unoldjoke.thebase.in/](https://unoldjoke.thebase.in/)\n  - [https://www.instagram.com/unoldjoke](https://www.instagram.com/unoldjoke)\n",
             "url": "https://ikmnjrd.github.io/blog/apparel-mens-hondatubasa",
