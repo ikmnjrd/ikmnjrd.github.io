@@ -200,6 +200,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ikmnjrd.github.io/blog/manage-agent-skills</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ikmnjrd.github.io/blog/markdown-it-process</loc>
     <changefreq>hourly</changefreq>
   </url>
