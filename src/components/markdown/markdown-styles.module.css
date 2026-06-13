@@ -1,39 +1,71 @@
+/*
+ * Article body styles.
+ * Converted from Tailwind @apply utilities to standard CSS so they survive the
+ * esbuild (non-Tailwind) build. Values follow Tailwind's default scale; colors
+ * come from the project palette (newmo-* CSS variables, red = #8b0000).
+ * `dark:` variants are expressed as `:global(.dark)` selectors (darkMode:'class').
+ */
 .markdown {
-  @apply leading-relaxed;
+  line-height: 1.625; /* leading-relaxed */
 }
 .markdown > table,
 .markdown > blockquote {
-  @apply my-6;
+  margin-top: 1.5rem; /* my-6 */
+  margin-bottom: 1.5rem;
 }
 .markdown p,
 .markdown ul,
 .markdown ol {
-  @apply my-2;
+  margin-top: 0.5rem; /* my-2 */
+  margin-bottom: 0.5rem;
 }
 .markdown > h1,
 .markdown > h2,
 .markdown > h3,
 .markdown > h4 {
-  @apply leading-snug;
+  line-height: 1.375; /* leading-snug */
 }
 .markdown h1 {
-  @apply text-3xl mt-8 mb-4;
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 2.25rem;
+  margin-top: 2rem; /* mt-8 */
+  margin-bottom: 1rem; /* mb-4 */
 }
 .markdown h2 {
-  @apply text-2xl mt-6 mb-4;
+  font-size: 1.5rem; /* text-2xl */
+  line-height: 2rem;
+  margin-top: 1.5rem; /* mt-6 */
+  margin-bottom: 1rem; /* mb-4 */
 }
 .markdown h3 {
-  @apply text-xl mt-4 mb-4;
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.75rem;
+  margin-top: 1rem; /* mt-4 */
+  margin-bottom: 1rem; /* mb-4 */
 }
 .markdown h4 {
-  @apply text-lg mt-2 mb-2;
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  margin-top: 0.5rem; /* mt-2 */
+  margin-bottom: 0.5rem; /* mb-2 */
 }
 
 .markdown a {
-  @apply hover:underline hover:text-newmo-400 visited:text-newmo-300 break-all;
+  word-break: break-all; /* break-all */
+}
+.markdown a:hover {
+  text-decoration-line: underline; /* hover:underline */
+  color: var(--color-newmo-400); /* hover:text-newmo-400 */
+}
+.markdown a:visited {
+  color: var(--color-newmo-300); /* visited:text-newmo-300 */
 }
 .markdown a[class='header-anchor'] {
-  @apply text-newmo-300 hover:text-newmo-400 break-all;
+  color: var(--color-newmo-300); /* text-newmo-300 */
+  word-break: break-all;
+}
+.markdown a[class='header-anchor']:hover {
+  color: var(--color-newmo-400); /* hover:text-newmo-400 */
 }
 
 /*
@@ -41,14 +73,22 @@
 * ex) jekyll-tipuesearch-adopt
 */
 .markdown ol {
-  @apply list-inside list-decimal;
+  list-style-position: inside; /* list-inside */
+  list-style-type: decimal; /* list-decimal */
 }
 .markdown ol > li > ol {
-  @apply list-inside pl-6 my-1;
+  list-style-position: inside;
+  padding-left: 1.5rem; /* pl-6 */
+  margin-top: 0.25rem; /* my-1 */
+  margin-bottom: 0.25rem;
   list-style-type: lower-alpha;
 }
 .markdown ol > li > ul {
-  @apply list-inside list-disc pl-6 my-1;
+  list-style-position: inside;
+  list-style-type: disc; /* list-disc */
+  padding-left: 1.5rem; /* pl-6 */
+  margin-top: 0.25rem; /* my-1 */
+  margin-bottom: 0.25rem;
 }
 
 /*
@@ -56,16 +96,26 @@
 * ex) font-what-is
 */
 .markdown ul {
-  @apply list-inside list-disc;
+  list-style-position: inside; /* list-inside */
+  list-style-type: disc; /* list-disc */
 }
 .markdown ul > li > ul {
-  @apply list-inside list-disc pl-6 my-1;
+  list-style-position: inside;
+  list-style-type: disc;
+  padding-left: 1.5rem; /* pl-6 */
+  margin-top: 0.25rem; /* my-1 */
+  margin-bottom: 0.25rem;
 }
 .markdown ul > li > ul > li > ul {
-  @apply list-inside list-disc pl-12 my-1;
+  list-style-position: inside;
+  list-style-type: disc;
+  padding-left: 3rem; /* pl-12 */
+  margin-top: 0.25rem; /* my-1 */
+  margin-bottom: 0.25rem;
 }
 .markdown ul p {
-  @apply m-0 inline-block;
+  margin: 0; /* m-0 */
+  display: inline-block; /* inline-block */
 }
 
 /*
@@ -73,10 +123,26 @@
 * ex) javascript-namespace-push-me-in-pit
 */
 .markdown code:not([class]) {
-  @apply text-sm italic dark:bg-newmo-600 bg-newmo-200  text-red rounded py-[1px] px-1 break-all;
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem;
+  font-style: italic; /* italic */
+  background-color: var(--color-newmo-200); /* bg-newmo-200 */
+  color: #8b0000; /* text-red */
+  border-radius: 0.25rem; /* rounded */
+  padding-top: 1px; /* py-[1px] */
+  padding-bottom: 1px;
+  padding-left: 0.25rem; /* px-1 */
+  padding-right: 0.25rem;
+  word-break: break-all; /* break-all */
+}
+:global(.dark) .markdown code:not([class]) {
+  background-color: var(
+    --color-newmo-600
+  ); /* dark:bg-newmo-600 */
 }
 .markdown code[class^='language-'] {
-  @apply text-sm;
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem;
 }
 
 /*
@@ -84,10 +150,19 @@
 * ex) javascript-weakmap-usage
 */
 .markdown blockquote {
-  @apply ml-4 pl-4 py-[1px] border-solid border-l-[0.5rem] border-l-newmo-200;
+  margin-left: 1rem; /* ml-4 */
+  padding-left: 1rem; /* pl-4 */
+  padding-top: 1px; /* py-[1px] */
+  padding-bottom: 1px;
+  border-style: solid; /* border-solid */
+  border-left-width: 0.5rem; /* border-l-[0.5rem] */
+  border-left-color: var(
+    --color-newmo-200
+  ); /* border-l-newmo-200 */
 }
 .markdown > blockquote cite {
-  @apply text-right block;
+  text-align: right; /* text-right */
+  display: block; /* block */
 }
 
 /*
@@ -96,6 +171,8 @@
 */
 .markdown > table td,
 .markdown > table th {
-  @apply border px-2;
+  border-width: 1px; /* border */
+  padding-left: 0.5rem; /* px-2 */
+  padding-right: 0.5rem;
   border-style: inset;
 }

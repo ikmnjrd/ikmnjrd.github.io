@@ -1,5 +1,5 @@
 import Link from './Link'
-import type { HTMLProps } from 'react'
+import type { ComponentProps } from 'preact'
 import styles from './Outline.module.css'
 
 export function Outline({
@@ -7,7 +7,7 @@ export function Outline({
   ...props
 }: {
   contents: { text: string; link: string }[]
-} & HTMLProps<HTMLDivElement>) {
+} & ComponentProps<'div'>) {
   return (
     <div {...props}>
       <div className={styles.desktopOutline}>

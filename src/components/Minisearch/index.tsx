@@ -63,7 +63,7 @@ export default function Search(
 
       <input
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e) => setQuery(e.currentTarget.value)}
         className={styles.input}
       />
       <div>

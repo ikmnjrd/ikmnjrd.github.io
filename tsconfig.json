@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es2015",
+    "target": "es2019",
     "module": "esnext",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -14,8 +15,44 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "rootDirs": ["./.hcm/src", "src"]
+    "baseUrl": ".",
+    "types": ["node", "jest", "@testing-library/jest-dom"],
+    "paths": {
+      "react": ["./node_modules/preact/compat/"],
+      "react-dom": ["./node_modules/preact/compat/"],
+      "react/jsx-runtime": [
+        "./node_modules/preact/jsx-runtime/"
+      ],
+      "react/jsx-dev-runtime": [
+        "./node_modules/preact/jsx-dev-runtime/"
+      ],
+      "react-dom/*": ["./node_modules/preact/compat/*"],
+      "next/link": ["./build/shims/next-link.tsx"],
+      "next/router": ["./build/shims/next-router.ts"],
+      "next/head": ["./build/shims/next-head.tsx"],
+      "next/app": ["./build/shims/next-app.ts"]
+    }
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": [
+    "types/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "build/**/*.ts",
+    "build/**/*.tsx",
+    "__tests__/**/*.ts",
+    "__tests__/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "docs",
+    "dist",
+    "tmp",
+    "_posts",
+    // 以下は未追跡の未完成 HonoX 試作。Preact 自作ビルドへ移行したため
+    // 本ビルド経路から外し、新規生成物のみで typecheck を成立させる目的で除外する。
+    // (ファイル自体は削除せずディスク上に温存)
+    "app",
+    "SankeyChart.tsx",
+    "vite.config.mts"
+  ]
 }

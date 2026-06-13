@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import type { HTMLProps } from 'react'
+import type { ComponentProps } from 'preact'
 import classNames from 'classnames'
 import styles from './Pagination.module.css'
 
@@ -10,7 +10,7 @@ export function Pagination({
 }: {
   currentPageIndex: number
   targetArray: unknown[]
-} & HTMLProps<HTMLDivElement>) {
+} & ComponentProps<'div'>) {
   return (
     <div className={styles.container} {...props}>
       {targetArray.map((_, idx) => (
