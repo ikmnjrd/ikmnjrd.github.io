@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og:https://ikmnjrd.github.io/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="ikmnjrd">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="alternate" type="application/rss+xml" title="ikmnjrd.github.io - rss" href="/rss/feed.xml">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0"/><meta name="google-site-verification" content="mSJsnnYDqT7YzaY5pkqKhPHifGmwW4pCr2B97rSnleU"/><title>疑問メモ_JestでECMAScriptを使う | ikmnjrd.github.io</title><meta property="og:url" content="https://ikmnjrd.github.io/blog/jest-within-ecma-script"/><meta property="og:type" content="article"/><meta property="og:image" content="https://ikmnjrd.github.io/images/posts/img1.jpg"/><meta property="og:title" content="疑問メモ_JestでECMAScriptを使う"/>
+    <link rel="stylesheet" href="/assets/client-FF66O7PO.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6W9YD5G74"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W6W9YD5G74', { page_path: window.location.pathname });
+    </script>
+  </head>
+  <body class="dark:bg-newmo-800 text-newmo-400 dark:text-newmo-100">
+    <div id="__app"><main class="app_container"><header class="Header_header"><h1 class="Header_title"><a href="/" class="Header_link">ikmnjrd.github.io</a><button aria-label="Toggle Theme" class="Header_darkModeButton"><img width="24px" height="24px" src="/light_mode_white_24dp.svg" alt="Dark Mode Status is false" aria-hidden="true" class="DarkModeButton_icon"/></button></h1><nav class="Header_nav"><button type="button"><span class="Header_navLink">Search</span></button><dialog class="modal_modal modal_micromodal__slide"><div tabindex="-1" class="modal_modal__overlay"><div role="dialog" aria-modal="true" class="modal_modal__container"><div><h4 class="minisearch_title">Search</h4><input value class="minisearch_input"/><div></div><div class="minisearch_pagination"></div></div></div></div></dialog><a href="/about" class="Header_navLink">About</a><a href="/tags" class="Header_navLink">Tags</a></nav></header><article class="article_article"><div class="article_header"><h1 class="article_title">疑問メモ_JestでECMAScriptを使う</h1><ul class="article_tagList"><li class="article_tagItem"><a href="/tag/Jest" class="article_tagLink">Jest</a></li><li class="article_tagItem"><a href="/tag/JavaScript" class="article_tagLink">JavaScript</a></li></ul><div class="article_date">Posted on 2022-01-07</div></div><img alt/><div style="max-width:auto;order:2;padding:1rem 2rem;" class="article_gridElSticky article_dotBorder article_borderTop"><div class="Outline_desktopOutline"><div class="Outline_item"><a href="#%E7%96%91%E5%95%8F" class="base_link">疑問</a></div><div class="Outline_item"><a href="#%E3%82%A8%E3%83%A9%E3%83%BC%E5%85%A8%E6%96%87" class="base_link">エラー全文</a></div><div class="Outline_item"><a href="#%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E8%BE%BF%E3%82%8B" class="base_link">わからないことを辿る</a></div><div class="Outline_item"><a href="#%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E" class="base_link">周辺用語</a></div><div class="Outline_item"><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE" class="base_link">参考文献</a></div></div><details class="Outline_mobileOutline"><summary class="Outline_item">目次</summary><ul><li><a href="#%E7%96%91%E5%95%8F" class="base_link">疑問</a></li><li><a href="#%E3%82%A8%E3%83%A9%E3%83%BC%E5%85%A8%E6%96%87" class="base_link">エラー全文</a></li><li><a href="#%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E8%BE%BF%E3%82%8B" class="base_link">わからないことを辿る</a></li><li><a href="#%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E" class="base_link">周辺用語</a></li><li><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE" class="base_link">参考文献</a></li></ul></details></div><div class="markdown_styles_markdown article_content article_dotBorder article_borderTop"><h3 id="%E7%96%91%E5%95%8F" tabindex="-1"><a class="header-anchor" href="#%E7%96%91%E5%95%8F" aria-hidden="true">#</a> 疑問</h3>
+<p>JestでECMAScriptを使う方法が<a href="https://jestjs.io/ja/docs/ecmascript-modules">公式</a>に書いてある。
+やってみたけどなぜかできなかったというメモ。</p>
+<p>公式通りにやってみた結果以下のエラー。</p>
+<h3 id="%E3%82%A8%E3%83%A9%E3%83%BC%E5%85%A8%E6%96%87" tabindex="-1"><a class="header-anchor" href="#%E3%82%A8%E3%83%A9%E3%83%BC%E5%85%A8%E6%96%87" aria-hidden="true">#</a> エラー全文</h3>
+<pre class="language-bash"><code class="language-bash">% <span class="token function">node</span> --experimental-vm-modules node_modules/jest/bin/jest.js
+<span class="token punctuation">(</span>node:92238<span class="token punctuation">)</span> ExperimentalWarning: VM Modules is an experimental feature. This feature could change at any <span class="token function">time</span>
+<span class="token punctuation">(</span>Use <span class="token variable"><span class="token variable">`</span><span class="token function">node</span> --trace-warnings <span class="token punctuation">..</span>.<span class="token variable">`</span></span> to show where the warning was created<span class="token punctuation">)</span>
+ FAIL  ./index.test.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, <span class="token function">which</span> will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default <span class="token string">"node_modules"</span> folder is ignored by transformers.
+
+    Here<span class="token string">'s what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'</span>ll <span class="token function">find</span> <span class="token function">more</span> details and examples of these config options <span class="token keyword">in</span> the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    /Users/ike/workspace/no-degradation-image-converter/index.test.js:1
+    <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"Object.&lt;anonymous>"</span>:function<span class="token punctuation">(</span>module,exports,require,__dirname,__filename,jest<span class="token punctuation">)</span><span class="token punctuation">{</span>import <span class="token function">sum</span> from <span class="token string">'./index'</span><span class="token punctuation">;</span>
+                                                                                      ^^^^^^
+
+    SyntaxError: Cannot use <span class="token function">import</span> statement outside a module
+
+      at Runtime.createScriptFromCode <span class="token punctuation">(</span>node_modules/jest-runtime/build/index.js:1728:14<span class="token punctuation">)</span>
+      at TestScheduler.scheduleTests <span class="token punctuation">(</span>node_modules/@jest/core/build/TestScheduler.js:333:13<span class="token punctuation">)</span>
+
+Test Suites: <span class="token number">1</span> failed, <span class="token number">1</span> total
+Tests:       <span class="token number">0</span> total
+Snapshots:   <span class="token number">0</span> total
+Time:        <span class="token number">0.222</span> s
+</code></pre>
+<h3 id="%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E8%BE%BF%E3%82%8B" tabindex="-1"><a class="header-anchor" href="#%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E8%BE%BF%E3%82%8B" aria-hidden="true">#</a> わからないことを辿る</h3>
+<p>そもそも実行時に付与してるオプションは、<a href="(https://nodejs.org/api/cli.html#--experimental-vm-modules)">Node.js</a>のサイトでこのように説明されている。</p>
+<blockquote>
+<p>--experimental-vm-module
+Enable experimental ES Module support in the vm module.</p>
+</blockquote>
+<p>とてもあっさり！</p>
+<p><code>vm module</code>とはなんぞ？
+要はV8エンジンらしい。以下公式での<a href="https://nodejs.org/api/vm.html#vm-executing-javascript">Node.jsのサイト</a>での説明</p>
+<blockquote>
+<p>The vm module enables compiling and running code within V8 Virtual Machine contexts. The vm module is not a security mechanism. Do not use it to run untrusted code.</p>
+</blockquote>
+<p>そして迷宮入り。Nodeを16の最新安定版にしてみたけどダメでしたね。
+大人しくCommonJSでrequireします。</p>
+<h3 id="%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E" tabindex="-1"><a class="header-anchor" href="#%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E" aria-hidden="true">#</a> 周辺用語</h3>
+<ul>
+<li>Node.js</li>
+<li>V8</li>
+<li>VM moduel</li>
+<li>CommonJS</li>
+<li>ECMAScript</li>
+</ul>
+<h3 id="%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE" tabindex="-1"><a class="header-anchor" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE" aria-hidden="true">#</a> 参考文献</h3>
+<ul>
+<li><a href="https://nodejs.org/api/cli.html#--experimental-vm-modules">--experimental-vm-module</a></li>
+<li><a href="https://nodejs.org/api/vm.html#vm-executing-javascript">(https://nodejs.org/api/vm.html#vm-executing-javascript)</a></li>
+<li><a href="https://nodejs.org/api/vm.html#vm-executing-javascript">https://nodejs.org/api/vm.html#vm-executing-javascript</a></li>
+</ul>
+</div></article></main><footer role="contentinfo" class="Footer_footer"><div class="Footer_content"><ul class="Footer_socialList"><li><a href="https://x.com/ikmnjrd" target="_blank" rel="nofollow noopener noreferrer" title="x" class="Footer_socialLink"><svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 1200 1227" fill="#fff" class="SvgIcon_icon"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path></svg></a></li><li><a href="https://github.com/ikmnjrd" target="_blank" rel="nofollow noopener noreferrer" title="GitHub" class="Footer_socialLink"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" fill="#fff" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="SvgIcon_icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></li><li><a href="https://ikmnjrd.github.io/rss/feed.xml" target="_blank" rel="nofollow noopener noreferrer" title="RSS" class="Footer_socialLink"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" fill="#fff" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" class="SvgIcon_icon"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></li></ul><p class="Footer_copyright">©︎ikmnjrd - <time datetime="Sat Jun 13 2026 23:30:49 GMT+0000 (Coordinated Universal Time)">2026</time></p></div><div class="Footer_wave"></div><div class="Footer_wave"></div></footer></div>
+    <script>window.__PAGE_DATA__={"route":"blog","props":{"frontmatter":{"title":"疑問メモ_JestでECMAScriptを使う","date":"2022-01-07","tag":["Jest","JavaScript"]},"slug":"jest-within-ecma-script","innerHtml":"\u003ch3 id=\"%E7%96%91%E5%95%8F\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#%E7%96%91%E5%95%8F\" aria-hidden=\"true\"\u003e#\u003c/a\u003e 疑問\u003c/h3\u003e\n\u003cp\u003eJestでECMAScriptを使う方法が\u003ca href=\"https://jestjs.io/ja/docs/ecmascript-modules\"\u003e公式\u003c/a\u003eに書いてある。\nやってみたけどなぜかできなかったというメモ。\u003c/p\u003e\n\u003cp\u003e公式通りにやってみた結果以下のエラー。\u003c/p\u003e\n\u003ch3 id=\"%E3%82%A8%E3%83%A9%E3%83%BC%E5%85%A8%E6%96%87\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#%E3%82%A8%E3%83%A9%E3%83%BC%E5%85%A8%E6%96%87\" aria-hidden=\"true\"\u003e#\u003c/a\u003e エラー全文\u003c/h3\u003e\n\u003cpre class=\"language-bash\"\u003e\u003ccode class=\"language-bash\"\u003e% \u003cspan class=\"token function\"\u003enode\u003c/span\u003e --experimental-vm-modules node_modules/jest/bin/jest.js\n\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003enode:92238\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e ExperimentalWarning: VM Modules is an experimental feature. This feature could change at any \u003cspan class=\"token function\"\u003etime\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003eUse \u003cspan class=\"token variable\"\u003e\u003cspan class=\"token variable\"\u003e`\u003c/span\u003e\u003cspan class=\"token function\"\u003enode\u003c/span\u003e --trace-warnings \u003cspan class=\"token punctuation\"\u003e..\u003c/span\u003e.\u003cspan class=\"token variable\"\u003e`\u003c/span\u003e\u003c/span\u003e to show where the warning was created\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n FAIL  ./index.test.js\n  ● Test suite failed to run\n\n    Jest encountered an unexpected token\n\n    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.\n\n    Out of the box Jest supports Babel, \u003cspan class=\"token function\"\u003ewhich\u003c/span\u003e will be used to transform your files into valid JS based on your Babel configuration.\n\n    By default \u003cspan class=\"token string\"\u003e\"node_modules\"\u003c/span\u003e folder is ignored by transformers.\n\n    Here\u003cspan class=\"token string\"\u003e's what you can do:\n     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.\n     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript\n     • To have some of your \"node_modules\" files transformed, you can specify a custom \"transformIgnorePatterns\" in your config.\n     • If you need a custom transformation specify a \"transform\" option in your config.\n     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the \"moduleNameMapper\" config option.\n\n    You'\u003c/span\u003ell \u003cspan class=\"token function\"\u003efind\u003c/span\u003e \u003cspan class=\"token function\"\u003emore\u003c/span\u003e details and examples of these config options \u003cspan class=\"token keyword\"\u003ein\u003c/span\u003e the docs:\n    https://jestjs.io/docs/configuration\n    For information about custom transformations, see:\n    https://jestjs.io/docs/code-transformation\n\n    Details:\n\n    /Users/ike/workspace/no-degradation-image-converter/index.test.js:1\n    \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\u003cspan class=\"token string\"\u003e\"Object.\u0026lt;anonymous\u003e\"\u003c/span\u003e:function\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003emodule,exports,require,__dirname,__filename,jest\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003eimport \u003cspan class=\"token function\"\u003esum\u003c/span\u003e from \u003cspan class=\"token string\"\u003e'./index'\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e;\u003c/span\u003e\n                                                                                      ^^^^^^\n\n    SyntaxError: Cannot use \u003cspan class=\"token function\"\u003eimport\u003c/span\u003e statement outside a module\n\n      at Runtime.createScriptFromCode \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003enode_modules/jest-runtime/build/index.js:1728:14\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n      at TestScheduler.scheduleTests \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003enode_modules/@jest/core/build/TestScheduler.js:333:13\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\nTest Suites: \u003cspan class=\"token number\"\u003e1\u003c/span\u003e failed, \u003cspan class=\"token number\"\u003e1\u003c/span\u003e total\nTests:       \u003cspan class=\"token number\"\u003e0\u003c/span\u003e total\nSnapshots:   \u003cspan class=\"token number\"\u003e0\u003c/span\u003e total\nTime:        \u003cspan class=\"token number\"\u003e0.222\u003c/span\u003e s\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E8%BE%BF%E3%82%8B\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E8%BE%BF%E3%82%8B\" aria-hidden=\"true\"\u003e#\u003c/a\u003e わからないことを辿る\u003c/h3\u003e\n\u003cp\u003eそもそも実行時に付与してるオプションは、\u003ca href=\"(https://nodejs.org/api/cli.html#--experimental-vm-modules)\"\u003eNode.js\u003c/a\u003eのサイトでこのように説明されている。\u003c/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e--experimental-vm-module\nEnable experimental ES Module support in the vm module.\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003cp\u003eとてもあっさり！\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003evm module\u003c/code\u003eとはなんぞ？\n要はV8エンジンらしい。以下公式での\u003ca href=\"https://nodejs.org/api/vm.html#vm-executing-javascript\"\u003eNode.jsのサイト\u003c/a\u003eでの説明\u003c/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003eThe vm module enables compiling and running code within V8 Virtual Machine contexts. The vm module is not a security mechanism. Do not use it to run untrusted code.\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003cp\u003eそして迷宮入り。Nodeを16の最新安定版にしてみたけどダメでしたね。\n大人しくCommonJSでrequireします。\u003c/p\u003e\n\u003ch3 id=\"%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E\" aria-hidden=\"true\"\u003e#\u003c/a\u003e 周辺用語\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eNode.js\u003c/li\u003e\n\u003cli\u003eV8\u003c/li\u003e\n\u003cli\u003eVM moduel\u003c/li\u003e\n\u003cli\u003eCommonJS\u003c/li\u003e\n\u003cli\u003eECMAScript\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE\" aria-hidden=\"true\"\u003e#\u003c/a\u003e 参考文献\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://nodejs.org/api/cli.html#--experimental-vm-modules\"\u003e--experimental-vm-module\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://nodejs.org/api/vm.html#vm-executing-javascript\"\u003e(https://nodejs.org/api/vm.html#vm-executing-javascript)\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://nodejs.org/api/vm.html#vm-executing-javascript\"\u003ehttps://nodejs.org/api/vm.html#vm-executing-javascript\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n","anchors":[{"text":"疑問","link":"%E7%96%91%E5%95%8F"},{"text":"エラー全文","link":"%E3%82%A8%E3%83%A9%E3%83%BC%E5%85%A8%E6%96%87"},{"text":"わからないことを辿る","link":"%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E8%BE%BF%E3%82%8B"},{"text":"周辺用語","link":"%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E"},{"text":"参考文献","link":"%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"}]}}</script>
+    <script type="module" src="/assets/client-WFVRIKTQ.js"></script>
+  </body>
+</html>

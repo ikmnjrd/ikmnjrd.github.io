@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og:https://ikmnjrd.github.io/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="ikmnjrd">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="alternate" type="application/rss+xml" title="ikmnjrd.github.io - rss" href="/rss/feed.xml">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0"/><meta name="google-site-verification" content="mSJsnnYDqT7YzaY5pkqKhPHifGmwW4pCr2B97rSnleU"/><title>自作PCの構成_2024-03 | ikmnjrd.github.io</title><meta property="og:url" content="https://ikmnjrd.github.io/blog/linux-hardware-2024-03"/><meta property="og:type" content="article"/><meta property="og:image" content="https://ikmnjrd.github.io/images/posts/img1.jpg"/><meta property="og:title" content="自作PCの構成_2024-03"/>
+    <link rel="stylesheet" href="/assets/client-FF66O7PO.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6W9YD5G74"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W6W9YD5G74', { page_path: window.location.pathname });
+    </script>
+  </head>
+  <body class="dark:bg-newmo-800 text-newmo-400 dark:text-newmo-100">
+    <div id="__app"><main class="app_container"><header class="Header_header"><h1 class="Header_title"><a href="/" class="Header_link">ikmnjrd.github.io</a><button aria-label="Toggle Theme" class="Header_darkModeButton"><img width="24px" height="24px" src="/light_mode_white_24dp.svg" alt="Dark Mode Status is false" aria-hidden="true" class="DarkModeButton_icon"/></button></h1><nav class="Header_nav"><button type="button"><span class="Header_navLink">Search</span></button><dialog class="modal_modal modal_micromodal__slide"><div tabindex="-1" class="modal_modal__overlay"><div role="dialog" aria-modal="true" class="modal_modal__container"><div><h4 class="minisearch_title">Search</h4><input value class="minisearch_input"/><div></div><div class="minisearch_pagination"></div></div></div></div></dialog><a href="/about" class="Header_navLink">About</a><a href="/tags" class="Header_navLink">Tags</a></nav></header><article class="article_article"><div class="article_header"><h1 class="article_title">自作PCの構成_2024-03</h1><ul class="article_tagList"><li class="article_tagItem"><a href="/tag/Linux" class="article_tagLink">Linux</a></li><li class="article_tagItem"><a href="/tag/misc" class="article_tagLink">misc</a></li></ul><div class="article_date">Posted on 2024-04-09</div></div><img alt/><div style="max-width:auto;order:2;padding:1rem 2rem;" class="article_gridElSticky article_dotBorder article_borderTop"><div class="Outline_desktopOutline"><div class="Outline_item"><a href="#%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2" class="base_link">ハードウェア</a></div><div class="Outline_item"><a href="#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" class="base_link">ソフトウェア</a></div><div class="Outline_item"><a href="#%E3%81%96%E3%81%A3%E3%81%8F%E3%82%8A%E6%A7%8B%E6%88%90%E3%82%92%E4%BC%9D%E3%81%88%E3%82%8B%E3%82%B3%E3%83%94%E3%83%9A%E7%94%A8" class="base_link">ざっくり構成を伝えるコピペ用</a></div></div><details class="Outline_mobileOutline"><summary class="Outline_item">目次</summary><ul><li><a href="#%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2" class="base_link">ハードウェア</a></li><li><a href="#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" class="base_link">ソフトウェア</a></li><li><a href="#%E3%81%96%E3%81%A3%E3%81%8F%E3%82%8A%E6%A7%8B%E6%88%90%E3%82%92%E4%BC%9D%E3%81%88%E3%82%8B%E3%82%B3%E3%83%94%E3%83%9A%E7%94%A8" class="base_link">ざっくり構成を伝えるコピペ用</a></li></ul></details></div><div class="markdown_styles_markdown article_content article_dotBorder article_borderTop"><h3 id="%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2" tabindex="-1"><a class="header-anchor" href="#%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2" aria-hidden="true">#</a> ハードウェア</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">部品</th>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CPU</td>
+<td style="text-align:left">AMD Ryzen 7 7745HX (オンボード)</td>
+</tr>
+<tr>
+<td style="text-align:left">マザーボード</td>
+<td style="text-align:left">Minisforum BD770i</td>
+</tr>
+<tr>
+<td style="text-align:left">GPU</td>
+<td style="text-align:left">ASUS Radeon RX 7600 OC  8GB</td>
+</tr>
+<tr>
+<td style="text-align:left">メモリ</td>
+<td style="text-align:left">Crucial 32GB DDR5 4800MHz SODIMM</td>
+</tr>
+<tr>
+<td style="text-align:left">HDD</td>
+<td style="text-align:left">Crucial T500 1TB PCIe Gen4 NVMe M.2 SSD</td>
+</tr>
+<tr>
+<td style="text-align:left">CPUファン</td>
+<td style="text-align:left">Noctua NF-A12x25 PWM chromax.Black.swap</td>
+</tr>
+<tr>
+<td style="text-align:left">電源</td>
+<td style="text-align:left">Cooler Master V850 SFX Gold ATX3.0</td>
+</tr>
+<tr>
+<td style="text-align:left">ケース</td>
+<td style="text-align:left">Cooler Master MasterBox NR200P ホワイト</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" tabindex="-1"><a class="header-anchor" href="#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" aria-hidden="true">#</a> ソフトウェア</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">部品</th>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">OS</td>
+<td style="text-align:left">EndeavourOS Linux x86_64</td>
+</tr>
+<tr>
+<td style="text-align:left">WindowManager</td>
+<td style="text-align:left">i3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E3%81%96%E3%81%A3%E3%81%8F%E3%82%8A%E6%A7%8B%E6%88%90%E3%82%92%E4%BC%9D%E3%81%88%E3%82%8B%E3%82%B3%E3%83%94%E3%83%9A%E7%94%A8" tabindex="-1"><a class="header-anchor" href="#%E3%81%96%E3%81%A3%E3%81%8F%E3%82%8A%E6%A7%8B%E6%88%90%E3%82%92%E4%BC%9D%E3%81%88%E3%82%8B%E3%82%B3%E3%83%94%E3%83%9A%E7%94%A8" aria-hidden="true">#</a> ざっくり構成を伝えるコピペ用</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">OS</td>
+<td style="text-align:left">EndeavourOS Linux x86_64</td>
+</tr>
+<tr>
+<td style="text-align:left">WM</td>
+<td style="text-align:left">i3</td>
+</tr>
+<tr>
+<td style="text-align:left">CPU</td>
+<td style="text-align:left">AMD Ryzen 7 7745HX (オンボード)</td>
+</tr>
+<tr>
+<td style="text-align:left">マザーボード</td>
+<td style="text-align:left">Minisforum BD770i</td>
+</tr>
+<tr>
+<td style="text-align:left">GPU</td>
+<td style="text-align:left">ASUS Radeon RX 7600 OC  8GB</td>
+</tr>
+</tbody>
+</table>
+</div></article></main><footer role="contentinfo" class="Footer_footer"><div class="Footer_content"><ul class="Footer_socialList"><li><a href="https://x.com/ikmnjrd" target="_blank" rel="nofollow noopener noreferrer" title="x" class="Footer_socialLink"><svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 1200 1227" fill="#fff" class="SvgIcon_icon"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path></svg></a></li><li><a href="https://github.com/ikmnjrd" target="_blank" rel="nofollow noopener noreferrer" title="GitHub" class="Footer_socialLink"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" fill="#fff" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="SvgIcon_icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></li><li><a href="https://ikmnjrd.github.io/rss/feed.xml" target="_blank" rel="nofollow noopener noreferrer" title="RSS" class="Footer_socialLink"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" fill="#fff" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" class="SvgIcon_icon"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></li></ul><p class="Footer_copyright">©︎ikmnjrd - <time datetime="Sat Jun 13 2026 23:30:50 GMT+0000 (Coordinated Universal Time)">2026</time></p></div><div class="Footer_wave"></div><div class="Footer_wave"></div></footer></div>
+    <script>window.__PAGE_DATA__={"route":"blog","props":{"frontmatter":{"title":"自作PCの構成_2024-03","date":"2024-04-09","tag":["Linux","misc"]},"slug":"linux-hardware-2024-03","innerHtml":"\u003ch3 id=\"%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2\" aria-hidden=\"true\"\u003e#\u003c/a\u003e ハードウェア\u003c/h3\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth style=\"text-align:left\"\u003e部品\u003c/th\u003e\n\u003cth style=\"text-align:left\"\u003e名称\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eCPU\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eAMD Ryzen 7 7745HX (オンボード)\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eマザーボード\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eMinisforum BD770i\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eGPU\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eASUS Radeon RX 7600 OC  8GB\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eメモリ\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eCrucial 32GB DDR5 4800MHz SODIMM\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eHDD\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eCrucial T500 1TB PCIe Gen4 NVMe M.2 SSD\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eCPUファン\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eNoctua NF-A12x25 PWM chromax.Black.swap\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003e電源\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eCooler Master V850 SFX Gold ATX3.0\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eケース\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eCooler Master MasterBox NR200P ホワイト\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003ch3 id=\"%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2\" aria-hidden=\"true\"\u003e#\u003c/a\u003e ソフトウェア\u003c/h3\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth style=\"text-align:left\"\u003e部品\u003c/th\u003e\n\u003cth style=\"text-align:left\"\u003e名称\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eOS\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eEndeavourOS Linux x86_64\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eWindowManager\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003ei3\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003ch3 id=\"%E3%81%96%E3%81%A3%E3%81%8F%E3%82%8A%E6%A7%8B%E6%88%90%E3%82%92%E4%BC%9D%E3%81%88%E3%82%8B%E3%82%B3%E3%83%94%E3%83%9A%E7%94%A8\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#%E3%81%96%E3%81%A3%E3%81%8F%E3%82%8A%E6%A7%8B%E6%88%90%E3%82%92%E4%BC%9D%E3%81%88%E3%82%8B%E3%82%B3%E3%83%94%E3%83%9A%E7%94%A8\" aria-hidden=\"true\"\u003e#\u003c/a\u003e ざっくり構成を伝えるコピペ用\u003c/h3\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth style=\"text-align:left\"\u003e\u003c/th\u003e\n\u003cth style=\"text-align:left\"\u003e\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eOS\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eEndeavourOS Linux x86_64\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eWM\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003ei3\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eCPU\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eAMD Ryzen 7 7745HX (オンボード)\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eマザーボード\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eMinisforum BD770i\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:left\"\u003eGPU\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003eASUS Radeon RX 7600 OC  8GB\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n","anchors":[{"text":"ハードウェア","link":"%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2"},{"text":"ソフトウェア","link":"%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2"},{"text":"ざっくり構成を伝えるコピペ用","link":"%E3%81%96%E3%81%A3%E3%81%8F%E3%82%8A%E6%A7%8B%E6%88%90%E3%82%92%E4%BC%9D%E3%81%88%E3%82%8B%E3%82%B3%E3%83%94%E3%83%9A%E7%94%A8"}]}}</script>
+    <script type="module" src="/assets/client-WFVRIKTQ.js"></script>
+  </body>
+</html>

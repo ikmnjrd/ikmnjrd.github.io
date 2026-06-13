@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og:https://ikmnjrd.github.io/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="ikmnjrd">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="alternate" type="application/rss+xml" title="ikmnjrd.github.io - rss" href="/rss/feed.xml">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0"/><meta name="google-site-verification" content="mSJsnnYDqT7YzaY5pkqKhPHifGmwW4pCr2B97rSnleU"/><title>自分のsshキーの作り方メモ | ikmnjrd.github.io</title><meta property="og:url" content="https://ikmnjrd.github.io/blog/ssh-keygen"/><meta property="og:type" content="article"/><meta property="og:image" content="https://ikmnjrd.github.io/images/posts/img1.jpg"/><meta property="og:title" content="自分のsshキーの作り方メモ"/><meta name="description" content="僕の疑問に追記する形で更新しています。"/>
+    <link rel="stylesheet" href="/assets/client-FF66O7PO.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6W9YD5G74"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W6W9YD5G74', { page_path: window.location.pathname });
+    </script>
+  </head>
+  <body class="dark:bg-newmo-800 text-newmo-400 dark:text-newmo-100">
+    <div id="__app"><main class="app_container"><header class="Header_header"><h1 class="Header_title"><a href="/" class="Header_link">ikmnjrd.github.io</a><button aria-label="Toggle Theme" class="Header_darkModeButton"><img width="24px" height="24px" src="/light_mode_white_24dp.svg" alt="Dark Mode Status is false" aria-hidden="true" class="DarkModeButton_icon"/></button></h1><nav class="Header_nav"><button type="button"><span class="Header_navLink">Search</span></button><dialog class="modal_modal modal_micromodal__slide"><div tabindex="-1" class="modal_modal__overlay"><div role="dialog" aria-modal="true" class="modal_modal__container"><div><h4 class="minisearch_title">Search</h4><input value class="minisearch_input"/><div></div><div class="minisearch_pagination"></div></div></div></div></dialog><a href="/about" class="Header_navLink">About</a><a href="/tags" class="Header_navLink">Tags</a></nav></header><article class="article_article"><div class="article_header"><h1 class="article_title">自分のsshキーの作り方メモ</h1><ul class="article_tagList"><li class="article_tagItem"><a href="/tag/shell" class="article_tagLink">shell</a></li><li class="article_tagItem"><a href="/tag/私的メモ" class="article_tagLink">私的メモ</a></li></ul><div class="article_date">Posted on 2022-07-14</div></div><img alt/><div style="max-width:auto;order:2;padding:1rem 2rem;" class="article_gridElSticky article_dotBorder article_borderTop"><div class="Outline_desktopOutline"><div class="Outline_item"><a href="#%E6%89%8B%E9%A0%86" class="base_link">手順</a></div><div class="Outline_item"><a href="#github" class="base_link">github</a></div><div class="Outline_item"><a href="#%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E" class="base_link">周辺用語</a></div><div class="Outline_item"><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE" class="base_link">参考文献</a></div></div><details class="Outline_mobileOutline"><summary class="Outline_item">目次</summary><ul><li><a href="#%E6%89%8B%E9%A0%86" class="base_link">手順</a></li><li><a href="#github" class="base_link">github</a></li><li><a href="#%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E" class="base_link">周辺用語</a></li><li><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE" class="base_link">参考文献</a></li></ul></details></div><div class="markdown_styles_markdown article_content article_dotBorder article_borderTop"><h3 id="%E6%89%8B%E9%A0%86" tabindex="-1"><a class="header-anchor" href="#%E6%89%8B%E9%A0%86" aria-hidden="true">#</a> 手順</h3>
+<p><code>$ ssh-keygen -t ed25519</code><br>
+鍵の名前の入力を求められるので<code>github</code>や<code>hoge</code>などサービス名を入れておく。<br>
+パスフレーズ（パスワード）はナシ。自分しか使わないマシン上で使う鍵なので。もしマシンの管理者が自分以外ならしっかり設定しておく。</p>
+<p><code>$HOME/.ssh</code>内にssh-keygenで入力した名前(<code>hoge</code>)の秘密鍵と<code>hoge.pub</code>の公開鍵ができている
+<code>$ pbcopy &lt; ~/.ssh/hoge.pub</code></p>
+<h3 id="github" tabindex="-1"><a class="header-anchor" href="#github" aria-hidden="true">#</a> github</h3>
+<pre class="language-sh"><code class="language-sh">$ <span class="token function">ssh</span> <span class="token parameter variable">-T</span> github
+Hi ikmnjrd<span class="token operator">!</span> You've successfully authenticated, but GitHub does not provide shell access.
+</code></pre>
+<p>認証は通ってるがいざcloneをしようとしたら <code>Permission denied (publickey).</code> のエラー。</p>
+<pre class="language-sh"><code class="language-sh">$ <span class="token function">ssh</span> <span class="token parameter variable">-vT</span> git@github.com
+</code></pre>
+<p>よくわからなかったが類似エラーを適当に検索したら~/.ssh/configのHostの値が原因っぽかった。</p>
+<pre class="language-sh"><code class="language-sh"><span class="token operator">==</span><span class="token operator">==</span>変更前
+Host github
+<span class="token operator">==</span><span class="token operator">==</span>変更後
+Host github github.com
+</code></pre>
+<p>無事cloneできた。</p>
+<h3 id="%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E" tabindex="-1"><a class="header-anchor" href="#%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E" aria-hidden="true">#</a> 周辺用語</h3>
+<ul>
+<li>RSA</li>
+<li>Ed25519</li>
+<li>楕円曲線暗号</li>
+<li>エドワーズ曲線デジタル署名アルゴリズム</li>
+</ul>
+<h3 id="%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE" tabindex="-1"><a class="header-anchor" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE" aria-hidden="true">#</a> 参考文献</h3>
+<ul>
+<li><a href="https://linuxfan.info/ssh-ed25519">SSH認証に最強の「Ed25519鍵」を使おう | LFI</a></li>
+<li><a href="https://wiki.archlinux.jp/index.php/SSH_%E9%8D%B5">SSH 鍵 - ArchWiki</a></li>
+<li><a href="https://qiita.com/hatorijobs/items/92d8df363020a7f6d9fb">git clone したら、Permission denied (publickey).のエラー - Qiita</a></li>
+</ul>
+</div></article></main><footer role="contentinfo" class="Footer_footer"><div class="Footer_content"><ul class="Footer_socialList"><li><a href="https://x.com/ikmnjrd" target="_blank" rel="nofollow noopener noreferrer" title="x" class="Footer_socialLink"><svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 1200 1227" fill="#fff" class="SvgIcon_icon"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path></svg></a></li><li><a href="https://github.com/ikmnjrd" target="_blank" rel="nofollow noopener noreferrer" title="GitHub" class="Footer_socialLink"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" fill="#fff" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="SvgIcon_icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></li><li><a href="https://ikmnjrd.github.io/rss/feed.xml" target="_blank" rel="nofollow noopener noreferrer" title="RSS" class="Footer_socialLink"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" fill="#fff" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" class="SvgIcon_icon"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></li></ul><p class="Footer_copyright">©︎ikmnjrd - <time datetime="Sat Jun 13 2026 23:31:06 GMT+0000 (Coordinated Universal Time)">2026</time></p></div><div class="Footer_wave"></div><div class="Footer_wave"></div></footer></div>
+    <script>window.__PAGE_DATA__={"route":"blog","props":{"frontmatter":{"title":"自分のsshキーの作り方メモ","description":"僕の疑問に追記する形で更新しています。","date":"2022-07-14","tag":["shell","私的メモ"]},"slug":"ssh-keygen","innerHtml":"\u003ch3 id=\"%E6%89%8B%E9%A0%86\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#%E6%89%8B%E9%A0%86\" aria-hidden=\"true\"\u003e#\u003c/a\u003e 手順\u003c/h3\u003e\n\u003cp\u003e\u003ccode\u003e$ ssh-keygen -t ed25519\u003c/code\u003e\u003cbr\u003e\n鍵の名前の入力を求められるので\u003ccode\u003egithub\u003c/code\u003eや\u003ccode\u003ehoge\u003c/code\u003eなどサービス名を入れておく。\u003cbr\u003e\nパスフレーズ（パスワード）はナシ。自分しか使わないマシン上で使う鍵なので。もしマシンの管理者が自分以外ならしっかり設定しておく。\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003e$HOME/.ssh\u003c/code\u003e内にssh-keygenで入力した名前(\u003ccode\u003ehoge\u003c/code\u003e)の秘密鍵と\u003ccode\u003ehoge.pub\u003c/code\u003eの公開鍵ができている\n\u003ccode\u003e$ pbcopy \u0026lt; ~/.ssh/hoge.pub\u003c/code\u003e\u003c/p\u003e\n\u003ch3 id=\"github\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#github\" aria-hidden=\"true\"\u003e#\u003c/a\u003e github\u003c/h3\u003e\n\u003cpre class=\"language-sh\"\u003e\u003ccode class=\"language-sh\"\u003e$ \u003cspan class=\"token function\"\u003essh\u003c/span\u003e \u003cspan class=\"token parameter variable\"\u003e-T\u003c/span\u003e github\nHi ikmnjrd\u003cspan class=\"token operator\"\u003e!\u003c/span\u003e You've successfully authenticated, but GitHub does not provide shell access.\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e認証は通ってるがいざcloneをしようとしたら \u003ccode\u003ePermission denied (publickey).\u003c/code\u003e のエラー。\u003c/p\u003e\n\u003cpre class=\"language-sh\"\u003e\u003ccode class=\"language-sh\"\u003e$ \u003cspan class=\"token function\"\u003essh\u003c/span\u003e \u003cspan class=\"token parameter variable\"\u003e-vT\u003c/span\u003e git@github.com\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eよくわからなかったが類似エラーを適当に検索したら~/.ssh/configのHostの値が原因っぽかった。\u003c/p\u003e\n\u003cpre class=\"language-sh\"\u003e\u003ccode class=\"language-sh\"\u003e\u003cspan class=\"token operator\"\u003e==\u003c/span\u003e\u003cspan class=\"token operator\"\u003e==\u003c/span\u003e変更前\nHost github\n\u003cspan class=\"token operator\"\u003e==\u003c/span\u003e\u003cspan class=\"token operator\"\u003e==\u003c/span\u003e変更後\nHost github github.com\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e無事cloneできた。\u003c/p\u003e\n\u003ch3 id=\"%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E\" aria-hidden=\"true\"\u003e#\u003c/a\u003e 周辺用語\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eRSA\u003c/li\u003e\n\u003cli\u003eEd25519\u003c/li\u003e\n\u003cli\u003e楕円曲線暗号\u003c/li\u003e\n\u003cli\u003eエドワーズ曲線デジタル署名アルゴリズム\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE\" tabindex=\"-1\"\u003e\u003ca class=\"header-anchor\" href=\"#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE\" aria-hidden=\"true\"\u003e#\u003c/a\u003e 参考文献\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://linuxfan.info/ssh-ed25519\"\u003eSSH認証に最強の「Ed25519鍵」を使おう | LFI\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://wiki.archlinux.jp/index.php/SSH_%E9%8D%B5\"\u003eSSH 鍵 - ArchWiki\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://qiita.com/hatorijobs/items/92d8df363020a7f6d9fb\"\u003egit clone したら、Permission denied (publickey).のエラー - Qiita\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n","anchors":[{"text":"手順","link":"%E6%89%8B%E9%A0%86"},{"text":"github","link":"github"},{"text":"周辺用語","link":"%E5%91%A8%E8%BE%BA%E7%94%A8%E8%AA%9E"},{"text":"参考文献","link":"%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"}]}}</script>
+    <script type="module" src="/assets/client-WFVRIKTQ.js"></script>
+  </body>
+</html>
