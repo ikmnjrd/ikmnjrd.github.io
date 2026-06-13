@@ -1,4 +1,4 @@
-import React from 'react'
+import type { FunctionComponent } from 'preact'
 import classNames from 'classnames'
 import styles from './SvgIcon.module.css'
 
@@ -23,7 +23,7 @@ type Props = {
   fill?: string
 }
 
-const SvgIcon: React.FC<Props> = ({
+const SvgIcon: FunctionComponent<Props> = ({
   type,
   size,
   strokeWidth = 2,

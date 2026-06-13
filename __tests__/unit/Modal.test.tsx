@@ -1,9 +1,8 @@
-import React from 'react'
 import {
   render,
   screen,
   fireEvent,
-} from '@testing-library/react'
+} from '@testing-library/preact'
 import Modal from '../../src/components/Modal/Modal'
 
 // jest.mock('../../src/hooks/useModal', () => {

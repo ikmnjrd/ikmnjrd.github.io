@@ -8,6 +8,16 @@ main {
   color: var(--color-newmo-400);
 }
 
+/*
+ * Dark mode (darkMode:'class'; the .dark class is toggled on <html>).
+ * Replaces the former Tailwind body utilities `dark:bg-newmo-800
+ * dark:text-newmo-100` that were removed with Tailwind.
+ */
+.dark body {
+  background-color: var(--color-newmo-800);
+  color: var(--color-newmo-100);
+}
+
 .header-text {
   color: var(--color-text-primary);
   text-shadow: var(--text-shadow-primary);

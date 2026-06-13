@@ -1,8 +1,7 @@
-import { FC } from 'react'
 import SvgIcon from './SvgIcon'
 import styles from './Footer.module.css'
 
-const Footer: FC = () => {
+function Footer() {
   const date = new Date()
   return (
     <footer className={styles.footer} role="contentinfo">

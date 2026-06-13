@@ -3,8 +3,6 @@ import getPostsFromTag from '../../utils/getPostsFromTag'
 import getTags from '../../utils/getTags'
 import { IFrontMatter } from '../../utils/getPostFilesData'
 import TitleHead from '../../components/TitleHead'
-import { GetStaticProps, GetStaticPaths } from 'next'
-import { ParsedUrlQuery } from 'node:querystring'
 import styles from '../base.module.css'
 
 interface Props {
@@ -14,7 +12,7 @@ interface Props {
     frontmatter: IFrontMatter
   }[]
 }
-interface Params extends ParsedUrlQuery {
+interface Params {
   tag: string
 }
 
@@ -41,9 +39,7 @@ export default function TagLinkPage({ tag, posts }: Props) {
   )
 }
 
-export const getStaticPaths: GetStaticPaths<
-  Params
-> = async () => {
+export const getStaticPaths = async () => {
   const { countedTags } = await getTags()
 
   const paths = Object.entries(countedTags).map((tag) => {
@@ -56,15 +52,16 @@ export const getStaticPaths: GetStaticPaths<
   }
 }
 
-export const getStaticProps: GetStaticProps<
-  Props,
-  Params
-> = async ({ params }) => {
-  const posts = await getPostsFromTag(params!.tag)
+export const getStaticProps = async ({
+  params,
+}: {
+  params: Params
+}): Promise<{ props: Props }> => {
+  const posts = await getPostsFromTag(params.tag)
 
   return {
     props: {
-      tag: params!.tag,
+      tag: params.tag,
       posts,
     },
   }

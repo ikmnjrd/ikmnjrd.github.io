@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/preact'
 import Footer from '../../src/components/Footer'
 
 describe('Footer', () => {

@@ -18,6 +18,12 @@ class JSDOMEnvironment extends $JSDOMEnvironment {
     if (!global.TextEncoder) global.TextEncoder = TextEncoder
     if (!global.TextDecoder) global.TextDecoder = TextDecoder
     if (!global.Uint8Array) global.Uint8Array = Uint8Array
+    // jsdom has no fetch; provide a no-network stub so client effects that
+    // fetch on mount (e.g. the search index) resolve via their .catch handlers.
+    if (!global.fetch) {
+      global.fetch = () =>
+        Promise.reject(new Error('fetch is disabled in tests'))
+    }
   }
 }
 

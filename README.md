@@ -17,15 +17,25 @@ WEBSITE_URL=https://{YOUR_NAME}.github.io
 GA_MEASUREMENT_ID={YOUR_GA4_ID}
 ```
 
-$ npm run dev
+$ npm run dev # http://localhost:3000 でローカル開発(ビルド+静的配信+watch+ライブリロード)
+
+## ビルドと配信
+
+- `npm run build` … `docs/` に GitHub Pages 配備用の静的サイトを生成(pretty URL + `.nojekyll`)
+- `npm run dev` … ローカル開発サーバ(自動再ビルド + ライブリロード)
+- `npm start` … ビルド済みの `docs/` を静的配信
 
 ## 主な利用しているもの
 
-- Next.js(SSG)
-- tailwind
+- Preact + preact-render-to-string(SSR/SSG レンダリング)
+- esbuild(自作 Node/TypeScript ビルドスクリプトによる静的サイト生成。`build/` 配下)
 - MarkdownIt(マークダウンパーサー)
 - MiniSearch(検索エンジン)
 - D3.js(タグ記事のビジュアライズ)
+
+各ページは preact-render-to-string で静的 HTML 化し、クライアントでハイドレーションして
+ダークモード/検索/Sankey/ページネーション等の対話性を復元する。CSS は esbuild の
+CSS Modules でバンドルする。
 
 ## 運用
 

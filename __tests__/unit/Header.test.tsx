@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/preact'
 import Header from '../../src/components/Header'
 import { UserContext } from '../../src/hooks/useUserContext'
 

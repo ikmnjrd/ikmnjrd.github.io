@@ -1,15 +1,11 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/preact'
 import TitleHead from '../../src/components/TitleHead'
 
 /* https://zenn.dev/nskij/articles/f7e8f8baa766e7 */
 jest.mock('next/head', () => {
   return {
     __esModule: true,
-    default: ({
-      children,
-    }: {
-      children: Array<React.ReactElement>
-    }) => {
+    default: ({ children }: { children: unknown }) => {
       return <>{children}</>
     },
   }

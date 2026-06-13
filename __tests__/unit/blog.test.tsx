@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/preact'
 import Blog from '../../src/pages/blog/[slug]'
 
 // 以下のエラーが出る。直そうとするがそうすると肝心のプログラムが動かなくなる

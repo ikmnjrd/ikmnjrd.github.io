@@ -1,16 +1,34 @@
-import swr, { Fetcher } from 'swr'
+import { useState, useEffect } from 'react'
 import { myFetch } from '../../utils/fetch'
-import getPostFilesData from '../../utils/getPostFilesData'
+import type getPostFilesData from '../../utils/getPostFilesData'
 import MiniSearch from 'minisearch'
 
 type ISearchData = Awaited<ReturnType<typeof getPostFilesData>>
 
+// Lightweight client fetch hook (formerly backed by SWR). Keeps the original
+// `useSearchSwr` name/return shape so the consumer is unchanged.
 export const useSearchSwr = () => {
-  const fetcher: Fetcher<ISearchData> = () =>
-    myFetch<ISearchData>('/to-search/blog-contents.json')
+  const [data, setData] = useState<ISearchData | undefined>(
+    undefined
+  )
 
-  return swr('to-search-json', fetcher)
+  useEffect(() => {
+    let active = true
+    myFetch<ISearchData>('/to-search/blog-contents.json')
+      .then((d) => {
+        if (active) setData(d)
+      })
+      .catch(() => {
+        /* search index unavailable */
+      })
+    return () => {
+      active = false
+    }
+  }, [])
+
+  return { data }
 }
+
 const segmenter = new Intl.Segmenter('ja-jp', {
   granularity: 'word',
 })

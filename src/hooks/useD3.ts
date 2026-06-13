@@ -27,7 +27,6 @@ export const useD3 = (
     return () => {
       d3.select(current).selectAll('*').remove()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies)
 
   return ref

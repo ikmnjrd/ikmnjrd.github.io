@@ -2,9 +2,11 @@ import fs from 'fs'
 import { Feed } from 'feed'
 import getPostFilesData from '../utils/getPostFilesData'
 
-export const generateRssFeed = async () => {
+export const generateRssFeed = async (
+  siteURL = process.env.WEBSITE_URL,
+  outDir = './public/rss'
+) => {
   const posts = await getPostFilesData()
-  const siteURL = process.env.WEBSITE_URL
   const date = new Date()
   const author = {
     name: 'ike',
@@ -45,14 +47,12 @@ export const generateRssFeed = async () => {
       date: new Date(post.frontmatter.date ?? ''),
     })
   })
-  fs.mkdirSync('./public/rss', {
+  fs.mkdirSync(outDir, {
     recursive: true,
   })
-  fs.writeFileSync('./public/rss/feed.xml', feed.rss2())
-  fs.writeFileSync('./public/rss/atom.xml', feed.atom1())
-  fs.writeFileSync('./public/rss/feed.json', feed.json1())
+  fs.writeFileSync(`${outDir}/feed.xml`, feed.rss2())
+  fs.writeFileSync(`${outDir}/atom.xml`, feed.atom1())
+  fs.writeFileSync(`${outDir}/feed.json`, feed.json1())
 
   console.log('rss feed generated')
 }
-
-generateRssFeed()

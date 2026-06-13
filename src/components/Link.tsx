@@ -1,12 +1,11 @@
 import NextLink, { type LinkProps } from 'next/link'
-import type { ReactNode, AnchorHTMLAttributes } from 'react'
+import type { ComponentChildren } from 'preact'
 import styles from '../pages/base.module.css'
 
 export default function Link({
   children,
   ...props
-}: AnchorHTMLAttributes<HTMLAnchorElement> &
-  LinkProps & { children: ReactNode }) {
+}: LinkProps & { children?: ComponentChildren }) {
   return (
     <NextLink className={styles.link} {...props}>
       {children}
