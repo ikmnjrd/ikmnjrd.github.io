@@ -94,7 +94,7 @@ const stubServerOnly: esbuild.Plugin = {
   },
 }
 
-/** Bundles the server renderer for Node and returns the output JS path. */
+/** Bundles the server renderer for Node and returns the output bundle path. */
 export async function buildServer(
   outdir: string
 ): Promise<string> {
@@ -104,14 +104,15 @@ export async function buildServer(
     entryPoints: { render: resolve('build/render-entry.tsx') },
     outdir,
     platform: 'node',
-    format: 'esm',
+    format: 'cjs',
+    outExtension: { '.js': '.cjs' },
     // sharp is a native addon; prismjs/markdown-it-prism use dynamic require()
     // for language components which esbuild cannot bundle — keep them external
     // so real Node resolution handles them at render time.
     external: ['sharp', 'prismjs', 'markdown-it-prism'],
     target: 'node18',
   })
-  return path.join(outdir, 'render.js')
+  return path.join(outdir, 'render.cjs')
 }
 
 export interface ClientAssets {
